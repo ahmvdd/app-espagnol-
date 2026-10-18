@@ -6,6 +6,7 @@ import {
 } from '../lib/content';
 import { state } from '../lib/state';
 import { renderRituels } from './rituels';
+import { ouvrirBilan } from './profe/bilan';
 import { TOOLS, toolCard } from '../tools';
 import { $, $$, esc } from '../lib/ui';
 
@@ -75,6 +76,7 @@ export const inicio: View = el => {
     <h2>Raccourcis</h2>
     <div class="tools">
       ${raccourcis.map(t => toolCard(t)).join('')}
+      <a class="panel tool-card" href="#/profe/carnet" id="raccourci-bilan"><span class="ico" aria-hidden="true">📝</span><strong>Bilan de séance</strong><span class="es" lang="es">El balance</span><span class="muted small">Moins d’une minute, en fin de cours</span></a>
       <a class="panel tool-card sos-card" href="#/sos"><span class="ico" aria-hidden="true">🆘</span><strong>SOS</strong><span class="es" lang="es">¡Socorro!</span><span class="muted small">Une idée tout de suite</span></a>
     </div>
 
@@ -100,4 +102,5 @@ export const inicio: View = el => {
   draw();
 
   renderRituels($('#rituels', el));
+  $('#raccourci-bilan', el).onclick = e => { e.preventDefault(); ouvrirBilan(); };
 };
