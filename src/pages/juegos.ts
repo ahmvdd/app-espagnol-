@@ -2,7 +2,7 @@ import type { View } from '../router';
 import type { Niveau } from '../content/types';
 import { GAMES, gameCard } from '../games';
 import { EQUIPOS, makeCtx, themeById, type Team } from '../games/engine';
-import { NIVEAUX, THEMES, dernierTheme } from '../lib/content';
+import { NIVEAUX, AXES, THEMES, dernierTheme } from '../lib/content';
 import { toggleFullscreen, exitFullscreen } from '../lib/fullscreen';
 import { confirmModal } from '../lib/modal';
 import { $, $$, esc } from '../lib/ui';
@@ -16,12 +16,19 @@ const resetTeams = () => { session.teams = EQUIPOS.slice(0, session.nbEquipes).m
 resetTeams();
 
 export const juegos: View = el => {
+  const q = new URLSearchParams(location.hash.split('?')[1] ?? '');
+  const qn = q.get('n') as Niveau | null;
+  if (qn && NIVEAUX.includes(qn)) {
+    session.niveau = qn;
+    session.themeId = THEMES[qn].some(t => t.id === q.get('t')) ? q.get('t')! : dernierTheme(qn).id;
+  }
   const id = location.hash.split('/')[2]?.split('?')[0];
   const game = GAMES.find(g => g.id === id);
 
   if (!game) {
     el.innerHTML = `<h1>Jeux <span class="es" lang="es">· Juegos</span></h1>
       <p class="muted">Choisis un jeu, puis le niveau, le thème et les équipes. Les scores sont gardés d’un jeu à l’autre pendant la séance.</p>
+      ${qn ? `<p class="pill">Thème choisi : ${session.niveau} · ${esc(THEMES[session.niveau].find(t => t.id === session.themeId)?.titre)}</p>` : ''}
       <div class="tools">${GAMES.map(gameCard).join('')}</div>`;
     return;
   }
@@ -46,7 +53,9 @@ export const juegos: View = el => {
         </div>
         <label class="field">Thème
           <select id="theme">
-            ${themes.map(t => `<option value="${t.id}" ${t.id === session.themeId ? 'selected' : ''}>${esc(t.titre)} (${t.vocab.length} mots)</option>`).join('')}
+            ${AXES[session.niveau].filter(a => a.themes.length).map(a => `<optgroup label="Axe ${a.n} · ${esc(a.titre)}">
+              ${a.themes.map(t => `<option value="${t.id}" ${t.id === session.themeId ? 'selected' : ''}>${esc(t.titre)} (${t.vocab.length} mots)</option>`).join('')}
+            </optgroup>`).join('')}
             <option value="tous" ${session.themeId === 'tous' ? 'selected' : ''}>Tous les thèmes de ${session.niveau}</option>
           </select>
         </label>
