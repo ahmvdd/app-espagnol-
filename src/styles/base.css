@@ -365,3 +365,18 @@ footer a{color:inherit}
   .print-area .tableau{background:#000;color:#fff}
 }
 .salle.u .place{width:6.6%;height:6.4%;font-size:clamp(.55rem,.95vw,.8rem)}
+
+/* La Vuelta */
+.vuelta{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(14rem,1fr);gap:1rem;align-items:start;margin-top:.75rem}
+@media (max-width:860px){.vuelta{grid-template-columns:1fr}}
+.map{width:100%;height:auto;max-height:70vh}
+.map .terre{fill:var(--tile);stroke:var(--cobalt);stroke-width:2;stroke-linejoin:round}
+.map .parcours{fill:none;stroke:var(--ochre);stroke-width:3;stroke-dasharray:8 6}
+.map .ville circle{fill:var(--surface);stroke:var(--ink);stroke-width:2}
+.map .ville text{font:700 12px var(--body);fill:var(--ink);paint-order:stroke;stroke:var(--surface);stroke-width:3px}
+.map .ville.flash circle{fill:var(--ochre);animation:pop .6s 2}
+.map .pion{font-size:22px;transition:x .5s,y .5s}
+.vuelta-equipes{display:flex;flex-direction:column;gap:.6rem}
+.equipe-v h3{margin:0;display:flex;align-items:center;gap:.4rem}
+.equipe-v h3 b{margin-left:auto;font:800 1.5rem var(--display)}
+.equipe-v p{margin:.3rem 0 .5rem}
