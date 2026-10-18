@@ -1,18 +1,16 @@
 import type { View } from '../router';
 import {
   NIVEAUX, COULEUR, CECRL, DUREES, axeDe, AMBIANCES, accueilPerso,
-  palabraDelDia, refranDelDia, activitesPour, lienActivite, dernierTheme,
+  activitesPour, lienActivite, dernierTheme,
   type Ambiance, type Niveau
 } from '../lib/content';
 import { state } from '../lib/state';
-import { speak } from '../lib/speech';
+import { renderRituels } from './rituels';
 import { TOOLS, toolCard } from '../tools';
-import { $, $$, esc, toast } from '../lib/ui';
+import { $, $$, esc } from '../lib/ui';
 
 /** Choix « J'ai X minutes » : gardés le temps de la séance. */
 const choix: { duree?: number; niveau?: Niveau; ambiance?: Ambiance; i: number } = { i: 0 };
-
-const say = (t: string) => { if (!speak(t, state.reglages.accent ?? 'es-ES')) toast('Voix espagnole absente sur cet appareil'); };
 
 function etapes(): string {
   const step = <T extends string | number>(titre: string, key: 'duree' | 'niveau' | 'ambiance', items: { v: T; label: string }[]) => `
@@ -46,8 +44,6 @@ function etapes(): string {
 
 export const inicio: View = el => {
   const { prenom: p, dedicace } = accueilPerso(state.reglages);
-  const w = palabraDelDia();
-  const [refEs, refFr] = refranDelDia();
   const date = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
   const raccourcis = ['minuteur', 'ruleta', 'equipos'].map(id => TOOLS.find(t => t.id === id)!);
 
@@ -83,27 +79,7 @@ export const inicio: View = el => {
     </div>
 
     <h2>Rituels du jour</h2>
-    <div class="idees">
-      <section class="panel center">
-        <h3>Palabra del día</h3>
-        <span class="pill">${w.niveau} · ${esc(w.theme)}</span>
-        <div class="big" lang="es">${esc(w.es)}</div>
-        <p class="big win" id="trad" hidden>${esc(w.fr)}</p>
-        <div class="row wrap center-row">
-          <button class="btn ghost sm" id="say-w">🔊 Écouter</button>
-          <button class="btn sm" id="reveal-w">Voir la traduction</button>
-        </div>
-      </section>
-      <section class="panel center">
-        <h3>Refrán del día</h3>
-        <div class="big" lang="es">${esc(refEs)}</div>
-        <p class="win" id="ref-fr" hidden>${esc(refFr)}</p>
-        <div class="row wrap center-row">
-          <button class="btn ghost sm" id="say-r">🔊 Écouter</button>
-          <button class="btn sm" id="reveal-r">Révéler le sens</button>
-        </div>
-      </section>
-    </div>
+    <div id="rituels"></div>
 
     <p class="home-foot muted small">
       <a href="#/aide">Aide</a> · <a href="#/aide/credits">Crédits</a> · <a href="#/profe">Tout effacer (dans Profe)</a>
@@ -123,8 +99,5 @@ export const inicio: View = el => {
   };
   draw();
 
-  $('#say-w', el).onclick = () => say(w.es);
-  $('#reveal-w', el).onclick = () => { $('#trad', el).hidden = false; $('#reveal-w', el).hidden = true; };
-  $('#say-r', el).onclick = () => say(refEs);
-  $('#reveal-r', el).onclick = () => { $('#ref-fr', el).hidden = false; $('#reveal-r', el).hidden = true; };
+  renderRituels($('#rituels', el));
 };

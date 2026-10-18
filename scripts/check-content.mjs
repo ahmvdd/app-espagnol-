@@ -83,8 +83,11 @@ for (const s of sos) {
   for (const i of s.idees ?? []) check(isStr(i.texte) && /^#\//.test(i.lien) && isStr(i.action), `sos.json › ${s.titre} : idée invalide`);
 }
 
-const ref = read('refranes.json') ?? [];
-check(ref.length >= 7 && ref.every(r => Array.isArray(r) && r.length === 2 && r.every(isStr)), 'refranes.json : liste de paires [espagnol, français]');
+const rit = read('rituels.json') ?? {};
+const paires = l => Array.isArray(l) && l.length >= 3 && l.every(x => Array.isArray(x) && x.length === 2 && x.every(isStr));
+check(paires(rit.meteo), 'rituels.json : "meteo" = liste de [emoji, phrase]');
+check(paires(rit.emociones), 'rituels.json : "emociones" = liste de [emoji, phrase]');
+for (const n of NIVEAUX) check(Array.isArray(rit.preguntas?.[n]) && rit.preguntas[n].length >= 5 && rit.preguntas[n].every(isStr), `rituels.json : au moins 5 preguntas pour ${n}`);
 const paises = read('paises.json') ?? [];
 check(paises.length >= 8 && paises.every(p => isStr(p.nom) && isStr(p.drapeau)), 'paises.json : 8 pays avec nom et drapeau');
 const esc = read('escape.json') ?? {};

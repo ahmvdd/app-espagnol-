@@ -436,3 +436,32 @@ h2.h3{font-size:1.17rem;margin:0}
 nav a.niv{border:2px solid var(--c);padding:.45rem .7rem;color:inherit}
 nav a.niv[aria-current="page"]{background:var(--c);color:#fff}
 nav a.n5{--c:#1E7045}nav a.n4{--c:#A84A17}nav a.n3{--c:#6B3391}
+
+/* Rituels du jour */
+.rituels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,26rem),1fr));gap:.75rem}
+.rituel .big{font-size:clamp(1.3rem,2.4vw,1.9rem)}
+.rituel{display:flex;flex-direction:column;gap:.5rem}
+.rituel-tete{justify-content:space-between}
+.rituel-tete h3{margin:0}
+.rituel .corps{gap:.6rem;flex:1;justify-content:center}
+.rituel .corps p{margin:0}
+.meteo .btn span{font-size:1.2em}
+.emociones{display:grid;grid-template-columns:repeat(2,1fr);gap:.4rem;width:100%}
+.emociones.grand{grid-template-columns:repeat(3,1fr);max-width:1100px}
+.emocion{display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;align-items:center;column-gap:.4rem;padding:.4rem .6rem;border:2px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:700 .85rem var(--body);cursor:pointer;text-align:left}
+.emocion .ico{grid-row:span 2;font-size:1.6rem}
+.emocion b{grid-row:span 2;font:800 1.2rem var(--display)}
+.barre-vote{height:6px;border-radius:3px;background:var(--tile);overflow:hidden}
+.barre-vote i{display:block;height:100%;background:var(--cobalt)}
+.emociones.grand .emocion{font-size:1.3rem;padding:.8rem 1rem}
+.emociones.grand .ico{font-size:3rem}
+.emociones.grand b{font-size:2rem}
+.rituel-plein{position:fixed;inset:0;z-index:35;background:var(--paper);color:var(--ink);overflow:auto;padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:1rem}
+.rituel-plein h2{font-size:clamp(1.5rem,4vw,2.5rem);margin:0}
+.rituel-plein .corps{flex:1;justify-content:center;width:100%;gap:1.2rem}
+.rituel-plein .fermer{position:absolute;top:1rem;right:1rem}
+.rituel-plein .fecha{max-width:22ch}
+.emocion .ico{grid-column:1;grid-row:1/3}
+.emocion>span[lang]{grid-column:2;grid-row:1}
+.emocion .barre-vote{grid-column:2;grid-row:2}
+.emocion b{grid-column:3;grid-row:1/3}

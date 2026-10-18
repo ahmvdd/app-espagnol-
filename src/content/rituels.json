@@ -1,0 +1,96 @@
+{
+ "meteo": [
+  [
+   "☀️",
+   "Hace sol"
+  ],
+  [
+   "⛅",
+   "Está nublado"
+  ],
+  [
+   "🌧",
+   "Llueve"
+  ],
+  [
+   "💨",
+   "Hace viento"
+  ],
+  [
+   "❄️",
+   "Nieva"
+  ],
+  [
+   "🥵",
+   "Hace calor"
+  ],
+  [
+   "🥶",
+   "Hace frío"
+  ]
+ ],
+ "emociones": [
+  [
+   "🤩",
+   "¡Estoy fenomenal!"
+  ],
+  [
+   "🙂",
+   "Estoy bien"
+  ],
+  [
+   "😀",
+   "Estoy contento/a"
+  ],
+  [
+   "😴",
+   "Estoy cansado/a"
+  ],
+  [
+   "😬",
+   "Estoy nervioso/a"
+  ],
+  [
+   "😢",
+   "Estoy triste"
+  ]
+ ],
+ "preguntas": {
+  "5e": [
+   "¿Qué tiempo hace hoy?",
+   "¿Cuál es tu comida favorita?",
+   "¿Qué haces después del colegio?",
+   "¿Cuántos hermanos tienes?",
+   "¿Cuál es tu asignatura favorita? ¿Por qué?",
+   "¿Qué vas a hacer este fin de semana?",
+   "¿A qué hora te levantas?",
+   "¿Qué te gusta hacer los domingos?",
+   "¿Cómo es tu mejor amigo o tu mejor amiga?",
+   "¿Tienes un animal en casa?"
+  ],
+  "4e": [
+   "¿Qué hiciste el fin de semana?",
+   "¿Adónde te gustaría viajar? ¿Por qué?",
+   "¿Qué deporte practicas?",
+   "¿Qué hiciste ayer por la tarde?",
+   "¿Cómo es tu barrio?",
+   "¿Qué invento te parece el más útil?",
+   "¿Qué harás en las vacaciones?",
+   "¿Cuál es tu ciudad favorita?",
+   "¿Qué música escuchas?",
+   "¿Qué cambiarías en tu colegio?"
+  ],
+  "3e": [
+   "¿Qué hiciste el fin de semana?",
+   "¿Qué oficio te gustaría hacer en el futuro?",
+   "¿Qué es para ti un buen amigo?",
+   "¿Estás de acuerdo con el móvil en el colegio?",
+   "¿Cómo te informas: periódico, tele o redes sociales?",
+   "Si pudieras vivir en otro país, ¿cuál elegirías?",
+   "¿Por qué causa te gustaría comprometerte?",
+   "¿Qué has aprendido esta semana?",
+   "¿Qué consejo darías a un alumno de sexto?",
+   "¿Cómo será tu vida dentro de diez años?"
+  ]
+ }
+}

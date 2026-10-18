@@ -2,10 +2,10 @@ import c5 from '../content/5e.json';
 import c4 from '../content/4e.json';
 import c3 from '../content/3e.json';
 import acts from '../content/activites.json';
-import refranesJson from '../content/refranes.json';
+import rituelsJson from '../content/rituels.json';
 import sosJson from '../content/sos.json';
 import site from '../content/site.json';
-import type { Activite, Ambiance, Axe, Niveau, NiveauFile, Refran, Situation, Theme } from '../content/types';
+import type { Activite, Ambiance, Axe, Niveau, NiveauFile, Situation, Theme } from '../content/types';
 
 export type { Activite, Ambiance, Axe, Niveau, Theme };
 
@@ -22,7 +22,7 @@ export const axeDe = (n: Niveau, themeId: string) => AXES[n].find(a => a.themes.
 export const COULEUR = Object.fromEntries(NIVEAUX.map(n => [n, FILES[n].couleur])) as Record<Niveau, string>;
 export const ACTIVITES = acts as Activite[];
 export const SOS = sosJson as Situation[];
-export const REFRANES = refranesJson as Refran[];
+export const RITUELS = rituelsJson as { meteo: [string, string][]; emociones: [string, string][]; preguntas: Record<Niveau, string[]> };
 export const SITE = { prenom: site.prenom, dedicace: site.dedicace };
 
 export const DUREES = [5, 10, 15, 20, 30, 50];
@@ -33,14 +33,13 @@ export const AMBIANCES: { id: Ambiance; label: string; icon: string }[] = [
 ];
 
 /** Numéro du jour local : même tirage pour toute la journée. */
-const dayIndex = (d = new Date()) => Math.floor((d.getTime() - d.getTimezoneOffset() * 6e4) / 864e5);
+export const dayIndex = (d = new Date()) => Math.floor((d.getTime() - d.getTimezoneOffset() * 6e4) / 864e5);
 
 export function palabraDelDia(d = new Date()) {
   const all = NIVEAUX.flatMap(n => THEMES[n].flatMap(t => t.vocab.map(([es, fr]) => ({ es, fr, niveau: n, theme: t.titre }))));
   return all[dayIndex(d) % all.length];
 }
 
-export const refranDelDia = (d = new Date()) => REFRANES[(dayIndex(d) * 7) % REFRANES.length];
 
 /** Activités qui tiennent dans le temps donné, la plus proche de la durée d'abord. */
 export function activitesPour(minutes: number, niveau: Niveau, ambiance: Ambiance): Activite[] {

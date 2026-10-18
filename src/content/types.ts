@@ -38,4 +38,3 @@ export type Activite = {
 
 export type Idee = { texte: string; lien: string; action: string };
 export type Situation = { titre: string; icon: string; idees: Idee[] };
-export type Refran = [string, string];
