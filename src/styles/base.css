@@ -504,3 +504,24 @@ nav a.n5{--c:#1E7045}nav a.n4{--c:#A84A17}nav a.n3{--c:#6B3391}
   .print-area .doc{break-after:page}
   .doc-tete,.doc-culture,.doc-niv{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
+
+/* Profe : onglets, suivi, carnet, bilan */
+.onglets{margin:.5rem 0 1rem}
+.progress{height:14px;border-radius:7px;background:var(--tile);overflow:hidden;margin:.4rem 0}
+.progress i{display:block;height:100%;background:var(--olive)}
+.suivi-axe{margin:1.25rem 0 .5rem}
+.suivi-liste{display:flex;flex-direction:column;gap:.4rem}
+.suivi-ligne{display:grid;grid-template-columns:9rem 1fr auto minmax(8rem,14rem);gap:.6rem;align-items:center;padding:.5rem .8rem;border-left:6px solid var(--line)}
+.suivi-ligne.statut-en-cours{border-left-color:var(--cobalt)}
+.suivi-ligne.statut-vu{border-left-color:var(--olive)}
+.suivi-ligne.statut-a-revoir{border-left-color:var(--ochre)}
+.suivi-ligne .statut{justify-content:flex-start}
+.suivi-titre{font-weight:700;color:inherit}
+.suivi-ligne input{min-height:36px;padding:.3rem .5rem}
+@media (max-width:760px){.suivi-ligne{grid-template-columns:1fr}}
+.bilan{max-width:36rem;max-height:92vh;overflow:auto}
+.bilan .humeur span{font-size:1.4rem}
+.carnet{list-style:none;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.seance p{margin:.3rem 0 0}
+.seance-tete{gap:.5rem .8rem}
+.seance-tete [data-del]{margin-left:auto}

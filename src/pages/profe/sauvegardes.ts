@@ -52,7 +52,7 @@ export function renderSauvegardes(el: HTMLElement): void {
         </div>
         ${pending ? `
           <div class="confirm" role="alert">
-            <p>Sauvegarde du <strong>${esc(pending.date)}</strong> : ${pending.classes} classe(s), ${pending.eleves} élève(s).<br>
+            <p>Sauvegarde du <strong>${esc(pending.date)}</strong> : ${pending.classes} classe(s), ${pending.eleves} élève(s), ${pending.seances} séance(s) au carnet.<br>
             Elle remplacera les données actuelles. L’état actuel est gardé comme point de retour.</p>
             <div class="row"><button class="btn" id="imp-ok">Remplacer</button><button class="btn ghost" id="imp-no">Garder les données actuelles</button></div>
           </div>` : ''}

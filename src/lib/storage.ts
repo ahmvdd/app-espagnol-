@@ -3,7 +3,7 @@
  * 3 niveaux : localStorage (données vivantes), 10 points de retour automatiques,
  * fichier .json exporté/importé par la prof.
  */
-export const SCHEMA = 1;
+export const SCHEMA = 2;
 const KEY = 'rincon.v1';
 const SNAPS = 'rincon.snapshots';
 const LAST_EXPORT = 'rincon.lastExport';
@@ -18,25 +18,40 @@ export type Classe = {
 };
 export type Plan = { id: string; classeId: string; nom: string; disposition: 'rangees' | 'ilots' | 'u'; places: (string | null)[] };
 export type Reglages = { muet: boolean; volume: number; police: 'standard' | 'dyslexie'; prenomProf: string; dedicace?: string; accent?: 'es-ES' | 'es-MX' };
-export type Data = { classes: Classe[]; plans: Plan[]; reglages: Reglages };
+export type Statut = 'pas-vu' | 'en-cours' | 'vu' | 'a-revoir';
+/** Suivi d'un chapitre (= thème, identifiant stable) pour une classe. */
+export type SuiviChapitre = { statut: Statut; date?: string; note?: string };
+/** Une séance du carnet de bord, avec son mini-bilan. */
+export type Seance = {
+  id: string; date: string; classeId: string; chapId: string; fait: string;
+  humeur: 0 | 1 | 2; objectif: 'oui' | 'partie' | 'non'; bien: string; ameliorer: string; revoir: boolean;
+};
+export type Data = {
+  classes: Classe[]; plans: Plan[]; reglages: Reglages;
+  /** suivi[classeId][chapId] */
+  suivi: Record<string, Record<string, SuiviChapitre>>;
+  seances: Seance[];
+};
 export type Snapshot = { date: number; data: string };
 
 export const EMPTY: Data = {
   classes: [],
   plans: [],
+  suivi: {},
+  seances: [],
   reglages: { muet: false, volume: 0.6, police: 'standard', prenomProf: '' }
 };
 
 export function loadData(): Data {
   try {
     const raw = localStorage.getItem(KEY);
-    if (raw) return { ...EMPTY, ...JSON.parse(raw) };
+    if (raw) return { ...structuredClone(EMPTY), ...JSON.parse(raw) };
   } catch { /* stockage indisponible */ }
   return structuredClone(EMPTY);
 }
 
-/** Les points de retour ne concernent que les classes, pas les plans ni les réglages (muet, accent...). */
-const eleveData = (d: Data) => JSON.stringify(d.classes);
+/** Les points de retour concernent les classes, le suivi et le carnet ; pas les plans ni les réglages (muet, accent...). */
+const eleveData = (d: Data) => JSON.stringify([d.classes, d.suivi, d.seances]);
 
 /** Sauvegarde + point de retour automatique (l'état précédent est conservé). */
 export function saveData(data: Data): boolean {
@@ -84,7 +99,7 @@ export function exportBackup(data: Data): void {
   try { localStorage.setItem(LAST_EXPORT, String(Date.now())); } catch { /* ignore */ }
 }
 
-export type BackupPreview = { date: string; classes: number; eleves: number; data: Data };
+export type BackupPreview = { date: string; classes: number; eleves: number; seances: number; data: Data };
 
 /** Lit et vérifie un fichier de sauvegarde, sans rien écraser. */
 export async function readBackup(file: File): Promise<BackupPreview> {
@@ -97,6 +112,7 @@ export async function readBackup(file: File): Promise<BackupPreview> {
     date: new Date(b.date).toLocaleDateString('fr-FR'),
     classes: data.classes.length,
     eleves: data.classes.reduce((n, c) => n + c.eleves.length, 0),
+    seances: data.seances.length,
     data
   };
 }
@@ -104,9 +120,8 @@ export async function readBackup(file: File): Promise<BackupPreview> {
 /** Fait évoluer les anciennes sauvegardes vers le format actuel. */
 function migrate(data: any, from: number): Data {
   let d = data;
-  // if (from < 2) d = { ...d, nouveauChamp: ... };
-  void from;
-  return { ...EMPTY, ...d };
+  if (from < 2) d = { ...d, suivi: {}, seances: [] };
+  return { ...structuredClone(EMPTY), ...d };
 }
 
 export function shouldRemindBackup(data: Data): boolean {
