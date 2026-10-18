@@ -74,8 +74,7 @@ main .btn.ghost[aria-pressed="true"]::before{content:"✓ "}
 .stage:fullscreen #tool{font-size:125%}
 .fs-exit{position:absolute;top:.75rem;right:.75rem;display:none}
 .stage:fullscreen .fs-exit{display:inline-flex}
-.clock{font:800 clamp(5rem,22vw,14rem)/1 var(--display);font-variant-numeric:tabular-nums}
-.clock.last{color:var(--ochre);animation:pulse 1s infinite}
+.clock{font:800 clamp(4rem,min(22vw,28vh),14rem)/1 var(--display);font-variant-numeric:tabular-nums}
 .clock.done{color:var(--pink)}
 @keyframes pulse{50%{opacity:.55}}
 .count{font:800 clamp(6rem,30vw,16rem)/1 var(--display);animation:pop .4s}
@@ -143,3 +142,32 @@ input[type=range]{min-height:auto;padding:0;border:0;background:none}
 
 /* Police dyslexie */
 :root[data-font="dys"]{--body:'OpenDyslexic','Atkinson Hyperlegible',system-ui,sans-serif;--display:'OpenDyslexic','Atkinson Hyperlegible',system-ui,sans-serif}
+
+/* Tuiles et titres bilingues */
+.es{color:var(--cobalt);font-style:italic;font-weight:700}
+h1 .es{font-size:.6em;font-weight:600}
+.check{gap:.5rem;font-weight:700;min-height:44px}
+
+/* Minuteur : 10 dernières secondes, fond qui change doucement, sans clignotement */
+.minuteur{border-radius:14px;padding:1rem;transition:background-color 1.2s ease}
+.minuteur.alerte{background:color-mix(in srgb,var(--ochre) 28%,transparent)}
+.alerte-ico{min-height:1.6em;margin:0;font-weight:700;font-size:1.2rem}
+#free-in{width:6.5rem;min-height:36px;padding:.3rem .5rem}
+
+/* Congelados plein écran */
+.stage.cong-full{background:var(--cobalt);color:var(--on-cobalt);cursor:pointer}
+.stage.cong-full .muted{color:inherit;opacity:.85}
+.stage.cong-full .count,.stage.cong-full .huge{color:inherit}
+.statue{position:relative;width:150px;height:220px;margin:0 auto;animation:freeze 1.2s ease-out}
+.statue i{position:absolute;background:linear-gradient(135deg,#ffffff 0%,#cfe9ff 40%,#8fc4f0 100%);border:2px solid #e8f5ff;box-shadow:0 0 18px rgb(200 235 255 / .7)}
+.statue .head{width:46px;height:46px;border-radius:50%;left:52px;top:0}
+.statue .body{width:56px;height:84px;border-radius:18px;left:47px;top:50px}
+.statue .arm{width:16px;height:70px;border-radius:8px;top:46px}
+.statue .arm.l{left:22px;transform:rotate(30deg)}.statue .arm.r{right:22px;transform:rotate(-30deg)}
+.statue .leg{width:18px;height:76px;border-radius:9px;top:138px}
+.statue .leg.l{left:52px}.statue .leg.r{right:52px}
+.statue::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgb(255 255 255 / .8) 50%,transparent 70%);background-size:250% 100%;animation:shine 2.5s linear infinite;mix-blend-mode:overlay;border-radius:20px}
+.flake{position:absolute;top:-20px;left:var(--x);color:#fff;font-size:1.2rem;animation:fall 3.5s linear var(--d) infinite;opacity:0}
+@keyframes freeze{from{filter:blur(6px) saturate(0);transform:scale(.9)}to{filter:none;transform:none}}
+@keyframes shine{from{background-position:150% 0}to{background-position:-100% 0}}
+@keyframes fall{0%{opacity:0;transform:translateY(0)}15%{opacity:1}100%{opacity:0;transform:translateY(260px) rotate(180deg)}}

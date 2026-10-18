@@ -16,14 +16,14 @@ const SITUATIONS: { titre: string; icon: string; idees: Idee[] }[] = [
     titre: 'Ils décrochent', icon: '😴',
     idees: [
       { texte: 'Ruleta : un élève tiré au sort redit en espagnol le dernier mot appris.', lien: '#/herramientas/ruleta', action: 'Lancer la Ruleta' },
-      { texte: 'Défi chrono : 1 minute pour écrire un maximum de mots du thème, par deux.', lien: '#/herramientas/minutero?t=60', action: 'Minuteur 1 min' },
+      { texte: 'Défi chrono : 1 minute pour écrire un maximum de mots du thème, par deux.', lien: '#/herramientas/minuteur?t=60', action: 'Minuteur 1 min' },
       { texte: 'Équipes express : chaque équipe propose une phrase avec le vocabulaire du jour.', lien: '#/herramientas/equipos', action: 'Faire les équipes' }
     ]
   },
   {
     titre: 'Après la récré', icon: '🔔',
     idees: [
-      { texte: '2 minutes pour s’installer et sortir ses affaires en silence, le minuteur au tableau.', lien: '#/herramientas/minutero?t=120', action: 'Minuteur 2 min' },
+      { texte: '2 minutes pour s’installer et sortir ses affaires en silence, le minuteur au tableau.', lien: '#/herramientas/minuteur?t=120', action: 'Minuteur 2 min' },
       { texte: 'Niveau de voix 1 : on s’installe en chuchotant, puis silence pour commencer.', lien: '#/herramientas/voz?n=1', action: 'Afficher « Susurro »' },
       { texte: 'Trois grandes respirations ensemble, puis le mot du jour au tableau.', lien: '#/', action: 'Voir le mot du jour' }
     ]

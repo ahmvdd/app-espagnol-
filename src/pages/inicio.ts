@@ -14,10 +14,10 @@ const IDEES: Record<number, Idee[]> = {
   ],
   5: [
     { titre: '🃏 Flashcards', desc: 'Révision express du thème en cours, à l’oral.', liens: NIVEAUX.map(n => [n, `#/nivel/${n}`]) },
-    { titre: '⏱ Défi chrono', desc: '1 minute par deux pour écrire un maximum de mots du thème.', liens: [['Minuteur 1 min', '#/herramientas/minutero?t=60']] }
+    { titre: '⏱ Défi chrono', desc: '1 minute par deux pour écrire un maximum de mots du thème.', liens: [['Minuteur 1 min', '#/herramientas/minuteur?t=60']] }
   ],
   10: [
-    { titre: '👥 Duel d’équipes', desc: 'Faire 4 équipes : chacune traduit à tour de rôle un mot des flashcards.', liens: [['Équipes', '#/herramientas/equipos'], ['Minuteur 10 min', '#/herramientas/minutero?t=600']] },
+    { titre: '👥 Duel d’équipes', desc: 'Faire 4 équipes : chacune traduit à tour de rôle un mot des flashcards.', liens: [['Équipes', '#/herramientas/equipos'], ['Minuteur 10 min', '#/herramientas/minuteur?t=600']] },
     { titre: '🎡 Interrogation orale', desc: 'Ruleta + flashcards : l’élève tiré au sort traduit la carte affichée.', liens: [['Ruleta', '#/herramientas/ruleta']] }
   ]
 };

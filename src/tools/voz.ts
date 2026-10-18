@@ -4,8 +4,8 @@ import { $$, onKeys } from '../lib/ui';
 const NIVELES = [
   { icon: '🤐', es: 'Silencio', fr: 'Silence total' },
   { icon: '🤫', es: 'Susurro', fr: 'On chuchote avec son voisin' },
-  { icon: '💬', es: 'Voz baja', fr: 'Voix basse, en groupe' },
-  { icon: '📢', es: 'Voz alta', fr: 'Voix claire, pour toute la classe' }
+  { icon: '👥', es: 'Voz de pareja', fr: 'On parle à deux, à voix basse' },
+  { icon: '📢', es: 'Voz de clase', fr: 'Voix claire, pour toute la classe' }
 ];
 
 let current = 0;
