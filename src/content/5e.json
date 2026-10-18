@@ -1,0 +1,14 @@
+{
+  "niveau": "5e",
+  "themes": [
+    {
+      "id": "me-presento",
+      "titre": "Me presento",
+      "vocab": [
+        ["hola", "bonjour"], ["me llamo", "je m'appelle"], ["tengo doce años", "j'ai douze ans"],
+        ["vivo en", "j'habite à"], ["el cumpleaños", "l'anniversaire"], ["simpático", "sympathique"],
+        ["alto", "grand"], ["divertido", "drôle"]
+      ]
+    }
+  ]
+}

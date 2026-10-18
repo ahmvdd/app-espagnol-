@@ -1,0 +1,14 @@
+{
+  "niveau": "4e",
+  "themes": [
+    {
+      "id": "la-ciudad",
+      "titre": "La ciudad",
+      "vocab": [
+        ["la calle", "la rue"], ["el ayuntamiento", "la mairie"], ["la plaza", "la place"],
+        ["a la derecha", "à droite"], ["a la izquierda", "à gauche"], ["todo recto", "tout droit"],
+        ["el barrio", "le quartier"], ["el museo", "le musée"]
+      ]
+    }
+  ]
+}

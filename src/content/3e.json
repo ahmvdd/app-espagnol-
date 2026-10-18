@@ -1,0 +1,14 @@
+{
+  "niveau": "3e",
+  "themes": [
+    {
+      "id": "las-opiniones",
+      "titre": "Las opiniones",
+      "vocab": [
+        ["creo que", "je crois que"], ["pienso que", "je pense que"], ["estoy de acuerdo", "je suis d'accord"],
+        ["no estoy de acuerdo", "je ne suis pas d'accord"], ["me parece que", "il me semble que"],
+        ["sin embargo", "cependant"], ["por un lado", "d'un côté"], ["en mi opinión", "à mon avis"]
+      ]
+    }
+  ]
+}

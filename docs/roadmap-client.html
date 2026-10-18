@@ -1,0 +1,334 @@
+<title>El Rincón de la Profe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+/* Layout : une colonne éditoriale, bandeau azulejo en tête, frise des phases, puis détails et attentes. */
+:root{
+  --paper:#F3F5FB;--surface:#FFFFFF;--ink:#16203B;--muted:#56607A;
+  --cobalt:#2340B8;--on-cobalt:#FFFFFF;--tile:#DCE3FA;--ochre:#E3A21A;
+  --pink:#C8326B;--olive:#3F7A26;--line:#D3D9EA;
+  --display:'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --body:'Atkinson Hyperlegible',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0E1325;--surface:#171F3D;--ink:#EDF0FA;--muted:#A6AFC8;
+  --cobalt:#7C93FF;--on-cobalt:#0E1325;--tile:#26315F;--ochre:#F2BA45;
+  --pink:#F0709D;--olive:#8BC462;--line:#2B3660;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0E1325;--surface:#171F3D;--ink:#EDF0FA;--muted:#A6AFC8;
+  --cobalt:#7C93FF;--on-cobalt:#0E1325;--tile:#26315F;--ochre:#F2BA45;
+  --pink:#F0709D;--olive:#8BC462;--line:#2B3660;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+.wrap{max-width:920px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;text-wrap:balance}
+h2{font-weight:800;font-size:clamp(1.6rem,4vw,2.2rem)}
+h3{font-weight:600;font-size:1.25rem}
+p{margin:0}
+.muted{color:var(--muted)}
+.eyebrow{font:700 .78rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+section{padding-block:2.75rem 0;display:flex;flex-direction:column;gap:1.1rem}
+
+.azulejo{background-color:var(--cobalt);background-image:
+  radial-gradient(circle at 50% 50%,var(--ochre) 0 9%,transparent 10%),
+  radial-gradient(circle at 50% 50%,transparent 0 22%,var(--paper) 23% 27%,transparent 28%),
+  radial-gradient(circle at 0 0,var(--paper) 0 21%,transparent 22%),
+  radial-gradient(circle at 100% 0,var(--paper) 0 21%,transparent 22%),
+  radial-gradient(circle at 0 100%,var(--paper) 0 21%,transparent 22%),
+  radial-gradient(circle at 100% 100%,var(--paper) 0 21%,transparent 22%);
+  background-size:var(--t,64px) var(--t,64px)}
+
+/* En-tête */
+.band{height:130px}
+.hero{background:var(--surface);border:1px solid var(--line);border-radius:18px;margin-top:-64px;position:relative;padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:.9rem}
+.hero h1{font-weight:800;font-size:clamp(2.3rem,7vw,4.2rem);letter-spacing:-.02em}
+.hero .lede{font-size:1.15rem;max-width:58ch;color:var(--muted)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{display:inline-flex;align-items:center;gap:.4rem;background:var(--tile);border-radius:999px;padding:.3rem .85rem;font-weight:700;font-size:.95rem}
+.chip.hot{background:var(--cobalt);color:var(--on-cobalt)}
+
+/* Principes */
+.principles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem}
+.pr{border-top:3px solid var(--cobalt);padding-top:.7rem;display:flex;flex-direction:column;gap:.25rem}
+.pr b{font-family:var(--display);font-weight:600;font-size:1.1rem}
+.pr span{color:var(--muted);font-size:.97rem}
+
+/* Frise */
+.gantt-box{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.25rem 1rem 1rem}
+.gantt{position:relative;min-width:620px;display:flex;flex-direction:column;gap:.6rem}
+.months{position:relative;height:1.4rem;border-bottom:1px solid var(--line)}
+.months span{position:absolute;top:0;font-size:.8rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.lane{position:relative;height:3.1rem}
+.barx{position:absolute;top:0;height:100%;border-radius:10px;padding:.35rem .65rem;display:flex;flex-direction:column;justify-content:center;overflow:hidden;font-size:.85rem;line-height:1.2}
+.barx b{font-family:var(--display);font-weight:600;font-size:.98rem}
+.b1{background:var(--cobalt);color:var(--on-cobalt)}
+.b2{background:var(--tile);color:var(--ink);border:2px solid var(--cobalt)}
+.b3{background:var(--ochre);color:#16203B}
+.ms{position:relative;height:3.6rem}
+.mk{position:absolute;top:0;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.2rem;font-size:.78rem;text-align:center;width:110px}
+.mk i{width:14px;height:14px;transform:rotate(45deg);background:var(--ink);display:block}
+.mk b{font-weight:700}
+.today{position:absolute;top:0;bottom:0;width:2px;background:var(--pink);pointer-events:none}
+.today span{position:absolute;top:-.1rem;left:6px;font-size:.75rem;font-weight:700;color:var(--pink);white-space:nowrap}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.9rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:.4rem}
+.legend i{width:14px;height:14px;border-radius:4px;display:inline-block}
+
+/* Phases */
+.phase{display:grid;grid-template-columns:auto 1fr;gap:1rem 1.25rem;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.25rem}
+.phase .num{font:800 2.6rem/1 var(--display);color:var(--cobalt);min-width:2.2rem}
+.phase .body{display:flex;flex-direction:column;gap:.6rem;min-width:0}
+.phase .head{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:baseline;justify-content:space-between}
+.date{font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+ul.items{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.35rem 1.25rem}
+ul.items li{padding-left:1.1rem;position:relative}
+ul.items li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--ochre)}
+
+/* Aperçu des outils */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.75rem}
+.tool{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.screen{height:120px;display:grid;place-items:center;background:var(--tile);position:relative}
+.cap{padding:.7rem .85rem;display:flex;flex-direction:column;gap:.15rem}
+.cap b{font-family:var(--display);font-weight:600}
+.cap span{font-size:.9rem;color:var(--muted)}
+.clock{font:800 2.6rem/1 var(--display);font-variant-numeric:tabular-nums;color:var(--cobalt)}
+.wheel{width:92px;height:92px;border-radius:50%;background:conic-gradient(var(--cobalt) 0 25%,var(--ochre) 0 50%,var(--pink) 0 75%,var(--olive) 0);position:relative}
+.wheel::after{content:"";position:absolute;inset:36%;border-radius:50%;background:var(--surface)}
+@media (prefers-reduced-motion:no-preference){.wheel{animation:spin 9s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}}
+.freeze{position:absolute;inset:0;display:grid;place-items:center;background:var(--cobalt);color:var(--on-cobalt);font:800 1.5rem/1 var(--display);letter-spacing:.04em}
+.voice{display:flex;gap:.35rem;align-items:flex-end;height:70px}
+.voice span{width:22px;border-radius:5px;background:var(--cobalt);display:grid;place-items:end center;color:var(--on-cobalt);font:800 .8rem/1.6 var(--display)}
+.voice span:nth-child(1){height:22%;opacity:.55}.voice span:nth-child(2){height:45%;opacity:.7}.voice span:nth-child(3){height:70%;opacity:.85}.voice span:nth-child(4){height:100%}
+.teams{display:grid;grid-template-columns:1fr 1fr;gap:.35rem;font-size:.8rem;font-weight:700}
+.teams span{background:var(--surface);border-radius:6px;padding:.25rem .5rem}
+.sos{display:flex;flex-direction:column;gap:.3rem;width:80%}
+.sos span{border:2px solid var(--pink);border-radius:8px;padding:.15rem .5rem;font-size:.78rem;font-weight:700;color:var(--pink);background:var(--surface);text-align:center}
+.flash{width:120px;height:78px;border-radius:12px;background:var(--surface);border:2px solid var(--cobalt);display:grid;place-items:center;font:600 1.15rem/1 var(--display);transform:rotate(-4deg)}
+.home{display:grid;grid-template-columns:repeat(3,1fr);gap:.35rem;width:80%}
+.home span{border-radius:8px;padding:.6rem 0;text-align:center;font:800 .95rem/1 var(--display);color:var(--on-cobalt);background:var(--cobalt)}
+.home span:nth-child(2){background:var(--olive);color:#fff}.home span:nth-child(3){background:var(--pink);color:#fff}
+
+/* Sauvegardes */
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:.6rem;align-items:stretch}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem;display:flex;flex-direction:column;gap:.3rem;min-width:0}
+.step b{font-family:var(--display);font-weight:600;font-size:1.05rem}
+.step span{color:var(--muted);font-size:.95rem}
+.step .tag{align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.15rem .5rem;border-radius:6px;background:var(--tile)}
+.arrow{display:grid;place-items:center;color:var(--muted);font-size:1.4rem}
+@media (max-width:700px){.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}}
+
+/* Attentes */
+.needs{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.need{display:grid;grid-template-columns:1fr auto;gap:.5rem 1rem;padding:.85rem 1.1rem;border-bottom:1px solid var(--line);align-items:center}
+.need:last-child{border-bottom:0}
+.need .q{min-width:0}
+.need .q b{display:block}
+.need .q span{color:var(--muted);font-size:.93rem}
+.when{font-weight:700;font-size:.85rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.when.soon{background:var(--pink);color:#fff}
+.when.later{background:var(--tile);color:var(--ink)}
+@media (max-width:520px){.need{grid-template-columns:1fr}.when{justify-self:start}}
+
+/* Livrables */
+.deliv{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.75rem;counter-reset:d}
+.deliv li{counter-increment:d;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem;display:flex;gap:.75rem;align-items:flex-start}
+.deliv li::before{content:counter(d);font:800 1.3rem/1 var(--display);color:var(--ochre);min-width:1.2rem}
+
+.loop{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.loop .chip{background:var(--surface);border:1px solid var(--line)}
+.loop .sep{color:var(--muted)}
+
+.note{border-left:4px solid var(--ochre);padding:.75rem 1rem;background:var(--surface);border-radius:0 12px 12px 0}
+footer{padding-block:3rem 2.5rem;color:var(--muted);font-size:.92rem;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between}
+</style>
+
+<div class="band azulejo" aria-hidden="true"></div>
+<main class="wrap">
+  <header class="hero">
+    <span class="eyebrow">Feuille de route du projet</span>
+    <h1>El Rincón de la Profe</h1>
+    <p class="lede">Un mini-site pour le cours d'espagnol au collège (5e, 4e, 3e) : des outils de gestion de classe, des jeux et du contenu prêts à lancer, utilisables debout devant la classe, même sans wifi.</p>
+    <div class="facts">
+      <span class="chip hot" id="countdown">Remise le 23 novembre 2026</span>
+      <span class="chip">3 phases de livraison</span>
+      <span class="chip">Aucun compte, aucune donnée envoyée</span>
+    </div>
+  </header>
+
+  <section aria-labelledby="t-principes">
+    <span class="eyebrow">Ce qui guide chaque choix</span>
+    <h2 id="t-principes">Les principes</h2>
+    <div class="principles">
+      <div class="pr"><b>3 clics maximum</b><span>Gros boutons, libellés en français avec l'espagnol en sous-titre. Rien à apprendre.</span></div>
+      <div class="pr"><b>Marche hors ligne</b><span>Le site s'installe comme une application et fonctionne même si le wifi du collège tombe.</span></div>
+      <div class="pr"><b>Données sur l'appareil</b><span>Les prénoms restent sur l'appareil de la prof. Aucun serveur, aucun traceur.</span></div>
+      <div class="pr"><b>Positif avant tout</b><span>Les points ne se retirent jamais. On valorise, on ne sanctionne pas.</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-frise">
+    <span class="eyebrow">Calendrier</span>
+    <h2 id="t-frise">Trois phases jusqu'à la fin du stage</h2>
+    <p class="muted">Mieux vaut un petit site parfaitement fini qu'un grand site à moitié prêt. Chaque phase est utilisable seule.</p>
+    <div class="gantt-box">
+      <div class="gantt" id="gantt">
+        <div class="months" id="months"></div>
+        <div class="lane" id="lane"></div>
+        <div class="ms" id="ms"></div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--cobalt)"></i>Phase 1, Essentiel</span>
+      <span><i style="background:var(--tile);border:2px solid var(--cobalt)"></i>Phase 2, Renfort</span>
+      <span><i style="background:var(--ochre)"></i>Phase 3, Sur mesure pendant le stage</span>
+      <span><i style="background:var(--pink);width:3px;border-radius:0"></i>Aujourd'hui</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-phases">
+    <span class="eyebrow">Contenu de chaque phase</span>
+    <h2 id="t-phases">Ce qui arrive, et quand</h2>
+
+    <article class="phase">
+      <div class="num">1</div>
+      <div class="body">
+        <div class="head"><h3>Essentiel : les outils du quotidien</h3><span class="date">avant le 8 novembre</span></div>
+        <p class="muted">De quoi tenir une classe agitée dès le premier jour, sur un lien privé pour tester.</p>
+        <ul class="items">
+          <li>Accueil avec « J'ai X minutes »</li>
+          <li>Minuteur géant (« ¡Tiempo! »)</li>
+          <li>Roulette des prénoms, sans répétition</li>
+          <li>Générateur d'équipes (pays hispanophones)</li>
+          <li>Bouton Congelados pour le silence</li>
+          <li>Niveau de voix de 0 à 3</li>
+          <li>Bouton SOS : 3 situations, 3 activités</li>
+          <li>Pages 5e, 4e, 3e : flashcards et audio</li>
+          <li>Sauvegarde et restauration des classes</li>
+          <li>Mode projection et bouton muet</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="phase">
+      <div class="num">2</div>
+      <div class="body">
+        <div class="head"><h3>Renfort : jeux et rituels</h3><span class="date">avant le 20 novembre</span></div>
+        <ul class="items">
+          <li>Plan de classe (glisser-déposer)</li>
+          <li>La Vuelta, classement par équipes</li>
+          <li>Rituel d'entrée et pauses énergie</li>
+          <li>Sonomètre, si le micro passe sur les PC du collège</li>
+          <li>8 jeux, dont Rosco, Ahorcado, Lotería</li>
+          <li>Un escape game</li>
+          <li>Carte interactive du monde hispanophone</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="phase">
+      <div class="num">3</div>
+      <div class="body">
+        <div class="head"><h3>Sur mesure : selon ce qu'on observe en classe</h3><span class="date">23 nov. au 4 déc., puis en continu</span></div>
+        <ul class="items">
+          <li>Autres jeux et Misión Imposible</li>
+          <li>Fiches imprimables par thème</li>
+          <li>Générateur de fiches et de mini-tests</li>
+          <li>Carnet de bord de séance</li>
+          <li>Ajustements après les retours de la prof</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section aria-labelledby="t-apercu">
+    <span class="eyebrow">Aperçu de la phase 1</span>
+    <h2 id="t-apercu">À quoi ça ressemble</h2>
+    <div class="tools">
+      <div class="tool"><div class="screen"><div class="home"><span>5e</span><span>4e</span><span>3e</span></div></div><div class="cap"><b>Accueil</b><span>Un niveau, une durée, une activité prête.</span></div></div>
+      <div class="tool"><div class="screen"><span class="clock">04:59</span></div><div class="cap"><b>Minuteur géant</b><span>Lisible du fond de la salle.</span></div></div>
+      <div class="tool"><div class="screen"><div class="wheel" aria-hidden="true"></div></div><div class="cap"><b>Roulette</b><span>Chacun passe une fois avant de recommencer.</span></div></div>
+      <div class="tool"><div class="screen"><div class="teams"><span>México</span><span>Chile</span><span>Perú</span><span>España</span></div></div><div class="cap"><b>Équipes</b><span>De 2 à 8 équipes, équilibrées.</span></div></div>
+      <div class="tool"><div class="screen"><div class="freeze">¡CONGELADOS! 3</div></div><div class="cap"><b>Congelados</b><span>Un écran et un gong pour le silence.</span></div></div>
+      <div class="tool"><div class="screen"><div class="voice"><span>0</span><span>1</span><span>2</span><span>3</span></div></div><div class="cap"><b>Niveau de voix</b><span>Du silence à la voix de classe.</span></div></div>
+      <div class="tool"><div class="screen"><div class="sos"><span>Trop bruyants</span><span>Ils décrochent</span><span>Après la récré</span></div></div><div class="cap"><b>SOS</b><span>Une solution en un clic.</span></div></div>
+      <div class="tool"><div class="screen"><div class="flash">la mochila</div></div><div class="cap"><b>Flashcards</b><span>Un clic, le mot est prononcé.</span></div></div>
+    </div>
+    <p class="muted">Ces vignettes reprennent l'esprit du prototype : bleu cobalt et azulejos, une police pensée pour la lecture et la dyslexie.</p>
+  </section>
+
+  <section aria-labelledby="t-donnees">
+    <span class="eyebrow">Sécurité des données</span>
+    <h2 id="t-donnees">Rien ne se perd, rien ne sort de l'appareil</h2>
+    <div class="flow">
+      <div class="step"><span class="tag">Automatique</span><b>Enregistrement sur l'appareil</b><span>Chaque modification est gardée dans le navigateur, sans compte ni serveur.</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><span class="tag">Automatique</span><b>10 points de retour</b><span>Une classe supprimée par erreur ? Bouton « Revenir en arrière ».</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><span class="tag">En un clic</span><b>Fichier de sauvegarde</b><span>À garder sur une clé USB ou dans ses mails. Un rappel s'affiche si la dernière date de plus de 7 jours.</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-besoins">
+    <span class="eyebrow">De ton côté</span>
+    <h2 id="t-besoins">Ce dont j'ai besoin</h2>
+    <p class="muted">Les deux premiers points bloquent la phase 1 : sans eux, les pages de niveau restent sur un seul thème d'exemple.</p>
+    <div class="needs">
+      <div class="need"><div class="q"><b>Qui écrit le contenu pédagogique ?</b><span>Listes de vocabulaire, quiz, fiches, et qui relit l'espagnol.</span></div><span class="when soon">avant le 25 oct.</span></div>
+      <div class="need"><div class="q"><b>Prénom de la prof et texte de la dédicace</b><span>Pour le bandeau « ¡Hola! » de l'accueil.</span></div><span class="when soon">avant le 25 oct.</span></div>
+      <div class="need"><div class="q"><b>Budget, délais et nombre de retouches</b><span>À fixer ensemble.</span></div><span class="when soon">avant le 25 oct.</span></div>
+      <div class="need"><div class="q"><b>Le nom du site</b><span>« El Rincón de la Profe » pour l'instant.</span></div><span class="when later">avant le 1er nov.</span></div>
+      <div class="need"><div class="q"><b>Les modifications par la prof</b><span>Doit-elle pouvoir changer elle-même les listes de mots ?</span></div><span class="when later">avant le 1er nov.</span></div>
+      <div class="need"><div class="q"><b>Niveaux enseignés, manuel, équipement de la salle</b><span>Vidéoprojecteur, TBI, tablette : à confirmer.</span></div><span class="when later">au début du stage</span></div>
+      <div class="need"><div class="q"><b>Nom de domaine et maintenance après le stage</b><span>Qui garde le site en vie ensuite.</span></div><span class="when later">avant le 20 nov.</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-methode">
+    <span class="eyebrow">Méthode</span>
+    <h2 id="t-methode">Comment on avance ensemble</h2>
+    <div class="loop">
+      <span class="chip">Je livre une phase sur un lien privé</span><span class="sep" aria-hidden="true">→</span>
+      <span class="chip">Tu testes et tu me fais tes retours</span><span class="sep" aria-hidden="true">→</span>
+      <span class="chip">Je corrige</span><span class="sep" aria-hidden="true">→</span>
+      <span class="chip">Phase suivante</span>
+    </div>
+    <p class="note">Le site reste privé jusqu'à la remise. Rien n'est publié ni partagé avant, pour garder la surprise.</p>
+  </section>
+
+  <section aria-labelledby="t-livrables">
+    <span class="eyebrow">À la remise</span>
+    <h2 id="t-livrables">Ce que tu reçois</h2>
+    <ol class="deliv">
+      <li>Les maquettes de l'accueil et des outils, validées avec toi avant le développement.</li>
+      <li>Le site en ligne sur un lien privé dès la phase 1.</li>
+      <li>Le code source et les accès à l'hébergement.</li>
+      <li>Un mode d'emploi d'une page à imprimer, avec un QR code d'accès.</li>
+      <li>Une heure de prise en main avec la prof, si elle le souhaite.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <span>Préparé par Sayeh · 18 octobre 2026</span>
+    <span>Basé sur le cahier des charges du 17 octobre 2026</span>
+  </footer>
+</main>
+
+<script>
+(()=>{
+  const D=s=>new Date(s+'T12:00:00');
+  const start=D('2026-10-19'), end=D('2026-12-06');
+  const span=end-start, pct=d=>Math.max(0,Math.min(100,(D(d)-start)/span*100));
+  const months=[['2026-10-19','Octobre'],['2026-11-01','Novembre'],['2026-12-01','Déc.']];
+  document.getElementById('months').innerHTML=months.map(([d,l])=>`<span style="left:${pct(d)}%">${l}</span>`).join('');
+  const bars=[['b1','2026-10-19','2026-11-08','Phase 1','Essentiel'],['b2','2026-11-09','2026-11-20','Phase 2','Renfort'],['b3','2026-11-23','2026-12-04','Phase 3','Stage, sur mesure']];
+  document.getElementById('lane').innerHTML=bars.map(([c,a,b,t,s])=>{const l=pct(a),w=pct(b)+100/((span)/864e5)-l;return `<div class="barx ${c}" style="left:${l}%;width:${w}%"><b>${t}</b><span>${s}</span></div>`}).join('');
+  const ms=[['2026-11-08','8 nov.','Lien de test'],['2026-11-20','20 nov.','Version complète'],['2026-11-23','23 nov.','Remise']];
+  document.getElementById('ms').innerHTML=ms.map(([d,a,b],i)=>`<div class="mk" style="left:${pct(d)+(i===2?3:i===1?-2:0)}%"><i></i><b>${a}</b><span>${b}</span></div>`).join('');
+  const now=new Date();
+  if(now>=start&&now<=end){const t=document.createElement('div');t.className='today';t.style.left=pct(now.toISOString().slice(0,10))+'%';t.innerHTML='<span>Aujourd\'hui</span>';document.getElementById('gantt').appendChild(t)}
+  const days=Math.ceil((D('2026-11-23')-now)/864e5);
+  if(days>0)document.getElementById('countdown').textContent=`Remise le 23 novembre 2026 · J-${days}`;
+})();
+</script>

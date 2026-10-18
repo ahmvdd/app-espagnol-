@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2340B8" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <title>El Rincón de la Profe</title>
+</head>
+<body>
+  <header class="top">
+    <div class="bar">
+      <a class="brand" href="#/"><i class="azulejo" aria-hidden="true"></i>El Rincón de la Profe</a>
+      <nav aria-label="Navigation principale">
+        <a href="#/">Inicio</a>
+        <a href="#/herramientas">Outils</a>
+        <a href="#/juegos">Jeux</a>
+        <a href="#/profe">Profe</a>
+        <a href="#/sos" class="sos">SOS</a>
+      </nav>
+      <div class="row">
+        <button id="btn-proj" class="btn ghost sm" aria-pressed="false">Projection</button>
+        <button id="btn-mute" class="btn ghost sm" aria-pressed="false">🔊 Son</button>
+      </div>
+    </div>
+  </header>
+  <div id="backup-reminder" class="reminder" hidden></div>
+  <main id="app"></main>
+  <footer>Les données restent sur cet appareil : rien n'est envoyé sur Internet.</footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
