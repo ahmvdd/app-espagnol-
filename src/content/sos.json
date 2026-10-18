@@ -1,0 +1,65 @@
+[
+ {
+  "titre": "Trop bruyants",
+  "icon": "🔊",
+  "idees": [
+   {
+    "texte": "Lancer ¡Congelados! : à la fin du compte à rebours, plus personne ne bouge ni ne parle.",
+    "lien": "#/herramientas/congelados",
+    "action": "Lancer Congelados"
+   },
+   {
+    "texte": "Afficher le niveau de voix 0 et attendre le silence complet avant de reprendre.",
+    "lien": "#/herramientas/voz?n=0",
+    "action": "Afficher « Silencio »"
+   },
+   {
+    "texte": "Chuchoter la consigne : la classe doit se taire pour l’entendre. Afficher le niveau 1.",
+    "lien": "#/herramientas/voz?n=1",
+    "action": "Afficher « Susurro »"
+   }
+  ]
+ },
+ {
+  "titre": "Ils décrochent",
+  "icon": "😴",
+  "idees": [
+   {
+    "texte": "Question flash : un élève tiré au sort redit en espagnol le dernier mot appris.",
+    "lien": "#/herramientas/ruleta",
+    "action": "Lancer la roulette"
+   },
+   {
+    "texte": "Défi chrono : 1 minute par deux pour écrire un maximum de mots du thème.",
+    "lien": "#/herramientas/minuteur?t=60",
+    "action": "Minuteur 1 min"
+   },
+   {
+    "texte": "Simón dice : tout le monde debout pendant 2 minutes, consignes en espagnol.",
+    "lien": "#/herramientas/minuteur?t=120",
+    "action": "Minuteur 2 min"
+   }
+  ]
+ },
+ {
+  "titre": "Après la récré / vendredi 16 h",
+  "icon": "🔔",
+  "idees": [
+   {
+    "texte": "2 minutes pour s’installer et sortir ses affaires en silence, le minuteur au tableau.",
+    "lien": "#/herramientas/minuteur?t=120",
+    "action": "Minuteur 2 min"
+   },
+   {
+    "texte": "On s’installe en chuchotant (niveau 1), puis silence complet pour commencer.",
+    "lien": "#/herramientas/voz?n=1",
+    "action": "Afficher « Susurro »"
+   },
+   {
+    "texte": "Trois grandes respirations ensemble, puis on fait deviner le mot du jour.",
+    "lien": "#/",
+    "action": "Voir le mot du jour"
+   }
+  ]
+ }
+]

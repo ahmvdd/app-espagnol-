@@ -1,0 +1,243 @@
+[
+ {
+  "id": "palabra",
+  "titre": "Palabra del día",
+  "consigne": "Faire deviner le mot du jour, l’écrire au tableau, puis le faire répéter à toute la classe.",
+  "duree": 5,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "calme",
+  "outil": "#/"
+ },
+ {
+  "id": "flash-ardoise",
+  "titre": "Flashcards sur ardoise",
+  "consigne": "Afficher les flashcards une par une : chaque élève écrit la traduction sur son ardoise, on vérifie ensemble.",
+  "duree": 10,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "calme",
+  "outil": "#/nivel/{n}",
+  "materiel": "ardoises"
+ },
+ {
+  "id": "dictee-mots",
+  "titre": "Dictée de mots",
+  "consigne": "Lire 10 mots du thème à voix haute ; les élèves les écrivent, puis on corrige avec les flashcards.",
+  "duree": 15,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "calme",
+  "outil": "#/nivel/{n}",
+  "materiel": "cahiers"
+ },
+ {
+  "id": "mini-redaction",
+  "titre": "Mini-rédaction",
+  "consigne": "Écrire 5 phrases sur le thème en 15 minutes, puis 2 ou 3 élèves lisent leur texte.",
+  "duree": 20,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "calme",
+  "outil": "#/herramientas/minuteur?t=900",
+  "materiel": "cahiers"
+ },
+ {
+  "id": "mini-dico",
+  "titre": "Mini-dictionnaire illustré",
+  "consigne": "Chaque élève crée une page de dictionnaire : 8 mots du thème avec un dessin et une phrase d’exemple.",
+  "duree": 30,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "calme",
+  "outil": "#/nivel/{n}",
+  "materiel": "feuilles, crayons de couleur"
+ },
+ {
+  "id": "affiche",
+  "titre": "Affiche en groupe",
+  "consigne": "Par groupes de 3 : une affiche sur le thème (titre, 10 mots, 3 phrases), puis 1 minute de présentation orale par groupe.",
+  "duree": 50,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "calme",
+  "outil": "#/herramientas/equipos",
+  "materiel": "grandes feuilles, feutres"
+ },
+ {
+  "id": "question-flash",
+  "titre": "Question flash",
+  "consigne": "Un élève tiré au sort traduit un mot ou répond à une question en espagnol.",
+  "duree": 5,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "normale",
+  "outil": "#/herramientas/ruleta"
+ },
+ {
+  "id": "habla",
+  "titre": "¡Habla!",
+  "consigne": "Projeter un sujet d’oral du thème ; un élève tiré au sort répond en 3 phrases, la classe aide si besoin.",
+  "duree": 10,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "normale",
+  "outil": "#/herramientas/ruleta"
+ },
+ {
+  "id": "interro-orale",
+  "titre": "Interrogation orale",
+  "consigne": "Roulette + flashcards : l’élève tiré au sort traduit la carte affichée. Une carte par élève.",
+  "duree": 15,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "normale",
+  "outil": "#/nivel/{n}"
+ },
+ {
+  "id": "duel-flash",
+  "titre": "Duel d’équipes",
+  "consigne": "4 équipes : à tour de rôle, chaque équipe traduit une flashcard. 1 point par bonne réponse.",
+  "duree": 20,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "normale",
+  "outil": "#/herramientas/equipos"
+ },
+ {
+  "id": "jeu-role",
+  "titre": "Jeu de rôle",
+  "consigne": "Par deux, préparer un mini-dialogue sur le thème (10 min), puis quelques binômes le jouent devant la classe.",
+  "duree": 30,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "normale",
+  "outil": "#/herramientas/minuteur?t=600"
+ },
+ {
+  "id": "seance-complete",
+  "titre": "Séance complète",
+  "consigne": "Rituel (5 min) → flashcards (10 min) → duel d’équipes (15 min) → oral tiré au sort (15 min) → bilan (5 min).",
+  "duree": 50,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "normale",
+  "outil": "#/nivel/{n}"
+ },
+ {
+  "id": "simon-congelados",
+  "titre": "Simón dice + Congelados",
+  "consigne": "Simón dice en espagnol (levantaos, sentaos, tocad la cabeza…), puis ¡Congelados! pour revenir au calme.",
+  "duree": 5,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "agitee",
+  "outil": "#/herramientas/congelados"
+ },
+ {
+  "id": "passe-mot",
+  "titre": "Le mot qui passe",
+  "consigne": "Chaque élève dit à son tour un mot du thème avant la fin du minuteur de 30 s ; celui qui sèche relance le tour.",
+  "duree": 10,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "agitee",
+  "outil": "#/herramientas/minuteur?t=30"
+ },
+ {
+  "id": "course-tableau",
+  "titre": "Course au tableau",
+  "consigne": "2 équipes en file : le premier de chaque file court écrire au tableau la traduction du mot annoncé.",
+  "duree": 15,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "agitee",
+  "outil": "#/herramientas/equipos",
+  "materiel": "tableau, 2 feutres"
+ },
+ {
+  "id": "mimes",
+  "titre": "Mimes du vocabulaire",
+  "consigne": "Un élève mime un mot du thème, son équipe doit le dire en espagnol avant la fin du minuteur.",
+  "duree": 20,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "agitee",
+  "outil": "#/herramientas/equipos"
+ },
+ {
+  "id": "tournoi",
+  "titre": "Tournoi par équipes",
+  "consigne": "Équipes de 4 : manches de flashcards, de questions orales et de mimes ; le score s’écrit au tableau.",
+  "duree": 30,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "agitee",
+  "outil": "#/herramientas/equipos"
+ },
+ {
+  "id": "olympiades",
+  "titre": "Olympiades d’espagnol",
+  "consigne": "Ateliers tournants de 10 min (flashcards, mimes, mots au tableau, oral), avec Congelados entre chaque atelier.",
+  "duree": 50,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "agitee",
+  "outil": "#/herramientas/equipos",
+  "materiel": "tableau"
+ }
+]
