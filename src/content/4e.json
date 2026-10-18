@@ -1,352 +1,891 @@
 {
  "niveau": "4e",
  "couleur": "#C2581E",
- "themes": [
+ "cecrl": "A1+",
+ "axes": [
   {
-   "id": "la-ciudad",
-   "titre": "La ciudad",
-   "relu": false,
-   "vocab": [
-    [
-     "la calle",
-     "la rue"
-    ],
-    [
-     "la plaza",
-     "la place"
-    ],
-    [
-     "el barrio",
-     "le quartier"
-    ],
-    [
-     "el ayuntamiento",
-     "la mairie"
-    ],
-    [
-     "el museo",
-     "le musée"
-    ],
-    [
-     "la estación",
-     "la gare"
-    ],
-    [
-     "el mercado",
-     "le marché"
-    ],
-    [
-     "la tienda",
-     "le magasin"
-    ],
-    [
-     "el parque",
-     "le parc"
-    ],
-    [
-     "a la derecha",
-     "à droite"
-    ],
-    [
-     "a la izquierda",
-     "à gauche"
-    ],
-    [
-     "todo recto",
-     "tout droit"
-    ],
-    [
-     "cerca de",
-     "près de"
-    ],
-    [
-     "lejos de",
-     "loin de"
-    ],
-    [
-     "al lado de",
-     "à côté de"
-    ],
-    [
-     "gira",
-     "tourne"
-    ]
+   "n": 1,
+   "titre": "Sport et société",
+   "objets": [
+    "Sport et bien-être",
+    "Les règles du jeu",
+    "Le sport pour tous"
    ],
-   "phrases": [
-    "Para ir al museo, gira a la derecha.",
-    "La estación está cerca de la plaza.",
-    "En mi barrio hay un parque y un mercado.",
-    "Sigue todo recto y cruza la calle."
-   ],
-   "quiz": [
+   "themes": [
     {
-     "q": "« à droite » se dit…",
-     "o": [
-      "a la derecha",
-      "a la izquierda",
-      "todo recto",
-      "al lado"
+     "id": "el-deporte",
+     "titre": "El deporte",
+     "objet": "Sport et bien-être · Les règles du jeu",
+     "relu": false,
+     "vocab": [
+      [
+       "el deporte",
+       "le sport"
+      ],
+      [
+       "el partido",
+       "le match"
+      ],
+      [
+       "el equipo",
+       "l'équipe"
+      ],
+      [
+       "jugar al fútbol",
+       "jouer au foot"
+      ],
+      [
+       "la pelota",
+       "le ballon"
+      ],
+      [
+       "la raqueta",
+       "la raquette"
+      ],
+      [
+       "el chándal",
+       "le survêtement"
+      ],
+      [
+       "el bañador",
+       "le maillot de bain"
+      ],
+      [
+       "ganar",
+       "gagner"
+      ],
+      [
+       "perder",
+       "perdre"
+      ],
+      [
+       "las reglas",
+       "les règles"
+      ],
+      [
+       "respetar",
+       "respecter"
+      ],
+      [
+       "el jugador",
+       "le joueur"
+      ],
+      [
+       "entrenar",
+       "s'entraîner"
+      ],
+      [
+       "el campeón",
+       "le champion"
+      ],
+      [
+       "el aficionado",
+       "le supporter"
+      ]
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
-    {
-     "q": "« la mairie » se dit…",
-     "o": [
-      "el ayuntamiento",
-      "el museo",
-      "el mercado",
-      "la estación"
+     "phrases": [
+      "El fútbol es el deporte más popular de España.",
+      "Mi equipo ganó el partido.",
+      "Hay que respetar las reglas.",
+      "Entreno tres veces por semana."
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
-    {
-     "q": "« todo recto » veut dire…",
-     "o": [
-      "tout droit",
-      "à droite",
-      "à gauche",
-      "tout près"
+     "quiz": [
+      {
+       "q": "« gagner » se dit…",
+       "o": [
+        "ganar",
+        "perder",
+        "jugar",
+        "entrenar"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el partido » veut dire…",
+       "o": [
+        "le match",
+        "le parti",
+        "la partie du corps",
+        "l'équipe"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« le survêtement » se dit…",
+       "o": [
+        "el chándal",
+        "el bañador",
+        "la camiseta",
+        "la raqueta"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el aficionado » veut dire…",
+       "o": [
+        "le supporter",
+        "l'affiché",
+        "l'entraîneur",
+        "l'arbitre"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Quel sport, très populaire en Espagne, a été inventé au Mexique ?",
+       "o": [
+        "el pádel",
+        "el tenis",
+        "el golf",
+        "el baloncesto"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "Complète : « Hay que ___ las reglas. »",
+       "o": [
+        "respetar",
+        "respeto",
+        "respeta",
+        "respetan"
+       ],
+       "a": 0,
+       "diff": "plata"
+      }
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
-    {
-     "q": "« le quartier » se dit…",
-     "o": [
-      "el barrio",
-      "la calle",
-      "la plaza",
-      "la tienda"
+     "parole": [
+      "¿Qué deporte practicas? ¿Por qué te gusta?",
+      "Presenta a un deportista hispano famoso.",
+      "¿El deporte es importante para la salud? Justifica."
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
-    {
-     "q": "« près de la place » se dit…",
-     "o": [
-      "cerca de la plaza",
-      "lejos de la plaza",
-      "al lado del parque",
-      "en la plaza"
-     ],
-     "a": 0,
-     "diff": "plata"
-    },
-    {
-     "q": "« Gira a la izquierda » veut dire…",
-     "o": [
-      "Tourne à gauche",
-      "Tourne à droite",
-      "Va tout droit",
-      "Traverse la rue"
-     ],
-     "a": 0,
-     "diff": "plata"
-    },
-    {
-     "q": "Complète : « En mi barrio ___ un parque. »",
-     "o": [
-      "hay",
-      "es",
-      "está",
-      "tiene"
-     ],
-     "a": 0,
-     "diff": "oro"
-    },
-    {
-     "q": "Complète : « El museo ___ al lado del parque. »",
-     "o": [
-      "está",
-      "es",
-      "hay",
-      "tiene"
-     ],
-     "a": 0,
-     "diff": "oro"
+     "culture": [
+      "Le football est le sport roi en Espagne et en Argentine ; à Cuba, au Venezuela et en République dominicaine, c’est le baseball.",
+      "Le pádel, très populaire en Espagne, a été inventé au Mexique, à Acapulco, en 1969.",
+      "Rafael Nadal a gagné 14 fois le tournoi de Roland-Garros, un record."
+     ]
     }
-   ],
-   "parole": [
-    "Describe tu barrio.",
-    "Explica a un turista cómo ir a la estación.",
-    "¿Qué hay en tu ciudad?",
-    "¿Prefieres vivir en el campo o en la ciudad? ¿Por qué?"
    ]
   },
   {
-   "id": "la-rutina",
-   "titre": "La rutina diaria",
-   "relu": false,
-   "vocab": [
-    [
-     "me levanto",
-     "je me lève"
-    ],
-    [
-     "me ducho",
-     "je me douche"
-    ],
-    [
-     "me visto",
-     "je m'habille"
-    ],
-    [
-     "desayuno",
-     "je prends le petit-déjeuner"
-    ],
-    [
-     "voy al colegio",
-     "je vais au collège"
-    ],
-    [
-     "como",
-     "je déjeune"
-    ],
-    [
-     "vuelvo a casa",
-     "je rentre à la maison"
-    ],
-    [
-     "hago los deberes",
-     "je fais mes devoirs"
-    ],
-    [
-     "ceno",
-     "je dîne"
-    ],
-    [
-     "me acuesto",
-     "je me couche"
-    ],
-    [
-     "por la mañana",
-     "le matin"
-    ],
-    [
-     "por la tarde",
-     "l'après-midi"
-    ],
-    [
-     "por la noche",
-     "le soir"
-    ],
-    [
-     "a las siete",
-     "à sept heures"
-    ],
-    [
-     "temprano",
-     "tôt"
-    ],
-    [
-     "tarde",
-     "tard"
-    ]
+   "n": 2,
+   "titre": "Voyages et exploration",
+   "objets": [
+    "L’Espagne, une destination appréciée des jeunes Européens",
+    "Voyager pour se sentir libre",
+    "Machu Picchu, une merveille inca"
    ],
-   "phrases": [
-    "Cada mañana me levanto a las siete.",
-    "Desayuno con mi hermana.",
-    "Por la tarde hago los deberes.",
-    "Me acuesto a las diez de la noche."
+   "themes": [
+    {
+     "id": "machu-picchu",
+     "titre": "Viajar a Machu Picchu",
+     "objet": "Machu Picchu, une merveille inca · Voyager",
+     "relu": false,
+     "vocab": [
+      [
+       "el viaje",
+       "le voyage"
+      ],
+      [
+       "viajar",
+       "voyager"
+      ],
+      [
+       "el destino",
+       "la destination"
+      ],
+      [
+       "las maletas",
+       "les valises"
+      ],
+      [
+       "el billete",
+       "le billet"
+      ],
+      [
+       "el tren",
+       "le train"
+      ],
+      [
+       "el avión",
+       "l'avion"
+      ],
+      [
+       "la montaña",
+       "la montagne"
+      ],
+      [
+       "los incas",
+       "les Incas"
+      ],
+      [
+       "las ruinas",
+       "les ruines"
+      ],
+      [
+       "el descubrimiento",
+       "la découverte"
+      ],
+      [
+       "la maravilla",
+       "la merveille"
+      ],
+      [
+       "descubrir",
+       "découvrir"
+      ],
+      [
+       "el turista",
+       "le touriste"
+      ],
+      [
+       "la mochila",
+       "le sac à dos"
+      ],
+      [
+       "compartir",
+       "partager"
+      ]
+     ],
+     "phrases": [
+      "Machu Picchu está en Perú, en los Andes.",
+      "Vamos a viajar en tren hasta Cuzco.",
+      "Las ruinas incas son una maravilla.",
+      "Me gusta descubrir otros países."
+     ],
+     "quiz": [
+      {
+       "q": "« la valise » se dit…",
+       "o": [
+        "la maleta",
+        "la mochila",
+        "el billete",
+        "el destino"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« descubrir » veut dire…",
+       "o": [
+        "découvrir",
+        "décrire",
+        "couvrir",
+        "descendre"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Dans quel pays se trouve Machu Picchu ?",
+       "o": [
+        "Perú",
+        "México",
+        "Chile",
+        "Bolivia"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Quelle langue parlaient les Incas ?",
+       "o": [
+        "el quechua",
+        "el náhuatl",
+        "el guaraní",
+        "el maya"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« la maravilla » veut dire…",
+       "o": [
+        "la merveille",
+        "la marée",
+        "la ville",
+        "la marche"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Mañana ___ a viajar a Perú. » (nosotros)",
+       "o": [
+        "vamos",
+        "van",
+        "voy",
+        "vais"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿A qué país hispano te gustaría viajar? ¿Por qué?",
+      "Prepara tu maleta para ir a Machu Picchu.",
+      "Cuenta un viaje que hiciste."
+     ],
+     "culture": [
+      "Machu Picchu est une cité inca du XVe siècle, perchée dans les Andes péruviennes, à près de 2 500 m d’altitude.",
+      "Elle a été révélée au monde en 1911 par l’explorateur Hiram Bingham et est classée au patrimoine mondial de l’UNESCO depuis 1983.",
+      "Les Incas parlaient le quechua, une langue encore parlée aujourd’hui par des millions de personnes dans les Andes."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "titre": "Villes, villages, quartiers",
+   "objets": [
+    "Villes et capitales d’Espagne et d’Amérique hispanophone",
+    "Où habiter ? Diversité des espaces construits",
+    "Préserver son cadre de vie"
    ],
-   "quiz": [
+   "themes": [
     {
-     "q": "« je me lève » se dit…",
-     "o": [
-      "me levanto",
-      "me acuesto",
-      "me ducho",
-      "me visto"
+     "id": "la-ciudad",
+     "titre": "La ciudad",
+     "objet": "Villes et capitales · Où habiter ?",
+     "relu": false,
+     "vocab": [
+      [
+       "la calle",
+       "la rue"
+      ],
+      [
+       "la plaza",
+       "la place"
+      ],
+      [
+       "el barrio",
+       "le quartier"
+      ],
+      [
+       "el ayuntamiento",
+       "la mairie"
+      ],
+      [
+       "el museo",
+       "le musée"
+      ],
+      [
+       "la estación",
+       "la gare"
+      ],
+      [
+       "el mercado",
+       "le marché"
+      ],
+      [
+       "la tienda",
+       "le magasin"
+      ],
+      [
+       "el parque",
+       "le parc"
+      ],
+      [
+       "a la derecha",
+       "à droite"
+      ],
+      [
+       "a la izquierda",
+       "à gauche"
+      ],
+      [
+       "todo recto",
+       "tout droit"
+      ],
+      [
+       "cerca de",
+       "près de"
+      ],
+      [
+       "lejos de",
+       "loin de"
+      ],
+      [
+       "al lado de",
+       "à côté de"
+      ],
+      [
+       "gira",
+       "tourne"
+      ]
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
+     "phrases": [
+      "Para ir al museo, gira a la derecha.",
+      "La estación está cerca de la plaza.",
+      "En mi barrio hay un parque y un mercado.",
+      "Sigue todo recto y cruza la calle."
+     ],
+     "quiz": [
+      {
+       "q": "« à droite » se dit…",
+       "o": [
+        "a la derecha",
+        "a la izquierda",
+        "todo recto",
+        "al lado"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« la mairie » se dit…",
+       "o": [
+        "el ayuntamiento",
+        "el museo",
+        "el mercado",
+        "la estación"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« todo recto » veut dire…",
+       "o": [
+        "tout droit",
+        "à droite",
+        "à gauche",
+        "tout près"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« le quartier » se dit…",
+       "o": [
+        "el barrio",
+        "la calle",
+        "la plaza",
+        "la tienda"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« près de la place » se dit…",
+       "o": [
+        "cerca de la plaza",
+        "lejos de la plaza",
+        "al lado del parque",
+        "en la plaza"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« Gira a la izquierda » veut dire…",
+       "o": [
+        "Tourne à gauche",
+        "Tourne à droite",
+        "Va tout droit",
+        "Traverse la rue"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « En mi barrio ___ un parque. »",
+       "o": [
+        "hay",
+        "es",
+        "está",
+        "tiene"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "Complète : « El museo ___ al lado del parque. »",
+       "o": [
+        "está",
+        "es",
+        "hay",
+        "tiene"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Describe tu barrio.",
+      "Explica a un turista cómo ir a la estación.",
+      "¿Qué hay en tu ciudad?",
+      "¿Prefieres vivir en el campo o en la ciudad? ¿Por qué?"
+     ],
+     "culture": [
+      "Au centre des villes espagnoles, on trouve souvent une Plaza Mayor ; en Amérique latine, une Plaza de Armas.",
+      "Madrid est la capitale de l’Espagne depuis 1561.",
+      "La Paz, en Bolivie, est le siège du gouvernement le plus haut du monde, à plus de 3 600 m d’altitude."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "titre": "Inventer, innover, créer",
+   "objets": [
+    "La technologie au service de l’homme",
+    "La langue espagnole et l’intelligence artificielle",
+    "Des explorations botaniques aux biotechnologies"
+   ],
+   "themes": [
     {
-     "q": "« me acuesto » veut dire…",
-     "o": [
-      "je me couche",
-      "je me lève",
-      "je m'habille",
-      "je me douche"
+     "id": "los-inventos",
+     "titre": "Los inventos",
+     "objet": "La technologie au service de l’homme",
+     "relu": false,
+     "vocab": [
+      [
+       "el invento",
+       "l'invention"
+      ],
+      [
+       "inventar",
+       "inventer"
+      ],
+      [
+       "crear",
+       "créer"
+      ],
+      [
+       "el inventor",
+       "l'inventeur"
+      ],
+      [
+       "la tecnología",
+       "la technologie"
+      ],
+      [
+       "los avances",
+       "les progrès"
+      ],
+      [
+       "la inteligencia artificial",
+       "l'intelligence artificielle"
+      ],
+      [
+       "el ordenador",
+       "l'ordinateur"
+      ],
+      [
+       "el móvil",
+       "le téléphone portable"
+      ],
+      [
+       "la pantalla",
+       "l'écran"
+      ],
+      [
+       "mejorar",
+       "améliorer"
+      ],
+      [
+       "soñar con",
+       "rêver de"
+      ],
+      [
+       "útil",
+       "utile"
+      ],
+      [
+       "el futuro",
+       "l'avenir"
+      ],
+      [
+       "la fregona",
+       "le balai-serpillière"
+      ],
+      [
+       "el submarino",
+       "le sous-marin"
+      ]
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
+     "phrases": [
+      "La fregona es un invento español.",
+      "La tecnología puede mejorar la vida.",
+      "Sueño con crear un robot.",
+      "El móvil es muy útil."
+     ],
+     "quiz": [
+      {
+       "q": "« inventer » se dit…",
+       "o": [
+        "inventar",
+        "crear",
+        "mejorar",
+        "soñar"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« mejorar » veut dire…",
+       "o": [
+        "améliorer",
+        "mélanger",
+        "mériter",
+        "mesurer"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« el ordenador » veut dire…",
+       "o": [
+        "l'ordinateur",
+        "l'ordonnance",
+        "le rangement",
+        "le donneur d'ordres"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Quel objet a été inventé par l'Espagnol Enric Bernat en 1958 ?",
+       "o": [
+        "el Chupa Chups",
+        "el móvil",
+        "la fregona",
+        "el submarino"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« soñar con » veut dire…",
+       "o": [
+        "rêver de",
+        "sonner avec",
+        "dormir avec",
+        "songer à partir"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« crear » et « creer » : « creer » veut dire…",
+       "o": [
+        "croire",
+        "créer",
+        "grandir",
+        "crier"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Qué invento es el más útil para ti? ¿Por qué?",
+      "Imagina un invento para tu colegio.",
+      "¿La inteligencia artificial es buena o peligrosa?"
+     ],
+     "culture": [
+      "Le balai-serpillière moderne (la fregona) a été mis au point en Espagne par Manuel Jalón dans les années 1950.",
+      "La sucette Chupa Chups a été créée à Barcelone par Enric Bernat en 1958 ; son logo a été dessiné par Salvador Dalí.",
+      "Isaac Peral a lancé en 1888 l’un des premiers sous-marins électriques."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "titre": "Langages et messages artistiques",
+   "objets": [
+    "Les créations artistiques (Dalí, Kahlo, Gaudí…)",
+    "El arte callejero",
+    "L’artiste témoigne et s’engage"
+   ],
+   "themes": []
+  },
+  {
+   "n": 6,
+   "titre": "L’Andalousie, terre de merveilles",
+   "objets": [
+    "Une terre de musique(s)",
+    "Un regard vers le passé : al-Ándalus",
+    "Une destination touristique pour tous les goûts"
+   ],
+   "themes": [
     {
-     "q": "« je m'habille » se dit…",
-     "o": [
-      "me visto",
-      "me ducho",
-      "me levanto",
-      "me acuesto"
+     "id": "andalucia",
+     "titre": "Andalucía",
+     "objet": "Une terre de musique(s) · al-Ándalus",
+     "relu": false,
+     "vocab": [
+      [
+       "Andalucía",
+       "l'Andalousie"
+      ],
+      [
+       "el flamenco",
+       "le flamenco"
+      ],
+      [
+       "la guitarra",
+       "la guitare"
+      ],
+      [
+       "el cante",
+       "le chant (flamenco)"
+      ],
+      [
+       "el baile",
+       "la danse"
+      ],
+      [
+       "las palmas",
+       "les claquements de mains"
+      ],
+      [
+       "la Alhambra",
+       "l'Alhambra"
+      ],
+      [
+       "la Mezquita",
+       "la Mosquée-cathédrale"
+      ],
+      [
+       "el palacio",
+       "le palais"
+      ],
+      [
+       "el patio",
+       "le patio"
+      ],
+      [
+       "el azulejo",
+       "le carreau de faïence"
+      ],
+      [
+       "el olivo",
+       "l'olivier"
+      ],
+      [
+       "el aceite de oliva",
+       "l'huile d'olive"
+      ],
+      [
+       "la feria",
+       "la foire, la fête"
+      ],
+      [
+       "el turismo",
+       "le tourisme"
+      ],
+      [
+       "al-Ándalus",
+       "al-Andalus"
+      ]
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
-    {
-     "q": "« le soir » se dit…",
-     "o": [
-      "por la noche",
-      "por la mañana",
-      "por la tarde",
-      "el mediodía"
+     "phrases": [
+      "La Alhambra está en Granada.",
+      "El flamenco mezcla cante, baile y guitarra.",
+      "Andalucía produce mucho aceite de oliva.",
+      "En abril se celebra la Feria de Sevilla."
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
-    {
-     "q": "« à sept heures » se dit…",
-     "o": [
-      "a las siete",
-      "a la siete",
-      "a los siete",
-      "en las siete"
+     "quiz": [
+      {
+       "q": "Dans quelle ville se trouve l'Alhambra ?",
+       "o": [
+        "Granada",
+        "Sevilla",
+        "Córdoba",
+        "Málaga"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el baile » veut dire…",
+       "o": [
+        "la danse",
+        "le bal masqué",
+        "le chant",
+        "la baleine"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Le flamenco réunit…",
+       "o": [
+        "cante, baile y guitarra",
+        "piano y violín",
+        "rap y DJ",
+        "tambores y flauta"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« el aceite » veut dire…",
+       "o": [
+        "l'huile",
+        "le vinaigre",
+        "l'acier",
+        "l'assiette"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Le mot « ojalá » vient de la langue…",
+       "o": [
+        "arabe",
+        "latine",
+        "grecque",
+        "quechua"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "Complète : « La Mezquita ___ en Córdoba. »",
+       "o": [
+        "está",
+        "es",
+        "hay",
+        "tiene"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
      ],
-     "a": 0,
-     "diff": "plata"
-    },
-    {
-     "q": "Complète : « Por la tarde ___ los deberes. » (yo)",
-     "o": [
-      "hago",
-      "hace",
-      "haces",
-      "hacen"
+     "parole": [
+      "¿Qué lugar de Andalucía te gustaría visitar? ¿Por qué?",
+      "Describe un espectáculo de flamenco.",
+      "¿El turismo es bueno o malo para Andalucía?"
      ],
-     "a": 0,
-     "diff": "plata"
-    },
-    {
-     "q": "Complète : « Mi hermano ___ a las siete. »",
-     "o": [
-      "se levanta",
-      "me levanto",
-      "te levantas",
-      "se levantan"
-     ],
-     "a": 0,
-     "diff": "oro"
-    },
-    {
-     "q": "« ceno » veut dire…",
-     "o": [
-      "je dîne",
-      "je déjeune",
-      "je cuisine",
-      "je rentre"
-     ],
-     "a": 0,
-     "diff": "plata"
+     "culture": [
+      "Al-Ándalus est le nom de la partie de la péninsule ibérique sous domination musulmane, de 711 à 1492.",
+      "L’Alhambra de Grenade a été construite par la dynastie nasride aux XIIIe et XIVe siècles.",
+      "Le flamenco est inscrit au patrimoine culturel immatériel de l’UNESCO depuis 2010.",
+      "Beaucoup de mots espagnols viennent de l’arabe : aceite, azúcar, almohada, ojalá."
+     ]
     }
    ],
-   "parole": [
-    "Cuenta tu rutina de la mañana.",
-    "¿A qué hora te levantas los sábados?",
-    "¿Qué haces después del colegio?",
-    "Compara tu rutina con la de tu compañero."
-   ]
+   "obligatoire": true
   }
+ ],
+ "grammaire": [
+  "Présent : irréguliers courants (hacer, querer, saber, salir, poner, venir)",
+  "Présent du subjonctif : verbes réguliers et irréguliers courants",
+  "Futur proche : ir a + infinitif",
+  "Gérondif : estar / seguir / ir + gérondif",
+  "Imparfait : -aba / -ía ; ir, ser, ver (A2+)",
+  "Passé simple des verbes réguliers et de tener, ir, ser, estar, hacer (A2+)",
+  "Futur simple : réguliers et tener, poner, hacer (A2+)",
+  "Obligation : hay que / tener que",
+  "Prépositions de déplacement : a, de, por, hasta, hacia",
+  "Cuando + subjonctif pour parler du futur (A2+)",
+  "Para que + subjonctif (A2+)",
+  "Faux-amis et mots proches : crear/creer, sentarse/sentirse"
  ]
 }

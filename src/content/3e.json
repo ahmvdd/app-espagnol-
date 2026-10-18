@@ -1,352 +1,1069 @@
 {
  "niveau": "3e",
  "couleur": "#7B3FA0",
- "themes": [
+ "cecrl": "A2",
+ "axes": [
   {
-   "id": "las-opiniones",
-   "titre": "Las opiniones",
-   "relu": false,
-   "vocab": [
-    [
-     "creo que",
-     "je crois que"
-    ],
-    [
-     "pienso que",
-     "je pense que"
-    ],
-    [
-     "en mi opinión",
-     "à mon avis"
-    ],
-    [
-     "me parece que",
-     "il me semble que"
-    ],
-    [
-     "estoy de acuerdo",
-     "je suis d'accord"
-    ],
-    [
-     "no estoy de acuerdo",
-     "je ne suis pas d'accord"
-    ],
-    [
-     "me gusta",
-     "j'aime"
-    ],
-    [
-     "me encanta",
-     "j'adore"
-    ],
-    [
-     "odio",
-     "je déteste"
-    ],
-    [
-     "prefiero",
-     "je préfère"
-    ],
-    [
-     "es importante",
-     "c'est important"
-    ],
-    [
-     "porque",
-     "parce que"
-    ],
-    [
-     "además",
-     "de plus"
-    ],
-    [
-     "sin embargo",
-     "cependant"
-    ],
-    [
-     "por un lado",
-     "d'un côté"
-    ],
-    [
-     "por otro lado",
-     "d'un autre côté"
-    ]
+   "n": 1,
+   "titre": "À la rencontre de l’autre",
+   "objets": [
+    "La convivialité, tout un art de vivre !",
+    "¿Amigos para siempre?",
+    "Des amours célèbres"
    ],
-   "phrases": [
-    "Creo que el deporte es muy importante.",
-    "En mi opinión, los deberes son útiles.",
-    "No estoy de acuerdo porque es demasiado caro.",
-    "Por un lado es divertido; por otro lado, es peligroso."
-   ],
-   "quiz": [
+   "themes": [
     {
-     "q": "« je pense que » se dit…",
-     "o": [
-      "pienso que",
-      "creo que",
-      "me parece que",
-      "prefiero que"
+     "id": "la-amistad",
+     "titre": "¿Amigos para siempre?",
+     "objet": "¿Amigos para siempre? Histoires d’amitiés",
+     "relu": false,
+     "vocab": [
+      [
+       "la amistad",
+       "l'amitié"
+      ],
+      [
+       "el amigo",
+       "l'ami"
+      ],
+      [
+       "ser amigos",
+       "être amis"
+      ],
+      [
+       "el compañero",
+       "le camarade"
+      ],
+      [
+       "llevarse bien",
+       "bien s'entendre"
+      ],
+      [
+       "tener confianza",
+       "avoir confiance"
+      ],
+      [
+       "compartir",
+       "partager"
+      ],
+      [
+       "saludar",
+       "saluer"
+      ],
+      [
+       "despedirse",
+       "dire au revoir"
+      ],
+      [
+       "abrazar",
+       "serrer dans ses bras"
+      ],
+      [
+       "enfadarse",
+       "se fâcher"
+      ],
+      [
+       "estar a gusto",
+       "être à l'aise"
+      ],
+      [
+       "el amor",
+       "l'amour"
+      ],
+      [
+       "estar enamorado",
+       "être amoureux"
+      ],
+      [
+       "el novio",
+       "le petit ami"
+      ],
+      [
+       "la convivencia",
+       "le vivre-ensemble"
+      ]
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
-    {
-     "q": "« sin embargo » veut dire…",
-     "o": [
-      "cependant",
-      "de plus",
-      "parce que",
-      "d'un côté"
+     "phrases": [
+      "Me llevo muy bien con mi mejor amiga.",
+      "Un buen amigo sabe compartir.",
+      "Nos enfadamos, pero hicimos las paces.",
+      "Tengo confianza en mis amigos."
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
-    {
-     "q": "« à mon avis » se dit…",
-     "o": [
-      "en mi opinión",
-      "me gusta",
-      "estoy de acuerdo",
-      "por un lado"
+     "quiz": [
+      {
+       "q": "« bien s'entendre » se dit…",
+       "o": [
+        "llevarse bien",
+        "estar bien",
+        "tener bien",
+        "hacerse bien"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« despedirse » veut dire…",
+       "o": [
+        "dire au revoir",
+        "se dépêcher",
+        "se dépenser",
+        "se disputer"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« enfadarse » veut dire…",
+       "o": [
+        "se fâcher",
+        "s'endormir",
+        "s'enfoncer",
+        "s'enfuir"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« compartir » veut dire…",
+       "o": [
+        "partager",
+        "comparer",
+        "compter",
+        "partir avec"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "En Argentine, le « Día del Amigo » est fêté le…",
+       "o": [
+        "20 de julio",
+        "14 de febrero",
+        "1 de mayo",
+        "12 de octubre"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "Complète : « Es importante que los amigos ___ confianza. »",
+       "o": [
+        "tengan",
+        "tienen",
+        "tener",
+        "tenían"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
-    {
-     "q": "« Estoy de acuerdo » veut dire…",
-     "o": [
-      "Je suis d'accord",
-      "Je ne suis pas d'accord",
-      "Je préfère",
-      "Il me semble"
+     "parole": [
+      "¿Qué es un buen amigo para ti?",
+      "Cuenta cómo conociste a tu mejor amigo o amiga.",
+      "¿Se puede tener amigos solo por internet? Justifica."
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
-    {
-     "q": "« parce que » se dit…",
-     "o": [
-      "porque",
-      "por qué",
-      "para que",
-      "aunque"
-     ],
-     "a": 0,
-     "diff": "plata"
-    },
-    {
-     "q": "« de plus » se dit…",
-     "o": [
-      "además",
-      "sin embargo",
-      "porque",
-      "entonces"
-     ],
-     "a": 0,
-     "diff": "plata"
-    },
-    {
-     "q": "Complète : « Me ___ los videojuegos. »",
-     "o": [
-      "encantan",
-      "encanta",
-      "encanto",
-      "encantas"
-     ],
-     "a": 0,
-     "diff": "oro"
-    },
-    {
-     "q": "Complète : « No creo que ___ verdad. »",
-     "o": [
-      "sea",
-      "es",
-      "está",
-      "ser"
-     ],
-     "a": 0,
-     "diff": "oro"
+     "culture": [
+      "Selon les pays, un ami se dit cuate (Mexique), pana (Venezuela), parcero (Colombie) ou colega (Espagne).",
+      "En Argentine, on fête le Día del Amigo le 20 juillet.",
+      "En Espagne, on se retrouve souvent entre amis pour les tapas : la convivialité fait partie de la culture."
+     ]
     }
-   ],
-   "parole": [
-    "¿Estás de acuerdo con el móvil en el colegio? Justifica tu respuesta.",
-    "Da tu opinión sobre los deberes.",
-    "¿Prefieres el cine o los videojuegos? ¿Por qué?",
-    "Debate: ¿el uniforme escolar es una buena idea?"
    ]
   },
   {
-   "id": "el-futuro",
-   "titre": "El futuro",
-   "relu": false,
-   "vocab": [
-    [
-     "el futuro",
-     "l'avenir"
-    ],
-    [
-     "el trabajo",
-     "le travail"
-    ],
-    [
-     "el oficio",
-     "le métier"
-    ],
-    [
-     "ganar dinero",
-     "gagner de l'argent"
-    ],
-    [
-     "viajar",
-     "voyager"
-    ],
-    [
-     "estudiar",
-     "étudier"
-    ],
-    [
-     "la universidad",
-     "l'université"
-    ],
-    [
-     "seré",
-     "je serai"
-    ],
-    [
-     "trabajaré",
-     "je travaillerai"
-    ],
-    [
-     "viviré",
-     "je vivrai"
-    ],
-    [
-     "me gustaría",
-     "j'aimerais"
-    ],
-    [
-     "quiero ser",
-     "je veux être"
-    ],
-    [
-     "el médico",
-     "le médecin"
-    ],
-    [
-     "el ingeniero",
-     "l'ingénieur"
-    ],
-    [
-     "el extranjero",
-     "l'étranger"
-    ],
-    [
-     "algún día",
-     "un jour"
-    ]
+   "n": 2,
+   "titre": "Travailler hier, aujourd’hui, demain",
+   "objets": [
+    "Travailler hier",
+    "Travailler aujourd’hui",
+    "Travailler demain"
    ],
-   "phrases": [
-    "En el futuro, me gustaría ser médica.",
-    "Viviré en el extranjero.",
-    "Algún día viajaré por América Latina.",
-    "Quiero estudiar en la universidad."
+   "themes": [
+    {
+     "id": "el-futuro",
+     "titre": "El trabajo y el futuro",
+     "objet": "Travailler demain",
+     "relu": false,
+     "vocab": [
+      [
+       "el futuro",
+       "l'avenir"
+      ],
+      [
+       "el trabajo",
+       "le travail"
+      ],
+      [
+       "el oficio",
+       "le métier"
+      ],
+      [
+       "ganar dinero",
+       "gagner de l'argent"
+      ],
+      [
+       "viajar",
+       "voyager"
+      ],
+      [
+       "estudiar",
+       "étudier"
+      ],
+      [
+       "la universidad",
+       "l'université"
+      ],
+      [
+       "seré",
+       "je serai"
+      ],
+      [
+       "trabajaré",
+       "je travaillerai"
+      ],
+      [
+       "viviré",
+       "je vivrai"
+      ],
+      [
+       "me gustaría",
+       "j'aimerais"
+      ],
+      [
+       "quiero ser",
+       "je veux être"
+      ],
+      [
+       "el médico",
+       "le médecin"
+      ],
+      [
+       "el ingeniero",
+       "l'ingénieur"
+      ],
+      [
+       "el extranjero",
+       "l'étranger"
+      ],
+      [
+       "algún día",
+       "un jour"
+      ]
+     ],
+     "phrases": [
+      "En el futuro, me gustaría ser médica.",
+      "Viviré en el extranjero.",
+      "Algún día viajaré por América Latina.",
+      "Quiero estudiar en la universidad."
+     ],
+     "quiz": [
+      {
+       "q": "« je travaillerai » se dit…",
+       "o": [
+        "trabajaré",
+        "trabajo",
+        "trabajé",
+        "trabajaba"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« me gustaría » veut dire…",
+       "o": [
+        "j'aimerais",
+        "j'aime",
+        "j'ai aimé",
+        "j'aimerai"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el oficio » veut dire…",
+       "o": [
+        "le métier",
+        "le bureau",
+        "l'office",
+        "le travailleur"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« gagner de l'argent » se dit…",
+       "o": [
+        "ganar dinero",
+        "gastar dinero",
+        "ganar tiempo",
+        "perder dinero"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Futur de « vivir » (yo) :",
+       "o": [
+        "viviré",
+        "vivo",
+        "viví",
+        "vivía"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Algún día ___ por América. » (yo)",
+       "o": [
+        "viajaré",
+        "viajé",
+        "viajaba",
+        "viajar"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Si estudio, ___ ingeniero. »",
+       "o": [
+        "seré",
+        "soy",
+        "fui",
+        "era"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« à l'étranger » se dit…",
+       "o": [
+        "en el extranjero",
+        "en el extraño",
+        "fuera del país",
+        "en la extranjera"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Qué oficio te gustaría hacer? ¿Por qué?",
+      "Imagina tu vida dentro de diez años.",
+      "¿Dónde vivirás en el futuro?",
+      "¿Es más importante ganar dinero o ser feliz?"
+     ],
+     "culture": [
+      "Le 1er mai (Día del Trabajador) est férié en Espagne et dans presque toute l’Amérique latine.",
+      "Après la ESO, les jeunes Espagnols choisissent entre le bachillerato et la formación profesional (FP), qui prépare à un métier."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "titre": "Voyages et migrations",
+   "objets": [
+    "Partons en voyage !",
+    "Quitter son pays : aventure, émigration ou exil",
+    "Souvenirs de voyage"
    ],
-   "quiz": [
+   "themes": [
     {
-     "q": "« je travaillerai » se dit…",
-     "o": [
-      "trabajaré",
-      "trabajo",
-      "trabajé",
-      "trabajaba"
+     "id": "de-viaje",
+     "titre": "De viaje",
+     "objet": "Partons en voyage ! · Quitter son pays",
+     "relu": false,
+     "vocab": [
+      [
+       "viajar",
+       "voyager"
+      ],
+      [
+       "la estancia",
+       "le séjour"
+      ],
+      [
+       "ir de excursión",
+       "faire une excursion"
+      ],
+      [
+       "estar de vacaciones",
+       "être en vacances"
+      ],
+      [
+       "el billete",
+       "le billet"
+      ],
+      [
+       "el pasaporte",
+       "le passeport"
+      ],
+      [
+       "el DNI",
+       "la carte d'identité (Espagne)"
+      ],
+      [
+       "la salida",
+       "le départ"
+      ],
+      [
+       "la llegada",
+       "l'arrivée"
+      ],
+      [
+       "el hotel",
+       "l'hôtel"
+      ],
+      [
+       "el camping",
+       "le camping"
+      ],
+      [
+       "emigrar",
+       "émigrer"
+      ],
+      [
+       "el inmigrante",
+       "l'immigré"
+      ],
+      [
+       "dejar",
+       "quitter, laisser"
+      ],
+      [
+       "la frontera",
+       "la frontière"
+      ],
+      [
+       "echar de menos",
+       "regretter, manquer"
+      ]
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
+     "phrases": [
+      "El verano pasado fui de viaje a Málaga.",
+      "Para viajar fuera de Europa hace falta el pasaporte.",
+      "Mi abuelo emigró a Argentina.",
+      "Echo de menos a mi familia."
+     ],
+     "quiz": [
+      {
+       "q": "« l'arrivée » se dit…",
+       "o": [
+        "la llegada",
+        "la salida",
+        "la estancia",
+        "la ruta"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« echar de menos » veut dire…",
+       "o": [
+        "regretter (quelqu'un) / manquer",
+        "jeter moins",
+        "échouer",
+        "mettre de côté"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Le DNI est…",
+       "o": [
+        "la carte d'identité espagnole",
+        "un billet de train",
+        "un passeport",
+        "un visa"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« emigrar » veut dire…",
+       "o": [
+        "émigrer",
+        "émerger",
+        "immigrer ici",
+        "émettre"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « El verano pasado ___ a Málaga. » (yo, ir)",
+       "o": [
+        "fui",
+        "iba",
+        "voy",
+        "iré"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "Comment s'appellent les hôtels publics installés dans des monuments historiques en Espagne ?",
+       "o": [
+        "los paradores",
+        "los hostales",
+        "los campings",
+        "los albergues"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Cuenta un viaje inolvidable.",
+      "¿Por qué las personas dejan su país?",
+      "Imagina que vives un año en un país hispano: ¿qué echarías de menos?"
+     ],
+     "culture": [
+      "Entre la fin du XIXe et le milieu du XXe siècle, des millions d’Espagnols ont émigré vers l’Argentine, Cuba ou le Mexique.",
+      "Les paradores sont des hôtels publics installés dans des châteaux, monastères et palais historiques d’Espagne.",
+      "En Espagne, la carte d’identité s’appelle le DNI (Documento Nacional de Identidad)."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "titre": "Langages et médias",
+   "objets": [
+    "Des moyens d’information multiples",
+    "Les médias au service d’une cause",
+    "À la découverte du dessin de presse"
+   ],
+   "themes": [
     {
-     "q": "« me gustaría » veut dire…",
-     "o": [
-      "j'aimerais",
-      "j'aime",
-      "j'ai aimé",
-      "j'aimerai"
+     "id": "las-opiniones",
+     "titre": "Opinar y debatir",
+     "objet": "Des moyens d’information multiples · Débattre",
+     "relu": false,
+     "vocab": [
+      [
+       "creo que",
+       "je crois que"
+      ],
+      [
+       "pienso que",
+       "je pense que"
+      ],
+      [
+       "en mi opinión",
+       "à mon avis"
+      ],
+      [
+       "me parece que",
+       "il me semble que"
+      ],
+      [
+       "estoy de acuerdo",
+       "je suis d'accord"
+      ],
+      [
+       "no estoy de acuerdo",
+       "je ne suis pas d'accord"
+      ],
+      [
+       "me gusta",
+       "j'aime"
+      ],
+      [
+       "me encanta",
+       "j'adore"
+      ],
+      [
+       "odio",
+       "je déteste"
+      ],
+      [
+       "prefiero",
+       "je préfère"
+      ],
+      [
+       "es importante",
+       "c'est important"
+      ],
+      [
+       "porque",
+       "parce que"
+      ],
+      [
+       "además",
+       "de plus"
+      ],
+      [
+       "sin embargo",
+       "cependant"
+      ],
+      [
+       "por un lado",
+       "d'un côté"
+      ],
+      [
+       "por otro lado",
+       "d'un autre côté"
+      ]
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
+     "phrases": [
+      "Creo que el deporte es muy importante.",
+      "En mi opinión, los deberes son útiles.",
+      "No estoy de acuerdo porque es demasiado caro.",
+      "Por un lado es divertido; por otro lado, es peligroso."
+     ],
+     "quiz": [
+      {
+       "q": "« je pense que » se dit…",
+       "o": [
+        "pienso que",
+        "creo que",
+        "me parece que",
+        "prefiero que"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« sin embargo » veut dire…",
+       "o": [
+        "cependant",
+        "de plus",
+        "parce que",
+        "d'un côté"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« à mon avis » se dit…",
+       "o": [
+        "en mi opinión",
+        "me gusta",
+        "estoy de acuerdo",
+        "por un lado"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« Estoy de acuerdo » veut dire…",
+       "o": [
+        "Je suis d'accord",
+        "Je ne suis pas d'accord",
+        "Je préfère",
+        "Il me semble"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« parce que » se dit…",
+       "o": [
+        "porque",
+        "por qué",
+        "para que",
+        "aunque"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« de plus » se dit…",
+       "o": [
+        "además",
+        "sin embargo",
+        "porque",
+        "entonces"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Me ___ los videojuegos. »",
+       "o": [
+        "encantan",
+        "encanta",
+        "encanto",
+        "encantas"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "Complète : « No creo que ___ verdad. »",
+       "o": [
+        "sea",
+        "es",
+        "está",
+        "ser"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Estás de acuerdo con el móvil en el colegio? Justifica tu respuesta.",
+      "Da tu opinión sobre los deberes.",
+      "¿Prefieres el cine o los videojuegos? ¿Por qué?",
+      "Debate: ¿el uniforme escolar es una buena idea?"
+     ],
+     "culture": [
+      "El País et El Mundo sont deux grands quotidiens nationaux espagnols ; le journal télévisé s’appelle el telediario.",
+      "Mafalda, la petite fille qui donne son avis sur le monde, a été créée par le dessinateur argentin Quino en 1964."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "titre": "Formes de l’engagement",
+   "objets": [
+    "Coopérer et aider, c’est aussi s’enrichir",
+    "S’engager pour une cause",
+    "Les artistes engagés"
+   ],
+   "themes": [
     {
-     "q": "« el oficio » veut dire…",
-     "o": [
-      "le métier",
-      "le bureau",
-      "l'office",
-      "le travailleur"
+     "id": "comprometerse",
+     "titre": "Comprometerse",
+     "objet": "S’engager pour une cause · Coopérer et aider",
+     "relu": false,
+     "vocab": [
+      [
+       "comprometerse",
+       "s'engager"
+      ],
+      [
+       "luchar",
+       "lutter"
+      ],
+      [
+       "ayudar",
+       "aider"
+      ],
+      [
+       "ser voluntario",
+       "être bénévole"
+      ],
+      [
+       "apuntarse a",
+       "s'inscrire à"
+      ],
+      [
+       "proteger",
+       "protéger"
+      ],
+      [
+       "dialogar",
+       "dialoguer"
+      ],
+      [
+       "la causa",
+       "la cause"
+      ],
+      [
+       "los derechos",
+       "les droits"
+      ],
+      [
+       "la libertad",
+       "la liberté"
+      ],
+      [
+       "la igualdad",
+       "l'égalité"
+      ],
+      [
+       "la solidaridad",
+       "la solidarité"
+      ],
+      [
+       "la ONG",
+       "l'ONG"
+      ],
+      [
+       "sensibilizar",
+       "sensibiliser"
+      ],
+      [
+       "el reto",
+       "le défi"
+      ],
+      [
+       "convencer",
+       "convaincre"
+      ]
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
+     "phrases": [
+      "Me apunté a una asociación para ayudar.",
+      "Hay que luchar por la igualdad.",
+      "Rigoberta Menchú lucha por los derechos de los indígenas.",
+      "Es necesario proteger el planeta."
+     ],
+     "quiz": [
+      {
+       "q": "« être bénévole » se dit…",
+       "o": [
+        "ser voluntario",
+        "ser benévolo",
+        "estar voluntario",
+        "hacer voluntad"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« luchar » veut dire…",
+       "o": [
+        "lutter",
+        "lécher",
+        "allumer",
+        "lâcher"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el reto » veut dire…",
+       "o": [
+        "le défi",
+        "le retour",
+        "le reste",
+        "le retard"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Rigoberta Menchú, prix Nobel de la paix 1992, est…",
+       "o": [
+        "guatemalteca",
+        "mexicana",
+        "argentina",
+        "española"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« la igualdad » veut dire…",
+       "o": [
+        "l'égalité",
+        "l'église",
+        "l'iguane",
+        "la liberté"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « Es necesario que todos ___ el planeta. »",
+       "o": [
+        "protejan",
+        "protegen",
+        "proteger",
+        "protegían"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Por qué causa te gustaría comprometerte?",
+      "Presenta a una persona hispana comprometida.",
+      "¿Es útil ser voluntario? Justifica."
+     ],
+     "culture": [
+      "Rigoberta Menchú, militante guatémaltèque des droits des peuples autochtones, a reçu le prix Nobel de la paix en 1992.",
+      "Las Cholitas escaladoras sont des femmes aymaras de Bolivie qui escaladent les sommets des Andes en jupe traditionnelle.",
+      "Pendant la guerre civile espagnole (1936-1939), des volontaires du monde entier ont rejoint les Brigades internationales."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "titre": "1492, l’année « admirable » ?",
+   "objets": [
+    "De la reconquista a una nueva conquista",
+    "La « découverte » de l’Amérique",
+    "Un évènement, deux points de vue : ¿Descubrimiento o despojo?"
+   ],
+   "themes": [
     {
-     "q": "« gagner de l'argent » se dit…",
-     "o": [
-      "ganar dinero",
-      "gastar dinero",
-      "ganar tiempo",
-      "perder dinero"
+     "id": "1492",
+     "titre": "1492",
+     "objet": "De la reconquista a una nueva conquista · La « découverte » de l’Amérique",
+     "relu": false,
+     "vocab": [
+      [
+       "el descubrimiento",
+       "la découverte"
+      ],
+      [
+       "la conquista",
+       "la conquête"
+      ],
+      [
+       "la Reconquista",
+       "la Reconquête"
+      ],
+      [
+       "los Reyes Católicos",
+       "les Rois catholiques"
+      ],
+      [
+       "Cristóbal Colón",
+       "Christophe Colomb"
+      ],
+      [
+       "el almirante",
+       "l'amiral"
+      ],
+      [
+       "la carabela",
+       "la caravelle"
+      ],
+      [
+       "navegar",
+       "naviguer"
+      ],
+      [
+       "desembarcar",
+       "débarquer"
+      ],
+      [
+       "el Nuevo Mundo",
+       "le Nouveau Monde"
+      ],
+      [
+       "los indígenas",
+       "les peuples autochtones"
+      ],
+      [
+       "el encuentro",
+       "la rencontre"
+      ],
+      [
+       "el enfrentamiento",
+       "l'affrontement"
+      ],
+      [
+       "la ruta",
+       "la route"
+      ],
+      [
+       "el oro",
+       "l'or"
+      ],
+      [
+       "el despojo",
+       "la spoliation"
+      ]
      ],
-     "a": 0,
-     "diff": "bronce"
-    },
-    {
-     "q": "Futur de « vivir » (yo) :",
-     "o": [
-      "viviré",
-      "vivo",
-      "viví",
-      "vivía"
+     "phrases": [
+      "En 1492 los Reyes Católicos conquistaron Granada.",
+      "Cristóbal Colón salió del puerto de Palos con tres carabelas.",
+      "El 12 de octubre de 1492 desembarcó en Guanahani.",
+      "¿Descubrimiento o despojo?"
      ],
-     "a": 0,
-     "diff": "plata"
-    },
-    {
-     "q": "Complète : « Algún día ___ por América. » (yo)",
-     "o": [
-      "viajaré",
-      "viajé",
-      "viajaba",
-      "viajar"
+     "quiz": [
+      {
+       "q": "Comment s'appelaient les trois navires de Colomb ?",
+       "o": [
+        "la Pinta, la Niña y la Santa María",
+        "la Pinta, la Lola y la Santa Ana",
+        "la Niña, la Reina y la Granada",
+        "la Isabel, la Juana y la Fernanda"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Quelle ville les Rois catholiques prennent-ils en janvier 1492 ?",
+       "o": [
+        "Granada",
+        "Sevilla",
+        "Toledo",
+        "Córdoba"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Colomb débarque en Amérique le…",
+       "o": [
+        "12 de octubre de 1492",
+        "2 de enero de 1492",
+        "3 de agosto de 1492",
+        "25 de diciembre de 1492"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« desembarcar » veut dire…",
+       "o": [
+        "débarquer",
+        "embarquer",
+        "déballer",
+        "débarrasser"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el almirante » veut dire…",
+       "o": [
+        "l'amiral",
+        "l'admirateur",
+        "l'aimant",
+        "le marin"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Colón ___ del puerto de Palos en 1492. »",
+       "o": [
+        "salió",
+        "sale",
+        "saldrá",
+        "salía"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
      ],
-     "a": 0,
-     "diff": "plata"
-    },
-    {
-     "q": "Complète : « Si estudio, ___ ingeniero. »",
-     "o": [
-      "seré",
-      "soy",
-      "fui",
-      "era"
+     "parole": [
+      "¿1492 es un descubrimiento o una conquista? Justifica.",
+      "Cuenta el viaje de Colón en cinco frases.",
+      "Imagina el encuentro desde el punto de vista de un taíno."
      ],
-     "a": 0,
-     "diff": "oro"
-    },
-    {
-     "q": "« à l'étranger » se dit…",
-     "o": [
-      "en el extranjero",
-      "en el extraño",
-      "fuera del país",
-      "en la extranjera"
-     ],
-     "a": 0,
-     "diff": "oro"
+     "culture": [
+      "Le 2 janvier 1492, les Rois catholiques prennent Grenade : c’est la fin d’al-Ándalus.",
+      "Le 3 août 1492, Christophe Colomb part du port de Palos avec trois navires : la Pinta, la Niña et la Santa María.",
+      "Le 12 octobre 1492, il débarque sur l’île de Guanahani, aux Bahamas ; il croit être arrivé en Asie.",
+      "La même année, Antonio de Nebrija publie la première grammaire de la langue castillane.",
+      "Les Vikings de Leif Erikson avaient déjà atteint l’Amérique du Nord vers l’an 1000."
+     ]
     }
    ],
-   "parole": [
-    "¿Qué oficio te gustaría hacer? ¿Por qué?",
-    "Imagina tu vida dentro de diez años.",
-    "¿Dónde vivirás en el futuro?",
-    "¿Es más importante ganar dinero o ser feliz?"
-   ]
+   "obligatoire": true
   }
+ ],
+ "grammaire": [
+  "Passé simple : réguliers et tener, ir, ser, estar, hacer",
+  "Imparfait et passé simple pour raconter",
+  "Passé composé : haber + participe",
+  "Futur simple : réguliers et irréguliers courants",
+  "Présent du subjonctif : es importante que, para que, cuando + subjonctif",
+  "Enclise : infinitif, gérondif, impératif",
+  "Obligation : hay que / tener que",
+  "Voix passive",
+  "Lo + adjectif : lo interesante, lo sorprendente",
+  "Apocope et diminutifs -ito / -illo",
+  "Faux-amis et mots proches : crear/creer, sentarse/sentirse"
  ]
 }

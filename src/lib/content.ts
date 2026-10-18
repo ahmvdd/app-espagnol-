@@ -5,15 +5,20 @@ import acts from '../content/activites.json';
 import refranesJson from '../content/refranes.json';
 import sosJson from '../content/sos.json';
 import site from '../content/site.json';
-import type { Activite, Ambiance, Niveau, NiveauFile, Refran, Situation, Theme } from '../content/types';
+import type { Activite, Ambiance, Axe, Niveau, NiveauFile, Refran, Situation, Theme } from '../content/types';
 
-export type { Activite, Ambiance, Niveau, Theme };
+export type { Activite, Ambiance, Axe, Niveau, Theme };
 
 /** Les JSON sont vérifiés au build par scripts/check-content.mjs. */
 const FILES = { '5e': c5, '4e': c4, '3e': c3 } as unknown as Record<Niveau, NiveauFile>;
 
 export const NIVEAUX: Niveau[] = ['5e', '4e', '3e'];
-export const THEMES = Object.fromEntries(NIVEAUX.map(n => [n, FILES[n].themes])) as Record<Niveau, Theme[]>;
+export const AXES = Object.fromEntries(NIVEAUX.map(n => [n, FILES[n].axes])) as Record<Niveau, Axe[]>;
+/** Tous les thèmes d'un niveau, dans l'ordre des axes. */
+export const THEMES = Object.fromEntries(NIVEAUX.map(n => [n, FILES[n].axes.flatMap(a => a.themes)])) as Record<Niveau, Theme[]>;
+export const CECRL = Object.fromEntries(NIVEAUX.map(n => [n, FILES[n].cecrl])) as Record<Niveau, string>;
+export const GRAMMAIRE = Object.fromEntries(NIVEAUX.map(n => [n, FILES[n].grammaire])) as Record<Niveau, string[]>;
+export const axeDe = (n: Niveau, themeId: string) => AXES[n].find(a => a.themes.some(t => t.id === themeId));
 export const COULEUR = Object.fromEntries(NIVEAUX.map(n => [n, FILES[n].couleur])) as Record<Niveau, string>;
 export const ACTIVITES = acts as Activite[];
 export const SOS = sosJson as Situation[];

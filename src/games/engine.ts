@@ -39,7 +39,7 @@ export const EQUIPOS = [
 export function themeTous(n: Niveau): Theme {
   const all = THEMES[n];
   return {
-    id: 'tous', titre: 'Tous les thèmes', relu: all.every(t => t.relu),
+    id: 'tous', titre: 'Tous les thèmes', objet: '', relu: all.every(t => t.relu), culture: all.flatMap(t => t.culture),
     vocab: all.flatMap(t => t.vocab), phrases: all.flatMap(t => t.phrases),
     quiz: all.flatMap(t => t.quiz), parole: all.flatMap(t => t.parole)
   };

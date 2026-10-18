@@ -21,13 +21,26 @@ for (const n of NIVEAUX) {
   if (!c) continue;
   check(c.niveau === n, `${f} : "niveau" doit valoir "${n}"`);
   check(/^#[0-9a-f]{6}$/i.test(c.couleur), `${f} : "couleur" doit être une couleur #RRGGBB`);
-  check(Array.isArray(c.themes) && c.themes.length > 0, `${f} : au moins un thème`);
+  check(['A1', 'A1+', 'A2', 'A2+', 'B1'].includes(c.cecrl), `${f} : "cecrl" invalide`);
+  check(Array.isArray(c.grammaire) && c.grammaire.every(isStr), `${f} : "grammaire" doit être une liste de textes`);
+  check(Array.isArray(c.axes) && c.axes.length === 6, `${f} : 6 axes attendus (programme officiel)`);
+  for (const [k, a] of (c.axes ?? []).entries()) {
+    check(a.n === k + 1 && isStr(a.titre), `${f} › axe ${k + 1} : numéro ou titre invalide`);
+    check(Array.isArray(a.objets) && a.objets.length && a.objets.every(isStr), `${f} › axe ${k + 1} : objets d'étude manquants`);
+    check(Array.isArray(a.themes), `${f} › axe ${k + 1} : "themes" doit être une liste`);
+  }
+  const axe6 = c.axes?.[5];
+  check(axe6?.obligatoire === true && axe6.themes.length > 0, `${f} : l'axe 6 est obligatoire et doit avoir au moins un thème`);
+  c.themes = (c.axes ?? []).flatMap(a => a.themes ?? []);
+  check(c.themes.length > 0, `${f} : au moins un thème`);
   const ids = new Set();
   for (const [i, t] of (c.themes ?? []).entries()) {
     const at = `${f} › thème ${i + 1} (${t.id ?? '?'})`;
     check(isStr(t.id) && /^[a-z0-9-]+$/.test(t.id), `${at} : "id" en minuscules et tirets`);
     check(!ids.has(t.id), `${at} : id en double`); ids.add(t.id);
     check(isStr(t.titre), `${at} : "titre" manquant`);
+    check(isStr(t.objet), `${at} : "objet" (objet d'étude) manquant`);
+    check(Array.isArray(t.culture) && t.culture.length > 0 && t.culture.every(isStr), `${at} : au moins un repère dans "culture"`);
     check(typeof t.relu === 'boolean', `${at} : "relu" doit valoir true ou false`);
     if (t.relu === false) warnings.push(`${at} : espagnol à relire`);
     check(Array.isArray(t.vocab) && t.vocab.length >= 4, `${at} : au moins 4 mots dans "vocab"`);
