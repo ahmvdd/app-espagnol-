@@ -11,8 +11,12 @@ export function start(app: HTMLElement): void {
     const path = location.hash.replace(/^#/, '') || '/';
     const base = '/' + (path.split('/')[1] ?? '').split('?')[0];
     const view = routes.get(path) ?? routes.get(base) ?? routes.get('/')!;
-    document.querySelectorAll('header nav a').forEach(a =>
-      a.setAttribute('aria-current', a.getAttribute('href') === '#' + base ? 'page' : 'false'));
+    const courant = '#' + path.split('?')[0];
+    document.querySelectorAll('header nav a').forEach(a => {
+      const href = a.getAttribute('href')!;
+      const actif = href === '#' + base || (href !== '#/' && courant.startsWith(href));
+      a.setAttribute('aria-current', actif ? 'page' : 'false');
+    });
     app.innerHTML = '';
     cleanup = view(app);
     window.scrollTo(0, 0);

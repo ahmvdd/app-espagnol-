@@ -431,3 +431,8 @@ h2.h3{font-size:1.17rem;margin:0}
 #qr-video{width:100%;border-radius:12px;background:#000}
 .pause-mot{font-size:clamp(3rem,min(11vw,18vh),8rem)}
 .taboo-carte.cachee{border-style:dashed;border-color:var(--line)}
+
+/* Menu : niveaux */
+nav a.niv{border:2px solid var(--c);padding:.45rem .7rem;color:inherit}
+nav a.niv[aria-current="page"]{background:var(--c);color:#fff}
+nav a.n5{--c:#1E7045}nav a.n4{--c:#A84A17}nav a.n3{--c:#6B3391}
