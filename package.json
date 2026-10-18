@@ -8,7 +8,8 @@
     "build": "node scripts/check-content.mjs && tsc && vite build",
     "preview": "vite preview --host",
     "test": "vitest run",
-    "check": "node scripts/check-content.mjs"
+    "check": "node scripts/check-content.mjs",
+    "deploy": "npm run build && npx -y wrangler@4.146.0 deploy"
   },
   "devDependencies": {
     "@types/qrcode": "^1.5.6",
