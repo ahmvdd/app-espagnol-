@@ -201,6 +201,22 @@
 
 ---
 
+## Version 2 — retours de Souhaïla (docs : « Retour version 1 site »)
+- [x] 1. Mimes de verbes : seulement le verbe espagnol (ni traduction ni emoji)
+- [x] 2. Simón dice : seulement la consigne espagnole
+- [x] Audit « réponse affichée avec la question » : Taboo corrigé (carte cachée + révéler), les autres jeux étaient déjà conformes
+- [x] 3. Cartes 5e / 4e / 3e : aussi dans le menu
+- [x] 4. Prénom + dédicace : un seul bloc dans Profe → Réglages, valeurs livrées dans `src/content/site.json` (à remplir avec les textes de Souhaïla)
+- [x] 5. Quatre rituels du jour (palabra, fecha y tiempo, ¿qué tal?, pregunta del día), agrandissables ; citation retirée
+- [x] 6. Pages par niveau : programme par chapitres (= thèmes, id stables, ajustables dans `src/content/{5e,4e,3e}.json`), notions, cours / fiche / corrigé imprimables, liens vers les jeux
+- [x] 7. Suivi des chapitres par classe (Profe → Suivi)
+- [x] 8. Mini-bilan de séance (accueil → Bilan de séance, ou Profe)
+- [x] 9. Carnet de bord (Profe → Carnet), inclus dans la sauvegarde fichier
+- [x] 10. Récompenses : diplôme + titres, mots de félicitations, trophée de classe dans La Vuelta
+- [x] 11. Rubrique Culture : carte, 10 fêtes, 7 photos à décrire (Wikimedia Commons, crédits dans Aide)
+- [ ] Lien privé (Cloudflare Access) avant d'envoyer la v2
+- [ ] En attente de Souhaïla : prénom de la prof, dédicace, liste de chapitres du manuel, relecture de l'espagnol
+
 ## Phase 3 — Sur mesure · 23 novembre au 4 décembre
 
 - [ ] **T3.1 Test sur place, jour 1** — PC de la salle : le profil est-il effacé à la déconnexion ? La voix espagnole est-elle présente ? Le site est-il bloqué ? Le micro fonctionne-t-il ? Le TBI est-il tactile ? → noter les résultats ici.
