@@ -11,9 +11,14 @@ const MAX_SNAPS = 10;
 const REMIND_AFTER_DAYS = 7;
 
 export type Eleve = { id: string; prenom: string };
-export type Classe = { id: string; nom: string; niveau: '5e' | '4e' | '3e'; eleves: Eleve[]; incompatibles: [string, string][] };
+export type Classe = {
+  id: string; nom: string; niveau: '5e' | '4e' | '3e'; eleves: Eleve[]; incompatibles: [string, string][];
+  /** Rôles tournants : jour de la dernière séance et position dans la rotation. */
+  roles?: { jour: string; tour: number };
+};
+export type Plan = { id: string; classeId: string; nom: string; disposition: 'rangees' | 'ilots' | 'u'; places: (string | null)[] };
 export type Reglages = { muet: boolean; volume: number; police: 'standard' | 'dyslexie'; prenomProf: string; accent?: 'es-ES' | 'es-MX' };
-export type Data = { classes: Classe[]; plans: unknown[]; reglages: Reglages };
+export type Data = { classes: Classe[]; plans: Plan[]; reglages: Reglages };
 export type Snapshot = { date: number; data: string };
 
 export const EMPTY: Data = {
