@@ -1,15 +1,61 @@
 import c5 from '../content/5e.json';
 import c4 from '../content/4e.json';
 import c3 from '../content/3e.json';
+import acts from '../content/activites.json';
+import refranesJson from '../content/refranes.json';
+import sosJson from '../content/sos.json';
+import site from '../content/site.json';
+import type { Activite, Ambiance, Niveau, NiveauFile, Refran, Situation, Theme } from '../content/types';
 
-export type Niveau = '5e' | '4e' | '3e';
-export type Theme = { id: string; titre: string; vocab: [string, string][] };
+export type { Activite, Ambiance, Niveau, Theme };
+
+/** Les JSON sont vérifiés au build par scripts/check-content.mjs. */
+const FILES = { '5e': c5, '4e': c4, '3e': c3 } as unknown as Record<Niveau, NiveauFile>;
 
 export const NIVEAUX: Niveau[] = ['5e', '4e', '3e'];
-export const THEMES = { '5e': c5.themes, '4e': c4.themes, '3e': c3.themes } as unknown as Record<Niveau, Theme[]>;
+export const THEMES = Object.fromEntries(NIVEAUX.map(n => [n, FILES[n].themes])) as Record<Niveau, Theme[]>;
+export const COULEUR = Object.fromEntries(NIVEAUX.map(n => [n, FILES[n].couleur])) as Record<Niveau, string>;
+export const ACTIVITES = acts as Activite[];
+export const SOS = sosJson as Situation[];
+export const REFRANES = refranesJson as Refran[];
+export const DEDICACE: string = site.dedicace;
+
+export const DUREES = [5, 10, 15, 20, 30, 50];
+export const AMBIANCES: { id: Ambiance; label: string; icon: string }[] = [
+  { id: 'calme', label: 'Calme', icon: '🌿' },
+  { id: 'normale', label: 'Normale', icon: '🙂' },
+  { id: 'agitee', label: 'Agitée', icon: '⚡' }
+];
+
+/** Numéro du jour local : même tirage pour toute la journée. */
+const dayIndex = (d = new Date()) => Math.floor((d.getTime() - d.getTimezoneOffset() * 6e4) / 864e5);
 
 export function palabraDelDia(d = new Date()) {
   const all = NIVEAUX.flatMap(n => THEMES[n].flatMap(t => t.vocab.map(([es, fr]) => ({ es, fr, niveau: n, theme: t.titre }))));
-  const day = Math.floor((d.getTime() - d.getTimezoneOffset() * 6e4) / 864e5);
-  return all[day % all.length];
+  return all[dayIndex(d) % all.length];
+}
+
+export const refranDelDia = (d = new Date()) => REFRANES[(dayIndex(d) * 7) % REFRANES.length];
+
+/** Activités qui tiennent dans le temps donné, la plus proche de la durée d'abord. */
+export function activitesPour(minutes: number, niveau: Niveau, ambiance: Ambiance): Activite[] {
+  return ACTIVITES
+    .filter(a => a.niveaux.includes(niveau) && a.ambiance === ambiance && a.duree <= minutes)
+    .sort((a, b) => b.duree - a.duree);
+}
+
+export const lienActivite = (a: Activite, n: Niveau) => a.outil?.replace('{n}', n);
+
+const LAST_THEME = 'rincon.dernierTheme';
+export function dernierTheme(n: Niveau): Theme {
+  let id = '';
+  try { id = JSON.parse(localStorage.getItem(LAST_THEME) || '{}')[n] ?? ''; } catch { /* ignore */ }
+  return THEMES[n].find(t => t.id === id) ?? THEMES[n][0];
+}
+export function rememberTheme(n: Niveau, id: string): void {
+  try {
+    const m = JSON.parse(localStorage.getItem(LAST_THEME) || '{}');
+    m[n] = id;
+    localStorage.setItem(LAST_THEME, JSON.stringify(m));
+  } catch { /* ignore */ }
 }
