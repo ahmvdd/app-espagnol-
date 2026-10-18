@@ -35,8 +35,8 @@ export function loadData(): Data {
   return structuredClone(EMPTY);
 }
 
-/** Les points de retour ne concernent que les classes et plans, pas les réglages (muet, accent...). */
-const eleveData = (d: Data) => JSON.stringify([d.classes, d.plans]);
+/** Les points de retour ne concernent que les classes, pas les plans ni les réglages (muet, accent...). */
+const eleveData = (d: Data) => JSON.stringify(d.classes);
 
 /** Sauvegarde + point de retour automatique (l'état précédent est conservé). */
 export function saveData(data: Data): boolean {

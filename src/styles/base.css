@@ -343,3 +343,25 @@ footer a{color:inherit}
 .culture li{margin:.35rem 0}
 .grammaire{margin:1rem 0}
 .grammaire summary{min-height:44px}
+
+/* Plan de classe */
+.plan-barre{align-items:flex-end;margin-bottom:.5rem}
+.plan{display:grid;grid-template-columns:14rem 1fr;gap:1rem;align-items:start}
+@media (max-width:820px){.plan{grid-template-columns:1fr}}
+.non-places h3{margin:0 0 .4rem}
+.non-places .chip{touch-action:none}
+.salle{position:relative;aspect-ratio:16/10;border:2px solid var(--line);border-radius:14px;background:var(--surface);min-width:0}
+.tableau{position:absolute;top:2%;left:30%;width:40%;height:6%;display:grid;place-items:center;background:var(--ink);color:var(--paper);border-radius:6px;font-weight:700;font-size:.85rem}
+.salle .table{position:absolute;background:var(--tile);border-radius:8px}
+.place{position:absolute;transform:translate(-50%,-50%);width:9%;height:9%;min-height:28px;border:2px dashed var(--muted);border-radius:8px;background:var(--surface);font:700 clamp(.6rem,1.1vw,.9rem)/1.1 var(--body);cursor:pointer;padding:0 2px;overflow:hidden;text-overflow:ellipsis;touch-action:none;color:var(--ink)}
+.place.pleine{border:2px solid var(--cobalt);background:var(--surface)}
+.place.sel,.chip[aria-pressed="true"]{outline:3px solid var(--ochre);outline-offset:2px}
+.ghost-chip{position:fixed;transform:translate(-50%,-50%);pointer-events:none;z-index:40;background:var(--cobalt);color:var(--on-cobalt);padding:.4rem .8rem;border-radius:999px;font-weight:700;box-shadow:0 6px 20px rgb(0 0 0 / .3)}
+@media print{
+  .print-titre{font:700 16pt sans-serif;margin:0 0 6mm}
+  .print-area .salle{border:2px solid #000;width:100%;background:#fff}
+  .print-area .place{border:1.5px solid #000;color:#000;background:#fff;font-size:9pt}
+  .print-area .salle .table{background:#eee}
+  .print-area .tableau{background:#000;color:#fff}
+}
+.salle.u .place{width:6.6%;height:6.4%;font-size:clamp(.55rem,.95vw,.8rem)}
