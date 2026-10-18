@@ -4,6 +4,8 @@ import { ESPANA, AMERICA, type LonLat } from '../lib/geo';
 import { confirmModal } from '../lib/modal';
 import { chime, beep } from '../lib/sound';
 import { $, $$, esc, toast } from '../lib/ui';
+import { apercu } from '../lib/documents';
+import { afficheTrophee } from './recompenses';
 
 type Ruta = {
   id: string; nom: string;
@@ -115,10 +117,36 @@ const vuelta: Tool = el => {
       const apres = etape(t.score);
       if (apres > avant) {
         chime();
-        toast(apres === ruta().villes.length - 1 ? `🏁 ¡Equipo ${t.nom} llega a la meta!` : `¡Equipo ${t.nom} llega a ${ruta().villes[apres][0]}!`);
         render(apres);
+        trophee(t, ruta().villes[apres][0], apres === ruta().villes.length - 1);
       } else { beep(880, 0.1); render(); }
     });
+  };
+
+  /** Trophée de classe : animation à chaque étape, affiche imprimable. */
+  const trophee = (t: Team, ville: string, meta: boolean) => {
+    const z = document.createElement('div');
+    z.className = 'trophee-plein';
+    z.setAttribute('role', 'dialog');
+    z.setAttribute('aria-modal', 'true');
+    z.setAttribute('aria-label', 'Trophée');
+    z.innerHTML = `
+      <div class="trophee-boite">
+        <div class="trophee-ico" aria-hidden="true">${meta ? '🏆' : '🥇'}</div>
+        <p class="huge" lang="es">${meta ? '¡Campeones!' : '¡Etapa conseguida!'}</p>
+        <p class="big" lang="es">${t.icon} Equipo ${esc(t.nom)} ${meta ? 'llega a la meta' : `llega a ${esc(ville)}`}</p>
+        <div class="row wrap center-row">
+          <button class="btn" data-a="print">🖨 Imprimer l’affiche</button>
+          <button class="btn ghost" data-a="ok">Continuer</button>
+        </div>
+      </div>`;
+    document.body.append(z);
+    const fermer = () => { z.remove(); removeEventListener('keydown', key, true); };
+    const key = (e: KeyboardEvent) => { if (e.key === 'Escape') { e.stopPropagation(); fermer(); } };
+    addEventListener('keydown', key, true);
+    $('[data-a="ok"]', z).onclick = fermer;
+    $('[data-a="print"]', z).onclick = () => { fermer(); apercu('Affiche de classe', afficheTrophee(t.nom, ville, meta)); };
+    $<HTMLButtonElement>('[data-a="ok"]', z).focus();
   };
 
   render();
