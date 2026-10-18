@@ -8,6 +8,7 @@ import pausas from './pausas';
 import roles from './roles';
 import consignas from './consignas';
 import sonometro from './sonometro';
+import rotations from './rotations';
 
 export type Tool = (el: HTMLElement, params: URLSearchParams) => void | (() => void);
 export type ToolInfo = { id: string; nom: string; es: string; desc: string; icon: string; run: Tool };
@@ -22,6 +23,7 @@ export const TOOLS: ToolInfo[] = [
   { id: 'rituel', nom: 'Rituel d’entrée', es: 'El ritual', desc: 'Consigne, 3 minutes, mini-défi', icon: '🚪', run: rituel },
   { id: 'pauses', nom: 'Pauses énergie', es: 'Pausas activas', desc: 'Simón dice, mimes, étirements', icon: '🤸', run: pausas },
   { id: 'roles', nom: 'Rôles tournants', es: 'Los roles', desc: 'Secrétaire, gardien du temps…', icon: '🎖', run: roles },
+  { id: 'rotations', nom: 'Travail de groupe', es: 'Rotaciones', desc: 'Speed meeting, world café, classe puzzle', icon: '🔁', run: rotations },
   { id: 'consignes', nom: 'Consignes en images', es: 'Las consignas', desc: 'Pictos bilingues à projeter', icon: '🖼', run: consignas }
 ];
 
