@@ -11,7 +11,7 @@ export function start(app: HTMLElement): void {
     const path = location.hash.replace(/^#/, '') || '/';
     const base = '/' + (path.split('/')[1] ?? '');
     const view = routes.get(path) ?? routes.get(base) ?? routes.get('/')!;
-    document.querySelectorAll('nav a').forEach(a =>
+    document.querySelectorAll('header nav a').forEach(a =>
       a.setAttribute('aria-current', a.getAttribute('href') === '#' + base ? 'page' : 'false'));
     app.innerHTML = '';
     cleanup = view(app);
