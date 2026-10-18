@@ -6,7 +6,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg', 'apple-touch-icon.png'],
-      workbox: { globPatterns: ['**/*.{js,css,html,svg,png,woff2,json,mp3}'] },
+      workbox: { globPatterns: ['**/*.{js,css,html,svg,png,jpg,woff2,json,mp3}'], maximumFileSizeToCacheInBytes: 3_000_000 },
       manifest: {
         name: 'El Rincón de la Profe',
         short_name: 'Rincón',

@@ -1,0 +1,282 @@
+[
+ {
+  "id": "leones",
+  "fichier": "cultura/leones.jpg",
+  "lieu": "El Patio de los Leones, la Alhambra (Granada)",
+  "pays": "España",
+  "quoi": "Une fontaine du XIVe siècle portée par douze lions, au cœur des palais nasrides de l’Alhambra.",
+  "preguntas": [
+   "¿Qué animales ves?",
+   "¿Cuántos leones hay?",
+   "¿Qué hay en el centro de la foto?",
+   "¿Te parece un lugar antiguo o moderno? ¿Por qué?"
+  ],
+  "vocab": [
+   [
+    "la fuente",
+    "la fontaine"
+   ],
+   [
+    "el león",
+    "le lion"
+   ],
+   [
+    "las columnas",
+    "les colonnes"
+   ],
+   [
+    "el agua",
+    "l'eau"
+   ],
+   [
+    "el palacio",
+    "le palais"
+   ]
+  ],
+  "credit": {
+   "auteur": "Jebulon",
+   "licence": "CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Fountain_patio_de_los_Leones_Alhambra_Granada_Spain.jpg"
+  }
+ },
+ {
+  "id": "altar",
+  "fichier": "cultura/altar.jpg",
+  "lieu": "Un altar de muertos",
+  "pays": "México",
+  "quoi": "Un autel du Día de Muertos avec des fleurs de cempasúchil, des bougies, de la nourriture et du papel picado.",
+  "preguntas": [
+   "¿Qué colores ves?",
+   "¿Qué hay en la mesa?",
+   "¿Qué hacen las personas?",
+   "¿Para qué es este altar?"
+  ],
+  "vocab": [
+   [
+    "el altar",
+    "l'autel"
+   ],
+   [
+    "las flores",
+    "les fleurs"
+   ],
+   [
+    "las velas",
+    "les bougies"
+   ],
+   [
+    "la comida",
+    "la nourriture"
+   ],
+   [
+    "el papel picado",
+    "le papier découpé"
+   ]
+  ],
+  "credit": {
+   "auteur": "Carolinadiazv",
+   "licence": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Altar_de_muertos_en_perspectiva.jpg"
+  }
+ },
+ {
+  "id": "ninot",
+  "fichier": "cultura/ninot.jpg",
+  "lieu": "Un ninot de las Fallas (Valencia)",
+  "pays": "España",
+  "quoi": "Une figurine (ninot) des Fallas de Valence : elle sera peut-être brûlée le 19 mars.",
+  "preguntas": [
+   "¿Cómo es el personaje?",
+   "¿Qué colores tiene?",
+   "¿Qué lleva en la cabeza?",
+   "¿Te gusta? ¿Por qué?"
+  ],
+  "vocab": [
+   [
+    "el muñeco",
+    "la figurine"
+   ],
+   [
+    "el sombrero",
+    "le chapeau"
+   ],
+   [
+    "la nariz",
+    "le nez"
+   ],
+   [
+    "divertido",
+    "drôle"
+   ],
+   [
+    "colorido",
+    "coloré"
+   ]
+  ],
+  "credit": {
+   "auteur": "Xavier Serra",
+   "licence": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ninot_Falla_Exposici%C3%B3_Misser_Masc%C3%B3_2011_Pac%C3%B3_Gisbert.jpg"
+  }
+ },
+ {
+  "id": "feria",
+  "fichier": "cultura/feria.jpg",
+  "lieu": "Una caseta de la Feria de Abril (Sevilla)",
+  "pays": "España",
+  "quoi": "Une caseta, tente rayée de la Feria de Séville, où l’on danse et où l’on se retrouve.",
+  "preguntas": [
+   "¿De qué colores es la caseta?",
+   "¿Qué llevan las personas?",
+   "¿Es de día o de noche?",
+   "¿Qué crees que hacen dentro?"
+  ],
+  "vocab": [
+   [
+    "la caseta",
+    "la tente"
+   ],
+   [
+    "las rayas",
+    "les rayures"
+   ],
+   [
+    "el vestido",
+    "la robe"
+   ],
+   [
+    "los farolillos",
+    "les lampions"
+   ],
+   [
+    "la fiesta",
+    "la fête"
+   ]
+  ],
+  "credit": {
+   "auteur": "Frobles",
+   "licence": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Caseta_de_Radio_Sevilla_en_la_Feria_de_Abril.JPG"
+  }
+ },
+ {
+  "id": "machupicchu",
+  "fichier": "cultura/machupicchu.jpg",
+  "lieu": "Machu Picchu",
+  "pays": "Perú",
+  "quoi": "La cité inca du XVe siècle, dans les Andes, avec le pic du Huayna Picchu derrière.",
+  "preguntas": [
+   "¿Qué ves en el centro de la foto?",
+   "¿Qué hay al fondo?",
+   "¿Cómo es el paisaje?",
+   "¿Te gustaría visitar este lugar? ¿Por qué?"
+  ],
+  "vocab": [
+   [
+    "la montaña",
+    "la montagne"
+   ],
+   [
+    "las ruinas",
+    "les ruines"
+   ],
+   [
+    "las nubes",
+    "les nuages"
+   ],
+   [
+    "al fondo",
+    "au fond"
+   ],
+   [
+    "verde",
+    "vert"
+   ]
+  ],
+  "credit": {
+   "auteur": "Martin St-Amant",
+   "licence": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:80_-_Machu_Picchu_-_Juin_2009_-_edit.2.jpg"
+  }
+ },
+ {
+  "id": "boqueria",
+  "fichier": "cultura/boqueria.jpg",
+  "lieu": "El mercado de la Boquería (Barcelona)",
+  "pays": "España",
+  "quoi": "Un étal de bonbons au marché de la Boquería, sur les Ramblas de Barcelone.",
+  "preguntas": [
+   "¿Qué se vende aquí?",
+   "¿Qué colores ves?",
+   "¿Te gustan los dulces? ¿Cuál prefieres?",
+   "Compara con un mercado de tu ciudad."
+  ],
+  "vocab": [
+   [
+    "el mercado",
+    "le marché"
+   ],
+   [
+    "los caramelos",
+    "les bonbons"
+   ],
+   [
+    "los dulces",
+    "les sucreries"
+   ],
+   [
+    "vender",
+    "vendre"
+   ],
+   [
+    "el puesto",
+    "l'étal"
+   ]
+  ],
+  "credit": {
+   "auteur": "Bernard Gagnon",
+   "licence": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:La_Boqueria,_Barcelona.jpg"
+  }
+ },
+ {
+  "id": "plazamayor",
+  "fichier": "cultura/plazamayor.jpg",
+  "lieu": "La Plaza Mayor de Madrid",
+  "pays": "España",
+  "quoi": "La grande place de Madrid (XVIIe siècle), avec la statue du roi Philippe III au centre.",
+  "preguntas": [
+   "¿Qué hay en el centro de la plaza?",
+   "¿Cómo son los edificios?",
+   "¿Qué tiempo hace?",
+   "¿Hay una plaza así en tu ciudad?"
+  ],
+  "vocab": [
+   [
+    "la plaza",
+    "la place"
+   ],
+   [
+    "la estatua",
+    "la statue"
+   ],
+   [
+    "el edificio",
+    "le bâtiment"
+   ],
+   [
+    "las torres",
+    "les tours"
+   ],
+   [
+    "el cielo",
+    "le ciel"
+   ]
+  ],
+  "credit": {
+   "auteur": "Carlos Delgado",
+   "licence": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Plaza_Mayor_de_Madrid_-_01.jpg"
+  }
+ }
+]

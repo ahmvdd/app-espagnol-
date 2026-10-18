@@ -1,5 +1,6 @@
 import type { View } from '../router';
-import { $ } from '../lib/ui';
+import { $, esc } from '../lib/ui';
+import { CREDITS_PHOTOS } from './cultura';
 
 export const aide: View = el => {
   el.innerHTML = `
@@ -44,6 +45,9 @@ export const aide: View = el => {
         <li>Voix : synthèse vocale de l’appareil (Web Speech API).</li>
         <li>Drapeaux et carte : dessinés en CSS et SVG pour ce site.</li>
         <li>Pictogrammes : emojis du système.</li>
+        <li>Photos (Wikimedia Commons, licences libres, redimensionnées pour le site) :
+          <ul>${CREDITS_PHOTOS.map(c => `<li>${esc(c.lieu)} — ${esc(c.auteur)}, ${esc(c.licence)}, <span class="small">${esc(c.source)}</span></li>`).join('')}</ul></li>
+        <li>Contenus pédagogiques : alignés sur le programme d’espagnol du collège (BO), rédigés pour ce site et à faire relire.</li>
       </ul>
     </section>
 
