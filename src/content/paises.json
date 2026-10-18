@@ -1,0 +1,10 @@
+[
+  { "nom": "España", "drapeau": "linear-gradient(#AA151B 0 25%,#F1BF00 25% 75%,#AA151B 75%)" },
+  { "nom": "México", "drapeau": "linear-gradient(90deg,#006847 0 33.4%,#fff 33.4% 66.6%,#CE1126 66.6%)" },
+  { "nom": "Argentina", "drapeau": "radial-gradient(circle,#F6B40E 0 12%,transparent 13%),linear-gradient(#74ACDF 0 33.4%,#fff 33.4% 66.6%,#74ACDF 66.6%)" },
+  { "nom": "Colombia", "drapeau": "linear-gradient(#FCD116 0 50%,#003893 50% 75%,#CE1126 75%)" },
+  { "nom": "Perú", "drapeau": "linear-gradient(90deg,#D91023 0 33.4%,#fff 33.4% 66.6%,#D91023 66.6%)" },
+  { "nom": "Chile", "drapeau": "linear-gradient(90deg,#0039A6 0 33.4%,#fff 33.4%) 0 0/100% 50% no-repeat,#D52B1E" },
+  { "nom": "Venezuela", "drapeau": "linear-gradient(#FFCC00 0 33.4%,#00247D 33.4% 66.6%,#CF142B 66.6%)" },
+  { "nom": "Bolivia", "drapeau": "linear-gradient(#D52B1E 0 33.4%,#F9E300 33.4% 66.6%,#007934 66.6%)" }
+]
