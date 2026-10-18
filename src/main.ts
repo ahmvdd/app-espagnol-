@@ -20,6 +20,7 @@ import { profe } from './pages/profe';
 import { sos } from './pages/sos';
 import { nivel } from './pages/nivel';
 import { aide } from './pages/aide';
+import { importer } from './pages/importer';
 
 registerSW({ immediate: true });
 requestPersistence();
@@ -59,5 +60,6 @@ route('/juegos', juegos);
 route('/profe', profe);
 route('/sos', sos);
 route('/aide', aide);
+route('/import', importer);
 route('/nivel', nivel); // #/nivel/5e, #/nivel/4e, #/nivel/3e
 start($('#app'));

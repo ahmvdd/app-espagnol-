@@ -422,3 +422,9 @@ footer a{color:inherit}
 .chip.pays[aria-pressed="true"]{background:var(--cobalt);color:var(--on-cobalt);border-color:var(--cobalt)}
 .pin.petit text{display:none}
 .pin.petit.actif text,.pin.petit:hover text{display:inline}
+
+/* Transfert QR */
+.qr-modal{max-width:34rem}
+.qr-box{background:#fff;border-radius:12px;padding:.5rem;max-width:22rem;margin:0 auto}
+.qr-box svg{display:block;width:100%;height:auto}
+#qr-video{width:100%;border-radius:12px;background:#000}

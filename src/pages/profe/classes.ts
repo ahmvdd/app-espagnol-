@@ -2,6 +2,7 @@ import type { Classe } from '../../lib/storage';
 import { state, update, uid } from '../../lib/state';
 import { confirmModal } from '../../lib/modal';
 import { $, $$, esc, toast } from '../../lib/ui';
+import { montrerQr } from './qr';
 
 const NIVEAUX = ['5e', '4e', '3e'] as const;
 
@@ -62,7 +63,10 @@ const classeHTML = (c: Classe) => {
         `<li><span>${esc(name.get(a))} ≠ ${esc(name.get(b))}</span><button class="btn ghost sm" data-inc-rm="${i}">Retirer</button></li>`).join('')}</ul>
     </details>
 
-    <button class="btn ghost sm danger" data-del>Supprimer la classe</button>
+    <div class="row wrap">
+      <button class="btn ghost sm" data-qr ${c.eleves.length ? '' : 'disabled'}>📱 Transférer par QR code</button>
+      <button class="btn ghost sm danger" data-del>Supprimer la classe</button>
+    </div>
   </section>`;
 };
 
@@ -117,6 +121,7 @@ export function renderClasses(el: HTMLElement): void {
         again('summary', 1);
       });
 
+      $('[data-qr]', sec).onclick = () => montrerQr(c);
       $('[data-del]', sec).onclick = async () => {
         const ok = await confirmModal(`Supprimer « ${c.nom || 'Sans nom'} » ?`,
           `${plural(c.eleves.length, 'élève')} seront retirés. Tu pourras revenir en arrière avec « Annuler la dernière modification ».`,

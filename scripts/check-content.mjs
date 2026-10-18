@@ -87,6 +87,18 @@ const ref = read('refranes.json') ?? [];
 check(ref.length >= 7 && ref.every(r => Array.isArray(r) && r.length === 2 && r.every(isStr)), 'refranes.json : liste de paires [espagnol, français]');
 const paises = read('paises.json') ?? [];
 check(paises.length >= 8 && paises.every(p => isStr(p.nom) && isStr(p.drapeau)), 'paises.json : 8 pays avec nom et drapeau');
+const esc = read('escape.json') ?? {};
+for (const n of NIVEAUX) {
+  const e = esc[n], at = `escape.json › ${n}`;
+  check(e && isStr(e.titre) && isStr(e.intro) && Array.isArray(e.enigmes) && e.enigmes.length >= 4 && e.enigmes.length <= 5, `${at} : titre, intro et 4 à 5 énigmes`);
+  for (const [k, q] of (e?.enigmes ?? []).entries())
+    check(isStr(q.q) && q.o?.length === 4 && q.o.every(isStr) && Number.isInteger(q.a) && q.a >= 0 && q.a < 4 && /^\d$/.test(q.chiffre) && isStr(q.indice), `${at} › énigme ${k + 1} invalide`);
+}
+const mundo = read('mundo.json') ?? [];
+check(mundo.length === 21, `mundo.json : 21 pays et territoires attendus (${mundo.length})`);
+for (const p of mundo)
+  check(isStr(p.id) && isStr(p.nom) && isStr(p.capitale) && isStr(p.fete) && isStr(p.accent) && isStr(p.drapeau)
+    && typeof p.lon === 'number' && typeof p.lat === 'number' && p.mots?.length === 3 && p.mots.every(m => m.length === 2 && m.every(isStr)), `mundo.json › ${p.id ?? '?'} : fiche incomplète`);
 const site = read('site.json');
 check(site && typeof site.dedicace === 'string', 'site.json : "dedicace" doit être un texte (vide possible)');
 

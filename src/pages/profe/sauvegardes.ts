@@ -3,6 +3,7 @@ import { state, update, replaceState } from '../../lib/state';
 import { confirmModal } from '../../lib/modal';
 import { beep } from '../../lib/sound';
 import { $, $$, esc, toast } from '../../lib/ui';
+import { scanner } from './qr';
 
 export function renderReglages(el: HTMLElement): void {
   const r = state.reglages;
@@ -38,6 +39,7 @@ export function renderSauvegardes(el: HTMLElement): void {
           <button class="btn" id="export">💾 Sauvegarder dans un fichier</button>
           <label class="btn ghost" tabindex="0" id="import-l">📂 Restaurer un fichier<input type="file" id="import" accept=".json,application/json" hidden /></label>
           <button class="btn ghost" id="undo" ${snaps.length ? '' : 'disabled'}>↩ Annuler la dernière modification</button>
+          <button class="btn ghost" id="scan">📷 Scanner un QR de classe</button>
         </div>
         ${pending ? `
           <div class="confirm" role="alert">
@@ -79,6 +81,7 @@ export function renderSauvegardes(el: HTMLElement): void {
       dispatchEvent(new HashChangeEvent('hashchange'));
     };
     $('#undo', el).onclick = () => back(0, true);
+    $('#scan', el).onclick = () => scanner();
     $$('[data-snap]', el).forEach(b => b.onclick = () => back(Number(b.dataset.snap)));
 
     $('#wipe', el).onclick = async () => {
