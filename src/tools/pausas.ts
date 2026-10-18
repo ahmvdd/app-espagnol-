@@ -4,7 +4,8 @@ import { speak } from '../lib/speech';
 import { beep, chime } from '../lib/sound';
 import { $, $$, esc, shuffle, timers } from '../lib/ui';
 
-type Etape = { es: string; fr: string; icon: string };
+/** Mimes et Simón dice : uniquement l'espagnol, sinon la réponse est donnée (retour v1). */
+type Etape = { es: string; fr?: string; icon?: string };
 type Pause = { id: string; titre: string; icon: string; regle: string; etapes: () => Etape[] };
 
 const SIMON: [string, string, string][] = [
@@ -31,12 +32,12 @@ const ESTIRAMIENTOS: [string, string, string][] = [
 const PAUSES: Pause[] = [
   {
     id: 'simon', titre: 'Simón dice', icon: '🗣', regle: 'On fait le geste seulement si la consigne commence par « Simón dice ». Sinon, on ne bouge pas !',
-    etapes: () => shuffle(SIMON).slice(0, 8).map(([es, fr, icon]) => {
+    etapes: () => shuffle(SIMON).slice(0, 8).map(([es]) => {
       const simon = Math.random() < 0.7;
-      return { es: simon ? `Simón dice : ¡${es}!` : `¡${es[0].toUpperCase() + es.slice(1)}!`, fr: simon ? fr : `piège : on ne bouge pas (${fr})`, icon: simon ? icon : '🙅' };
+      return { es: simon ? `Simón dice : ¡${es}!` : `¡${es[0].toUpperCase() + es.slice(1)}!` };
     })
   },
-  { id: 'mimos', titre: 'Mimes de verbes', icon: '🎭', regle: 'Tout le monde mime le verbe affiché, en silence.', etapes: () => shuffle(VERBOS).slice(0, 8).map(([es, fr, icon]) => ({ es, fr, icon })) },
+  { id: 'mimos', titre: 'Mimes de verbes', icon: '🎭', regle: 'Lis le verbe espagnol, souviens-toi de son sens et mime-le : les autres devinent.', etapes: () => shuffle(VERBOS).slice(0, 8).map(([es]) => ({ es })) },
   { id: 'estiramientos', titre: 'Étirements', icon: '🧘', regle: 'On suit les consignes calmement, sans parler.', etapes: () => ESTIRAMIENTOS.map(([es, fr, icon]) => ({ es, fr, icon })) }
 ];
 
@@ -73,9 +74,9 @@ const pausas: Tool = el => {
       el.innerHTML = `
         <div class="center pause">
           <span class="pill">${p.titre} · ${i + 1} / ${etapes.length}</span>
-          <div class="count" aria-hidden="true">${e.icon}</div>
-          <div class="huge" lang="es" aria-live="assertive">${esc(e.es)}</div>
-          <p class="big muted">${esc(e.fr)}</p>
+          ${e.icon ? `<div class="count" aria-hidden="true">${e.icon}</div>` : ''}
+          <div class="huge pause-mot" lang="es" aria-live="assertive">${esc(e.es)}</div>
+          ${e.fr ? `<p class="big muted">${esc(e.fr)}</p>` : ''}
           <div class="barre"><i style="animation-duration:${DUREE_ETAPE}ms"></i></div>
           <button class="btn ghost sm" id="stop">Arrêter</button>
         </div>`;
