@@ -40,6 +40,7 @@ for (const n of NIVEAUX) {
     check(!ids.has(t.id), `${at} : id en double`); ids.add(t.id);
     check(isStr(t.titre), `${at} : "titre" manquant`);
     check(isStr(t.objet), `${at} : "objet" (objet d'étude) manquant`);
+    check(Array.isArray(t.notions) && t.notions.length > 0 && t.notions.every(isStr), `${at} : "notions" manquantes`);
     check(Array.isArray(t.culture) && t.culture.length > 0 && t.culture.every(isStr), `${at} : au moins un repère dans "culture"`);
     check(typeof t.relu === 'boolean', `${at} : "relu" doit valoir true ou false`);
     if (t.relu === false) warnings.push(`${at} : espagnol à relire`);

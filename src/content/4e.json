@@ -16,6 +16,12 @@
      "id": "el-deporte",
      "titre": "El deporte",
      "objet": "Sport et bien-être · Les règles du jeu",
+     "notions": [
+      "Les sports, le matériel et les lieux",
+      "Jugar a / practicar",
+      "Hay que + infinitif : respecter les règles",
+      "Le passé simple : ganó, perdió"
+     ],
      "relu": false,
      "vocab": [
       [
@@ -183,6 +189,12 @@
      "id": "machu-picchu",
      "titre": "Viajar a Machu Picchu",
      "objet": "Machu Picchu, une merveille inca · Voyager",
+     "notions": [
+      "Le vocabulaire du voyage",
+      "Ir a + infinitif : vamos a viajar",
+      "Me gustaría + infinitif",
+      "Les Incas et le quechua"
+     ],
      "relu": false,
      "vocab": [
       [
@@ -350,6 +362,12 @@
      "id": "la-ciudad",
      "titre": "La ciudad",
      "objet": "Villes et capitales · Où habiter ?",
+     "notions": [
+      "Les lieux de la ville",
+      "Indiquer un chemin : gira, sigue todo recto",
+      "Estar pour situer : está al lado de",
+      "Hay / está : la différence"
+     ],
      "relu": false,
      "vocab": [
       [
@@ -540,6 +558,12 @@
      "id": "los-inventos",
      "titre": "Los inventos",
      "objet": "La technologie au service de l’homme",
+     "notions": [
+      "La technologie et les inventions",
+      "Faux-amis : crear / creer",
+      "Le futur simple : la tecnología mejorará",
+      "Exprimer un rêve : soñar con"
+     ],
      "relu": false,
      "vocab": [
       [
@@ -717,6 +741,12 @@
      "id": "andalucia",
      "titre": "Andalucía",
      "objet": "Une terre de musique(s) · al-Ándalus",
+     "notions": [
+      "La musique et les monuments d’Andalousie",
+      "Les mots d’origine arabe",
+      "Estar pour situer, ser pour définir",
+      "Al-Ándalus : repères historiques"
+     ],
      "relu": false,
      "vocab": [
       [

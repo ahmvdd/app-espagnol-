@@ -9,6 +9,8 @@ export type Theme = {
   titre: string;
   /** Objet d'étude du programme auquel le thème se rattache. */
   objet: string;
+  /** Notions du chapitre (lexique, grammaire, culture) : le « programme » affiché et imprimé. */
+  notions: string[];
   /** false tant que l'espagnol n'a pas été relu. */
   relu: boolean;
   vocab: [string, string][];

@@ -16,6 +16,12 @@
      "id": "me-presento",
      "titre": "Me presento",
      "objet": "Y tú, ¿quién eres? Se présenter",
+     "notions": [
+      "Se présenter : nom, âge, nationalité, ville",
+      "Poser des questions : ¿Cómo te llamas? ¿Cuántos años tienes?",
+      "Verbes ser, tener et vivir au présent",
+      "Décrire le caractère et le physique : accord des adjectifs"
+     ],
      "relu": false,
      "vocab": [
       [
@@ -194,6 +200,12 @@
      "id": "la-familia",
      "titre": "La familia",
      "objet": "Portraits de familles",
+     "notions": [
+      "Le vocabulaire de la famille",
+      "Les possessifs mi / mis, tu / tus, su / sus",
+      "Tener et ser au présent : Tengo dos hermanos",
+      "Absence d’article : ser hijo único"
+     ],
      "relu": false,
      "vocab": [
       [
@@ -383,6 +395,12 @@
      "id": "la-rutina",
      "titre": "La rutina y los horarios",
      "objet": "Oye, ¿qué hora es? L’Espagne, des horaires à part",
+     "notions": [
+      "Les verbes pronominaux : levantarse, ducharse, acostarse",
+      "Dire l’heure : a las siete, por la mañana",
+      "Les marqueurs temporels : primero, después, luego",
+      "Comparer les horaires de l’Espagne et de la France"
+     ],
      "relu": false,
      "vocab": [
       [
@@ -572,6 +590,12 @@
      "id": "el-colegio",
      "titre": "El colegio y el tiempo libre",
      "objet": "Le(s) temps de l’école · Loisirs d’ici et d’ailleurs",
+     "notions": [
+      "Les matières et l’emploi du temps",
+      "Exprimer ses goûts : me gusta / me encanta + infinitif",
+      "Les loisirs et les lieux de loisirs",
+      "Ir a + lieu : voy a la piscina"
+     ],
      "relu": false,
      "vocab": [
       [
@@ -740,6 +764,12 @@
      "id": "las-fiestas",
      "titre": "¿Qué celebramos hoy?",
      "objet": "¿Qué celebramos hoy? Les fêtes traditionnelles",
+     "notions": [
+      "Les fêtes d’Espagne et d’Amérique latine",
+      "Les dates : el seis de enero",
+      "Cumplir años, celebrar, regalar",
+      "Formules de vœux : ¡Feliz cumpleaños!"
+     ],
      "relu": false,
      "vocab": [
       [
@@ -917,6 +947,12 @@
      "id": "dia-de-muertos",
      "titre": "El Día de Muertos",
      "objet": "La Fête des Morts",
+     "notions": [
+      "Le vocabulaire de l’ofrenda",
+      "Le présent à la 3e personne du pluriel : las familias preparan",
+      "Hay + nom : en el altar hay velas",
+      "Comparer deux fêtes"
+     ],
      "relu": false,
      "vocab": [
       [
@@ -1074,6 +1110,12 @@
      "id": "sabores-de-mexico",
      "titre": "Sabores de México",
      "objet": "Saveurs du Mexique",
+     "notions": [
+      "Les aliments et les saveurs",
+      "Se + verbe : se come, se hace",
+      "¡Qué rico! : l’exclamation",
+      "Expliquer une recette simple"
+     ],
      "relu": false,
      "vocab": [
       [

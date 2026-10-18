@@ -465,3 +465,42 @@ nav a.n5{--c:#1E7045}nav a.n4{--c:#A84A17}nav a.n3{--c:#6B3391}
 .emocion>span[lang]{grid-column:2;grid-row:1}
 .emocion .barre-vote{grid-column:2;grid-row:2}
 .emocion b{grid-column:3;grid-row:1/3}
+
+/* Chapitres : notions et documents */
+.notions{margin:.5rem 0 0;padding-left:1.2rem}
+.chapitre-outils{margin-bottom:1rem}
+.chapitre-outils h3{margin:0 0 .5rem}
+.apercu{align-items:stretch;background:var(--tile)}
+.apercu-barre{justify-content:center;position:sticky;top:0;background:var(--tile);padding:.5rem;z-index:1}
+.apercu-page{background:#fff;color:#16203B;max-width:210mm;width:100%;margin:0 auto;padding:12mm;box-shadow:0 6px 30px rgb(0 0 0 / .25);border-radius:4px}
+
+/* Documents imprimables (écran et papier) */
+.doc{font:11pt/1.45 'Atkinson Hyperlegible',sans-serif;color:#16203B}
+.doc-tete{border:3px solid var(--c);border-radius:12px;padding:4mm 6mm;margin-bottom:5mm;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 14%,#fff),#fff)}
+.doc-tete h1{font:800 22pt/1.1 'Bricolage Grotesque Variable',sans-serif;margin:1mm 0;color:var(--c)}
+.doc-tete p{margin:0}
+.doc-niv{background:var(--c);color:#fff;border-radius:999px;padding:.5mm 3mm;font-weight:700}
+.doc-type{font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-left:2mm}
+.doc-nom{margin-top:2mm!important;font-size:10pt}
+.doc-bloc{border-left:4px solid var(--c);padding:1mm 0 1mm 4mm;margin:0 0 5mm;break-inside:avoid}
+.doc-bloc h2{font:800 13pt 'Bricolage Grotesque Variable',sans-serif;margin:0 0 2mm;color:var(--c)}
+.doc-bloc ul,.doc-bloc ol{margin:0;padding-left:5mm}
+.doc-vocab{width:100%;border-collapse:collapse;columns:2}
+.doc-vocab td{border-bottom:1px solid #ddd;padding:1mm 2mm}
+.doc-culture{background:#F2F8EE;border-left-color:#3F7A26}
+.doc-culture h2{color:#2E6A1C}
+.doc-gram{font-size:9.5pt}
+.doc-ligne{display:inline-block;width:55mm;border-bottom:1px solid #16203B}
+.doc-rep{color:#B3261E;font-weight:700}
+.doc-bon{color:#B3261E;font-weight:700;text-decoration:underline}
+.doc-relier{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
+.doc-lettres{list-style:none;padding:0!important}
+.doc-qcm{display:flex;flex-wrap:wrap;gap:2mm 6mm;margin:1mm 0 2mm}
+.doc-banque{border:1.5px dashed var(--c);border-radius:8px;padding:2mm 3mm;margin:0 0 2mm}
+.doc-lignes span{display:block;border-bottom:1px solid #16203B;height:8mm}
+@media print{
+  @page{size:A4;margin:12mm}
+  body{background:#fff}
+  .print-area .doc{break-after:page}
+  .doc-tete,.doc-culture,.doc-niv{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
