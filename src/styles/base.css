@@ -525,3 +525,32 @@ nav a.n5{--c:#1E7045}nav a.n4{--c:#A84A17}nav a.n3{--c:#6B3391}
 .seance p{margin:.3rem 0 0}
 .seance-tete{gap:.5rem .8rem}
 .seance-tete [data-del]{margin-left:auto}
+
+/* Récompenses */
+.recomp{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:1rem}
+.titres{display:flex;flex-direction:column;gap:.1rem}
+.titre-choix{font-weight:700;min-height:36px}
+.diplome{page:paysage}
+.dip-cadre{border:8px double var(--c,#2340B8);border-radius:18px;padding:10mm 14mm;text-align:center;background:radial-gradient(circle at 50% 0,#FFF6DD,#fff 60%);min-height:178mm;display:flex;flex-direction:column;justify-content:center;gap:3mm}
+.dip-cadre p{margin:0}
+.dip-sur{font:800 34pt 'Bricolage Grotesque Variable',sans-serif;color:#2340B8;letter-spacing:.04em}
+.dip-otorga{font-size:13pt;color:#56607A}
+.dip-nom{font:800 30pt 'Bricolage Grotesque Variable',sans-serif;color:#16203B;border-bottom:2px solid #E3A21A;display:inline-block;margin:0 auto!important;padding:0 6mm}
+.dip-titre{font:800 22pt 'Bricolage Grotesque Variable',sans-serif;color:#C8326B}
+.dip-motif{font-size:14pt;font-style:italic}
+.dip-pied{display:flex;justify-content:space-between;margin-top:8mm;font-size:11pt;text-align:left}
+.dip-pied span:last-child{text-align:right}
+.felic-page{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+.felic{border:2px dashed #2340B8;border-radius:10px;padding:5mm;text-align:center;break-inside:avoid}
+.felic p{margin:0}
+.felic-titre{font:800 16pt 'Bricolage Grotesque Variable',sans-serif;color:#C8326B}
+.felic-sig{font-size:9pt;color:#56607A;margin-top:2mm!important}
+.trophee-ico{font-size:clamp(5rem,20vh,9rem);line-height:1}
+.trophee-plein{position:fixed;inset:0;z-index:36;display:grid;place-items:center;background:rgb(10 14 30 / .6)}
+.trophee-boite{background:var(--surface);color:var(--ink);border-radius:20px;padding:2rem;text-align:center;max-width:40rem;border:4px solid var(--ochre);animation:pop .5s}
+.trophee-boite .trophee-ico{animation:trophee 1.2s ease-in-out infinite alternate}
+@keyframes trophee{from{transform:rotate(-8deg) scale(1)}to{transform:rotate(8deg) scale(1.12)}}
+@media print{
+  @page paysage{size:A4 landscape;margin:10mm}
+  .dip-cadre,.felic,.dip-nom{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}

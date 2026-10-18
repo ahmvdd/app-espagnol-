@@ -12,6 +12,7 @@ import rotations from './rotations';
 import plan from './plan';
 import vuelta from './vuelta';
 import mundo from './mundo';
+import recompenses from './recompenses';
 
 export type Tool = (el: HTMLElement, params: URLSearchParams) => void | (() => void);
 export type ToolInfo = { id: string; nom: string; es: string; desc: string; icon: string; run: Tool };
@@ -27,6 +28,7 @@ export const TOOLS: ToolInfo[] = [
   { id: 'pauses', nom: 'Pauses énergie', es: 'Pausas activas', desc: 'Simón dice, mimes, étirements', icon: '🤸', run: pausas },
   { id: 'mundo', nom: 'Le monde hispanophone', es: 'El mundo hispano', desc: '21 pays : capitale, fête, accent, mots', icon: '🌎', run: mundo },
   { id: 'vuelta', nom: 'La Vuelta', es: 'La Vuelta', desc: 'Course d’étapes par équipes sur la carte', icon: '🚴', run: vuelta },
+  { id: 'recompenses', nom: 'Récompenses', es: 'Los premios', desc: 'Diplômes, titres, mots de félicitations', icon: '🎓', run: recompenses },
   { id: 'plan', nom: 'Plan de classe', es: 'El plano de la clase', desc: 'Glisser les élèves à leur place', icon: '🪑', run: plan },
   { id: 'roles', nom: 'Rôles tournants', es: 'Los roles', desc: 'Secrétaire, gardien du temps…', icon: '🎖', run: roles },
   { id: 'rotations', nom: 'Travail de groupe', es: 'Rotaciones', desc: 'Speed meeting, world café, classe puzzle', icon: '🔁', run: rotations },
