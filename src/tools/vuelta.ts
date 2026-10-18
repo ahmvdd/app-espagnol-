@@ -84,7 +84,7 @@ const vuelta: Tool = el => {
           ${etat.teams.map((t, k) => {
             const e = etape(t.score), fini = t.score >= total();
             return `<section class="panel equipe-v">
-              <h3>${t.icon} Equipo ${esc(t.nom)} <b>${t.score}</b> pts</h3>
+              <h2 class="h3">${t.icon} Equipo ${esc(t.nom)} <b>${t.score}</b> pts</h2>
               <p class="small">${fini ? '🏁 ¡Llegada!' : `Étape ${e + 1} → <strong>${esc(r.villes[e + 1][0])}</strong> (${PTS_ETAPE - (t.score % PTS_ETAPE)} pts)`}</p>
               <div class="row"><button class="btn sm" data-t="${k}" data-p="1">+1</button><button class="btn sm" data-t="${k}" data-p="5">+5</button></div>
             </section>`;

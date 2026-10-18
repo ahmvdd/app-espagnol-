@@ -122,11 +122,11 @@ const planTool: Tool = el => {
         <button class="btn ghost sm" id="print">🖨 Imprimer</button>
       </div>
       <div class="plan">
-        <aside class="non-places panel" data-liste aria-label="Élèves non placés">
-          <h3>À placer (${nonPlaces.length})</h3>
+        <section class="non-places panel" data-liste aria-label="Élèves non placés">
+          <h2 class="h3">À placer (${nonPlaces.length})</h2>
           <div class="chips">${nonPlaces.map(e => `<button class="chip" data-drag="${e.id}" data-from="liste" aria-pressed="${selection?.id === e.id}">${esc(e.prenom)}</button>`).join('') || '<p class="muted small">Tout le monde est placé.</p>'}</div>
           <p class="muted small">Glisse un prénom sur une place, ou touche-le puis touche la place. Glisse un élève ici pour le retirer.</p>
-        </aside>
+        </section>
         <div class="salle ${p.disposition}" id="salle">
           <div class="tableau">Tableau · Pizarra</div>
           ${tables.map(t => `<i class="table" style="left:${t.l}%;top:${t.t}%;width:${t.w}%;height:${t.h}%"></i>`).join('')}

@@ -332,7 +332,7 @@ footer a{color:inherit}
 .axe.actif{border-left-color:var(--niveau,var(--cobalt))}
 .axe.oblig{border-left-color:var(--ochre)}
 .axe-titre{margin:0;font-weight:700}
-.axe-n{color:var(--niveau,var(--cobalt));margin-right:.3rem}
+.axe-n{color:var(--ink);margin-right:.3rem;border-bottom:3px solid var(--niveau,var(--cobalt))}
 .oblig-pill{background:var(--ochre);color:#16203B}
 .objets{margin:0;padding-left:1.1rem;font-size:.9rem;color:var(--muted)}
 .theme-head{margin:1.5rem 0 .75rem}
@@ -348,7 +348,8 @@ footer a{color:inherit}
 .plan-barre{align-items:flex-end;margin-bottom:.5rem}
 .plan{display:grid;grid-template-columns:14rem 1fr;gap:1rem;align-items:start}
 @media (max-width:820px){.plan{grid-template-columns:1fr}}
-.non-places h3{margin:0 0 .4rem}
+.non-places h2{margin:0 0 .4rem}
+h2.h3{font-size:1.17rem;margin:0}
 .non-places .chip{touch-action:none}
 .salle{position:relative;aspect-ratio:16/10;border:2px solid var(--line);border-radius:14px;background:var(--surface);min-width:0}
 .tableau{position:absolute;top:2%;left:30%;width:40%;height:6%;display:grid;place-items:center;background:var(--ink);color:var(--paper);border-radius:6px;font-weight:700;font-size:.85rem}
@@ -377,8 +378,8 @@ footer a{color:inherit}
 .map .ville.flash circle{fill:var(--ochre);animation:pop .6s 2}
 .map .pion{font-size:22px;transition:x .5s,y .5s}
 .vuelta-equipes{display:flex;flex-direction:column;gap:.6rem}
-.equipe-v h3{margin:0;display:flex;align-items:center;gap:.4rem}
-.equipe-v h3 b{margin-left:auto;font:800 1.5rem var(--display)}
+.equipe-v h2{margin:0;display:flex;align-items:center;gap:.4rem}
+.equipe-v h2 b{margin-left:auto;font:800 1.5rem var(--display)}
 .equipe-v p{margin:.3rem 0 .5rem}
 
 /* Escape game */

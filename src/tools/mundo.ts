@@ -88,7 +88,7 @@ const mundo: Tool = el => {
         </svg>
         <div class="chips" role="group" aria-label="Pays">${LISTE.map(p => `<button class="chip pays" data-pays="${p.id}" aria-pressed="${p.id === actuel}">${esc(p.nom)}</button>`).join('')}</div>
       </div>
-      <aside class="panel" id="fiche" aria-live="polite"></aside>
+      <section class="panel" id="fiche" aria-live="polite" aria-label="Fiche du pays"></section>
     </div>`;
 
   $$('.pin', el).forEach(g => g.addEventListener('click', () => choisir(g.dataset.pin!)));
