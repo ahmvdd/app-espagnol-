@@ -430,3 +430,4 @@ h2.h3{font-size:1.17rem;margin:0}
 .qr-box svg{display:block;width:100%;height:auto}
 #qr-video{width:100%;border-radius:12px;background:#000}
 .pause-mot{font-size:clamp(3rem,min(11vw,18vh),8rem)}
+.taboo-carte.cachee{border-style:dashed;border-color:var(--line)}

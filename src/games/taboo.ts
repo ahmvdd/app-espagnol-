@@ -15,7 +15,10 @@ const taboo: Game = (el, ctx) => {
   };
   let tabous = interdits(0);
 
+  /** La carte reste cachée à la classe : seul l'élève qui fait deviner la regarde (retour v1). */
+  let visible = false;
   const carte = (d: number) => {
+    visible = false;
     k = (k + d) % cartes.length;
     if (k === 0 && d) cartes = shuffle(cartes);
     tabous = interdits(k);
@@ -47,23 +50,33 @@ const taboo: Game = (el, ctx) => {
     el.innerHTML = `
       <div class="center">
         <div class="row center-row"><span class="pill">${equipe ? `${equipe.icon} ${esc(equipe.nom)}` : 'Toute la classe'}</span><span class="pill">⏱ <span id="clock" role="timer">${reste}</span> s</span></div>
+        ${visible ? `
         <div class="taboo-carte">
           <div class="huge" lang="es">${esc(cartes[k][0])}</div>
           <p class="muted">Mots tabous :</p>
           <ul class="tabous">${tabous.map(w => `<li>🚫 ${esc(w)}</li>`).join('')}</ul>
         </div>
+        <button class="btn ghost" id="voir">🙈 Cacher la carte</button>` : `
+        <div class="taboo-carte cachee">
+          <div class="huge" aria-hidden="true">🂠</div>
+          <p class="big">Carte cachée</p>
+          <p class="muted">Seul l’élève qui fait deviner regarde la carte.</p>
+        </div>
+        <button class="btn" id="voir">👁 Voir la carte</button>`}
         <div class="row wrap center-row">
           <button class="btn ok bigbtn" id="ok">✓ Trouvé</button>
           <button class="btn ghost" id="pass">⏭ Passer</button>
         </div>
-        <p class="muted small">Touches : Entrée = trouvé · → = passer</p>
+        <p class="muted small">Touches : V = voir / cacher · Entrée = trouvé · → = passer</p>
       </div>`;
     $('#ok', el).onclick = ok;
     $('#pass', el).onclick = passe;
+    $('#voir', el).onclick = basculer;
   };
+  const basculer = () => { visible = !visible; render(); };
 
   render();
-  const off = onKeys({ Enter: () => phase === 'joue' && ok(), ArrowRight: () => phase === 'joue' && passe() });
+  const off = onKeys({ Enter: () => phase === 'joue' && ok(), ArrowRight: () => phase === 'joue' && passe(), v: () => phase === 'joue' && basculer() });
   return () => { timer?.stop(); off(); };
 };
 
