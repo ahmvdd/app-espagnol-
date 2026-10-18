@@ -3,6 +3,11 @@ import ruleta from './ruleta';
 import equipos from './equipos';
 import congelados from './congelados';
 import voz from './voz';
+import rituel from './rituel';
+import pausas from './pausas';
+import roles from './roles';
+import consignas from './consignas';
+import sonometro from './sonometro';
 
 export type Tool = (el: HTMLElement, params: URLSearchParams) => void | (() => void);
 export type ToolInfo = { id: string; nom: string; es: string; desc: string; icon: string; run: Tool };
@@ -12,7 +17,12 @@ export const TOOLS: ToolInfo[] = [
   { id: 'ruleta', nom: 'Roulette', es: 'La ruleta', desc: 'Tirer un élève au sort', icon: '🎡', run: ruleta },
   { id: 'equipos', nom: 'Équipes', es: 'Los equipos', desc: 'Faire des équipes', icon: '👥', run: equipos },
   { id: 'congelados', nom: 'Congelados', es: '¡Congelados!', desc: 'Tout le monde s’arrête', icon: '❄', run: congelados },
-  { id: 'voz', nom: 'Niveau de voix', es: 'El nivel de voz', desc: 'Du silence à la voix de classe', icon: '🔉', run: voz }
+  { id: 'voz', nom: 'Niveau de voix', es: 'El nivel de voz', desc: 'Du silence à la voix de classe', icon: '🔉', run: voz },
+  { id: 'sonometre', nom: 'Sonomètre', es: 'El sonómetro', desc: 'Le micro mesure le bruit', icon: '🎙', run: sonometro },
+  { id: 'rituel', nom: 'Rituel d’entrée', es: 'El ritual', desc: 'Consigne, 3 minutes, mini-défi', icon: '🚪', run: rituel },
+  { id: 'pauses', nom: 'Pauses énergie', es: 'Pausas activas', desc: 'Simón dice, mimes, étirements', icon: '🤸', run: pausas },
+  { id: 'roles', nom: 'Rôles tournants', es: 'Los roles', desc: 'Secrétaire, gardien du temps…', icon: '🎖', run: roles },
+  { id: 'consignes', nom: 'Consignes en images', es: 'Las consignas', desc: 'Pictos bilingues à projeter', icon: '🖼', run: consignas }
 ];
 
 export const toolCard = (t: ToolInfo, query = '') =>

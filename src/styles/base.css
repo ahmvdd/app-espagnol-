@@ -284,3 +284,43 @@ footer a{color:inherit}
   .loteria-carte .grille{display:grid;grid-template-columns:repeat(var(--t),1fr);gap:2mm}
   .loteria-carte .grille div{border:1px solid #000;min-height:22mm;display:grid;place-items:center;text-align:center;font:700 13pt sans-serif;padding:2mm}
 }
+
+/* Minuteur : thèmes visuels */
+.visuel:empty{display:none}
+.avec-visuel .clock{font-size:clamp(3rem,min(12vw,14vh),7rem)}
+.vis-sablier{height:min(30vh,220px)}
+.vis-sablier .sable{fill:var(--ochre)}
+.vis-sablier .verre{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round}
+.vis-meche{display:flex;align-items:center;width:min(80vw,640px);height:60px;gap:.5rem}
+.vis-meche .fil{height:8px;background:repeating-linear-gradient(90deg,var(--ink) 0 10px,var(--muted) 10px 14px);border-radius:4px;position:relative;margin-left:auto;transition:width .3s linear}
+.vis-meche .fil span{position:absolute;left:-1rem;top:-1.2rem;font-size:1.8rem}
+.vis-meche b{font-size:3rem}
+.vis-tortilla{width:min(30vh,220px);aspect-ratio:1;border-radius:50%;border:4px solid #B5651D;background:conic-gradient(#F2C14E var(--f),var(--paper) 0);display:grid;place-items:center;font-size:4rem}
+.vis-fusee{position:relative;width:120px;height:min(30vh,220px);border-left:2px dashed var(--line);margin-left:60px}
+.vis-fusee span{position:absolute;left:-1.6rem;font-size:3rem;transition:bottom .3s linear}
+.vis-fusee i{position:absolute;top:-1.2rem;left:-1.3rem;font-size:2.4rem;font-style:normal}
+
+/* Rituel, pauses, rôles, consignes */
+.defi{max-width:40rem;border:2px solid var(--ochre)}
+.defi p{margin:.2rem 0}
+.pause-btn{cursor:pointer;align-items:center;text-align:center;font:inherit}
+.barre{width:min(80vw,520px);height:10px;border-radius:5px;background:var(--tile);overflow:hidden}
+.barre i{display:block;height:100%;background:var(--cobalt);animation:remplir linear forwards}
+@keyframes remplir{from{width:0}to{width:100%}}
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.75rem;margin:1rem 0}
+.role{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.3rem}
+.role .ico,.consigna .ico{font-size:2.4rem}
+.consignas{display:grid;grid-template-columns:repeat(auto-fill,minmax(11rem,1fr));gap:.6rem}
+.consigna{display:flex;flex-direction:column;align-items:center;gap:.25rem;cursor:pointer;font:inherit;text-align:center}
+.consigna:hover{border-color:var(--cobalt)}
+
+/* Sonomètre */
+.sono{display:flex;gap:2rem;align-items:center;justify-content:center;flex-wrap:wrap}
+.feu{display:flex;flex-direction:column;gap:.6rem;background:var(--ink);padding:1rem;border-radius:60px}
+.feu i{font-size:3.5rem;font-style:normal;opacity:.2;line-height:1}
+.sono.vert .l-vert,.sono.orange .l-orange,.sono.rouge .l-rouge{opacity:1}
+.jauge{position:relative;width:min(70vw,560px);height:28px;border-radius:14px;background:var(--tile);overflow:hidden}
+.jauge i{display:block;height:100%;transition:width .1s}
+.jauge i.vert{background:#3BB54A}.jauge i.orange{background:#F39C12}.jauge i.rouge{background:#E2382F}
+.jauge .seuil{position:absolute;top:0;bottom:0;width:3px;background:var(--ink)}
+.reglages-sono{width:min(70vw,560px);text-align:left}

@@ -8,6 +8,37 @@ const MAX = 3600;
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
 const label = (s: number) => (s < 60 ? `${s} s` : `${s / 60} min`);
 
+const THEMES = [
+  { id: 'chiffres', label: '🔢 Chiffres' }, { id: 'sablier', label: '⏳ Sablier' },
+  { id: 'meche', label: '🧨 Mèche' }, { id: 'tortilla', label: '🥘 Tortilla' }, { id: 'fusee', label: '🚀 Fusée' }
+] as const;
+type Visuel = typeof THEMES[number]['id'];
+const PREF = 'rincon.minuteurTheme';
+let visuel: Visuel = (() => { try { return (localStorage.getItem(PREF) as Visuel) || 'chiffres'; } catch { return 'chiffres'; } })();
+
+/** Représentation du temps restant (frac de 1 à 0). */
+function dessin(v: Visuel, frac: number): string {
+  const f = Math.max(0, Math.min(1, frac));
+  switch (v) {
+    case 'sablier': return `
+      <svg viewBox="0 0 100 140" class="vis-sablier" aria-hidden="true">
+        <clipPath id="haut"><path d="M15 10 H85 L52 68 H48 Z"/></clipPath>
+        <clipPath id="bas"><path d="M48 72 H52 L85 130 H15 Z"/></clipPath>
+        <rect clip-path="url(#haut)" x="0" y="${10 + 58 * (1 - f)}" width="100" height="${58 * f + 1}" class="sable"/>
+        <rect clip-path="url(#bas)" x="0" y="${130 - 58 * (1 - f)}" width="100" height="${58 * (1 - f) + 1}" class="sable"/>
+        ${f > 0 && f < 1 ? '<rect x="49" y="66" width="2" height="62" class="sable"/>' : ''}
+        <path d="M10 6 H90 M10 134 H90 M15 10 L48 68 V72 L15 130 M85 10 L52 68 V72 L85 130" class="verre"/>
+      </svg>`;
+    case 'meche': return `
+      <div class="vis-meche" aria-hidden="true"><div class="fil" style="width:${f * 100}%"><span>${f > 0 ? '🔥' : ''}</span></div><b>${f > 0 ? '💣' : '💥'}</b></div>`;
+    case 'tortilla': return `
+      <div class="vis-tortilla" aria-hidden="true" style="--f:${f * 360}deg"><span>${f > 0 ? '' : '🍽'}</span></div>`;
+    case 'fusee': return `
+      <div class="vis-fusee" aria-hidden="true"><span style="bottom:${(1 - f) * 78}%">🚀</span><i>🌕</i></div>`;
+    default: return '';
+  }
+}
+
 /** « 2:30 », « 2 », « 90s » → secondes. */
 export function parseDuree(v: string): number | null {
   const s = v.trim().toLowerCase().replace(/\s/g, '');
@@ -32,6 +63,10 @@ const minuteur: Tool = (el, params) => {
           <button class="btn ghost sm">OK</button>
         </form>
       </div>
+      <div class="row wrap center-row" role="group" aria-label="Thème visuel">
+        ${THEMES.map(t => `<button class="btn ghost sm" data-v="${t.id}" aria-pressed="${t.id === visuel}">${t.label}</button>`).join('')}
+      </div>
+      <div class="visuel" id="vis"></div>
       <div class="clock" id="clock" role="timer" aria-live="off"></div>
       <p class="alerte-ico" id="ico" aria-hidden="true"></p>
       <p class="huge win" id="msg" aria-live="assertive"></p>
@@ -43,12 +78,14 @@ const minuteur: Tool = (el, params) => {
       <button class="btn ghost sm" id="reset">Remettre à zéro</button>
       <p class="muted small">Touche Espace : démarrer / pause</p>
     </div>`;
-  const root = $('#root', el), clock = $('#clock', el), msg = $('#msg', el), go = $('#go', el), ico = $('#ico', el);
+  const vis = $('#vis', el), root = $('#root', el), clock = $('#clock', el), msg = $('#msg', el), go = $('#go', el), ico = $('#ico', el);
 
   const running = () => !!timer?.running();
   const show = () => {
     const last = left <= 10 && left > 0 && !!timer;
     clock.textContent = fmt(left);
+    vis.innerHTML = dessin(visuel, total ? left / total : 0);
+    root.classList.toggle('avec-visuel', visuel !== 'chiffres');
     root.classList.toggle('alerte', last);
     ico.textContent = last ? '⏳ Plus que quelques secondes' : '';
     clock.classList.toggle('done', left === 0);
@@ -78,6 +115,12 @@ const minuteur: Tool = (el, params) => {
   const toggle = () => (running() ? pause() : start());
 
   $$('[data-s]', el).forEach(b => b.onclick = () => set(Number(b.dataset.s)));
+  $$('[data-v]', el).forEach(b => b.onclick = () => {
+    visuel = b.dataset.v as Visuel;
+    try { localStorage.setItem(PREF, visuel); } catch { /* ignore */ }
+    $$('[data-v]', el).forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    show();
+  });
   $<HTMLFormElement>('#free', el).onsubmit = e => {
     e.preventDefault();
     const inp = $<HTMLInputElement>('#free-in', el);
