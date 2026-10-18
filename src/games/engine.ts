@@ -24,8 +24,8 @@ export type GameInfo = {
   run: Game;
   /** Le jeu a besoin d'équipes (sinon « toute la classe » est proposé). */
   needsTeams?: boolean;
-  /** Le jeu a besoin de quiz rédigés plutôt que du seul vocabulaire. */
-  minVocab?: number;
+  /** Le jeu a son propre contenu par niveau (pas de choix de thème). */
+  sansTheme?: boolean;
 };
 
 export const EQUIPOS = [

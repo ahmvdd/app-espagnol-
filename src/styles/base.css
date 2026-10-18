@@ -380,3 +380,21 @@ footer a{color:inherit}
 .equipe-v h3{margin:0;display:flex;align-items:center;gap:.4rem}
 .equipe-v h3 b{margin-left:auto;font:800 1.5rem var(--display)}
 .equipe-v p{margin:.3rem 0 .5rem}
+
+/* Escape game */
+.escape-intro .big{max-width:46ch}
+.escape-clock{font:800 1.4rem var(--display)}
+.escape-clock.urgent{background:var(--pink);color:var(--on-pink)}
+.salles{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.6rem;margin-bottom:1rem}
+.salle-e{display:flex;flex-direction:column;align-items:center;gap:.2rem;padding:.8rem;border-radius:14px;border:2px solid var(--cobalt);background:var(--surface);cursor:pointer;font:inherit;color:var(--ink)}
+.salle-e b{font:800 2.4rem/1 var(--display);color:var(--cobalt)}
+.salle-e[aria-pressed="true"]{box-shadow:0 0 0 3px var(--ochre)}
+.salle-e.ok{background:var(--tile);border-color:var(--olive)}
+.salle-e.ok b{color:var(--olive)}
+.enigme{display:flex;flex-direction:column;align-items:center;gap:.8rem;text-align:center}
+.opt-btn{cursor:pointer;font:inherit;color:inherit;text-align:center}
+.opt-btn.faux{opacity:.4;text-decoration:line-through}
+.indice{font-size:1.15rem;margin:0}
+.cadenas{margin-top:1.25rem}
+.lock{display:flex;gap:.4rem}
+.lock input{width:3.2rem;height:3.6rem;text-align:center;font:800 1.8rem var(--display);border:3px solid var(--ink);border-radius:10px}

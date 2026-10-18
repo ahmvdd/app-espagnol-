@@ -1,0 +1,218 @@
+{
+ "5e": {
+  "titre": "La ofrenda perdida",
+  "axe": "Axe 6 · Le Mexique",
+  "intro": "Es el Día de Muertos en Oaxaca. La caja con las fotos de la ofrenda está cerrada con un candado. Resolved los cinco enigmas: cada uno os da una cifra del código.",
+  "enigmes": [
+   {
+    "titre": "La fecha",
+    "q": "¿Cuándo se celebra el Día de Muertos?",
+    "o": [
+     "el 1 y el 2 de noviembre",
+     "el 31 de octubre",
+     "el 6 de enero",
+     "el 16 de septiembre"
+    ],
+    "a": 0,
+    "chiffre": "1",
+    "indice": "Es justo después de Halloween."
+   },
+   {
+    "titre": "La capital",
+    "q": "¿Cuál es la capital de México?",
+    "o": [
+     "Ciudad de México",
+     "Guadalajara",
+     "Cancún",
+     "Monterrey"
+    ],
+    "a": 0,
+    "chiffre": "7",
+    "indice": "Tiene el mismo nombre que el país."
+   },
+   {
+    "titre": "La cocina",
+    "q": "El guacamole se hace con…",
+    "o": [
+     "aguacate",
+     "tomate",
+     "chocolate",
+     "maíz"
+    ],
+    "a": 0,
+    "chiffre": "3",
+    "indice": "Es una fruta verde."
+   },
+   {
+    "titre": "Los números",
+    "q": "Diez más cuatro son…",
+    "o": [
+     "catorce",
+     "doce",
+     "cuarenta",
+     "quince"
+    ],
+    "a": 0,
+    "chiffre": "9",
+    "indice": "Dieciséis menos dos."
+   },
+   {
+    "titre": "La flor",
+    "q": "La flor naranja de las ofrendas es el…",
+    "o": [
+     "cempasúchil",
+     "girasol",
+     "clavel",
+     "tulipán"
+    ],
+    "a": 0,
+    "chiffre": "5",
+    "indice": "Su nombre viene del náhuatl."
+   }
+  ]
+ },
+ "4e": {
+  "titre": "El misterio de la Alhambra",
+  "axe": "Axe 6 · L’Andalousie",
+  "intro": "Estáis de visita en Andalucía. Un guardia ha cerrado por error la puerta del Patio de los Leones. Para salir, encontrad el código de cinco cifras.",
+  "enigmes": [
+   {
+    "titre": "La ciudad",
+    "q": "¿En qué ciudad está la Alhambra?",
+    "o": [
+     "Granada",
+     "Sevilla",
+     "Córdoba",
+     "Málaga"
+    ],
+    "a": 0,
+    "chiffre": "2",
+    "indice": "Es también el nombre de una fruta."
+   },
+   {
+    "titre": "La música",
+    "q": "El flamenco mezcla cante, baile y…",
+    "o": [
+     "guitarra",
+     "piano",
+     "violín",
+     "batería"
+    ],
+    "a": 0,
+    "chiffre": "8",
+    "indice": "Un instrumento de seis cuerdas."
+   },
+   {
+    "titre": "El camino",
+    "q": "« Tout droit » se dice…",
+    "o": [
+     "todo recto",
+     "a la derecha",
+     "a la izquierda",
+     "al lado"
+    ],
+    "a": 0,
+    "chiffre": "0",
+    "indice": "Recto = droit."
+   },
+   {
+    "titre": "El viaje",
+    "q": "Ayer yo ___ a Sevilla. (ir)",
+    "o": [
+     "fui",
+     "voy",
+     "iré",
+     "vas"
+    ],
+    "a": 0,
+    "chiffre": "6",
+    "indice": "Es el pasado simple de « ir » con « yo »."
+   },
+   {
+    "titre": "Las palabras",
+    "q": "La palabra « aceite » viene del…",
+    "o": [
+     "árabe",
+     "latín",
+     "griego",
+     "inglés"
+    ],
+    "a": 0,
+    "chiffre": "1",
+    "indice": "Piensa en al-Ándalus."
+   }
+  ]
+ },
+ "3e": {
+  "titre": "El diario de Colón",
+  "axe": "Axe 6 · 1492",
+  "intro": "En un museo de Sevilla habéis encontrado un cofre con el diario de a bordo de Cristóbal Colón. Para abrirlo, resolved los cinco enigmas de 1492.",
+  "enigmes": [
+   {
+    "titre": "La salida",
+    "q": "¿De qué puerto salió Colón el 3 de agosto de 1492?",
+    "o": [
+     "Palos",
+     "Cádiz",
+     "Barcelona",
+     "Lisboa"
+    ],
+    "a": 0,
+    "chiffre": "1",
+    "indice": "Está en Huelva, en Andalucía."
+   },
+   {
+    "titre": "Los barcos",
+    "q": "¿Cuántas carabelas tenía Colón?",
+    "o": [
+     "tres",
+     "dos",
+     "cuatro",
+     "cinco"
+    ],
+    "a": 0,
+    "chiffre": "4",
+    "indice": "La Pinta, la Niña y la Santa María."
+   },
+   {
+    "titre": "La conquista",
+    "q": "¿Qué ciudad conquistaron los Reyes Católicos en enero de 1492?",
+    "o": [
+     "Granada",
+     "Toledo",
+     "Sevilla",
+     "Córdoba"
+    ],
+    "a": 0,
+    "chiffre": "9",
+    "indice": "Allí está la Alhambra."
+   },
+   {
+    "titre": "La llegada",
+    "q": "Colón ___ en Guanahani el 12 de octubre. (desembarcar)",
+    "o": [
+     "desembarcó",
+     "desembarca",
+     "desembarcará",
+     "desembarcaba"
+    ],
+    "a": 0,
+    "chiffre": "2",
+    "indice": "Una acción terminada en el pasado: pretérito indefinido."
+   },
+   {
+    "titre": "El título",
+    "q": "« L'amiral » se dice…",
+    "o": [
+     "el almirante",
+     "el capitán",
+     "el marinero",
+     "el rey"
+    ],
+    "a": 0,
+    "chiffre": "7",
+    "indice": "Se parece a « admirar »."
+   }
+  ]
+ }
+}

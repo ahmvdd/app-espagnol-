@@ -51,14 +51,14 @@ export const juegos: View = el => {
         <div class="field">Niveau
           <div class="row wrap" role="group" aria-label="Niveau">${NIVEAUX.map(n => `<button class="btn ghost" data-n="${n}" aria-pressed="${n === session.niveau}">${n}</button>`).join('')}</div>
         </div>
-        <label class="field">Thème
+        ${game.sansTheme ? '' : `<label class="field">Thème
           <select id="theme">
             ${AXES[session.niveau].filter(a => a.themes.length).map(a => `<optgroup label="Axe ${a.n} · ${esc(a.titre)}">
               ${a.themes.map(t => `<option value="${t.id}" ${t.id === session.themeId ? 'selected' : ''}>${esc(t.titre)} (${t.vocab.length} mots)</option>`).join('')}
             </optgroup>`).join('')}
             <option value="tous" ${session.themeId === 'tous' ? 'selected' : ''}>Tous les thèmes de ${session.niveau}</option>
           </select>
-        </label>
+        </label>`}
         <div class="field">Équipes
           <div class="row wrap" role="group" aria-label="Nombre d'équipes">
             ${[0, 2, 3, 4].filter(n => n >= minEq).map(n => `<button class="btn ghost" data-e="${n}" aria-pressed="${n === session.nbEquipes}">${n ? `${n} équipes` : 'Toute la classe'}</button>`).join('')}
@@ -69,7 +69,7 @@ export const juegos: View = el => {
       </section>`;
 
     $$('[data-n]', el).forEach(b => b.onclick = () => { session.niveau = b.dataset.n as Niveau; session.themeId = dernierTheme(session.niveau).id; setup(); });
-    $<HTMLSelectElement>('#theme', el).onchange = e => { session.themeId = (e.target as HTMLSelectElement).value; };
+    $<HTMLSelectElement>('#theme', el)?.addEventListener('change', e => { session.themeId = (e.target as HTMLSelectElement).value; });
     $$('[data-e]', el).forEach(b => b.onclick = () => { session.nbEquipes = Number(b.dataset.e); resetTeams(); setup(); });
     $('#zero', el)?.addEventListener('click', async () => {
       if (await confirmModal('Remettre les scores à zéro ?', 'Les points de toutes les équipes repartent à 0.', 'Remettre à zéro')) { resetTeams(); setup(); }
@@ -82,7 +82,7 @@ export const juegos: View = el => {
     el.innerHTML = `
       <div class="row head">
         <button class="btn ghost sm" id="back">← Réglages</button>
-        <h1>${game.icon} ${esc(game.nom)} <span class="es">· ${session.niveau} · ${esc(theme.titre)}</span></h1>
+        <h1>${game.icon} ${esc(game.nom)} <span class="es">· ${session.niveau}${game.sansTheme ? '' : ` · ${esc(theme.titre)}`}</span></h1>
         <button class="btn ghost sm" id="fs">⛶ Plein écran</button>
       </div>
       <section class="panel stage game-stage" id="stage">
