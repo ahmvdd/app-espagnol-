@@ -1,14 +1,352 @@
 {
-  "niveau": "3e",
-  "themes": [
+ "niveau": "3e",
+ "couleur": "#7B3FA0",
+ "themes": [
+  {
+   "id": "las-opiniones",
+   "titre": "Las opiniones",
+   "relu": false,
+   "vocab": [
+    [
+     "creo que",
+     "je crois que"
+    ],
+    [
+     "pienso que",
+     "je pense que"
+    ],
+    [
+     "en mi opinión",
+     "à mon avis"
+    ],
+    [
+     "me parece que",
+     "il me semble que"
+    ],
+    [
+     "estoy de acuerdo",
+     "je suis d'accord"
+    ],
+    [
+     "no estoy de acuerdo",
+     "je ne suis pas d'accord"
+    ],
+    [
+     "me gusta",
+     "j'aime"
+    ],
+    [
+     "me encanta",
+     "j'adore"
+    ],
+    [
+     "odio",
+     "je déteste"
+    ],
+    [
+     "prefiero",
+     "je préfère"
+    ],
+    [
+     "es importante",
+     "c'est important"
+    ],
+    [
+     "porque",
+     "parce que"
+    ],
+    [
+     "además",
+     "de plus"
+    ],
+    [
+     "sin embargo",
+     "cependant"
+    ],
+    [
+     "por un lado",
+     "d'un côté"
+    ],
+    [
+     "por otro lado",
+     "d'un autre côté"
+    ]
+   ],
+   "phrases": [
+    "Creo que el deporte es muy importante.",
+    "En mi opinión, los deberes son útiles.",
+    "No estoy de acuerdo porque es demasiado caro.",
+    "Por un lado es divertido; por otro lado, es peligroso."
+   ],
+   "quiz": [
     {
-      "id": "las-opiniones",
-      "titre": "Las opiniones",
-      "vocab": [
-        ["creo que", "je crois que"], ["pienso que", "je pense que"], ["estoy de acuerdo", "je suis d'accord"],
-        ["no estoy de acuerdo", "je ne suis pas d'accord"], ["me parece que", "il me semble que"],
-        ["sin embargo", "cependant"], ["por un lado", "d'un côté"], ["en mi opinión", "à mon avis"]
-      ]
+     "q": "« je pense que » se dit…",
+     "o": [
+      "pienso que",
+      "creo que",
+      "me parece que",
+      "prefiero que"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« sin embargo » veut dire…",
+     "o": [
+      "cependant",
+      "de plus",
+      "parce que",
+      "d'un côté"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« à mon avis » se dit…",
+     "o": [
+      "en mi opinión",
+      "me gusta",
+      "estoy de acuerdo",
+      "por un lado"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« Estoy de acuerdo » veut dire…",
+     "o": [
+      "Je suis d'accord",
+      "Je ne suis pas d'accord",
+      "Je préfère",
+      "Il me semble"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« parce que » se dit…",
+     "o": [
+      "porque",
+      "por qué",
+      "para que",
+      "aunque"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "« de plus » se dit…",
+     "o": [
+      "además",
+      "sin embargo",
+      "porque",
+      "entonces"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "Complète : « Me ___ los videojuegos. »",
+     "o": [
+      "encantan",
+      "encanta",
+      "encanto",
+      "encantas"
+     ],
+     "a": 0,
+     "diff": "oro"
+    },
+    {
+     "q": "Complète : « No creo que ___ verdad. »",
+     "o": [
+      "sea",
+      "es",
+      "está",
+      "ser"
+     ],
+     "a": 0,
+     "diff": "oro"
     }
-  ]
+   ],
+   "parole": [
+    "¿Estás de acuerdo con el móvil en el colegio? Justifica tu respuesta.",
+    "Da tu opinión sobre los deberes.",
+    "¿Prefieres el cine o los videojuegos? ¿Por qué?",
+    "Debate: ¿el uniforme escolar es una buena idea?"
+   ]
+  },
+  {
+   "id": "el-futuro",
+   "titre": "El futuro",
+   "relu": false,
+   "vocab": [
+    [
+     "el futuro",
+     "l'avenir"
+    ],
+    [
+     "el trabajo",
+     "le travail"
+    ],
+    [
+     "el oficio",
+     "le métier"
+    ],
+    [
+     "ganar dinero",
+     "gagner de l'argent"
+    ],
+    [
+     "viajar",
+     "voyager"
+    ],
+    [
+     "estudiar",
+     "étudier"
+    ],
+    [
+     "la universidad",
+     "l'université"
+    ],
+    [
+     "seré",
+     "je serai"
+    ],
+    [
+     "trabajaré",
+     "je travaillerai"
+    ],
+    [
+     "viviré",
+     "je vivrai"
+    ],
+    [
+     "me gustaría",
+     "j'aimerais"
+    ],
+    [
+     "quiero ser",
+     "je veux être"
+    ],
+    [
+     "el médico",
+     "le médecin"
+    ],
+    [
+     "el ingeniero",
+     "l'ingénieur"
+    ],
+    [
+     "el extranjero",
+     "l'étranger"
+    ],
+    [
+     "algún día",
+     "un jour"
+    ]
+   ],
+   "phrases": [
+    "En el futuro, me gustaría ser médica.",
+    "Viviré en el extranjero.",
+    "Algún día viajaré por América Latina.",
+    "Quiero estudiar en la universidad."
+   ],
+   "quiz": [
+    {
+     "q": "« je travaillerai » se dit…",
+     "o": [
+      "trabajaré",
+      "trabajo",
+      "trabajé",
+      "trabajaba"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« me gustaría » veut dire…",
+     "o": [
+      "j'aimerais",
+      "j'aime",
+      "j'ai aimé",
+      "j'aimerai"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« el oficio » veut dire…",
+     "o": [
+      "le métier",
+      "le bureau",
+      "l'office",
+      "le travailleur"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« gagner de l'argent » se dit…",
+     "o": [
+      "ganar dinero",
+      "gastar dinero",
+      "ganar tiempo",
+      "perder dinero"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "Futur de « vivir » (yo) :",
+     "o": [
+      "viviré",
+      "vivo",
+      "viví",
+      "vivía"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "Complète : « Algún día ___ por América. » (yo)",
+     "o": [
+      "viajaré",
+      "viajé",
+      "viajaba",
+      "viajar"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "Complète : « Si estudio, ___ ingeniero. »",
+     "o": [
+      "seré",
+      "soy",
+      "fui",
+      "era"
+     ],
+     "a": 0,
+     "diff": "oro"
+    },
+    {
+     "q": "« à l'étranger » se dit…",
+     "o": [
+      "en el extranjero",
+      "en el extraño",
+      "fuera del país",
+      "en la extranjera"
+     ],
+     "a": 0,
+     "diff": "oro"
+    }
+   ],
+   "parole": [
+    "¿Qué oficio te gustaría hacer? ¿Por qué?",
+    "Imagina tu vida dentro de diez años.",
+    "¿Dónde vivirás en el futuro?",
+    "¿Es más importante ganar dinero o ser feliz?"
+   ]
+  }
+ ]
 }

@@ -1,14 +1,352 @@
 {
-  "niveau": "5e",
-  "themes": [
+ "niveau": "5e",
+ "couleur": "#2E8B57",
+ "themes": [
+  {
+   "id": "me-presento",
+   "titre": "Me presento",
+   "relu": false,
+   "vocab": [
+    [
+     "hola",
+     "bonjour"
+    ],
+    [
+     "adiós",
+     "au revoir"
+    ],
+    [
+     "me llamo",
+     "je m'appelle"
+    ],
+    [
+     "¿Cómo te llamas?",
+     "Comment tu t'appelles ?"
+    ],
+    [
+     "tengo doce años",
+     "j'ai douze ans"
+    ],
+    [
+     "¿Cuántos años tienes?",
+     "Quel âge as-tu ?"
+    ],
+    [
+     "vivo en",
+     "j'habite à"
+    ],
+    [
+     "soy francés",
+     "je suis français"
+    ],
+    [
+     "el cumpleaños",
+     "l'anniversaire"
+    ],
+    [
+     "alto",
+     "grand"
+    ],
+    [
+     "bajo",
+     "petit"
+    ],
+    [
+     "simpático",
+     "sympathique"
+    ],
+    [
+     "divertido",
+     "drôle"
+    ],
+    [
+     "tímido",
+     "timide"
+    ],
+    [
+     "el pelo moreno",
+     "les cheveux bruns"
+    ],
+    [
+     "los ojos azules",
+     "les yeux bleus"
+    ]
+   ],
+   "phrases": [
+    "Me llamo Lucía y tengo doce años.",
+    "Vivo en Madrid, en España.",
+    "Soy alta y un poco tímida.",
+    "Mi cumpleaños es el cinco de mayo."
+   ],
+   "quiz": [
     {
-      "id": "me-presento",
-      "titre": "Me presento",
-      "vocab": [
-        ["hola", "bonjour"], ["me llamo", "je m'appelle"], ["tengo doce años", "j'ai douze ans"],
-        ["vivo en", "j'habite à"], ["el cumpleaños", "l'anniversaire"], ["simpático", "sympathique"],
-        ["alto", "grand"], ["divertido", "drôle"]
-      ]
+     "q": "« je m'appelle » se dit…",
+     "o": [
+      "me llamo",
+      "te llamas",
+      "se llama",
+      "nos llamamos"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« tengo doce años » veut dire…",
+     "o": [
+      "j'ai douze ans",
+      "j'ai deux ans",
+      "il a douze ans",
+      "j'ai vingt ans"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« Comment tu t'appelles ? » se dit…",
+     "o": [
+      "¿Cómo te llamas?",
+      "¿Cuántos años tienes?",
+      "¿Dónde vives?",
+      "¿Cómo estás?"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "Complète : « Yo ___ en París. »",
+     "o": [
+      "vivo",
+      "vives",
+      "vive",
+      "vivimos"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "« les yeux bleus » se dit…",
+     "o": [
+      "los ojos azules",
+      "el pelo azul",
+      "los ojos verdes",
+      "las orejas azules"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "Au féminin, « simpático » devient…",
+     "o": [
+      "simpática",
+      "simpático",
+      "simpáticos",
+      "simpáticas"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "Complète : « Mi cumpleaños es ___ cinco de mayo. »",
+     "o": [
+      "el",
+      "la",
+      "en",
+      "a"
+     ],
+     "a": 0,
+     "diff": "oro"
+    },
+    {
+     "q": "Complète : « Ella ___ trece años. »",
+     "o": [
+      "tiene",
+      "tengo",
+      "tienes",
+      "es"
+     ],
+     "a": 0,
+     "diff": "oro"
     }
-  ]
+   ],
+   "parole": [
+    "Preséntate en tres frases.",
+    "Describe a tu mejor amigo o a tu mejor amiga.",
+    "¿Cuándo es tu cumpleaños?",
+    "Pregunta a tu compañero cómo se llama y cuántos años tiene."
+   ]
+  },
+  {
+   "id": "la-familia",
+   "titre": "La familia",
+   "relu": false,
+   "vocab": [
+    [
+     "la familia",
+     "la famille"
+    ],
+    [
+     "el padre",
+     "le père"
+    ],
+    [
+     "la madre",
+     "la mère"
+    ],
+    [
+     "los padres",
+     "les parents"
+    ],
+    [
+     "el hermano",
+     "le frère"
+    ],
+    [
+     "la hermana",
+     "la sœur"
+    ],
+    [
+     "el abuelo",
+     "le grand-père"
+    ],
+    [
+     "la abuela",
+     "la grand-mère"
+    ],
+    [
+     "el tío",
+     "l'oncle"
+    ],
+    [
+     "la tía",
+     "la tante"
+    ],
+    [
+     "el primo",
+     "le cousin"
+    ],
+    [
+     "la prima",
+     "la cousine"
+    ],
+    [
+     "el hijo",
+     "le fils"
+    ],
+    [
+     "la hija",
+     "la fille"
+    ],
+    [
+     "el perro",
+     "le chien"
+    ],
+    [
+     "el gato",
+     "le chat"
+    ]
+   ],
+   "phrases": [
+    "Tengo dos hermanos y una hermana.",
+    "Mi madre se llama Carmen.",
+    "Mis abuelos viven en Sevilla.",
+    "No tengo hermanos, soy hijo único."
+   ],
+   "quiz": [
+    {
+     "q": "« la sœur » se dit…",
+     "o": [
+      "la hermana",
+      "la madre",
+      "la tía",
+      "la prima"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« le grand-père » se dit…",
+     "o": [
+      "el abuelo",
+      "el padre",
+      "el tío",
+      "el primo"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« los padres » veut dire…",
+     "o": [
+      "les parents",
+      "les pères",
+      "les frères",
+      "les cousins"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« mi tía » veut dire…",
+     "o": [
+      "ma tante",
+      "ma cousine",
+      "ma mère",
+      "ma sœur"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« le cousin » se dit…",
+     "o": [
+      "el primo",
+      "la prima",
+      "el tío",
+      "el hijo"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "Complète : « Tengo dos hermanos y una ___. »",
+     "o": [
+      "hermana",
+      "hermano",
+      "hermanos",
+      "hermanas"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "Complète : « Mis abuelos ___ en Sevilla. »",
+     "o": [
+      "viven",
+      "vive",
+      "vivo",
+      "vivimos"
+     ],
+     "a": 0,
+     "diff": "oro"
+    },
+    {
+     "q": "« la fille » (de quelqu'un) se dit…",
+     "o": [
+      "la hija",
+      "la hermana",
+      "la madre",
+      "la tía"
+     ],
+     "a": 0,
+     "diff": "plata"
+    }
+   ],
+   "parole": [
+    "Describe a tu familia en tres frases.",
+    "¿Cuántos hermanos tienes?",
+    "Presenta a un miembro de tu familia.",
+    "¿Tienes animales en casa? ¿Cómo se llaman?"
+   ]
+  }
+ ]
 }

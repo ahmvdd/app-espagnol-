@@ -1,14 +1,352 @@
 {
-  "niveau": "4e",
-  "themes": [
+ "niveau": "4e",
+ "couleur": "#C2581E",
+ "themes": [
+  {
+   "id": "la-ciudad",
+   "titre": "La ciudad",
+   "relu": false,
+   "vocab": [
+    [
+     "la calle",
+     "la rue"
+    ],
+    [
+     "la plaza",
+     "la place"
+    ],
+    [
+     "el barrio",
+     "le quartier"
+    ],
+    [
+     "el ayuntamiento",
+     "la mairie"
+    ],
+    [
+     "el museo",
+     "le musée"
+    ],
+    [
+     "la estación",
+     "la gare"
+    ],
+    [
+     "el mercado",
+     "le marché"
+    ],
+    [
+     "la tienda",
+     "le magasin"
+    ],
+    [
+     "el parque",
+     "le parc"
+    ],
+    [
+     "a la derecha",
+     "à droite"
+    ],
+    [
+     "a la izquierda",
+     "à gauche"
+    ],
+    [
+     "todo recto",
+     "tout droit"
+    ],
+    [
+     "cerca de",
+     "près de"
+    ],
+    [
+     "lejos de",
+     "loin de"
+    ],
+    [
+     "al lado de",
+     "à côté de"
+    ],
+    [
+     "gira",
+     "tourne"
+    ]
+   ],
+   "phrases": [
+    "Para ir al museo, gira a la derecha.",
+    "La estación está cerca de la plaza.",
+    "En mi barrio hay un parque y un mercado.",
+    "Sigue todo recto y cruza la calle."
+   ],
+   "quiz": [
     {
-      "id": "la-ciudad",
-      "titre": "La ciudad",
-      "vocab": [
-        ["la calle", "la rue"], ["el ayuntamiento", "la mairie"], ["la plaza", "la place"],
-        ["a la derecha", "à droite"], ["a la izquierda", "à gauche"], ["todo recto", "tout droit"],
-        ["el barrio", "le quartier"], ["el museo", "le musée"]
-      ]
+     "q": "« à droite » se dit…",
+     "o": [
+      "a la derecha",
+      "a la izquierda",
+      "todo recto",
+      "al lado"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« la mairie » se dit…",
+     "o": [
+      "el ayuntamiento",
+      "el museo",
+      "el mercado",
+      "la estación"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« todo recto » veut dire…",
+     "o": [
+      "tout droit",
+      "à droite",
+      "à gauche",
+      "tout près"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« le quartier » se dit…",
+     "o": [
+      "el barrio",
+      "la calle",
+      "la plaza",
+      "la tienda"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« près de la place » se dit…",
+     "o": [
+      "cerca de la plaza",
+      "lejos de la plaza",
+      "al lado del parque",
+      "en la plaza"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "« Gira a la izquierda » veut dire…",
+     "o": [
+      "Tourne à gauche",
+      "Tourne à droite",
+      "Va tout droit",
+      "Traverse la rue"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "Complète : « En mi barrio ___ un parque. »",
+     "o": [
+      "hay",
+      "es",
+      "está",
+      "tiene"
+     ],
+     "a": 0,
+     "diff": "oro"
+    },
+    {
+     "q": "Complète : « El museo ___ al lado del parque. »",
+     "o": [
+      "está",
+      "es",
+      "hay",
+      "tiene"
+     ],
+     "a": 0,
+     "diff": "oro"
     }
-  ]
+   ],
+   "parole": [
+    "Describe tu barrio.",
+    "Explica a un turista cómo ir a la estación.",
+    "¿Qué hay en tu ciudad?",
+    "¿Prefieres vivir en el campo o en la ciudad? ¿Por qué?"
+   ]
+  },
+  {
+   "id": "la-rutina",
+   "titre": "La rutina diaria",
+   "relu": false,
+   "vocab": [
+    [
+     "me levanto",
+     "je me lève"
+    ],
+    [
+     "me ducho",
+     "je me douche"
+    ],
+    [
+     "me visto",
+     "je m'habille"
+    ],
+    [
+     "desayuno",
+     "je prends le petit-déjeuner"
+    ],
+    [
+     "voy al colegio",
+     "je vais au collège"
+    ],
+    [
+     "como",
+     "je déjeune"
+    ],
+    [
+     "vuelvo a casa",
+     "je rentre à la maison"
+    ],
+    [
+     "hago los deberes",
+     "je fais mes devoirs"
+    ],
+    [
+     "ceno",
+     "je dîne"
+    ],
+    [
+     "me acuesto",
+     "je me couche"
+    ],
+    [
+     "por la mañana",
+     "le matin"
+    ],
+    [
+     "por la tarde",
+     "l'après-midi"
+    ],
+    [
+     "por la noche",
+     "le soir"
+    ],
+    [
+     "a las siete",
+     "à sept heures"
+    ],
+    [
+     "temprano",
+     "tôt"
+    ],
+    [
+     "tarde",
+     "tard"
+    ]
+   ],
+   "phrases": [
+    "Cada mañana me levanto a las siete.",
+    "Desayuno con mi hermana.",
+    "Por la tarde hago los deberes.",
+    "Me acuesto a las diez de la noche."
+   ],
+   "quiz": [
+    {
+     "q": "« je me lève » se dit…",
+     "o": [
+      "me levanto",
+      "me acuesto",
+      "me ducho",
+      "me visto"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« me acuesto » veut dire…",
+     "o": [
+      "je me couche",
+      "je me lève",
+      "je m'habille",
+      "je me douche"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« je m'habille » se dit…",
+     "o": [
+      "me visto",
+      "me ducho",
+      "me levanto",
+      "me acuesto"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« le soir » se dit…",
+     "o": [
+      "por la noche",
+      "por la mañana",
+      "por la tarde",
+      "el mediodía"
+     ],
+     "a": 0,
+     "diff": "bronce"
+    },
+    {
+     "q": "« à sept heures » se dit…",
+     "o": [
+      "a las siete",
+      "a la siete",
+      "a los siete",
+      "en las siete"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "Complète : « Por la tarde ___ los deberes. » (yo)",
+     "o": [
+      "hago",
+      "hace",
+      "haces",
+      "hacen"
+     ],
+     "a": 0,
+     "diff": "plata"
+    },
+    {
+     "q": "Complète : « Mi hermano ___ a las siete. »",
+     "o": [
+      "se levanta",
+      "me levanto",
+      "te levantas",
+      "se levantan"
+     ],
+     "a": 0,
+     "diff": "oro"
+    },
+    {
+     "q": "« ceno » veut dire…",
+     "o": [
+      "je dîne",
+      "je déjeune",
+      "je cuisine",
+      "je rentre"
+     ],
+     "a": 0,
+     "diff": "plata"
+    }
+   ],
+   "parole": [
+    "Cuenta tu rutina de la mañana.",
+    "¿A qué hora te levantas los sábados?",
+    "¿Qué haces después del colegio?",
+    "Compara tu rutina con la de tu compañero."
+   ]
+  }
+ ]
 }
