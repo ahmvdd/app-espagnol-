@@ -26,7 +26,7 @@ export function renderSuivi(el: HTMLElement): void {
         ${p.aRevoir.length || p.enCours.length ? `<p><strong>À reprendre :</strong> ${[...p.aRevoir, ...p.enCours].map(t => `${statutInfo(suiviDe(c, t.id).statut).icon} ${esc(t.titre)}`).join(' · ')}</p>` : ''}
       </section>
       ${AXES[c.niveau].filter(a => a.themes.length).map(a => `
-        <h3 class="suivi-axe">Axe ${a.n} · ${esc(a.titre)}${a.obligatoire ? ' <span class="pill oblig-pill">⭐ obligatoire</span>' : ''}</h3>
+        <h2 class="suivi-axe h3">Axe ${a.n} · ${esc(a.titre)}${a.obligatoire ? ' <span class="pill oblig-pill">⭐ obligatoire</span>' : ''}</h2>
         <div class="suivi-liste">${a.themes.map(t => {
           const s = suiviDe(c, t.id), info = statutInfo(s.statut);
           return `<div class="panel suivi-ligne statut-${s.statut}" data-t="${t.id}">
