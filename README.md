@@ -19,7 +19,8 @@ Vite + TypeScript (sans framework) · vite-plugin-pwa · polices auto-hébergée
 ```bash
 npm install
 npm run dev      # http://localhost:5173 (accessible sur le réseau local avec --host)
-npm run build    # sortie dans dist/
+npm run build    # vérifie le contenu puis sortie dans dist/
+npm test         # tests unitaires (équipes)
 ```
 
 ## Structure
@@ -30,9 +31,15 @@ src/
   lib/storage.ts     localStorage + 10 points de retour + export/import .json
   lib/sound.ts       bips doux + mode muet
   lib/speech.ts      synthèse vocale espagnole (es-ES / es-MX)
-  pages/             une vue par page
-  tools/             un fichier par outil de classe
-  content/           vocabulaire et thèmes par niveau (JSON)
+  lib/state.ts       état partagé (update / subscribe)
+  lib/timer.ts       compte à rebours sans dérive (startTimer)
+  lib/content.ts     accès au contenu : axes, thèmes, activités, refranes
+  pages/             une vue par page (profe/ : classes, sauvegardes, QR)
+  tools/             un fichier par outil de classe (TOOLS dans index.ts)
+  games/             moteur de jeux commun + un fichier par jeu
+  content/           niveaux (6 axes officiels), activités, SOS, escape, pays (JSON, vérifiés au build)
+scripts/
+  check-content.mjs  validation du contenu, lancée par npm run build
 docs/
   ROADMAP.md         phases et checklist
   prototype/         prototype « La Clase Viva » (référence visuelle et code à porter)

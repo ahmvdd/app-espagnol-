@@ -181,22 +181,22 @@
 
 ## Phase 2 — Renfort · jalon **20 novembre**
 
-- [ ] **T2.1 Plan de classe** · ⏱ 5 h — glisser-déposer (souris + tactile), dispositions en rangées, îlots et U, plusieurs plans par classe, bouton « Mélanger », feuille d'impression. ✅ Utilisable au doigt sur tablette.
-- [ ] **T2.2 La Vuelta** · ⏱ 4 h — carte SVG Espagne / Amérique latine, étapes, boutons +1 et +5 par équipe (jamais de −), animation d'étape franchie, remise à zéro confirmée. ✅ Les scores survivent au rechargement.
-- [ ] **T2.3 Rituel d'entrée** · ⏱ 2 h — consigne ES (« Siéntate, saca tu cuaderno »), décompte de 3 min via `startTimer`, mini-défi tiré au sort.
-- [ ] **T2.4 Pauses énergie** · ⏱ 2 h — Simón dice, mimes de verbes, étirements guidés : séquences d'une minute avec minuteur intégré.
-- [ ] **T2.5 Rôles tournants** · ⏱ 1 h 30 — secretario, guardián del tiempo, guardián del silencio, ayudante, portavoz, avec rotation automatique par séance.
-- [ ] **T2.6 Consignes en images** · ⏱ 1 h 30 — pictogrammes bilingues (Escuchad, Escribid, Trabajad en parejas, Guardad vuestras cosas), un clic pour projeter.
-- [ ] **T2.7 Sonomètre** · ⏱ 3 h — **d'abord tester le micro sur un PC du collège.** Phrase d'explication avant la demande d'autorisation ; analyse locale (Web Audio `AnalyserNode`), rien n'est enregistré ; feu vert/orange/rouge avec icônes ; seuils réglables ; alerte douce. ✅ Si le micro est refusé, un message clair et le Niveau de voix proposé à la place.
-- [ ] **T2.8 Minuteur : thèmes visuels** · ⏱ 2 h — sablier, mèche, tortilla, fusée.
-- [ ] **T2.9 Moteur de jeux commun** · ⏱ 3 h — sélection niveau + thème, scores par équipe, mode projeté, plein écran. Tous les jeux s'appuient dessus.
-- [ ] **T2.10 à T2.17 — 8 jeux** · ⏱ 2 à 3 h chacun · 🔗 T2.9
-  - [ ] Rosco (Pasapalabra) · [ ] Ahorcado · [ ] Lotería (cartes imprimables) · [ ] Memory
-  - [ ] Quiz en direct (porter le quiz du prototype, réponses sur papier) · [ ] La bomba · [ ] Basta · [ ] Taboo
-- [ ] **T2.18 Escape game** · ⏱ 4 h — porter `tEscape` du prototype : 4 à 5 énigmes, cadenas à code, indices qui coûtent du temps, durée 20, 30 ou 45 min.
-- [ ] **T2.19 Carte du monde hispanophone** · ⏱ 4 h — carte SVG cliquable → fiche pays (drapeau, capitale, fête, accent, 3 mots, mini-quiz). Chiffres vérifiés et sources dans la page Crédits.
-- [ ] **T2.20 Transfert par QR** · ⏱ 2 h — liste de prénoms tablette → PC via un QR code (compressé ; au-delà d'une certaine taille, passer par le fichier).
-- [ ] **T2.21 Page Crédits et aide** · ⏱ 1 h 30 — sources des images et sons, mentions légales, confidentialité, mode d'emploi d'une page.
+- [x] **T2.1 Plan de classe** · ⏱ 5 h — glisser-déposer (souris + tactile), dispositions en rangées, îlots et U, plusieurs plans par classe, bouton « Mélanger », feuille d'impression. ✅ Utilisable au doigt sur tablette.
+- [x] **T2.2 La Vuelta** · ⏱ 4 h — carte SVG Espagne / Amérique latine, étapes, boutons +1 et +5 par équipe (jamais de −), animation d'étape franchie, remise à zéro confirmée. ✅ Les scores survivent au rechargement.
+- [x] **T2.3 Rituel d'entrée** · ⏱ 2 h — consigne ES (« Siéntate, saca tu cuaderno »), décompte de 3 min via `startTimer`, mini-défi tiré au sort.
+- [x] **T2.4 Pauses énergie** · ⏱ 2 h — Simón dice, mimes de verbes, étirements guidés : séquences d'une minute avec minuteur intégré.
+- [x] **T2.5 Rôles tournants** · ⏱ 1 h 30 — secretario, guardián del tiempo, guardián del silencio, ayudante, portavoz, avec rotation automatique par séance.
+- [x] **T2.6 Consignes en images** · ⏱ 1 h 30 — pictogrammes bilingues (Escuchad, Escribid, Trabajad en parejas, Guardad vuestras cosas), un clic pour projeter.
+- [x] **T2.7 Sonomètre** · ⏱ 3 h — **d'abord tester le micro sur un PC du collège.** Phrase d'explication avant la demande d'autorisation ; analyse locale (Web Audio `AnalyserNode`), rien n'est enregistré ; feu vert/orange/rouge avec icônes ; seuils réglables ; alerte douce. ✅ Si le micro est refusé, un message clair et le Niveau de voix proposé à la place.
+- [x] **T2.8 Minuteur : thèmes visuels** · ⏱ 2 h — sablier, mèche, tortilla, fusée.
+- [x] **T2.9 Moteur de jeux commun** · ⏱ 3 h — sélection niveau + thème, scores par équipe, mode projeté, plein écran. Tous les jeux s'appuient dessus.
+- [x] **T2.10 à T2.17 — 8 jeux** · ⏱ 2 à 3 h chacun · 🔗 T2.9
+  - [x] Rosco (Pasapalabra) · [x] Ahorcado · [x] Lotería (cartes imprimables) · [x] Memory
+  - [x] Quiz en direct (porter le quiz du prototype, réponses sur papier) · [x] La bomba · [x] Basta · [x] Taboo
+- [x] **T2.18 Escape game** · ⏱ 4 h — porter `tEscape` du prototype : 4 à 5 énigmes, cadenas à code, indices qui coûtent du temps, durée 20, 30 ou 45 min.
+- [x] **T2.19 Carte du monde hispanophone** · ⏱ 4 h — carte SVG cliquable → fiche pays (drapeau, capitale, fête, accent, 3 mots, mini-quiz). Chiffres vérifiés et sources dans la page Crédits.
+- [x] **T2.20 Transfert par QR** · ⏱ 2 h — liste de prénoms tablette → PC via un QR code (compressé ; au-delà d'une certaine taille, passer par le fichier).
+- [x] **T2.21 Page Crédits et aide** · ⏱ 1 h 30 — sources des images et sons, mentions légales, confidentialité, mode d'emploi d'une page.
 - [ ] **T2.22 Livraison de la phase 2** — ✅ envoyée **au plus tard le 20 novembre**.
 
 ---
@@ -249,3 +249,6 @@ _(vide)_
 ## Notes de test
 - 18/10 — Testé automatiquement dans Chrome (headless) : 1366×768 et 1920×1080 en mode projection sans débordement, axe-core sans violation en clair et en sombre, hors ligne OK sur toutes les pages, 100 générations d'équipes sans paire incompatible.
 - Reste à tester à la main : Edge, Firefox, Safari (iPad/iPhone) et un téléphone (T1.19).
+- 18/10 — Phase 2 testée automatiquement (Chrome) : plan de classe (glisser-déposer souris, toucher-toucher, échange, retrait, 3 dispositions, rechargement), La Vuelta (étapes, scores conservés), escape game (indice −2 min, cadenas), carte (21 pays, mini-quiz), transfert QR (encodage → capture → décodage → import, 24 élèves = 262 caractères). Axe-core sans violation sur 24 pages. Hors ligne OK.
+- Sonomètre : non testable sans vrai micro → à vérifier sur un PC du collège (T3.1).
+- Carte du monde : aucun chiffre (population, superficie) affiché ; capitales, fêtes nationales, accents et mots à faire relire.
