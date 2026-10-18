@@ -122,3 +122,24 @@ details{margin:.75rem 0}
 .vocab{width:100%;border-collapse:collapse;background:var(--surface);border-radius:12px}
 .vocab td{padding:.5rem .75rem;border-bottom:1px solid var(--line)}
 .vocab td:last-child{width:1%}
+
+/* Modale */
+.modal-back{position:fixed;inset:0;background:rgb(10 14 30 / .55);display:grid;place-items:center;z-index:30;padding:1rem}
+.modal{background:var(--surface);color:var(--ink);border-radius:16px;padding:1.5rem;max-width:30rem;width:100%;box-shadow:0 20px 60px rgb(0 0 0 / .35)}
+.modal h2{margin:0 0 .5rem}
+.modal p{margin:0 0 1rem}
+
+/* Profe */
+ul.chips{list-style:none;padding:0}
+li.chip{display:inline-flex;align-items:center;gap:.3rem;cursor:default;padding-right:.3rem}
+.chip .x{border:0;background:none;cursor:pointer;min-width:32px;min-height:32px;border-radius:50%;color:var(--muted);font-weight:700}
+.chip .x:hover{background:var(--tile);color:var(--pink)}
+.add-one{margin-bottom:.5rem}
+fieldset{border:0;padding:0;margin:0 0 .75rem}
+fieldset label{font-weight:400;min-height:44px}
+input[type=radio],input[type=checkbox]{min-height:auto;width:1.2rem;height:1.2rem}
+input[type=range]{min-height:auto;padding:0;border:0;background:none}
+.dys-sample{font-family:'OpenDyslexic',var(--body)}
+
+/* Police dyslexie */
+:root[data-font="dys"]{--body:'OpenDyslexic','Atkinson Hyperlegible',system-ui,sans-serif;--display:'OpenDyslexic','Atkinson Hyperlegible',system-ui,sans-serif}

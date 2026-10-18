@@ -1,11 +1,11 @@
 import type { View } from '../router';
 import { NIVEAUX, THEMES, type Niveau } from '../lib/content';
-import { data, commit } from '../lib/store';
+import { state, update } from '../lib/state';
 import { speak } from '../lib/speech';
 import { $, $$, esc, shuffle, toast, onKeys } from '../lib/ui';
 
 const say = (txt: string) => {
-  if (!speak(txt, data.reglages.accent ?? 'es-ES')) toast('Pas de voix espagnole disponible (ou son coupé)');
+  if (!speak(txt, state.reglages.accent ?? 'es-ES')) toast('Pas de voix espagnole disponible (ou son coupé)');
 };
 
 export const nivel: View = el => {
@@ -45,8 +45,8 @@ export const nivel: View = el => {
           <button class="btn ghost sm" id="side" aria-pressed="${frFirst}">Commencer par le français</button>
           <label class="row small">Accent
             <select id="accent">
-              <option value="es-ES" ${data.reglages.accent !== 'es-MX' ? 'selected' : ''}>Espagne</option>
-              <option value="es-MX" ${data.reglages.accent === 'es-MX' ? 'selected' : ''}>Mexique</option>
+              <option value="es-ES" ${state.reglages.accent !== 'es-MX' ? 'selected' : ''}>Espagne</option>
+              <option value="es-MX" ${state.reglages.accent === 'es-MX' ? 'selected' : ''}>Mexique</option>
             </select>
           </label>
         </div>
@@ -66,7 +66,7 @@ export const nivel: View = el => {
     $('#say', el).onclick = () => say(es);
     $('#mix', el).onclick = () => { deck = shuffle(deck); i = 0; flipped = false; render(); };
     $('#side', el).onclick = () => { frFirst = !frFirst; flipped = false; render(); };
-    $<HTMLSelectElement>('#accent', el).onchange = e => { data.reglages.accent = (e.target as HTMLSelectElement).value as 'es-ES' | 'es-MX'; commit(); };
+    $<HTMLSelectElement>('#accent', el).onchange = e => { state.reglages.accent = (e.target as HTMLSelectElement).value as 'es-ES' | 'es-MX'; update(); };
     $$('[data-say]', el).forEach(b => b.onclick = () => say(theme.vocab[Number(b.dataset.say)][0]));
   };
 

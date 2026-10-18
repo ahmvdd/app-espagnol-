@@ -1,6 +1,6 @@
 import type { View } from '../router';
 import { NIVEAUX, THEMES, palabraDelDia } from '../lib/content';
-import { data } from '../lib/store';
+import { state, update } from '../lib/state';
 import { speak } from '../lib/speech';
 import { TOOLS, toolCard } from '../tools';
 import { $, $$, esc, toast } from '../lib/ui';
@@ -25,7 +25,7 @@ const IDEES: Record<number, Idee[]> = {
 let minutes = 0;
 
 export const inicio: View = el => {
-  const p = data.reglages.prenomProf;
+  const p = state.reglages.prenomProf;
   const w = palabraDelDia();
   const date = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
 
@@ -68,7 +68,7 @@ export const inicio: View = el => {
 
     $$('[data-m]', el).forEach(b => b.onclick = () => { minutes = minutes === Number(b.dataset.m) ? 0 : Number(b.dataset.m); render(); });
     $$('[data-palabra]', el).forEach(b => b.onclick = () => { const h = $('#palabra', el); h.scrollIntoView({ behavior: 'smooth' }); h.focus({ preventScroll: true }); });
-    $('#say', el).onclick = () => { if (!speak(w.es, data.reglages.accent ?? 'es-ES')) toast('Pas de voix espagnole disponible (ou son coupé)'); };
+    $('#say', el).onclick = () => { if (!speak(w.es, state.reglages.accent ?? 'es-ES')) toast('Pas de voix espagnole disponible (ou son coupé)'); };
     $('#reveal', el).onclick = () => { $('#trad', el).hidden = false; $('#reveal', el).hidden = true; };
   };
 

@@ -1,13 +1,15 @@
 import '@fontsource/atkinson-hyperlegible/400.css';
 import '@fontsource/atkinson-hyperlegible/700.css';
 import '@fontsource-variable/bricolage-grotesque';
+import '@fontsource/opendyslexic/400.css';
+import '@fontsource/opendyslexic/700.css';
 import './styles/tokens.css';
 import './styles/base.css';
 
 import { registerSW } from 'virtual:pwa-register';
 import { route, start } from './router';
 import { requestPersistence, shouldRemindBackup } from './lib/storage';
-import { data, commit } from './lib/store';
+import { state, update, subscribe } from './lib/state';
 import { setMuted, setVolume } from './lib/sound';
 import { $ } from './lib/ui';
 
@@ -21,17 +23,19 @@ import { nivel } from './pages/nivel';
 registerSW({ immediate: true });
 requestPersistence();
 
-setMuted(data.reglages.muet);
-setVolume(data.reglages.volume);
-
 // Bouton muet toujours visible
 const mute = $('#btn-mute');
-const syncMute = () => {
-  mute.setAttribute('aria-pressed', String(data.reglages.muet));
-  mute.textContent = data.reglages.muet ? '🔇 Muet' : '🔊 Son';
+const applyReglages = () => {
+  const r = state.reglages;
+  setMuted(r.muet);
+  setVolume(r.volume);
+  document.documentElement.dataset.font = r.police === 'dyslexie' ? 'dys' : 'std';
+  mute.setAttribute('aria-pressed', String(r.muet));
+  mute.textContent = r.muet ? '🔇 Muet' : '🔊 Son';
 };
-mute.onclick = () => { data.reglages.muet = !data.reglages.muet; setMuted(data.reglages.muet); commit(); syncMute(); };
-syncMute();
+mute.onclick = () => update(s => { s.reglages.muet = !s.reglages.muet; });
+subscribe(applyReglages);
+applyReglages();
 
 // Mode projection
 const proj = $('#btn-proj');
@@ -42,7 +46,7 @@ proj.onclick = () => {
 };
 
 // Rappel de sauvegarde (> 7 jours)
-if (shouldRemindBackup(data)) {
+if (shouldRemindBackup(state)) {
   const r = $('#backup-reminder');
   r.hidden = false;
   r.innerHTML = 'Pense à sauvegarder tes classes 💾 <a href="#/profe">Sauvegarder maintenant</a>';

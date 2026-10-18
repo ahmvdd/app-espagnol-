@@ -1,5 +1,5 @@
 import type { Tool } from './index';
-import { data } from '../lib/store';
+import { state, update } from '../lib/state';
 import { classeOptions, currentClasseId, rememberClasse } from '../lib/classes';
 import { beep } from '../lib/sound';
 import { $, esc, pick, timers, onKeys, toast, reducedMotion } from '../lib/ui';
@@ -12,7 +12,7 @@ const ruleta: Tool = el => {
   let src = currentClasseId();
   let nb = 28, spinning = false;
 
-  const classe = () => data.classes.find(c => c.id === src);
+  const classe = () => state.classes.find(c => c.id === src);
   const list = () => {
     const c = classe();
     return c?.eleves.length ? c.eleves.map(e => e.prenom) : Array.from({ length: nb }, (_, i) => `N° ${i + 1}`);

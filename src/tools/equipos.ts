@@ -1,5 +1,5 @@
 import type { Tool } from './index';
-import { data, commit } from '../lib/store';
+import { state, update } from '../lib/state';
 import { classeOptions, currentClasseId, rememberClasse } from '../lib/classes';
 import { $, $$, esc, pick, shuffle, toast } from '../lib/ui';
 
@@ -48,10 +48,10 @@ const equipos: Tool = el => {
   let result: string[][] = [];
 
   const render = () => {
-    const c = data.classes.find(x => x.id === src);
+    const c = state.classes.find(x => x.id === src);
     if (!c?.eleves.length) {
       el.innerHTML = `
-        ${data.classes.length ? `<label class="field">Classe <select id="src">${classeOptions(src)}</select></label>` : ''}
+        ${state.classes.length ? `<label class="field">Classe <select id="src">${classeOptions(src)}</select></label>` : ''}
         <p class="center big">Il faut d’abord une classe avec des prénoms.</p>
         <p class="center"><a class="btn" href="#/profe">Ajouter une classe</a></p>`;
       const s = $<HTMLSelectElement>('#src', el);
@@ -106,11 +106,11 @@ const equipos: Tool = el => {
       const a = $<HTMLSelectElement>('#inc-a', el).value, b = $<HTMLSelectElement>('#inc-b', el).value;
       if (a === b) return toast('Choisis deux élèves différents');
       if (c.incompatibles.some(([x, y]) => (x === a && y === b) || (x === b && y === a))) return toast('Déjà séparés');
-      c.incompatibles.push([a, b]); commit(); render();
+      c.incompatibles.push([a, b]); update(); render();
       $$<HTMLDetailsElement>('details', el)[1].open = true;
     };
     $$('[data-inc]', el).forEach(b => b.onclick = () => {
-      c.incompatibles.splice(Number(b.dataset.inc), 1); commit(); render();
+      c.incompatibles.splice(Number(b.dataset.inc), 1); update(); render();
       $$<HTMLDetailsElement>('details', el)[1].open = true;
     });
     $('#gen', el).onclick = () => {
