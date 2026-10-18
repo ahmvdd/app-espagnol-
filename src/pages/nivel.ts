@@ -21,10 +21,10 @@ export const nivel: View = el => {
       </nav>
     </div>
 
-    <div class="theme-list" role="list">
-      ${themes.map(t => `<a role="listitem" class="panel theme-card" href="#/nivel/${n}/${t.id}" aria-current="${t === theme ? 'true' : 'false'}">
-        <strong>${esc(t.titre)}</strong><span class="muted small">${t.vocab.length} mots · ${t.quiz.length} questions</span></a>`).join('')}
-    </div>
+    <ul class="theme-list">
+      ${themes.map(t => `<li><a class="panel theme-card" href="#/nivel/${n}/${t.id}" aria-current="${t === theme ? 'true' : 'false'}">
+        <strong>${esc(t.titre)}</strong><span class="muted small">${t.vocab.length} mots · ${t.quiz.length} questions</span></a></li>`).join('')}
+    </ul>
 
     <section class="panel stage" id="flash"></section>
 

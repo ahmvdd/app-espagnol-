@@ -2,7 +2,7 @@
 :root {
   --paper:#F3F5FB; --surface:#FFFFFF; --ink:#16203B; --muted:#56607A;
   --cobalt:#2340B8; --on-cobalt:#FFFFFF; --tile:#DCE3FA; --ochre:#E3A21A;
-  --pink:#C8326B; --olive:#3F7A26; --line:#D3D9EA;
+  --pink:#C8326B; --on-pink:#FFFFFF; --olive:#3F7A26; --line:#D3D9EA;
   --display:'Bricolage Grotesque Variable', system-ui, sans-serif;
   --body:'Atkinson Hyperlegible', system-ui, sans-serif;
   color-scheme: light;
@@ -11,13 +11,13 @@
   :root:not([data-theme="light"]) {
     --paper:#0E1325; --surface:#171F3D; --ink:#EDF0FA; --muted:#A6AFC8;
     --cobalt:#7C93FF; --on-cobalt:#0E1325; --tile:#26315F; --ochre:#F2BA45;
-    --pink:#F0709D; --olive:#8BC462; --line:#2B3660; color-scheme: dark;
+    --pink:#F0709D; --on-pink:#0E1325; --olive:#8BC462; --line:#2B3660; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --paper:#0E1325; --surface:#171F3D; --ink:#EDF0FA; --muted:#A6AFC8;
   --cobalt:#7C93FF; --on-cobalt:#0E1325; --tile:#26315F; --ochre:#F2BA45;
-  --pink:#F0709D; --olive:#8BC462; --line:#2B3660; color-scheme: dark;
+  --pink:#F0709D; --on-pink:#0E1325; --olive:#8BC462; --line:#2B3660; color-scheme: dark;
 }
 /* Mode projection : texte très grand, contraste élevé */
 :root[data-proj="on"] { font-size: 130%; --muted: var(--ink); }
