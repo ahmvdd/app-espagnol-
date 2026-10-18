@@ -1,76 +1,129 @@
 import type { View } from '../router';
-import { NIVEAUX, THEMES, palabraDelDia } from '../lib/content';
-import { state, update } from '../lib/state';
+import {
+  NIVEAUX, THEMES, COULEUR, DUREES, AMBIANCES, DEDICACE,
+  palabraDelDia, refranDelDia, activitesPour, lienActivite, dernierTheme,
+  type Ambiance, type Niveau
+} from '../lib/content';
+import { state } from '../lib/state';
 import { speak } from '../lib/speech';
 import { TOOLS, toolCard } from '../tools';
 import { $, $$, esc, toast } from '../lib/ui';
 
-type Idee = { titre: string; desc: string; liens: [string, string][] };
+/** Choix « J'ai X minutes » : gardés le temps de la séance. */
+const choix: { duree?: number; niveau?: Niveau; ambiance?: Ambiance; i: number } = { i: 0 };
 
-const IDEES: Record<number, Idee[]> = {
-  2: [
-    { titre: '🎡 Question flash', desc: 'Un élève tiré au sort répond à une question en espagnol.', liens: [['Ruleta', '#/herramientas/ruleta']] },
-    { titre: '📖 Palabra del día', desc: 'Faire deviner le mot du jour, puis le faire répéter à toute la classe.', liens: [] }
-  ],
-  5: [
-    { titre: '🃏 Flashcards', desc: 'Révision express du thème en cours, à l’oral.', liens: NIVEAUX.map(n => [n, `#/nivel/${n}`]) },
-    { titre: '⏱ Défi chrono', desc: '1 minute par deux pour écrire un maximum de mots du thème.', liens: [['Minuteur 1 min', '#/herramientas/minuteur?t=60']] }
-  ],
-  10: [
-    { titre: '👥 Duel d’équipes', desc: 'Faire 4 équipes : chacune traduit à tour de rôle un mot des flashcards.', liens: [['Équipes', '#/herramientas/equipos'], ['Minuteur 10 min', '#/herramientas/minuteur?t=600']] },
-    { titre: '🎡 Interrogation orale', desc: 'Ruleta + flashcards : l’élève tiré au sort traduit la carte affichée.', liens: [['Ruleta', '#/herramientas/ruleta']] }
-  ]
-};
+const say = (t: string) => { if (!speak(t, state.reglages.accent ?? 'es-ES')) toast('Voix espagnole absente sur cet appareil'); };
 
-let minutes = 0;
+function etapes(): string {
+  const step = <T extends string | number>(titre: string, key: 'duree' | 'niveau' | 'ambiance', items: { v: T; label: string }[]) => `
+    <div class="field">${titre}
+      <div class="row wrap" role="group" aria-label="${titre}">
+        ${items.map(it => `<button class="btn ghost" data-${key}="${it.v}" aria-pressed="${choix[key] === it.v}">${it.label}</button>`).join('')}
+      </div>
+    </div>`;
+
+  let html = step('1. Combien de temps ?', 'duree', DUREES.map(d => ({ v: d, label: `${d} min` })));
+  if (choix.duree) html += step('2. Quelle classe ?', 'niveau', NIVEAUX.map(n => ({ v: n, label: n })));
+  if (choix.duree && choix.niveau) html += step('3. Quelle ambiance ?', 'ambiance', AMBIANCES.map(a => ({ v: a.id, label: `${a.icon} ${a.label}` })));
+  if (choix.duree && choix.niveau && choix.ambiance) {
+    const list = activitesPour(choix.duree, choix.niveau, choix.ambiance);
+    const a = list[choix.i % list.length];
+    const lien = lienActivite(a, choix.niveau);
+    html += `
+      <section class="panel activite" aria-live="polite">
+        <div class="row wrap"><span class="pill">⏱ ${a.duree} min</span><span class="pill">${choix.niveau}</span>${a.materiel ? `<span class="pill">✏️ ${esc(a.materiel)}</span>` : ''}</div>
+        <h3>${esc(a.titre)}</h3>
+        <p>${esc(a.consigne)}</p>
+        <div class="row wrap">
+          ${lien ? `<a class="btn bigbtn" href="${lien}">▶ Lancer</a>` : ''}
+          ${list.length > 1 ? `<button class="btn ghost" id="autre">Autre idée (${(choix.i % list.length) + 1}/${list.length})</button>` : ''}
+          <button class="btn ghost sm" id="reset">Recommencer</button>
+        </div>
+      </section>`;
+  }
+  return html;
+}
 
 export const inicio: View = el => {
   const p = state.reglages.prenomProf;
   const w = palabraDelDia();
+  const [refEs, refFr] = refranDelDia();
   const date = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+  const raccourcis = ['minuteur', 'ruleta', 'equipos'].map(id => TOOLS.find(t => t.id === id)!);
 
-  const render = () => {
-    el.innerHTML = `
-      <section class="hero">
-        <i class="azulejo band" aria-hidden="true"></i>
-        <div><p class="muted">${esc(date)}</p><h1 class="hello">¡Hola${p ? `, ${esc(p)}` : ''}!</h1></div>
-      </section>
-
-      <div class="levels">
-        ${NIVEAUX.map(n => `<a class="panel level" href="#/nivel/${n}"><span class="huge">${n}</span><span class="muted">${THEMES[n].map(t => esc(t.titre)).join(' · ')}</span></a>`).join('')}
+  el.innerHTML = `
+    <section class="hero">
+      <i class="azulejo band" aria-hidden="true"></i>
+      <div>
+        <p class="muted" lang="es">${esc(date)}</p>
+        <h1 class="hello" lang="es">¡Hola${p ? `, ${esc(p)}` : ''}!</h1>
+        ${DEDICACE ? `<p class="dedicace">${esc(DEDICACE)}</p>` : ''}
       </div>
+    </section>
 
-      <h2>J’ai… minutes</h2>
-      <div class="row wrap" role="group" aria-label="Temps disponible">
-        ${[2, 5, 10].map(m => `<button class="btn ghost" data-m="${m}" aria-pressed="${m === minutes}">${m} min</button>`).join('')}
-      </div>
-      ${minutes ? `<div class="idees">${IDEES[minutes].map(i => `
-        <section class="panel">
-          <h3>${i.titre}</h3><p>${i.desc}</p>
-          <div class="row wrap">${i.liens.length
-            ? i.liens.map(([l, h]) => `<a class="btn sm" href="${h}">${esc(l)}</a>`).join('')
-            : '<button class="btn sm" data-palabra>Voir le mot du jour</button>'}</div>
-        </section>`).join('')}</div>` : ''}
+    <div class="levels">
+      ${NIVEAUX.map(n => {
+        const t = dernierTheme(n);
+        return `<a class="panel level" href="#/nivel/${n}/${t.id}" style="--niveau:${COULEUR[n]}">
+          <span class="huge">${n}</span><span><strong>${esc(t.titre)}</strong></span>
+          <span class="muted small">${THEMES[n].length} thèmes</span></a>`;
+      }).join('')}
+    </div>
 
-      <h2>Raccourcis</h2>
-      <div class="tools">${TOOLS.map(t => toolCard(t)).join('')}</div>
+    <section class="panel star">
+      <h2>⏱ J’ai… minutes</h2>
+      <div id="etapes"></div>
+    </section>
 
-      <h2 id="palabra" tabindex="-1">Palabra del día</h2>
+    <h2>Raccourcis</h2>
+    <div class="tools">
+      ${raccourcis.map(t => toolCard(t)).join('')}
+      <a class="panel tool-card sos-card" href="#/sos"><span class="ico" aria-hidden="true">🆘</span><strong>SOS</strong><span class="es" lang="es">¡Socorro!</span><span class="muted small">Une idée tout de suite</span></a>
+    </div>
+
+    <h2>Rituels du jour</h2>
+    <div class="idees">
       <section class="panel center">
+        <h3>Palabra del día</h3>
         <span class="pill">${w.niveau} · ${esc(w.theme)}</span>
-        <div class="huge">${esc(w.es)}</div>
-        <p class="big" id="trad" hidden>${esc(w.fr)}</p>
+        <div class="big" lang="es">${esc(w.es)}</div>
+        <p class="big win" id="trad" hidden>${esc(w.fr)}</p>
         <div class="row wrap center-row">
-          <button class="btn ghost" id="say">🔈 Écouter</button>
-          <button class="btn" id="reveal">Voir la traduction</button>
+          <button class="btn ghost sm" id="say-w">🔊 Écouter</button>
+          <button class="btn sm" id="reveal-w">Voir la traduction</button>
         </div>
-      </section>`;
+      </section>
+      <section class="panel center">
+        <h3>Refrán del día</h3>
+        <div class="big" lang="es">${esc(refEs)}</div>
+        <p class="win" id="ref-fr" hidden>${esc(refFr)}</p>
+        <div class="row wrap center-row">
+          <button class="btn ghost sm" id="say-r">🔊 Écouter</button>
+          <button class="btn sm" id="reveal-r">Révéler le sens</button>
+        </div>
+      </section>
+    </div>
 
-    $$('[data-m]', el).forEach(b => b.onclick = () => { minutes = minutes === Number(b.dataset.m) ? 0 : Number(b.dataset.m); render(); });
-    $$('[data-palabra]', el).forEach(b => b.onclick = () => { const h = $('#palabra', el); h.scrollIntoView({ behavior: 'smooth' }); h.focus({ preventScroll: true }); });
-    $('#say', el).onclick = () => { if (!speak(w.es, state.reglages.accent ?? 'es-ES')) toast('Pas de voix espagnole disponible (ou son coupé)'); };
-    $('#reveal', el).onclick = () => { $('#trad', el).hidden = false; $('#reveal', el).hidden = true; };
+    <p class="home-foot muted small">
+      <a href="#/aide">Aide</a> · <a href="#/aide/credits">Crédits</a> · <a href="#/profe">Tout effacer (dans Profe)</a>
+    </p>`;
+
+  const zone = $('#etapes', el);
+  const draw = (focus?: string) => {
+    zone.innerHTML = etapes();
+    $$('[data-duree]', zone).forEach(b => b.onclick = () => { choix.duree = Number(b.dataset.duree); choix.i = 0; draw('[data-niveau]'); });
+    $$('[data-niveau]', zone).forEach(b => b.onclick = () => { choix.niveau = b.dataset.niveau as Niveau; choix.i = 0; draw('[data-ambiance]'); });
+    $$('[data-ambiance]', zone).forEach(b => b.onclick = () => { choix.ambiance = b.dataset.ambiance as Ambiance; choix.i = 0; draw('.activite a, #autre'); });
+    const autre = $('#autre', zone);
+    if (autre) autre.onclick = () => { choix.i++; draw('#autre'); };
+    const reset = $('#reset', zone);
+    if (reset) reset.onclick = () => { delete choix.duree; delete choix.niveau; delete choix.ambiance; choix.i = 0; draw('[data-duree]'); };
+    if (focus) $<HTMLElement>(focus, zone)?.focus();
   };
+  draw();
 
-  render();
+  $('#say-w', el).onclick = () => say(w.es);
+  $('#reveal-w', el).onclick = () => { $('#trad', el).hidden = false; $('#reveal-w', el).hidden = true; };
+  $('#say-r', el).onclick = () => say(refEs);
+  $('#reveal-r', el).onclick = () => { $('#ref-fr', el).hidden = false; $('#reveal-r', el).hidden = true; };
 };
