@@ -103,6 +103,17 @@ check(mundo.length === 21, `mundo.json : 21 pays et territoires attendus (${mund
 for (const p of mundo)
   check(isStr(p.id) && isStr(p.nom) && isStr(p.capitale) && isStr(p.fete) && isStr(p.accent) && isStr(p.drapeau)
     && typeof p.lon === 'number' && typeof p.lat === 'number' && p.mots?.length === 3 && p.mots.every(m => m.length === 2 && m.every(isStr)), `mundo.json › ${p.id ?? '?'} : fiche incomplète`);
+const fiestas = read('fiestas.json') ?? [];
+check(fiestas.length >= 8, 'fiestas.json : au moins 8 fêtes');
+for (const x of fiestas)
+  check(isStr(x.id) && isStr(x.nom) && isStr(x.pays) && isStr(x.quand) && isStr(x.activite) && x.texte?.length && x.texte.every(isStr)
+    && x.vocab?.length >= 3 && x.vocab.every(v => v.length === 2 && v.every(isStr)) && x.niveaux?.every(n => NIVEAUX.includes(n)), `fiestas.json › ${x.id ?? '?'} : fiche incomplète`);
+const fotos = read('fotos.json') ?? [];
+for (const x of fotos) {
+  check(isStr(x.id) && isStr(x.fichier) && isStr(x.lieu) && isStr(x.quoi) && x.preguntas?.length >= 3 && x.vocab?.length >= 3, `fotos.json › ${x.id ?? '?'} : fiche incomplète`);
+  check(isStr(x.credit?.auteur) && isStr(x.credit?.licence) && /^https:\/\//.test(x.credit?.source ?? ''), `fotos.json › ${x.id ?? '?'} : crédit (auteur, licence, source) obligatoire`);
+  try { readFileSync(new URL('../../public/' + x.fichier, dir)); } catch { errors.push(`fotos.json › ${x.id} : fichier public/${x.fichier} introuvable`); }
+}
 const site = read('site.json');
 check(site && typeof site.dedicace === 'string' && typeof site.prenom === 'string', 'site.json : "prenom" et "dedicace" doivent être des textes (vides possibles)');
 check((site?.dedicace ?? '').length <= 280, 'site.json : dédicace trop longue (280 caractères max)');

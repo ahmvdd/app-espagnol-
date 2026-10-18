@@ -1,0 +1,386 @@
+[
+ {
+  "id": "reyes",
+  "nom": "Los Reyes Magos",
+  "pays": "España",
+  "quand": "6 de enero",
+  "icon": "👑",
+  "texte": [
+   "En Espagne, ce sont les trois Rois mages, Melchor, Gaspar et Baltasar, qui apportent les cadeaux aux enfants, dans la nuit du 5 au 6 janvier.",
+   "Le 5 janvier au soir, un grand défilé, la Cabalgata de Reyes, traverse les villes : les rois lancent des bonbons à la foule.",
+   "Le 6 janvier, on mange le roscón de Reyes, une brioche en couronne qui cache une figurine et une fève."
+  ],
+  "vocab": [
+   [
+    "los Reyes Magos",
+    "les Rois mages"
+   ],
+   [
+    "la cabalgata",
+    "le défilé"
+   ],
+   [
+    "el roscón",
+    "la galette en couronne"
+   ],
+   [
+    "los caramelos",
+    "les bonbons"
+   ],
+   [
+    "los regalos",
+    "les cadeaux"
+   ]
+  ],
+  "activite": "Écrire en espagnol une petite lettre aux Rois mages : « Queridos Reyes Magos, este año quiero… »",
+  "niveaux": [
+   "5e"
+  ]
+ },
+ {
+  "id": "fallas",
+  "nom": "Las Fallas",
+  "pays": "España · Valencia",
+  "quand": "del 15 al 19 de marzo",
+  "icon": "🔥",
+  "texte": [
+   "À Valence, chaque quartier construit d’immenses statues de carton et de bois, les ninots, souvent drôles ou critiques.",
+   "La nuit du 19 mars, la Cremà : presque toutes les statues sont brûlées dans les rues.",
+   "Les Fallas sont inscrites au patrimoine culturel immatériel de l’UNESCO depuis 2016."
+  ],
+  "vocab": [
+   [
+    "la falla",
+    "le monument des Fallas"
+   ],
+   [
+    "el ninot",
+    "la figurine"
+   ],
+   [
+    "quemar",
+    "brûler"
+   ],
+   [
+    "los petardos",
+    "les pétards"
+   ],
+   [
+    "el fuego",
+    "le feu"
+   ]
+  ],
+  "activite": "Décrire un ninot imaginaire : « Mi ninot es grande, tiene… »",
+  "niveaux": [
+   "5e",
+   "4e"
+  ]
+ },
+ {
+  "id": "feria",
+  "nom": "La Feria de Abril",
+  "pays": "España · Sevilla",
+  "quand": "dos semanas después de Semana Santa",
+  "icon": "💃",
+  "texte": [
+   "Pendant une semaine, Séville installe une ville éphémère de tentes colorées, les casetas.",
+   "On y danse les sevillanas, on porte la robe de flamenca et on se promène à cheval ou en calèche.",
+   "La rue principale de la foire est éclairée par des milliers de lampions."
+  ],
+  "vocab": [
+   [
+    "la caseta",
+    "la tente"
+   ],
+   [
+    "las sevillanas",
+    "la danse sévillane"
+   ],
+   [
+    "el traje de flamenca",
+    "la robe de flamenca"
+   ],
+   [
+    "el caballo",
+    "le cheval"
+   ],
+   [
+    "bailar",
+    "danser"
+   ]
+  ],
+  "activite": "Préparer une invitation à la Feria : « Te invito a mi caseta el sábado a las… »",
+  "niveaux": [
+   "4e"
+  ]
+ },
+ {
+  "id": "sanfermin",
+  "nom": "San Fermín",
+  "pays": "España · Pamplona",
+  "quand": "del 6 al 14 de julio",
+  "icon": "🐂",
+  "texte": [
+   "La fête commence le 6 juillet à midi avec le chupinazo, une fusée lancée depuis la mairie.",
+   "Tout le monde s’habille en blanc avec un foulard rouge.",
+   "Les encierros, où des coureurs courent devant les taureaux, sont célèbres mais aussi critiqués : un bon sujet de débat en classe."
+  ],
+  "vocab": [
+   [
+    "el pañuelo rojo",
+    "le foulard rouge"
+   ],
+   [
+    "vestirse de blanco",
+    "s'habiller en blanc"
+   ],
+   [
+    "correr",
+    "courir"
+   ],
+   [
+    "el toro",
+    "le taureau"
+   ],
+   [
+    "la fiesta",
+    "la fête"
+   ]
+  ],
+  "activite": "Débat (3e) : « ¿Estás a favor o en contra de los encierros? ¿Por qué? »",
+  "niveaux": [
+   "3e"
+  ]
+ },
+ {
+  "id": "tomatina",
+  "nom": "La Tomatina",
+  "pays": "España · Buñol",
+  "quand": "el último miércoles de agosto",
+  "icon": "🍅",
+  "texte": [
+   "Dans le village de Buñol, près de Valence, des milliers de personnes se lancent des tomates pendant une heure.",
+   "Les tomates utilisées sont trop mûres pour être mangées.",
+   "Après la bataille, les rues sont lavées au jet d’eau."
+  ],
+  "vocab": [
+   [
+    "el tomate",
+    "la tomate"
+   ],
+   [
+    "lanzar",
+    "lancer"
+   ],
+   [
+    "la batalla",
+    "la bataille"
+   ],
+   [
+    "sucio",
+    "sale"
+   ],
+   [
+    "el pueblo",
+    "le village"
+   ]
+  ],
+  "activite": "Raconter la Tomatina au passé (4e) : « Ayer fui a Buñol y… »",
+  "niveaux": [
+   "4e"
+  ]
+ },
+ {
+  "id": "hispanidad",
+  "nom": "El Día de la Hispanidad",
+  "pays": "España y América",
+  "quand": "12 de octubre",
+  "icon": "🌎",
+  "texte": [
+   "Le 12 octobre rappelle l’arrivée de Christophe Colomb en Amérique en 1492.",
+   "En Espagne, c’est la Fête nationale. En Amérique latine, la date porte d’autres noms selon les pays, comme « Día del Respeto a la Diversidad Cultural » en Argentine.",
+   "Cette date fait débat : découverte, rencontre ou conquête ? C’est l’axe 6 de 3e."
+  ],
+  "vocab": [
+   [
+    "la Fiesta Nacional",
+    "la fête nationale"
+   ],
+   [
+    "el descubrimiento",
+    "la découverte"
+   ],
+   [
+    "el encuentro",
+    "la rencontre"
+   ],
+   [
+    "la conquista",
+    "la conquête"
+   ],
+   [
+    "la diversidad",
+    "la diversité"
+   ]
+  ],
+  "activite": "Débat (3e) : « ¿Qué se celebra el 12 de octubre? ¿Descubrimiento o encuentro? »",
+  "niveaux": [
+   "3e"
+  ]
+ },
+ {
+  "id": "muertos",
+  "nom": "El Día de Muertos",
+  "pays": "México",
+  "quand": "1 y 2 de noviembre",
+  "icon": "💀",
+  "texte": [
+   "Les familles mexicaines installent un autel (altar) avec des photos des défunts, des bougies, du pain de mort et des fleurs orange de cempasúchil.",
+   "C’est une fête joyeuse pour se souvenir de ceux qui sont partis.",
+   "La Catrina, squelette élégant, est devenue le symbole de la fête."
+  ],
+  "vocab": [
+   [
+    "el altar",
+    "l'autel"
+   ],
+   [
+    "la ofrenda",
+    "l'offrande"
+   ],
+   [
+    "la calavera",
+    "la tête de mort"
+   ],
+   [
+    "el pan de muerto",
+    "le pain des morts"
+   ],
+   [
+    "recordar",
+    "se souvenir"
+   ]
+  ],
+  "activite": "Fabriquer en classe une ofrenda en papier et la décrire : « En nuestro altar hay… »",
+  "niveaux": [
+   "5e"
+  ]
+ },
+ {
+  "id": "nochevieja",
+  "nom": "Nochevieja y las doce uvas",
+  "pays": "España",
+  "quand": "31 de diciembre",
+  "icon": "🍇",
+  "texte": [
+   "À minuit, les Espagnols mangent douze grains de raisin, un à chaque coup de l’horloge.",
+   "À Madrid, la foule se réunit devant l’horloge de la Puerta del Sol.",
+   "Manger les douze raisins à temps porte bonheur pour l’année qui commence."
+  ],
+  "vocab": [
+   [
+    "las uvas",
+    "les raisins"
+   ],
+   [
+    "las campanadas",
+    "les coups de cloche"
+   ],
+   [
+    "la medianoche",
+    "minuit"
+   ],
+   [
+    "la suerte",
+    "la chance"
+   ],
+   [
+    "¡Feliz Año Nuevo!",
+    "Bonne année !"
+   ]
+  ],
+  "activite": "Défi : réciter les nombres de 1 à 12 en espagnol en mangeant… des raisins imaginaires !",
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ]
+ },
+ {
+  "id": "intiraymi",
+  "nom": "Inti Raymi",
+  "pays": "Perú · Cusco",
+  "quand": "24 de junio",
+  "icon": "☀️",
+  "texte": [
+   "L’Inti Raymi, la fête du Soleil, était la plus grande fête de l’Empire inca.",
+   "Elle est célébrée chaque 24 juin à Cuzco, avec une grande reconstitution sur l’esplanade de Sacsayhuamán.",
+   "Les acteurs y parlent quechua, la langue des Incas."
+  ],
+  "vocab": [
+   [
+    "el sol",
+    "le soleil"
+   ],
+   [
+    "los incas",
+    "les Incas"
+   ],
+   [
+    "el quechua",
+    "le quechua"
+   ],
+   [
+    "la ceremonia",
+    "la cérémonie"
+   ],
+   [
+    "el imperio",
+    "l'empire"
+   ]
+  ],
+  "activite": "Présenter l’Inti Raymi en 4 phrases avec « se celebra, hay, la gente… »",
+  "niveaux": [
+   "4e"
+  ]
+ },
+ {
+  "id": "oruro",
+  "nom": "El Carnaval de Oruro",
+  "pays": "Bolivia · Oruro",
+  "quand": "febrero o marzo, antes de la Cuaresma",
+  "icon": "🎭",
+  "texte": [
+   "À Oruro, en Bolivie, des milliers de danseurs défilent avec des costumes et des masques spectaculaires.",
+   "La danse la plus célèbre est la Diablada, la danse des diables.",
+   "Le carnaval est inscrit au patrimoine culturel immatériel de l’UNESCO."
+  ],
+  "vocab": [
+   [
+    "el carnaval",
+    "le carnaval"
+   ],
+   [
+    "la máscara",
+    "le masque"
+   ],
+   [
+    "el disfraz",
+    "le costume"
+   ],
+   [
+    "el diablo",
+    "le diable"
+   ],
+   [
+    "desfilar",
+    "défiler"
+   ]
+  ],
+  "activite": "Décrire un masque : couleurs, formes, émotions (« Me parece que… »)",
+  "niveaux": [
+   "4e",
+   "3e"
+  ]
+ }
+]
