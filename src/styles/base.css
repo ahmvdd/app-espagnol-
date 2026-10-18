@@ -11,8 +11,9 @@ nav{display:flex;gap:.3rem;margin-left:auto;flex-wrap:wrap}
 nav a{padding:.5rem .85rem;border-radius:999px;font-weight:700;color:inherit;text-decoration:none}
 nav a:hover{background:var(--tile)}
 nav a[aria-current="page"]{background:var(--cobalt);color:var(--on-cobalt)}
-nav a.sos{border:2px solid var(--pink);color:var(--pink)}
-nav a.sos[aria-current="page"]{background:var(--pink);color:#fff}
+nav a.sos{background:#C42B2B;color:#fff;border:2px solid #C42B2B}
+nav a.sos:hover{background:#A32020}
+nav a.sos[aria-current="page"]{background:#A32020;color:#fff;box-shadow:0 0 0 3px var(--surface),0 0 0 5px #C42B2B}
 main{max-width:1120px;margin:0 auto;padding:1.25rem 1rem 5rem}
 footer{max-width:1120px;margin:0 auto;padding:0 1rem 2rem;color:var(--muted);font-size:.9rem}
 .row{display:flex;gap:.5rem;align-items:center}
@@ -100,9 +101,10 @@ details{margin:.75rem 0}
 
 /* SOS */
 .sos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.75rem;margin:1rem 0}
-.sos-btn{display:flex;flex-direction:column;align-items:center;gap:.4rem;font:700 1.4rem/1.2 var(--display);cursor:pointer;min-height:120px;justify-content:center;border-width:2px}
-.sos-btn[aria-pressed="true"]{border-color:var(--pink);box-shadow:inset 0 0 0 2px var(--pink)}
-.sos-idee{padding:2rem 1.25rem}
+.sos-col{display:flex;flex-direction:column;gap:1rem;border:2px solid var(--line)}
+.sos-col h2{margin:0;font-size:1.4rem}
+.sos-texte{font-size:1.2rem;flex:1;margin:0}
+.sos-col .bigbtn{font-size:1.2rem}
 
 /* Accueil */
 .hero{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
@@ -171,3 +173,29 @@ h1 .es{font-size:.6em;font-weight:600}
 @keyframes freeze{from{filter:blur(6px) saturate(0);transform:scale(.9)}to{filter:none;transform:none}}
 @keyframes shine{from{background-position:150% 0}to{background-position:-100% 0}}
 @keyframes fall{0%{opacity:0;transform:translateY(0)}15%{opacity:1}100%{opacity:0;transform:translateY(260px) rotate(180deg)}}
+
+/* Niveaux : une couleur par niveau, toujours accompagnée du libellé */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.niveau-head h1{display:flex;align-items:center;gap:.6rem}
+.niveau-badge{background:var(--niveau,var(--cobalt));color:#fff;border-radius:12px;padding:.15rem .6rem}
+.theme-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:.6rem;margin-bottom:1rem}
+.theme-card{display:flex;flex-direction:column;gap:.2rem;color:inherit;text-decoration:none;padding:.8rem 1rem;border-left:6px solid var(--niveau,var(--cobalt))}
+.theme-card[aria-current="true"]{border-color:var(--niveau,var(--cobalt));box-shadow:inset 0 0 0 2px var(--niveau,var(--cobalt))}
+.theme-card[aria-current="true"] strong::before{content:"▶ "}
+.vocab th{text-align:left;padding:.5rem .75rem;border-bottom:2px solid var(--line)}
+.phrases{font-size:1.15rem;line-height:1.7}
+.level{border-top:8px solid var(--niveau,var(--cobalt))}
+
+/* Accueil */
+.dedicace{font-style:italic;margin:.4rem 0 0}
+.star{border:2px solid var(--ochre);margin-top:1.5rem}
+.star h2{margin-top:0}
+.activite{border:2px solid var(--cobalt);margin-top:.5rem}
+.activite h3{font-size:1.5rem;margin:.6rem 0 .3rem}
+.sos-card{border:2px solid #C42B2B}
+.home-foot{margin-top:2.5rem;text-align:center}
+.prose{margin-bottom:1rem;line-height:1.65}
+.prose h2{margin-top:0}
+.prose li{margin:.3rem 0}
+kbd{border:1px solid var(--line);border-bottom-width:3px;border-radius:6px;padding:0 .4rem;font:700 .9em var(--body);background:var(--surface)}
+footer a{color:inherit}
