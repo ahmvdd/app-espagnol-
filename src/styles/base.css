@@ -324,3 +324,22 @@ footer a{color:inherit}
 .jauge i.vert{background:#3BB54A}.jauge i.orange{background:#F39C12}.jauge i.rouge{background:#E2382F}
 .jauge .seuil{position:absolute;top:0;bottom:0;width:3px;background:var(--ink)}
 .reglages-sono{width:min(70vw,560px);text-align:left}
+
+/* Niveaux : axes du programme */
+.axes-details>summary{font-weight:700}
+.axes{list-style:none;padding:0;margin:.75rem 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.axe{display:flex;flex-direction:column;gap:.4rem;border-left:6px solid var(--line)}
+.axe.actif{border-left-color:var(--niveau,var(--cobalt))}
+.axe.oblig{border-left-color:var(--ochre)}
+.axe-titre{margin:0;font-weight:700}
+.axe-n{color:var(--niveau,var(--cobalt));margin-right:.3rem}
+.oblig-pill{background:var(--ochre);color:#16203B}
+.objets{margin:0;padding-left:1.1rem;font-size:.9rem;color:var(--muted)}
+.theme-head{margin:1.5rem 0 .75rem}
+.theme-head h2{margin:.2rem 0}
+.theme-head p{margin:0}
+.culture{border:2px solid var(--olive);margin:1rem 0}
+.culture h2{margin-top:0}
+.culture li{margin:.35rem 0}
+.grammaire{margin:1rem 0}
+.grammaire summary{min-height:44px}
