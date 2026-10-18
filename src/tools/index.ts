@@ -11,6 +11,7 @@ import sonometro from './sonometro';
 import rotations from './rotations';
 import plan from './plan';
 import vuelta from './vuelta';
+import mundo from './mundo';
 
 export type Tool = (el: HTMLElement, params: URLSearchParams) => void | (() => void);
 export type ToolInfo = { id: string; nom: string; es: string; desc: string; icon: string; run: Tool };
@@ -24,6 +25,7 @@ export const TOOLS: ToolInfo[] = [
   { id: 'sonometre', nom: 'Sonomètre', es: 'El sonómetro', desc: 'Le micro mesure le bruit', icon: '🎙', run: sonometro },
   { id: 'rituel', nom: 'Rituel d’entrée', es: 'El ritual', desc: 'Consigne, 3 minutes, mini-défi', icon: '🚪', run: rituel },
   { id: 'pauses', nom: 'Pauses énergie', es: 'Pausas activas', desc: 'Simón dice, mimes, étirements', icon: '🤸', run: pausas },
+  { id: 'mundo', nom: 'Le monde hispanophone', es: 'El mundo hispano', desc: '21 pays : capitale, fête, accent, mots', icon: '🌎', run: mundo },
   { id: 'vuelta', nom: 'La Vuelta', es: 'La Vuelta', desc: 'Course d’étapes par équipes sur la carte', icon: '🚴', run: vuelta },
   { id: 'plan', nom: 'Plan de classe', es: 'El plano de la clase', desc: 'Glisser les élèves à leur place', icon: '🪑', run: plan },
   { id: 'roles', nom: 'Rôles tournants', es: 'Los roles', desc: 'Secrétaire, gardien du temps…', icon: '🎖', run: roles },

@@ -1,0 +1,506 @@
+[
+ {
+  "id": "espana",
+  "nom": "España",
+  "capitale": "Madrid",
+  "lon": -3.7,
+  "lat": 40.42,
+  "fete": "12 de octubre · Fiesta Nacional",
+  "accent": "On prononce le « z » et le « c » (devant e, i) la langue entre les dents, et on utilise « vosotros ».",
+  "mots": [
+   [
+    "vale",
+    "d'accord"
+   ],
+   [
+    "guay",
+    "génial"
+   ],
+   [
+    "el bocadillo",
+    "le sandwich"
+   ]
+  ],
+  "drapeau": "linear-gradient(#AA151B 0 25%,#F1BF00 25% 75%,#AA151B 75%)"
+ },
+ {
+  "id": "mexico",
+  "nom": "México",
+  "capitale": "Ciudad de México",
+  "lon": -99.13,
+  "lat": 19.43,
+  "fete": "16 de septiembre · Independencia",
+  "accent": "Accent chantant ; comme dans toute l’Amérique, « ustedes » remplace « vosotros ».",
+  "mots": [
+   [
+    "chido",
+    "cool"
+   ],
+   [
+    "ahorita",
+    "tout de suite (ou plus tard !)"
+   ],
+   [
+    "¿qué onda?",
+    "quoi de neuf ?"
+   ]
+  ],
+  "drapeau": "linear-gradient(90deg,#006847 0 33.4%,#fff 33.4% 66.6%,#CE1126 66.6%)"
+ },
+ {
+  "id": "guatemala",
+  "nom": "Guatemala",
+  "capitale": "Ciudad de Guatemala",
+  "lon": -90.51,
+  "lat": 14.64,
+  "fete": "15 de septiembre · Independencia",
+  "accent": "On entend souvent « vos » à la place de « tú » (le voseo).",
+  "mots": [
+   [
+    "chapín",
+    "guatémaltèque"
+   ],
+   [
+    "patojo",
+    "enfant"
+   ],
+   [
+    "chilero",
+    "génial"
+   ]
+  ],
+  "drapeau": "linear-gradient(90deg,#4997D0 0 33.4%,#fff 33.4% 66.6%,#4997D0 66.6%)"
+ },
+ {
+  "id": "honduras",
+  "nom": "Honduras",
+  "capitale": "Tegucigalpa",
+  "lon": -87.21,
+  "lat": 14.07,
+  "fete": "15 de septiembre · Independencia",
+  "accent": "Voseo courant ; les « s » en fin de syllabe s’aspirent souvent.",
+  "mots": [
+   [
+    "catracho",
+    "hondurien"
+   ],
+   [
+    "cipote",
+    "enfant"
+   ],
+   [
+    "el pisto",
+    "l'argent"
+   ]
+  ],
+  "drapeau": "linear-gradient(#18C3DF 0 33.4%,#fff 33.4% 66.6%,#18C3DF 66.6%)"
+ },
+ {
+  "id": "el-salvador",
+  "nom": "El Salvador",
+  "capitale": "San Salvador",
+  "lon": -89.19,
+  "lat": 13.69,
+  "fete": "15 de septiembre · Independencia",
+  "accent": "Voseo courant, comme dans toute l’Amérique centrale.",
+  "mots": [
+   [
+    "guanaco",
+    "salvadorien"
+   ],
+   [
+    "chivo",
+    "génial"
+   ],
+   [
+    "la pupusa",
+    "galette de maïs farcie"
+   ]
+  ],
+  "drapeau": "linear-gradient(#0F47AF 0 33.4%,#fff 33.4% 66.6%,#0F47AF 66.6%)"
+ },
+ {
+  "id": "nicaragua",
+  "nom": "Nicaragua",
+  "capitale": "Managua",
+  "lon": -86.25,
+  "lat": 12.13,
+  "fete": "15 de septiembre · Independencia",
+  "accent": "Voseo et « s » aspirés.",
+  "mots": [
+   [
+    "nica",
+    "nicaraguayen"
+   ],
+   [
+    "chavalo",
+    "garçon"
+   ],
+   [
+    "tuani",
+    "génial"
+   ]
+  ],
+  "drapeau": "linear-gradient(#0067C6 0 33.4%,#fff 33.4% 66.6%,#0067C6 66.6%)"
+ },
+ {
+  "id": "costa-rica",
+  "nom": "Costa Rica",
+  "capitale": "San José",
+  "lon": -84.09,
+  "lat": 9.93,
+  "fete": "15 de septiembre · Independencia",
+  "accent": "On utilise beaucoup « usted », même avec les enfants.",
+  "mots": [
+   [
+    "¡pura vida!",
+    "super ! / salut !"
+   ],
+   [
+    "mae",
+    "mec"
+   ],
+   [
+    "tuanis",
+    "génial"
+   ]
+  ],
+  "drapeau": "linear-gradient(#002B7F 0 16.6%,#fff 16.6% 33.3%,#CE1126 33.3% 66.6%,#fff 66.6% 83.3%,#002B7F 83.3%)"
+ },
+ {
+  "id": "panama",
+  "nom": "Panamá",
+  "capitale": "Ciudad de Panamá",
+  "lon": -79.52,
+  "lat": 8.98,
+  "fete": "3 de noviembre · Separación de Colombia",
+  "accent": "Accent caribéen : les « s » en fin de syllabe s’aspirent.",
+  "mots": [
+   [
+    "¿xopá?",
+    "quoi de neuf ?"
+   ],
+   [
+    "pelao",
+    "enfant"
+   ],
+   [
+    "chévere",
+    "génial"
+   ]
+  ],
+  "drapeau": "linear-gradient(90deg,#fff 50%,#DA121A 50%) 0 0/100% 50% no-repeat,linear-gradient(90deg,#072357 50%,#fff 50%)"
+ },
+ {
+  "id": "cuba",
+  "nom": "Cuba",
+  "capitale": "La Habana",
+  "lon": -82.37,
+  "lat": 23.11,
+  "fete": "1 de enero · Triunfo de la Revolución",
+  "accent": "Accent caribéen : les « s » finaux s’aspirent ou disparaissent.",
+  "mots": [
+   [
+    "asere",
+    "pote"
+   ],
+   [
+    "la guagua",
+    "le bus"
+   ],
+   [
+    "¿qué bolá?",
+    "ça va ?"
+   ]
+  ],
+  "drapeau": "linear-gradient(to bottom right,#CF142B 50%,transparent 50%) 0 0/40% 50% no-repeat,linear-gradient(to top right,#CF142B 50%,transparent 50%) 0 100%/40% 50% no-repeat,linear-gradient(#002A8F 0 20%,#fff 20% 40%,#002A8F 40% 60%,#fff 60% 80%,#002A8F 80%)"
+ },
+ {
+  "id": "republica-dominicana",
+  "nom": "República Dominicana",
+  "capitale": "Santo Domingo",
+  "lon": -69.93,
+  "lat": 18.48,
+  "fete": "27 de febrero · Independencia",
+  "accent": "Accent caribéen, rapide, avec des « s » qui disparaissent.",
+  "mots": [
+   [
+    "la vaina",
+    "le truc"
+   ],
+   [
+    "un chin",
+    "un petit peu"
+   ],
+   [
+    "la guagua",
+    "le bus"
+   ]
+  ],
+  "drapeau": "linear-gradient(90deg,transparent 45%,#fff 45% 55%,transparent 55%),linear-gradient(transparent 42%,#fff 42% 58%,transparent 58%),linear-gradient(90deg,#002D62 50%,#CE1126 50%) 0 0/100% 50% no-repeat,linear-gradient(90deg,#CE1126 50%,#002D62 50%)"
+ },
+ {
+  "id": "puerto-rico",
+  "nom": "Puerto Rico",
+  "capitale": "San Juan",
+  "lon": -66.1,
+  "lat": 18.47,
+  "fete": "25 de julio · Día de la Constitución",
+  "accent": "Territoire associé aux États-Unis : on y parle espagnol et anglais ; le « r » ressemble parfois à un « l ».",
+  "mots": [
+   [
+    "boricua",
+    "portoricain"
+   ],
+   [
+    "los chavos",
+    "l'argent"
+   ],
+   [
+    "janguear",
+    "sortir (de l'anglais to hang out)"
+   ]
+  ],
+  "drapeau": "linear-gradient(to bottom right,#0050F0 50%,transparent 50%) 0 0/40% 50% no-repeat,linear-gradient(to top right,#0050F0 50%,transparent 50%) 0 100%/40% 50% no-repeat,linear-gradient(#ED0000 0 20%,#fff 20% 40%,#ED0000 40% 60%,#fff 60% 80%,#ED0000 80%)"
+ },
+ {
+  "id": "colombia",
+  "nom": "Colombia",
+  "capitale": "Bogotá",
+  "lon": -74.07,
+  "lat": 4.71,
+  "fete": "20 de julio · Independencia",
+  "accent": "L’accent de Bogotá est réputé très clair ; on dit souvent « usted », même entre amis.",
+  "mots": [
+   [
+    "parcero",
+    "pote"
+   ],
+   [
+    "bacano",
+    "génial"
+   ],
+   [
+    "el tinto",
+    "le petit café noir"
+   ]
+  ],
+  "drapeau": "linear-gradient(#FCD116 0 50%,#003893 50% 75%,#CE1126 75%)"
+ },
+ {
+  "id": "venezuela",
+  "nom": "Venezuela",
+  "capitale": "Caracas",
+  "lon": -66.9,
+  "lat": 10.48,
+  "fete": "5 de julio · Independencia",
+  "accent": "Accent caribéen, « s » aspirés.",
+  "mots": [
+   [
+    "pana",
+    "ami"
+   ],
+   [
+    "chévere",
+    "génial"
+   ],
+   [
+    "la arepa",
+    "galette de maïs"
+   ]
+  ],
+  "drapeau": "linear-gradient(#FFCC00 0 33.4%,#00247D 33.4% 66.6%,#CF142B 66.6%)"
+ },
+ {
+  "id": "ecuador",
+  "nom": "Ecuador",
+  "capitale": "Quito",
+  "lon": -78.47,
+  "lat": -0.18,
+  "fete": "10 de agosto · Primer Grito de Independencia",
+  "accent": "Accent andin, posé ; beaucoup de mots viennent du quechua.",
+  "mots": [
+   [
+    "ñaño",
+    "frère"
+   ],
+   [
+    "¡chuta!",
+    "mince !"
+   ],
+   [
+    "la guagua",
+    "le bébé (du quechua)"
+   ]
+  ],
+  "drapeau": "linear-gradient(#FFDD00 0 50%,#034EA2 50% 75%,#ED1C24 75%)"
+ },
+ {
+  "id": "peru",
+  "nom": "Perú",
+  "capitale": "Lima",
+  "lon": -77.04,
+  "lat": -12.05,
+  "fete": "28 de julio · Independencia",
+  "accent": "Accent de Lima réputé clair ; dans les Andes, on parle aussi quechua et aymara.",
+  "mots": [
+   [
+    "pata",
+    "ami"
+   ],
+   [
+    "la chamba",
+    "le travail"
+   ],
+   [
+    "chévere",
+    "génial"
+   ]
+  ],
+  "drapeau": "linear-gradient(90deg,#D91023 0 33.4%,#fff 33.4% 66.6%,#D91023 66.6%)"
+ },
+ {
+  "id": "bolivia",
+  "nom": "Bolivia",
+  "capitale": "Sucre (siège du gouvernement : La Paz)",
+  "lon": -65.26,
+  "lat": -19.03,
+  "fete": "6 de agosto · Independencia",
+  "accent": "Accent andin ; l’espagnol cohabite avec le quechua, l’aymara et le guaraní.",
+  "mots": [
+   [
+    "la salteña",
+    "chausson farci"
+   ],
+   [
+    "¡chuta!",
+    "mince !"
+   ],
+   [
+    "la wawa",
+    "le bébé (de l'aymara)"
+   ]
+  ],
+  "drapeau": "linear-gradient(#D52B1E 0 33.4%,#F9E300 33.4% 66.6%,#007934 66.6%)"
+ },
+ {
+  "id": "chile",
+  "nom": "Chile",
+  "capitale": "Santiago",
+  "lon": -70.67,
+  "lat": -33.45,
+  "fete": "18 de septiembre · Fiestas Patrias",
+  "accent": "Débit rapide, « s » aspirés, et le fameux « po » en fin de phrase.",
+  "mots": [
+   [
+    "¿cachái?",
+    "tu piges ?"
+   ],
+   [
+    "bacán",
+    "génial"
+   ],
+   [
+    "la once",
+    "le goûter"
+   ]
+  ],
+  "drapeau": "linear-gradient(90deg,#0039A6 0 33.4%,#fff 33.4%) 0 0/100% 50% no-repeat,#D52B1E"
+ },
+ {
+  "id": "argentina",
+  "nom": "Argentina",
+  "capitale": "Buenos Aires",
+  "lon": -58.38,
+  "lat": -34.6,
+  "fete": "9 de julio · Independencia",
+  "accent": "« vos » au lieu de « tú », et « ll » / « y » prononcés comme « ch » dans « chat ».",
+  "mots": [
+   [
+    "¡che!",
+    "hé !"
+   ],
+   [
+    "el mate",
+    "le maté"
+   ],
+   [
+    "el laburo",
+    "le travail"
+   ]
+  ],
+  "drapeau": "radial-gradient(circle,#F6B40E 0 12%,transparent 13%),linear-gradient(#74ACDF 0 33.4%,#fff 33.4% 66.6%,#74ACDF 66.6%)"
+ },
+ {
+  "id": "uruguay",
+  "nom": "Uruguay",
+  "capitale": "Montevideo",
+  "lon": -56.16,
+  "lat": -34.9,
+  "fete": "25 de agosto · Independencia",
+  "accent": "Comme en Argentine : « vos » et « ll » prononcé « ch ».",
+  "mots": [
+   [
+    "ta",
+    "d'accord"
+   ],
+   [
+    "gurí",
+    "enfant"
+   ],
+   [
+    "el mate",
+    "le maté"
+   ]
+  ],
+  "drapeau": "radial-gradient(circle at 18% 22%,#FCD116 0 9%,transparent 10%),linear-gradient(90deg,#fff 0 36%,transparent 36%) 0 0/100% 44.4% no-repeat,repeating-linear-gradient(#fff 0 11.1%,#0038A8 11.1% 22.2%)"
+ },
+ {
+  "id": "paraguay",
+  "nom": "Paraguay",
+  "capitale": "Asunción",
+  "lon": -57.58,
+  "lat": -25.26,
+  "fete": "14 y 15 de mayo · Independencia",
+  "accent": "Pays bilingue : presque tout le monde y parle espagnol et guaraní.",
+  "mots": [
+   [
+    "el tereré",
+    "maté glacé"
+   ],
+   [
+    "la chipa",
+    "pain au fromage"
+   ],
+   [
+    "mitaí",
+    "enfant (guaraní)"
+   ]
+  ],
+  "drapeau": "linear-gradient(#D52B1E 0 33.4%,#fff 33.4% 66.6%,#0038A8 66.6%)"
+ },
+ {
+  "id": "guinea-ecuatorial",
+  "nom": "Guinea Ecuatorial",
+  "capitale": "Malabo",
+  "lon": 8.78,
+  "lat": 3.75,
+  "fete": "12 de octubre · Independencia",
+  "accent": "Seul pays d’Afrique où l’espagnol est langue officielle (avec le français et le portugais).",
+  "mots": [
+   [
+    "la ceiba",
+    "le fromager (arbre du drapeau)"
+   ],
+   [
+    "el cacao",
+    "le cacao"
+   ],
+   [
+    "el bosque",
+    "la forêt"
+   ]
+  ],
+  "drapeau": "linear-gradient(to bottom right,#0073CE 50%,transparent 50%) 0 0/20% 50% no-repeat,linear-gradient(to top right,#0073CE 50%,transparent 50%) 0 100%/20% 50% no-repeat,linear-gradient(#3E9A00 0 33.4%,#fff 33.4% 66.6%,#E32118 66.6%)"
+ }
+]
