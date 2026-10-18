@@ -1,5 +1,6 @@
 import { exportBackup, readBackup, getSnapshots, restoreSnapshot, wipeAll, type BackupPreview } from '../../lib/storage';
 import { state, update, replaceState } from '../../lib/state';
+import { accueilPerso } from '../../lib/content';
 import { confirmModal } from '../../lib/modal';
 import { beep } from '../../lib/sound';
 import { $, $$, esc, toast } from '../../lib/ui';
@@ -7,10 +8,16 @@ import { scanner } from './qr';
 
 export function renderReglages(el: HTMLElement): void {
   const r = state.reglages;
+  const perso = accueilPerso(r);
   el.innerHTML = `
     <section class="panel">
-      <label class="field">Ton prénom (affiché sur l’accueil)
-        <input id="prenom" value="${esc(r.prenomProf)}" autocomplete="off" /></label>
+      <fieldset class="field">
+        <legend>Accueil personnalisé</legend>
+        <label class="field">Prénom (« ¡Hola, … ! »)
+          <input id="prenom" value="${esc(perso.prenom)}" autocomplete="off" /></label>
+        <label class="field">Dédicace (courte, affichée sous le bonjour)
+          <textarea id="dedicace" rows="2" maxlength="280">${esc(perso.dedicace)}</textarea></label>
+      </fieldset>
       <fieldset class="field">
         <legend>Police</legend>
         <label class="row"><input type="radio" name="police" value="standard" ${r.police !== 'dyslexie' ? 'checked' : ''}> Standard (Atkinson Hyperlegible)</label>
@@ -22,6 +29,8 @@ export function renderReglages(el: HTMLElement): void {
 
   const prenom = $<HTMLInputElement>('#prenom', el);
   prenom.onchange = () => { update(s => { s.reglages.prenomProf = prenom.value.trim(); }); toast('Enregistré ✓'); };
+  const dedi = $<HTMLTextAreaElement>('#dedicace', el);
+  dedi.onchange = () => { update(s => { s.reglages.dedicace = dedi.value.trim(); }); toast('Enregistré ✓'); };
   $$<HTMLInputElement>('[name=police]', el).forEach(i => i.onchange = () => update(s => { s.reglages.police = i.value as 'standard' | 'dyslexie'; }));
   const vol = $<HTMLInputElement>('#vol', el);
   vol.onchange = () => { update(s => { s.reglages.volume = Number(vol.value); }); beep(); };

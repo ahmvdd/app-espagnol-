@@ -1,6 +1,6 @@
 import type { View } from '../router';
 import {
-  NIVEAUX, COULEUR, CECRL, DUREES, axeDe, AMBIANCES, DEDICACE,
+  NIVEAUX, COULEUR, CECRL, DUREES, axeDe, AMBIANCES, accueilPerso,
   palabraDelDia, refranDelDia, activitesPour, lienActivite, dernierTheme,
   type Ambiance, type Niveau
 } from '../lib/content';
@@ -45,7 +45,7 @@ function etapes(): string {
 }
 
 export const inicio: View = el => {
-  const p = state.reglages.prenomProf;
+  const { prenom: p, dedicace } = accueilPerso(state.reglages);
   const w = palabraDelDia();
   const [refEs, refFr] = refranDelDia();
   const date = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
@@ -57,7 +57,7 @@ export const inicio: View = el => {
       <div>
         <p class="muted" lang="es">${esc(date)}</p>
         <h1 class="hello" lang="es">¡Hola${p ? `, ${esc(p)}` : ''}!</h1>
-        ${DEDICACE ? `<p class="dedicace">${esc(DEDICACE)}</p>` : ''}
+        ${dedicace ? `<p class="dedicace">${esc(dedicace)}</p>` : ''}
       </div>
     </section>
 

@@ -17,7 +17,7 @@ export type Classe = {
   roles?: { jour: string; tour: number };
 };
 export type Plan = { id: string; classeId: string; nom: string; disposition: 'rangees' | 'ilots' | 'u'; places: (string | null)[] };
-export type Reglages = { muet: boolean; volume: number; police: 'standard' | 'dyslexie'; prenomProf: string; accent?: 'es-ES' | 'es-MX' };
+export type Reglages = { muet: boolean; volume: number; police: 'standard' | 'dyslexie'; prenomProf: string; dedicace?: string; accent?: 'es-ES' | 'es-MX' };
 export type Data = { classes: Classe[]; plans: Plan[]; reglages: Reglages };
 export type Snapshot = { date: number; data: string };
 

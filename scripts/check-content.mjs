@@ -100,7 +100,8 @@ for (const p of mundo)
   check(isStr(p.id) && isStr(p.nom) && isStr(p.capitale) && isStr(p.fete) && isStr(p.accent) && isStr(p.drapeau)
     && typeof p.lon === 'number' && typeof p.lat === 'number' && p.mots?.length === 3 && p.mots.every(m => m.length === 2 && m.every(isStr)), `mundo.json › ${p.id ?? '?'} : fiche incomplète`);
 const site = read('site.json');
-check(site && typeof site.dedicace === 'string', 'site.json : "dedicace" doit être un texte (vide possible)');
+check(site && typeof site.dedicace === 'string' && typeof site.prenom === 'string', 'site.json : "prenom" et "dedicace" doivent être des textes (vides possibles)');
+check((site?.dedicace ?? '').length <= 280, 'site.json : dédicace trop longue (280 caractères max)');
 
 if (warnings.length) console.warn(`⚠ ${warnings.length} thème(s) à faire relire :\n  ` + warnings.join('\n  '));
 if (errors.length) {

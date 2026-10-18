@@ -23,7 +23,7 @@ export const COULEUR = Object.fromEntries(NIVEAUX.map(n => [n, FILES[n].couleur]
 export const ACTIVITES = acts as Activite[];
 export const SOS = sosJson as Situation[];
 export const REFRANES = refranesJson as Refran[];
-export const DEDICACE: string = site.dedicace;
+export const SITE = { prenom: site.prenom, dedicace: site.dedicace };
 
 export const DUREES = [5, 10, 15, 20, 30, 50];
 export const AMBIANCES: { id: Ambiance; label: string; icon: string }[] = [
@@ -50,6 +50,12 @@ export function activitesPour(minutes: number, niveau: Niveau, ambiance: Ambianc
 }
 
 export const lienActivite = (a: Activite, n: Niveau) => a.outil?.replace('{n}', n);
+
+/** Prénom et dédicace : réglage de l'appareil, sinon valeurs livrées dans site.json. */
+export const accueilPerso = (r: { prenomProf: string; dedicace?: string }) => ({
+  prenom: r.prenomProf || SITE.prenom,
+  dedicace: r.dedicace ?? SITE.dedicace
+});
 
 const LAST_THEME = 'rincon.dernierTheme';
 export function dernierTheme(n: Niveau): Theme {
