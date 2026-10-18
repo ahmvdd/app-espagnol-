@@ -123,8 +123,8 @@
  },
  {
   "id": "duel-flash",
-  "titre": "Duel d’équipes",
-  "consigne": "4 équipes : à tour de rôle, chaque équipe traduit une flashcard. 1 point par bonne réponse.",
+  "titre": "Quiz par équipes",
+  "consigne": "4 équipes : les questions du thème sont projetées, chaque équipe répond sur ardoise. 1 point par bonne réponse.",
   "duree": 20,
   "niveaux": [
    "5e",
@@ -132,7 +132,7 @@
    "3e"
   ],
   "ambiance": "normale",
-  "outil": "#/herramientas/equipos"
+  "outil": "#/juegos/quiz?n={n}"
  },
  {
   "id": "jeu-role",
@@ -145,7 +145,7 @@
    "3e"
   ],
   "ambiance": "normale",
-  "outil": "#/herramientas/minuteur?t=600"
+  "outil": "#/herramientas/rotations"
  },
  {
   "id": "seance-complete",
@@ -175,8 +175,8 @@
  },
  {
   "id": "passe-mot",
-  "titre": "Le mot qui passe",
-  "consigne": "Chaque élève dit à son tour un mot du thème avant la fin du minuteur de 30 s ; celui qui sèche relance le tour.",
+  "titre": "La bomba",
+  "consigne": "On se passe la « bombe » : celui qui la tient traduit le mot affiché avant de la passer. Quand elle explose, il donne un mot de plus.",
   "duree": 10,
   "niveaux": [
    "5e",
@@ -184,7 +184,7 @@
    "3e"
   ],
   "ambiance": "agitee",
-  "outil": "#/herramientas/minuteur?t=30"
+  "outil": "#/juegos/bomba?n={n}"
  },
  {
   "id": "course-tableau",
@@ -202,8 +202,8 @@
  },
  {
   "id": "mimes",
-  "titre": "Mimes du vocabulaire",
-  "consigne": "Un élève mime un mot du thème, son équipe doit le dire en espagnol avant la fin du minuteur.",
+  "titre": "Taboo",
+  "consigne": "Faire deviner un mot du thème à son équipe, en espagnol, sans dire les mots interdits. 1 minute par équipe.",
   "duree": 20,
   "niveaux": [
    "5e",
@@ -211,7 +211,7 @@
    "3e"
   ],
   "ambiance": "agitee",
-  "outil": "#/herramientas/equipos"
+  "outil": "#/juegos/taboo?n={n}"
  },
  {
   "id": "tournoi",
@@ -224,7 +224,7 @@
    "3e"
   ],
   "ambiance": "agitee",
-  "outil": "#/herramientas/equipos"
+  "outil": "#/juegos/rosco?n={n}"
  },
  {
   "id": "olympiades",
@@ -239,5 +239,127 @@
   "ambiance": "agitee",
   "outil": "#/herramientas/equipos",
   "materiel": "tableau"
+ },
+ {
+  "id": "lo-que-aprendi",
+  "titre": "Lo que aprendí",
+  "consigne": "Fin de séance : chaque élève écrit une chose nouvelle qu’il a apprise sur le monde hispanique, puis 3 élèves la lisent.",
+  "duree": 5,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "calme",
+  "outil": "#/nivel/{n}",
+  "materiel": "cahiers"
+ },
+ {
+  "id": "memory",
+  "titre": "Memory du thème",
+  "consigne": "Projeter le Memory : les équipes retrouvent chaque mot espagnol et sa traduction, à tour de rôle.",
+  "duree": 10,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "calme",
+  "outil": "#/juegos/memory?n={n}"
+ },
+ {
+  "id": "mediation",
+  "titre": "Médiation : explique-le",
+  "consigne": "Par deux : A lit un court document en espagnol et l’explique en français à B, qui pose des questions. Puis on inverse.",
+  "duree": 15,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "calme",
+  "materiel": "un court document par binôme"
+ },
+ {
+  "id": "loteria",
+  "titre": "Lotería",
+  "consigne": "Distribuer les cartes imprimées : la prof tire et annonce les mots en espagnol, les élèves cochent la traduction.",
+  "duree": 20,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "calme",
+  "outil": "#/juegos/loteria?n={n}",
+  "materiel": "cartes imprimées"
+ },
+ {
+  "id": "speed-meeting",
+  "titre": "Speed meeting",
+  "consigne": "Par deux, questions-réponses sur le thème ; toutes les 2 minutes, on change de partenaire (5 tours).",
+  "duree": 10,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "normale",
+  "outil": "#/herramientas/rotations"
+ },
+ {
+  "id": "ahorcado",
+  "titre": "El ahorcado",
+  "consigne": "Pendu projeté avec les mots du thème : les équipes proposent les lettres à tour de rôle.",
+  "duree": 10,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "normale",
+  "outil": "#/juegos/ahorcado?n={n}"
+ },
+ {
+  "id": "world-cafe",
+  "titre": "World café",
+  "consigne": "4 tables, 4 questions sur le thème : les groupes changent de table toutes les 6 minutes et complètent les réponses.",
+  "duree": 30,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "normale",
+  "outil": "#/herramientas/rotations",
+  "materiel": "4 grandes feuilles"
+ },
+ {
+  "id": "classe-puzzle",
+  "titre": "Classe puzzle",
+  "consigne": "Document découpé en 4 parties : travail individuel, groupes d’experts, puis groupes puzzle où chacun explique sa partie.",
+  "duree": 50,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "calme",
+  "outil": "#/herramientas/rotations",
+  "materiel": "document en 4 parties"
+ },
+ {
+  "id": "basta",
+  "titre": "¡Basta!",
+  "consigne": "Une lettre tirée au sort, 8 catégories, 2 minutes : la première équipe qui a tout crie « ¡Basta! ».",
+  "duree": 15,
+  "niveaux": [
+   "5e",
+   "4e",
+   "3e"
+  ],
+  "ambiance": "agitee",
+  "outil": "#/juegos/basta?n={n}",
+  "materiel": "feuilles"
  }
 ]
