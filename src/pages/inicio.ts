@@ -1,6 +1,6 @@
 import type { View } from '../router';
 import {
-  NIVEAUX, THEMES, COULEUR, DUREES, AMBIANCES, DEDICACE,
+  NIVEAUX, COULEUR, CECRL, DUREES, axeDe, AMBIANCES, DEDICACE,
   palabraDelDia, refranDelDia, activitesPour, lienActivite, dernierTheme,
   type Ambiance, type Niveau
 } from '../lib/content';
@@ -65,8 +65,9 @@ export const inicio: View = el => {
       ${NIVEAUX.map(n => {
         const t = dernierTheme(n);
         return `<a class="panel level" href="#/nivel/${n}/${t.id}" style="--niveau:${COULEUR[n]}">
-          <span class="huge">${n}</span><span><strong>${esc(t.titre)}</strong></span>
-          <span class="muted small">${THEMES[n].length} thèmes</span></a>`;
+          <span class="row"><span class="huge">${n}</span><span class="pill">${CECRL[n]}</span></span>
+          <span><strong>${esc(t.titre)}</strong></span>
+          <span class="muted small">Axe ${axeDe(n, t.id)?.n} · ${esc(axeDe(n, t.id)?.titre)}</span></a>`;
       }).join('')}
     </div>
 

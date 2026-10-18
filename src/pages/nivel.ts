@@ -1,5 +1,5 @@
 import type { View } from '../router';
-import { NIVEAUX, THEMES, COULEUR, dernierTheme, rememberTheme, type Niveau } from '../lib/content';
+import { NIVEAUX, AXES, COULEUR, CECRL, GRAMMAIRE, axeDe, dernierTheme, rememberTheme, THEMES, type Niveau } from '../lib/content';
 import { flashcards } from '../tools/flashcards';
 import { state } from '../lib/state';
 import { speak } from '../lib/speech';
@@ -8,25 +8,45 @@ import { $, $$, esc, toast } from '../lib/ui';
 export const nivel: View = el => {
   const [, , hashN, hashT] = location.hash.split('/');
   const n: Niveau = NIVEAUX.includes(hashN as Niveau) ? (hashN as Niveau) : '5e';
-  const themes = THEMES[n];
-  const theme = themes.find(t => t.id === hashT) ?? dernierTheme(n);
+  const theme = THEMES[n].find(t => t.id === hashT) ?? dernierTheme(n);
+  const axe = axeDe(n, theme.id)!;
   rememberTheme(n, theme.id);
   el.style.setProperty('--niveau', COULEUR[n]);
 
   el.innerHTML = `
     <div class="row head niveau-head">
-      <h1><span class="niveau-badge">${n}</span> ${esc(theme.titre)}</h1>
+      <h1><span class="niveau-badge">${n}</span> Espagnol <span class="pill" title="Niveau visé en fin d'année (LVB)">🎯 ${CECRL[n]} · LVB</span></h1>
       <nav class="row wrap" aria-label="Niveaux">
         ${NIVEAUX.map(x => `<a class="btn ghost sm" href="#/nivel/${x}" aria-current="${x === n ? 'page' : 'false'}">${x}</a>`).join('')}
       </nav>
     </div>
 
-    <ul class="theme-list">
-      ${themes.map(t => `<li><a class="panel theme-card" href="#/nivel/${n}/${t.id}" aria-current="${t === theme ? 'true' : 'false'}">
-        <strong>${esc(t.titre)}</strong><span class="muted small">${t.vocab.length} mots · ${t.quiz.length} questions</span></a></li>`).join('')}
-    </ul>
+    <details class="axes-details" ${hashT ? '' : 'open'}>
+      <summary>Les 6 axes culturels du programme · 5 à traiter dans l’année, dont l’axe 6</summary>
+      <ol class="axes">
+        ${AXES[n].map(a => `
+          <li class="panel axe ${a === axe ? 'actif' : ''} ${a.obligatoire ? 'oblig' : ''}">
+            <p class="axe-titre"><span class="axe-n">Axe ${a.n}</span> ${esc(a.titre)} ${a.obligatoire ? '<span class="pill oblig-pill">⭐ obligatoire</span>' : ''}</p>
+            <ul class="objets">${a.objets.map(o => `<li>${esc(o)}</li>`).join('')}</ul>
+            ${a.themes.length
+              ? `<div class="row wrap">${a.themes.map(t => `<a class="btn ${t === theme ? '' : 'ghost'} sm" href="#/nivel/${n}/${t.id}" ${t === theme ? 'aria-current="true"' : ''}>${esc(t.titre)}</a>`).join('')}</div>`
+              : '<p class="muted small">Contenu à venir.</p>'}
+          </li>`).join('')}
+      </ol>
+    </details>
+
+    <section class="theme-head">
+      <p class="muted">Axe ${axe.n} · ${esc(axe.titre)}</p>
+      <h2>${esc(theme.titre)}</h2>
+      <p class="small">Objet d’étude : ${esc(theme.objet)}</p>
+    </section>
 
     <section class="panel stage" id="flash"></section>
+
+    <section class="panel culture">
+      <h2 lang="es">🌎 Lo que aprendí sobre el mundo hispánico</h2>
+      <ul>${theme.culture.map(c => `<li>${esc(c)}</li>`).join('')}</ul>
+    </section>
 
     <h2>Tout le vocabulaire</h2>
     <div class="table-wrap"><table class="vocab">
@@ -35,8 +55,17 @@ export const nivel: View = el => {
         <td><button class="btn ghost sm" data-say="${k}" aria-label="Écouter ${esc(e)}">🔊</button></td></tr>`).join('')}</tbody>
     </table></div>
 
-    ${theme.phrases.length ? `<h2>Phrases modèles</h2><ul class="phrases">${theme.phrases.map(p => `<li lang="es">${esc(p)}</li>`).join('')}</ul>` : ''}
-    ${theme.parole.length ? `<h2>Sujets d’oral</h2><ul class="phrases">${theme.parole.map(p => `<li lang="es">${esc(p)}</li>`).join('')}</ul>` : ''}`;
+    <div class="idees">
+      ${theme.phrases.length ? `<section class="panel"><h2>Phrases modèles</h2><ul class="phrases">${theme.phrases.map(p => `<li lang="es">${esc(p)}</li>`).join('')}</ul></section>` : ''}
+      ${theme.parole.length ? `<section class="panel"><h2>Sujets d’oral</h2><ul class="phrases">${theme.parole.map(p => `<li lang="es">${esc(p)}</li>`).join('')}</ul></section>` : ''}
+    </div>
+
+    <details class="panel grammaire">
+      <summary><strong>Grammaire du programme en ${n}</strong>&nbsp;· ${CECRL[n]}</summary>
+      <ul>${GRAMMAIRE[n].map(g => `<li>${esc(g)}</li>`).join('')}</ul>
+    </details>
+
+    <p class="center"><a class="btn" href="#/juegos?n=${n}&t=${theme.id}">🎲 Jouer avec ce thème</a></p>`;
 
   $$('[data-say]', el).forEach(b => b.onclick = () => {
     if (!speak(theme.vocab[Number(b.dataset.say)][0], state.reglages.accent ?? 'es-ES')) toast('Voix espagnole absente sur cet appareil');

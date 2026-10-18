@@ -9,7 +9,7 @@ export function start(app: HTMLElement): void {
   const go = () => {
     if (typeof cleanup === 'function') cleanup();
     const path = location.hash.replace(/^#/, '') || '/';
-    const base = '/' + (path.split('/')[1] ?? '');
+    const base = '/' + (path.split('/')[1] ?? '').split('?')[0];
     const view = routes.get(path) ?? routes.get(base) ?? routes.get('/')!;
     document.querySelectorAll('header nav a').forEach(a =>
       a.setAttribute('aria-current', a.getAttribute('href') === '#' + base ? 'page' : 'false'));
