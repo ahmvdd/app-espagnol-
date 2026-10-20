@@ -22,6 +22,7 @@ import { nivel } from './pages/nivel';
 import { aide } from './pages/aide';
 import { importer } from './pages/importer';
 import { cultura } from './pages/cultura';
+import { doc } from './pages/doc';
 
 registerSW({ immediate: true });
 requestPersistence();
@@ -63,5 +64,6 @@ route('/sos', sos);
 route('/aide', aide);
 route('/import', importer);
 route('/cultura', cultura);
+route('/doc', doc);
 route('/nivel', nivel); // #/nivel/5e, #/nivel/4e, #/nivel/3e
 start($('#app'));

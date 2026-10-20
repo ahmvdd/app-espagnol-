@@ -1,7 +1,7 @@
 import type { View } from '../router';
 import { NIVEAUX, AXES, COULEUR, CECRL, GRAMMAIRE, axeDe, dernierTheme, rememberTheme, THEMES, type Niveau } from '../lib/content';
 import { flashcards } from '../tools/flashcards';
-import { apercu, cours, fiche, corrige } from '../lib/documents';
+import { apercu, docHtml, fichierPdf, DOCS, type DocType } from '../lib/documents';
 import { state } from '../lib/state';
 import { speak } from '../lib/speech';
 import { $, $$, esc, toast } from '../lib/ui';
@@ -47,11 +47,9 @@ export const nivel: View = el => {
       <section class="panel">
         <h3>🖨 Documents à imprimer</h3>
         <div class="row wrap">
-          <button class="btn sm" data-doc="cours">📖 Cours</button>
-          <button class="btn sm" data-doc="fiche">✏️ Fiche d’exercices</button>
-          <button class="btn ghost sm" data-doc="corrige">✅ Corrigé</button>
+          ${(Object.keys(DOCS) as DocType[]).map(d => `<button class="btn ${DOCS[d].eleve ? '' : 'ghost'} sm" data-doc="${d}">${DOCS[d].icon} ${DOCS[d].label}</button>`).join('')}
         </div>
-        <p class="muted small">Aperçu, puis « Imprimer » ou « Enregistrer en PDF ».</p>
+        <p class="muted small">Aperçu, puis « Imprimer » ou « Enregistrer en PDF ». Les corrigés sont un fichier à part, pour l’enseignante.</p>
       </section>
       <section class="panel">
         <h3>🎲 Jouer avec ce chapitre</h3>
@@ -91,10 +89,9 @@ export const nivel: View = el => {
   $$('[data-say]', el).forEach(b => b.onclick = () => {
     if (!speak(theme.vocab[Number(b.dataset.say)][0], state.reglages.accent ?? 'es-ES')) toast('Voix espagnole absente sur cet appareil');
   });
-  const docs = { cours: ['Cours', cours], fiche: ['Fiche d’exercices', fiche], corrige: ['Corrigé', corrige] } as const;
   $$('[data-doc]', el).forEach(b => b.onclick = () => {
-    const [nom, f] = docs[b.dataset.doc as keyof typeof docs];
-    apercu(`${nom} · ${n} · ${theme.titre}`, f(n, axe, theme));
+    const d = b.dataset.doc as DocType;
+    apercu(`${DOCS[d].label} · ${n} · ${theme.titre}`, docHtml(d, n, axe, theme), fichierPdf(n, axe, theme, d));
   });
   const stop = flashcards($('#flash', el), theme.vocab);
   return () => { stop(); el.style.removeProperty('--niveau'); };
