@@ -50,7 +50,7 @@ export const inicio: View = el => {
 
   el.innerHTML = `
     <section class="hero">
-      <i class="azulejo band" aria-hidden="true"></i>
+      <img class="logo" src="/icon-192.png" alt="" width="80" height="80">
       <div>
         <p class="muted" lang="es">${esc(date)}</p>
         <h1 class="hello" lang="es">¡Hola${p ? `, ${esc(p)}` : ''}!</h1>
