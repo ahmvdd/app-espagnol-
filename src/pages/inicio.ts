@@ -63,7 +63,7 @@ export const inicio: View = el => {
 
   el.innerHTML = `
     <section class="hero">
-      <img class="logo" src="/icon-192.png" alt="" width="80" height="80">
+      <img class="logo" src="/logo/clase-viva-transparent.png" alt="" width="80" height="80">
       <div>
         <h1 class="hello" lang="es">¡Hola${p ? `, ${esc(p)}` : ''}!</h1>
         ${dedicace ? `<p class="dedicace">${esc(dedicace)}</p>` : ''}
