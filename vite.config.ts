@@ -6,10 +6,10 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg', 'apple-touch-icon.png'],
-      workbox: { globPatterns: ['**/*.{js,css,html,svg,png,jpg,woff2,json,mp3}'], maximumFileSizeToCacheInBytes: 3_000_000 },
+      workbox: { globPatterns: ['**/*.{js,css,html,svg,png,jpg,woff2,json,mp3}'], maximumFileSizeToCacheInBytes: 3_000_000, navigateFallbackDenylist: [/^\/pdf\//] },
       manifest: {
-        name: 'El Rincón de la Profe',
-        short_name: 'Rincón',
+        name: 'Clase Viva',
+        short_name: 'Clase Viva',
         description: "Outils de classe et jeux pour le cours d'espagnol",
         lang: 'fr',
         start_url: '/',

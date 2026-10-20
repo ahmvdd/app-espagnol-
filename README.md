@@ -1,4 +1,6 @@
-# El Rincón de la Profe
+# Clase Viva
+
+_(anciennement « El Rincón de la Profe » ; les clés de stockage internes `rincon.*` sont conservées pour ne perdre aucune donnée)_
 
 Mini-site d'aide à la gestion de classe et à l'animation des cours d'espagnol (5e, 4e, 3e),
 pour une professeure de collège. Stage de Souhaïla du 23/11 au 04/12/2026.

@@ -4,7 +4,7 @@ import { CREDITS_PHOTOS } from './cultura';
 
 export const aide: View = el => {
   el.innerHTML = `
-    <h1>Aide</h1>
+    <h1>Aide · Clase Viva</h1>
 
     <section class="panel prose">
       <h2>Mode d’emploi en une page</h2>
@@ -29,6 +29,7 @@ export const aide: View = el => {
 
     <section class="panel prose" id="confidentialite">
       <h2>Confidentialité</h2>
+      <p>Clase Viva ne collecte aucune donnée.</p>
       <ul>
         <li>Aucun compte, aucune base de données, aucune statistique de visite.</li>
         <li>Les prénoms des élèves restent dans le navigateur de cet appareil (stockage local) et dans les fichiers que tu exportes toi-même.</li>
@@ -53,7 +54,7 @@ export const aide: View = el => {
 
     <section class="panel prose">
       <h2>Mentions</h2>
-      <p>Site personnel réalisé pour un usage en classe, non commercial. Hébergement privé, accès réservé.</p>
+      <p>Clase Viva : site personnel réalisé pour un usage en classe, non commercial. Hébergement privé, accès réservé.</p>
     </section>`;
 
   const target = location.hash.split('/')[2];

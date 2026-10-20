@@ -87,13 +87,13 @@ export function restoreSnapshot(index: number, pop = false): Data | null {
   return data;
 }
 
-/** Télécharge un fichier rincon-sauvegarde-AAAA-MM-JJ.json */
+/** Télécharge un fichier clase-viva-sauvegarde-AAAA-MM-JJ.json ; « rincon » reste l'identifiant technique interne (données conservées). */
 export function exportBackup(data: Data): void {
   const backup = { app: 'rincon', schema: SCHEMA, date: new Date().toISOString(), data };
   const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = `rincon-sauvegarde-${backup.date.slice(0, 10)}.json`;
+  a.download = `clase-viva-sauvegarde-${backup.date.slice(0, 10)}.json`;
   a.click();
   URL.revokeObjectURL(a.href);
   try { localStorage.setItem(LAST_EXPORT, String(Date.now())); } catch { /* ignore */ }
@@ -105,7 +105,7 @@ export type BackupPreview = { date: string; classes: number; eleves: number; sea
 export async function readBackup(file: File): Promise<BackupPreview> {
   let b: any;
   try { b = JSON.parse(await file.text()); } catch { throw new Error("Ce fichier est illisible."); }
-  if (b?.app !== 'rincon') throw new Error("Ce fichier n'est pas une sauvegarde du site.");
+  if (b?.app !== 'rincon') throw new Error("Ce fichier n'est pas une sauvegarde de Clase Viva.");
   if (b.schema > SCHEMA) throw new Error('Cette sauvegarde vient d’une version plus récente du site.');
   const data = migrate(b.data, b.schema);
   return {
