@@ -23,15 +23,13 @@ export const nivel: View = el => {
     </div>
 
     <details class="axes-details" ${hashT ? '' : 'open'}>
-      <summary>📋 Programme de l’année : 6 axes, ${THEMES[n].length} chapitres · 5 axes à traiter, dont l’axe 6</summary>
+      <summary>📋 Programme de l’année : ${AXES[n].filter(a => a.themes.length).length} axes, ${THEMES[n].length} chapitres · 5 axes à traiter, dont l’axe 6</summary>
       <ol class="axes">
-        ${AXES[n].map(a => `
+        ${AXES[n].filter(a => a.themes.length).map(a => `
           <li class="panel axe ${a === axe ? 'actif' : ''} ${a.obligatoire ? 'oblig' : ''}">
             <p class="axe-titre"><span class="axe-n">Axe ${a.n}</span> ${esc(a.titre)} ${a.obligatoire ? '<span class="pill oblig-pill">⭐ obligatoire</span>' : ''}</p>
             <ul class="objets">${a.objets.map(o => `<li>${esc(o)}</li>`).join('')}</ul>
-            ${a.themes.length
-              ? `<div class="row wrap">${a.themes.map(t => `<a class="btn ${t === theme ? '' : 'ghost'} sm" href="#/nivel/${n}/${t.id}" ${t === theme ? 'aria-current="true"' : ''}>${esc(t.titre)}</a>`).join('')}</div>`
-              : '<p class="muted small">Contenu à venir.</p>'}
+            <div class="row wrap">${a.themes.map(t => `<a class="btn ${t === theme ? '' : 'ghost'} sm" href="#/nivel/${n}/${t.id}" ${t === theme ? 'aria-current="true"' : ''}>${esc(t.titre)}</a>`).join('')}</div>
           </li>`).join('')}
       </ol>
     </details>
