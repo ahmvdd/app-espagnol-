@@ -635,3 +635,24 @@ html.doc-seul .doc-ecran{display:block;background:#fff;max-width:210mm;margin:0 
 .jouer{border:2px solid var(--ochre);margin-top:1rem}
 .docs-eleves,.ressources{margin-top:1rem}
 .doc-paysage .diapo{page:paysage}
+
+/* Programme : ressources et jeux en pastilles (et non en liens bruts) */
+.prog-ressources a,.prog-jeux a{display:flex;align-items:center;gap:.35rem;min-height:40px;padding:.35rem .6rem;border:2px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);text-decoration:none;font-weight:700;font-size:.9rem;line-height:1.2}
+.prog-ressources a:hover,.prog-jeux a:hover{border-color:var(--niveau,var(--cobalt))}
+.prog-ressources li:last-child a{border-color:var(--niveau,var(--cobalt))}
+.prog-jeux{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.prog-jeux a{display:inline-flex;min-height:36px;padding:.25rem .55rem;font-size:.85rem}
+.prog-chapitre h3 a{text-decoration:none}
+.prog-chapitre h3 a:hover{text-decoration:underline}
+
+/* Téléphone : en-tête compact, menu sur une ligne qui défile */
+@media (max-width:700px){
+  header.top{position:static}
+  .bar{padding:.5rem .75rem;gap:.4rem}
+  .brand{font-size:1.1rem}
+  .bar>.row{margin-left:auto}
+  .bar>.row .btn{min-height:36px;padding:.25rem .55rem;font-size:.85rem}
+  nav{order:3;width:100%;margin-left:0;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:.2rem}
+  nav::-webkit-scrollbar{display:none}
+  nav a{white-space:nowrap;padding:.4rem .7rem;flex:none}
+}

@@ -59,7 +59,7 @@ export const programme: View = el => {
                 ${(Object.keys(DOCS) as DocType[]).map(d => `<li><a href="pdf/${fichierPdf(n, a, t, d)}" download target="_blank" rel="noopener">${DOCS[d].icon} ${DOCS[d].label}${DOCS[d].eleve ? '' : ' (enseignante)'}</a></li>`).join('')}
                 <li><a href="#/nivel/${n}/${t.id}#ressources">🧑‍🏫 Ressources pour l’enseignante</a></li>
               </ul>
-              <p class="small prog-jeux">🎲 ${JEUX.map(([g, l]) => `<a href="#/juegos/${g}?n=${n}&t=${t.id}">${l}</a>`).join(' · ')}</p>
+              <p class="small prog-jeux">🎲 ${JEUX.map(([g, l]) => `<a href="#/juegos/${g}?n=${n}&t=${t.id}">${l}</a>`).join('')}</p>
             </article>`;
           }).join('')}</div>
         </section>`).join('')}`;
