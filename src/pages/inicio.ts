@@ -1,7 +1,6 @@
 import type { View } from '../router';
 import {
-  NIVEAUX, COULEUR, CECRL, DUREES, axeDe, AMBIANCES, accueilPerso,
-  activitesPour, lienActivite, dernierTheme,
+  NIVEAUX, DUREES, AMBIANCES, accueilPerso, activitesPour, lienActivite, dayIndex, citaDelDia,
   type Ambiance, type Niveau
 } from '../lib/content';
 import { state } from '../lib/state';
@@ -9,6 +8,21 @@ import { renderRituels } from './rituels';
 import { ouvrirBilan } from './profe/bilan';
 import { TOOLS, toolCard } from '../tools';
 import { $, $$, esc } from '../lib/ui';
+
+/** « Otra cita » : décalage gardé pour la journée sur cet appareil. */
+const KEY_CITA = 'rincon.cita';
+function lireDecalage(): number {
+  try {
+    const c = JSON.parse(localStorage.getItem(KEY_CITA) || 'null') as { jour: number; k: number } | null;
+    return c?.jour === dayIndex() ? c.k : 0;
+  } catch { return 0; }
+}
+const ecrireDecalage = (k: number) => { try { localStorage.setItem(KEY_CITA, JSON.stringify({ jour: dayIndex(), k })); } catch { /* ignore */ } };
+
+function cita(k: number): string {
+  const c = citaDelDia(k);
+  return `<blockquote lang="es"><p>« ${esc(c.texto)} »</p>${c.autor ? `<footer>— ${esc(c.autor)}</footer>` : ''}</blockquote>`;
+}
 
 /** Choix « J'ai X minutes » : gardés le temps de la séance. */
 const choix: { duree?: number; niveau?: Niveau; ambiance?: Ambiance; i: number } = { i: 0 };
@@ -58,15 +72,13 @@ export const inicio: View = el => {
       </div>
     </section>
 
-    <div class="levels">
-      ${NIVEAUX.map(n => {
-        const t = dernierTheme(n);
-        return `<a class="panel level" href="#/programme/${n}" style="--niveau:${COULEUR[n]}">
-          <span class="row"><span class="huge">${n}</span><span class="pill">${CECRL[n]}</span></span>
-          <span><strong>${esc(t.titre)}</strong></span>
-          <span class="muted small">Axe ${axeDe(n, t.id)?.n} · ${esc(axeDe(n, t.id)?.titre)}</span></a>`;
-      }).join('')}
-    </div>
+    <section class="cita" aria-label="Cita del día">
+      <div class="row cita-tete"><span class="small" lang="es">✨ Cita del día</span><button class="btn ghost sm" id="otra-cita" lang="es">Otra cita</button></div>
+      <div id="cita" aria-live="polite">${cita(lireDecalage())}</div>
+    </section>
+
+    <h2>Rituels du jour</h2>
+    <div id="rituels"></div>
 
     <section class="panel star">
       <h2>⏱ J’ai… minutes</h2>
@@ -79,9 +91,6 @@ export const inicio: View = el => {
       <a class="panel tool-card" href="#/profe/carnet" id="raccourci-bilan"><span class="ico" aria-hidden="true">📝</span><strong>Bilan de séance</strong><span class="es" lang="es">El balance</span><span class="muted small">Moins d’une minute, en fin de cours</span></a>
       <a class="panel tool-card sos-card" href="#/sos"><span class="ico" aria-hidden="true">🆘</span><strong>SOS</strong><span class="es" lang="es">¡Socorro!</span><span class="muted small">Une idée tout de suite</span></a>
     </div>
-
-    <h2>Rituels du jour</h2>
-    <div id="rituels"></div>
 
     <p class="home-foot muted small">
       <a href="#/aide">Aide</a> · <a href="#/aide/credits">Crédits</a> · <a href="#/profe">Tout effacer (dans Profe)</a>
@@ -101,6 +110,7 @@ export const inicio: View = el => {
   };
   draw();
 
+  $('#otra-cita', el).onclick = () => { const k = lireDecalage() + 1; ecrireDecalage(k); $('#cita', el).innerHTML = cita(k); };
   renderRituels($('#rituels', el));
   $('#raccourci-bilan', el).onclick = e => { e.preventDefault(); ouvrirBilan(); };
 };

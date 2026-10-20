@@ -5,6 +5,7 @@ import acts from '../content/activites.json';
 import rituelsJson from '../content/rituels.json';
 import sosJson from '../content/sos.json';
 import site from '../content/site.json';
+import citasJson from '../content/citas.json';
 import type { Activite, Ambiance, Axe, Niveau, NiveauFile, Situation, Theme } from '../content/types';
 
 export type { Activite, Ambiance, Axe, Niveau, Theme };
@@ -40,6 +41,18 @@ export function palabraDelDia(d = new Date()) {
   return all[dayIndex(d) % all.length];
 }
 
+/** Citations pour l'enseignante : une phrase de la cliente environ tous les huit jours, entre les citations célèbres. */
+export const CITAS: { texto: string; autor?: string }[] = (() => {
+  const prof = [...citasJson.prof];
+  const out: { texto: string; autor?: string }[] = [];
+  citasJson.celebres.forEach(([texto, autor], i) => {
+    if (i % 7 === 0 && prof.length) out.push({ texto: prof.shift()! });
+    out.push({ texto, autor });
+  });
+  return [...out, ...prof.map(texto => ({ texto }))];
+})();
+
+export const citaDelDia = (decalage = 0, d = new Date()) => CITAS[(dayIndex(d) + decalage) % CITAS.length];
 
 /** Activités qui tiennent dans le temps donné, la plus proche de la durée d'abord. */
 export function activitesPour(minutes: number, niveau: Niveau, ambiance: Ambiance): Activite[] {
