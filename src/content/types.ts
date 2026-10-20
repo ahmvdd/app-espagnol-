@@ -19,10 +19,18 @@ export type Theme = {
   parole: string[];
   /** « Lo que aprendí sobre el mundo hispánico » : repères culturels, en français. */
   culture: string[];
+  /** Erreurs fréquentes des élèves (fiche enseignante). */
+  erreurs?: string[];
 };
 
 /** Axe culturel du programme officiel (BO 2025, nouveaux programmes de LVER). */
-export type Axe = { n: number; titre: string; objets: string[]; themes: Theme[]; obligatoire?: boolean };
+export type Axe = {
+  n: number; titre: string; objets: string[]; themes: Theme[]; obligatoire?: boolean;
+  /** Objectif de l'axe (texte du programme officiel). */
+  intro?: string;
+  /** Pistes de tâches finales. */
+  taches?: string[];
+};
 
 export type NiveauFile = { niveau: Niveau; couleur: string; cecrl: string; axes: Axe[]; grammaire: string[] };
 

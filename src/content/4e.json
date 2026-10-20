@@ -6,16 +6,22 @@
   {
    "n": 1,
    "titre": "Sport et société",
+   "intro": "Le sport permet de s’épanouir personnellement et collectivement et renforce le lien social ; les grands sportifs deviennent des symboles qui inspirent tout un pays.",
+   "taches": [
+    "Présenter un sportif hispanique inspirant (fiche ou vidéo).",
+    "Rédiger la charte du « juego limpio » de la classe.",
+    "Organiser un mini-tournoi et le commenter en espagnol."
+   ],
    "objets": [
-    "Sport et bien-être",
-    "Les règles du jeu",
-    "Le sport pour tous"
+    "Sport et bien-être : le sport au service d’aptitudes physiques et intellectuelles et du lien social",
+    "Les règles du jeu : respecter les règles, porter les couleurs de sa région, se dépasser et gagner loyalement",
+    "Le sport pour tous : des amateurs aux sportifs, valides et handicapés, les plus célèbres"
    ],
    "themes": [
     {
      "id": "el-deporte",
      "titre": "El deporte",
-     "objet": "Sport et bien-être · Les règles du jeu",
+     "objet": "Sport et bien-être : le sport au service d’aptitudes physiques et intellectuelles et du lien social",
      "notions": [
       "Les sports, le matériel et les lieux",
       "Jugar a / practicar",
@@ -172,6 +178,329 @@
       "Le football est le sport roi en Espagne et en Argentine ; à Cuba, au Venezuela et en République dominicaine, c’est le baseball.",
       "Le pádel, très populaire en Espagne, a été inventé au Mexique, à Acapulco, en 1969.",
       "Rafael Nadal a gagné 14 fois le tournoi de Roland-Garros, un record."
+     ],
+     "erreurs": [
+      "Dire « jugar fútbol » au lieu de « jugar al fútbol ».",
+      "Confondre « el partido » (le match) et « la parte » (la partie).",
+      "Oublier l’accent de « ganó », « perdió » au passé simple."
+     ]
+    },
+    {
+     "id": "las-reglas-del-juego",
+     "titre": "Las reglas del juego",
+     "objet": "Les règles du jeu : respecter les règles, porter les couleurs de sa région, se dépasser et gagner loyalement",
+     "notions": [
+      "Les règles et l’arbitrage",
+      "L’obligation et l’interdiction : hay que, está prohibido",
+      "Tener derecho a + infinitif",
+      "Encourager : ¡Vamos!, ¡Ánimo!"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "las reglas",
+       "les règles"
+      ],
+      [
+       "respetar",
+       "respecter"
+      ],
+      [
+       "el árbitro",
+       "l'arbitre"
+      ],
+      [
+       "la falta",
+       "la faute"
+      ],
+      [
+       "la tarjeta roja",
+       "le carton rouge"
+      ],
+      [
+       "el juego limpio",
+       "le fair-play"
+      ],
+      [
+       "tener derecho a",
+       "avoir le droit de"
+      ],
+      [
+       "está prohibido",
+       "il est interdit de"
+      ],
+      [
+       "el equipo",
+       "l'équipe"
+      ],
+      [
+       "el rival",
+       "l'adversaire"
+      ],
+      [
+       "el empate",
+       "le match nul"
+      ],
+      [
+       "animar",
+       "encourager"
+      ],
+      [
+       "la afición",
+       "les supporters"
+      ],
+      [
+       "la camiseta",
+       "le maillot"
+      ]
+     ],
+     "phrases": [
+      "En el fútbol, está prohibido tocar el balón con la mano.",
+      "El árbitro saca tarjeta roja.",
+      "Hay que respetar al rival.",
+      "¡Vamos, equipo! ¡Ánimo!"
+     ],
+     "quiz": [
+      {
+       "q": "« el árbitro » veut dire…",
+       "o": [
+        "l'arbitre",
+        "l'arbre",
+        "l'archer",
+        "l'arrière"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« le match nul » se dit…",
+       "o": [
+        "el empate",
+        "la derrota",
+        "la victoria",
+        "el gol"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« está prohibido » veut dire…",
+       "o": [
+        "il est interdit",
+        "il est permis",
+        "il est probable",
+        "il est prévu"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Comment s’appelle le match Real Madrid – FC Barcelone ?",
+       "o": [
+        "el Clásico",
+        "el Derbi",
+        "la Final",
+        "la Copa"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Hay que ___ las reglas. »",
+       "o": [
+        "respetar",
+        "respeta",
+        "respetamos",
+        "respetáis"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « Tenemos derecho ___ jugar. »",
+       "o": [
+        "a",
+        "de",
+        "en",
+        "por"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Explica las reglas de tu deporte favorito.",
+      "¿Qué es para ti el juego limpio?",
+      "¿Te gusta ganar? ¿Sabes perder?"
+     ],
+     "culture": [
+      "Le Real Madrid et le FC Barcelone s’affrontent dans « el Clásico », l’un des matchs les plus suivis au monde.",
+      "Porter le maillot de son club ou de sa région, c’est montrer d’où l’on vient : en Espagne, les supporters sont très attachés à leur équipe locale.",
+      "L’Espagne a gagné la Coupe du monde de football masculine en 2010 et féminine en 2023."
+     ],
+     "erreurs": [
+      "Oublier le « a » : « tener derecho a jugar ».",
+      "Confondre « la falta » (la faute) et « falta » (il manque).",
+      "Dire « el rival » sans le « a » personnel : « respetar al rival »."
+     ]
+    },
+    {
+     "id": "deporte-para-todos",
+     "titre": "El deporte para todos",
+     "objet": "Le sport pour tous : des amateurs aux sportifs, valides et handicapés, les plus célèbres",
+     "notions": [
+      "Le sport adapté et l’inclusion",
+      "Le passé simple : ganó, participó",
+      "Exprimer l’effort : superarse, con esfuerzo",
+      "Donner son opinion : creo que, me parece que"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el deporte adaptado",
+       "le handisport"
+      ],
+      [
+       "la silla de ruedas",
+       "le fauteuil roulant"
+      ],
+      [
+       "ser ciego",
+       "être aveugle"
+      ],
+      [
+       "la discapacidad",
+       "le handicap"
+      ],
+      [
+       "los Juegos Paralímpicos",
+       "les Jeux paralympiques"
+      ],
+      [
+       "la medalla",
+       "la médaille"
+      ],
+      [
+       "el campeón",
+       "le champion"
+      ],
+      [
+       "superarse",
+       "se dépasser"
+      ],
+      [
+       "el esfuerzo",
+       "l'effort"
+      ],
+      [
+       "el aficionado",
+       "l'amateur, le supporter"
+      ],
+      [
+       "la igualdad",
+       "l'égalité"
+      ],
+      [
+       "competir",
+       "concourir"
+      ],
+      [
+       "el récord",
+       "le record"
+      ],
+      [
+       "entrenar",
+       "s'entraîner"
+      ]
+     ],
+     "phrases": [
+      "Teresa Perales ganó muchas medallas en los Juegos Paralímpicos.",
+      "El baloncesto en silla de ruedas es muy rápido.",
+      "El deporte es para todos.",
+      "Con esfuerzo, todos podemos superarnos."
+     ],
+     "quiz": [
+      {
+       "q": "« la silla de ruedas » veut dire…",
+       "o": [
+        "le fauteuil roulant",
+        "la chaise longue",
+        "le vélo",
+        "la roue"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« ser ciego » veut dire…",
+       "o": [
+        "être aveugle",
+        "être sourd",
+        "être muet",
+        "être cinq"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« la medalla » veut dire…",
+       "o": [
+        "la médaille",
+        "le médaillon",
+        "le métal",
+        "la mêlée"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Quelle ville a organisé les Jeux olympiques et paralympiques de 1992 ?",
+       "o": [
+        "Barcelona",
+        "Madrid",
+        "México",
+        "Buenos Aires"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« superarse » veut dire…",
+       "o": [
+        "se dépasser",
+        "se séparer",
+        "se reposer",
+        "se sauver"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète au passé simple : « Teresa Perales ___ muchas medallas. »",
+       "o": [
+        "ganó",
+        "gana",
+        "ganará",
+        "ganaba"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Presenta a un deportista paralímpico.",
+      "¿El deporte es realmente para todos? Justifica.",
+      "¿Qué deporte adaptado te gustaría probar?"
+     ],
+     "culture": [
+      "La nageuse espagnole Teresa Perales est l’une des sportives paralympiques les plus titrées de l’histoire.",
+      "Barcelone a accueilli les Jeux olympiques et paralympiques en 1992.",
+      "En Espagne, l’ONCE, organisation des personnes aveugles, soutient de nombreux sportifs."
+     ],
+     "erreurs": [
+      "Oublier l’accent au passé simple : « ganó » (sinon c’est « gano », je gagne).",
+      "Dire « los minusválidos » : préférer « las personas con discapacidad ».",
+      "Confondre « competir » (concourir) et « compartir » (partager)."
      ]
     }
    ]
@@ -179,16 +508,340 @@
   {
    "n": 2,
    "titre": "Voyages et exploration",
+   "intro": "Voyageurs d’hier et d’aujourd’hui gardent le rêve d’atteindre de nouveaux horizons : les terres hispaniques sont si vastes et si diverses que plusieurs voyages ne suffiraient pas à les découvrir.",
+   "taches": [
+    "Préparer un séjour Erasmus imaginaire : ville, logement, activités.",
+    "Écrire le journal de bord d’un voyage sur le Chemin de Saint-Jacques.",
+    "Réaliser une brochure touristique sur Machu Picchu."
+   ],
    "objets": [
-    "L’Espagne, une destination appréciée des jeunes Européens",
+    "L’Espagne, une destination appréciée des jeunes citoyens européens",
     "Voyager pour se sentir libre",
     "Machu Picchu, une merveille inca"
    ],
    "themes": [
     {
+     "id": "espana-destino-europeo",
+     "titre": "España, destino de jóvenes europeos",
+     "objet": "L’Espagne, une destination appréciée des jeunes citoyens européens",
+     "notions": [
+      "L’Europe et les échanges",
+      "Le futur proche : voy a hacer",
+      "Le passé composé : ha sido",
+      "Présenter un projet"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "Europa",
+       "l'Europe"
+      ],
+      [
+       "los ciudadanos",
+       "les citoyens"
+      ],
+      [
+       "los europeos",
+       "les Européens"
+      ],
+      [
+       "el intercambio",
+       "l'échange"
+      ],
+      [
+       "la beca",
+       "la bourse d'études"
+      ],
+      [
+       "estudiar en el extranjero",
+       "étudier à l'étranger"
+      ],
+      [
+       "el piso compartido",
+       "la colocation"
+      ],
+      [
+       "la estancia",
+       "le séjour"
+      ],
+      [
+       "las lenguas",
+       "les langues"
+      ],
+      [
+       "conocer",
+       "connaître, découvrir"
+      ],
+      [
+       "acoger",
+       "accueillir"
+      ],
+      [
+       "el proyecto",
+       "le projet"
+      ],
+      [
+       "la experiencia",
+       "l'expérience"
+      ],
+      [
+       "la Unión Europea",
+       "l'Union européenne"
+      ]
+     ],
+     "phrases": [
+      "España es uno de los destinos preferidos de los estudiantes Erasmus.",
+      "Este verano voy a hacer un intercambio en Salamanca.",
+      "Comparto piso con estudiantes de toda Europa.",
+      "Ha sido una experiencia inolvidable."
+     ],
+     "quiz": [
+      {
+       "q": "« el intercambio » veut dire…",
+       "o": [
+        "l'échange",
+        "l'intérieur",
+        "l'intervalle",
+        "l'interview"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« étudier à l'étranger » se dit…",
+       "o": [
+        "estudiar en el extranjero",
+        "estudiar en el extraño",
+        "estudiar fuera de casa",
+        "estudiar en Europa"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Depuis quelle année le programme Erasmus existe-t-il ?",
+       "o": [
+        "1987",
+        "2007",
+        "1957",
+        "1999"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« la estancia » veut dire…",
+       "o": [
+        "le séjour",
+        "la pièce",
+        "l'étape",
+        "la gare"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« acoger » veut dire…",
+       "o": [
+        "accueillir",
+        "accorder",
+        "accoucher",
+        "acheter"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Este verano ___ a hacer un intercambio. » (yo)",
+       "o": [
+        "voy",
+        "vas",
+        "va",
+        "vamos"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      }
+     ],
+     "parole": [
+      "¿Te gustaría estudiar en España? ¿Dónde?",
+      "Prepara un mensaje para tu familia de acogida.",
+      "¿Qué ventajas tiene un intercambio?"
+     ],
+     "culture": [
+      "Le programme européen Erasmus existe depuis 1987 ; l’Espagne est l’une des destinations préférées des étudiants européens.",
+      "Salamanque abrite l’une des plus anciennes universités d’Europe, fondée en 1218.",
+      "Le Parlement européen siège à Strasbourg et la Commission européenne à Bruxelles (programme officiel)."
+     ],
+     "erreurs": [
+      "Oublier le « a » du futur proche : « voy a hacer ».",
+      "Confondre « conocer » (connaître) et « saber » (savoir).",
+      "Dire « ha estado una experiencia » au lieu de « ha sido »."
+     ]
+    },
+    {
+     "id": "viajar-libre",
+     "titre": "Viajar para sentirse libre",
+     "objet": "Voyager pour se sentir libre",
+     "notions": [
+      "Le voyage et les émotions",
+      "Le passé simple et l’imparfait pour raconter",
+      "Sentirse + adjectif",
+      "Exprimer une préférence : prefiero… porque…"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "la libertad",
+       "la liberté"
+      ],
+      [
+       "sentirse libre",
+       "se sentir libre"
+      ],
+      [
+       "la aventura",
+       "l'aventure"
+      ],
+      [
+       "el camino",
+       "le chemin"
+      ],
+      [
+       "el peregrino",
+       "le pèlerin"
+      ],
+      [
+       "la mochila",
+       "le sac à dos"
+      ],
+      [
+       "caminar",
+       "marcher"
+      ],
+      [
+       "descubrir",
+       "découvrir"
+      ],
+      [
+       "ser atrevido",
+       "être audacieux"
+      ],
+      [
+       "las emociones",
+       "les émotions"
+      ],
+      [
+       "el equipaje",
+       "les bagages"
+      ],
+      [
+       "contar",
+       "raconter"
+      ],
+      [
+       "encontrar",
+       "trouver, rencontrer"
+      ],
+      [
+       "el albergue",
+       "l'auberge"
+      ]
+     ],
+     "phrases": [
+      "Hice el Camino de Santiago con mi padre.",
+      "Viajar me hace sentir libre.",
+      "Cada día caminábamos veinte kilómetros.",
+      "Encontramos a peregrinos de todo el mundo."
+     ],
+     "quiz": [
+      {
+       "q": "« el peregrino » veut dire…",
+       "o": [
+        "le pèlerin",
+        "le pèlerinage",
+        "le perroquet",
+        "le peuplier"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« ser atrevido » veut dire…",
+       "o": [
+        "être audacieux",
+        "être attristé",
+        "être attentif",
+        "être en retard"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« el albergue » veut dire…",
+       "o": [
+        "l'auberge",
+        "l'abricot",
+        "l'arbre",
+        "l'alcôve"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Où arrive le Chemin de Saint-Jacques ?",
+       "o": [
+        "a Santiago de Compostela",
+        "a Sevilla",
+        "a Madrid",
+        "a Barcelona"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète à l’imparfait : « Cada día ___ veinte kilómetros. » (nosotros)",
+       "o": [
+        "caminábamos",
+        "caminaremos",
+        "caminad",
+        "caminaron"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« sentirse libre » veut dire…",
+       "o": [
+        "se sentir libre",
+        "se libérer",
+        "sentir bon",
+        "être livré"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      }
+     ],
+     "parole": [
+      "¿Qué viaje te gustaría hacer para sentirte libre?",
+      "Cuenta una aventura de viaje.",
+      "¿Prefieres viajar solo o en grupo? ¿Por qué?"
+     ],
+     "culture": [
+      "Le chemin de Saint-Jacques mène à Saint-Jacques-de-Compostelle, en Galice ; les pèlerins le parcourent à pied depuis le Moyen Âge.",
+      "Pour obtenir la « Compostela », il faut parcourir au moins les 100 derniers kilomètres à pied.",
+      "La Ruta 40 traverse l’Argentine du nord au sud sur plus de 5 000 km."
+     ],
+     "erreurs": [
+      "Confondre « sentir » (sentir, regretter) et « sentirse » (se sentir).",
+      "Mélanger passé simple et imparfait : action ponctuelle (« hice ») / habitude (« caminábamos »).",
+      "Oublier le « a » personnel : « encontramos a peregrinos »."
+     ]
+    },
+    {
      "id": "machu-picchu",
      "titre": "Viajar a Machu Picchu",
-     "objet": "Machu Picchu, une merveille inca · Voyager",
+     "objet": "Machu Picchu, une merveille inca",
      "notions": [
       "Le vocabulaire du voyage",
       "Ir a + infinitif : vamos a viajar",
@@ -345,6 +998,11 @@
       "Machu Picchu est une cité inca du XVe siècle, perchée dans les Andes péruviennes, à près de 2 500 m d’altitude.",
       "Elle a été révélée au monde en 1911 par l’explorateur Hiram Bingham et est classée au patrimoine mondial de l’UNESCO depuis 1983.",
       "Les Incas parlaient le quechua, une langue encore parlée aujourd’hui par des millions de personnes dans les Andes."
+     ],
+     "erreurs": [
+      "Dire « viajar en avión » mais « ir a pie » : bien distinguer en / a.",
+      "Oublier le « a » du futur proche : « vamos a viajar ».",
+      "Confondre « la mochila » (sac à dos) et « la maleta » (valise)."
      ]
     }
    ]
@@ -352,6 +1010,12 @@
   {
    "n": 3,
    "titre": "Villes, villages, quartiers",
+   "intro": "Se promener dans les rues des villes et des villages d’Espagne et d’Amérique latine est riche en découvertes : places, quartiers et monuments inspirent peintres, photographes et écrivains.",
+   "taches": [
+    "Guider un camarade sur un plan de ville en espagnol.",
+    "Présenter la maison ou la ville de ses rêves.",
+    "Proposer trois actions pour rendre son quartier plus vert."
+   ],
    "objets": [
     "Villes et capitales d’Espagne et d’Amérique hispanophone",
     "Où habiter ? Diversité des espaces construits",
@@ -361,7 +1025,7 @@
     {
      "id": "la-ciudad",
      "titre": "La ciudad",
-     "objet": "Villes et capitales · Où habiter ?",
+     "objet": "Villes et capitales d’Espagne et d’Amérique hispanophone",
      "notions": [
       "Les lieux de la ville",
       "Indiquer un chemin : gira, sigue todo recto",
@@ -541,6 +1205,333 @@
       "Au centre des villes espagnoles, on trouve souvent une Plaza Mayor ; en Amérique latine, une Plaza de Armas.",
       "Madrid est la capitale de l’Espagne depuis 1561.",
       "La Paz, en Bolivie, est le siège du gouvernement le plus haut du monde, à plus de 3 600 m d’altitude."
+     ],
+     "erreurs": [
+      "Utiliser « es » pour situer : « el museo es al lado » (on dit « está »).",
+      "Confondre « a la derecha » (à droite) et « derecho » (tout droit, en Amérique).",
+      "Oublier la contraction « al » : « al lado del museo »."
+     ]
+    },
+    {
+     "id": "donde-vivir",
+     "titre": "¿Dónde vivir?",
+     "objet": "Où habiter ? Diversité des espaces construits",
+     "notions": [
+      "Les types de logement",
+      "Les nombres ordinaux : el cuarto piso",
+      "Comparer : más tranquilo que",
+      "Justifier : porque"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el piso",
+       "l'appartement, l'étage"
+      ],
+      [
+       "la casa",
+       "la maison"
+      ],
+      [
+       "el edificio",
+       "l'immeuble"
+      ],
+      [
+       "el pueblo",
+       "le village"
+      ],
+      [
+       "el campo",
+       "la campagne"
+      ],
+      [
+       "el barrio",
+       "le quartier"
+      ],
+      [
+       "los vecinos",
+       "les voisins"
+      ],
+      [
+       "el ascensor",
+       "l'ascenseur"
+      ],
+      [
+       "la terraza",
+       "la terrasse"
+      ],
+      [
+       "tranquilo",
+       "calme"
+      ],
+      [
+       "ruidoso",
+       "bruyant"
+      ],
+      [
+       "las afueras",
+       "la périphérie"
+      ],
+      [
+       "el alcalde",
+       "le maire"
+      ],
+      [
+       "el municipio",
+       "la commune"
+      ]
+     ],
+     "phrases": [
+      "Vivo en el cuarto piso de un edificio.",
+      "En el pueblo todo es más tranquilo.",
+      "En Cuenca hay casas colgadas sobre el río.",
+      "Prefiero vivir en el campo porque hay naturaleza."
+     ],
+     "quiz": [
+      {
+       "q": "« los vecinos » veut dire…",
+       "o": [
+        "les voisins",
+        "les vins",
+        "les villes",
+        "les vaches"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el ascensor » veut dire…",
+       "o": [
+        "l'ascenseur",
+        "l'ascension",
+        "l'escalier",
+        "l'assistant"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« ruidoso » veut dire…",
+       "o": [
+        "bruyant",
+        "ruiné",
+        "rusé",
+        "rouge"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« Vivo en el cuarto piso » veut dire…",
+       "o": [
+        "j'habite au quatrième étage",
+        "j'habite dans la chambre",
+        "j'habite au quart",
+        "j'habite au sol"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Où se trouvent les « casas colgadas » ?",
+       "o": [
+        "en Cuenca",
+        "en Madrid",
+        "en Bilbao",
+        "en Cádiz"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Prefiero el campo ___ es más tranquilo. »",
+       "o": [
+        "porque",
+        "por qué",
+        "para",
+        "pero"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Describe tu casa o tu piso.",
+      "¿Prefieres vivir en la ciudad o en el campo?",
+      "Imagina la casa de tus sueños."
+     ],
+     "culture": [
+      "En Espagne, la plupart des gens vivent en appartement (piso) plutôt qu’en maison.",
+      "À Cuenca, les « casas colgadas » sont accrochées au bord d’une falaise.",
+      "Les maisons blanches des « pueblos blancos » d’Andalousie sont peintes à la chaux pour garder la fraîcheur."
+     ],
+     "erreurs": [
+      "Confondre « el piso » (appartement / étage) et « el suelo » (le sol).",
+      "Écrire « porque » en deux mots dans une réponse (« por qué » = pourquoi ?).",
+      "Oublier l’accord : « las casas blancas »."
+     ]
+    },
+    {
+     "id": "cuidar-el-entorno",
+     "titre": "Cuidar el entorno",
+     "objet": "Préserver son cadre de vie",
+     "notions": [
+      "L’environnement et le recyclage",
+      "Hay que / es importante que + subjonctif",
+      "Les couleurs des conteneurs",
+      "Proposer des solutions"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el medio ambiente",
+       "l'environnement"
+      ],
+      [
+       "proteger",
+       "protéger"
+      ],
+      [
+       "la contaminación",
+       "la pollution"
+      ],
+      [
+       "el aire puro",
+       "l'air pur"
+      ],
+      [
+       "las zonas verdes",
+       "les espaces verts"
+      ],
+      [
+       "reciclar",
+       "recycler"
+      ],
+      [
+       "la basura",
+       "les déchets"
+      ],
+      [
+       "el contenedor",
+       "le conteneur de tri"
+      ],
+      [
+       "ahorrar agua",
+       "économiser l'eau"
+      ],
+      [
+       "el calentamiento climático",
+       "le réchauffement climatique"
+      ],
+      [
+       "la bici",
+       "le vélo"
+      ],
+      [
+       "el transporte público",
+       "les transports en commun"
+      ],
+      [
+       "limpio",
+       "propre"
+      ],
+      [
+       "sucio",
+       "sale"
+      ],
+      [
+       "el planeta",
+       "la planète"
+      ]
+     ],
+     "phrases": [
+      "Hay que reciclar el plástico en el contenedor amarillo.",
+      "Voy al colegio en bici para no contaminar.",
+      "En mi barrio hay muchas zonas verdes.",
+      "Es importante que protejamos el planeta."
+     ],
+     "quiz": [
+      {
+       "q": "« la basura » veut dire…",
+       "o": [
+        "les déchets",
+        "la base",
+        "la bouche",
+        "le bus"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« reciclar » veut dire…",
+       "o": [
+        "recycler",
+        "réciter",
+        "recevoir",
+        "recommencer"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "En Espagne, le conteneur du plastique est…",
+       "o": [
+        "amarillo",
+        "azul",
+        "verde",
+        "rojo"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« ahorrar agua » veut dire…",
+       "o": [
+        "économiser l'eau",
+        "boire de l'eau",
+        "jeter l'eau",
+        "chauffer l'eau"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« el medio ambiente » veut dire…",
+       "o": [
+        "l'environnement",
+        "l'ambiance",
+        "le milieu",
+        "la moitié"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « Es importante que ___ el planeta. »",
+       "o": [
+        "protejamos",
+        "protegemos",
+        "proteger",
+        "protegimos"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Qué haces para proteger el medio ambiente?",
+      "Propón tres ideas para mejorar tu barrio.",
+      "¿Es mejor ir en bici o en coche? ¿Por qué?"
+     ],
+     "culture": [
+      "En Espagne, le conteneur jaune sert au plastique et aux emballages, le bleu au papier, le vert au verre.",
+      "Pontevedra, en Galice, a rendu son centre-ville presque entièrement piéton.",
+      "Madrid a créé une zone à faibles émissions dans son centre pour réduire la pollution."
+     ],
+     "erreurs": [
+      "Utiliser l’indicatif après « es importante que » : on emploie le subjonctif (« protejamos »).",
+      "Oublier le g → j : proteger → proteja.",
+      "Confondre « el medio ambiente » et « el ambiente » (l’ambiance)."
      ]
     }
    ]
@@ -548,10 +1539,16 @@
   {
    "n": 4,
    "titre": "Inventer, innover, créer",
+   "intro": "En Espagne comme en Amérique hispanique, améliorer la vie quotidienne et relever les défis de demain sont des enjeux majeurs : la recherche scientifique et technique apporte des progrès visibles.",
+   "taches": [
+    "Présenter une invention espagnole ou latino-américaine.",
+    "Débat : l’intelligence artificielle à l’école, pour ou contre ?",
+    "Créer une affiche sur un aliment venu d’Amérique."
+   ],
    "objets": [
     "La technologie au service de l’homme",
     "La langue espagnole et l’intelligence artificielle",
-    "Des explorations botaniques aux biotechnologies"
+    "Des explorations botaniques en Amérique latine aux biotechnologies aujourd’hui"
    ],
    "themes": [
     {
@@ -714,6 +1711,329 @@
       "Le balai-serpillière moderne (la fregona) a été mis au point en Espagne par Manuel Jalón dans les années 1950.",
       "La sucette Chupa Chups a été créée à Barcelone par Enric Bernat en 1958 ; son logo a été dessiné par Salvador Dalí.",
       "Isaac Peral a lancé en 1888 l’un des premiers sous-marins électriques."
+     ],
+     "erreurs": [
+      "Confondre « crear » (créer) et « creer » (croire).",
+      "Dire « el móvil » mais « el teléfono » : attention aux faux-amis (« la batería », « la pantalla »).",
+      "Oublier l’accent au futur : « mejorará »."
+     ]
+    },
+    {
+     "id": "espanol-e-ia",
+     "titre": "El español y la inteligencia artificial",
+     "objet": "La langue espagnole et l’intelligence artificielle",
+     "notions": [
+      "Le vocabulaire du numérique",
+      "Donner des conseils : hay que, tienes que",
+      "L’esprit critique : comprobar, la fuente",
+      "Débattre : por un lado… por otro lado"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "la inteligencia artificial",
+       "l'intelligence artificielle"
+      ],
+      [
+       "el ordenador",
+       "l'ordinateur"
+      ],
+      [
+       "la aplicación",
+       "l'application"
+      ],
+      [
+       "el traductor automático",
+       "le traducteur automatique"
+      ],
+      [
+       "traducir",
+       "traduire"
+      ],
+      [
+       "preguntar",
+       "demander, poser une question"
+      ],
+      [
+       "responder",
+       "répondre"
+      ],
+      [
+       "el error",
+       "l'erreur"
+      ],
+      [
+       "comprobar",
+       "vérifier"
+      ],
+      [
+       "la fuente",
+       "la source"
+      ],
+      [
+       "el asistente de voz",
+       "l'assistant vocal"
+      ],
+      [
+       "fiable",
+       "fiable"
+      ],
+      [
+       "el espíritu crítico",
+       "l'esprit critique"
+      ],
+      [
+       "equivocarse",
+       "se tromper"
+      ]
+     ],
+     "phrases": [
+      "Uso un traductor automático, pero compruebo las palabras.",
+      "La inteligencia artificial puede equivocarse.",
+      "Hay que desarrollar el espíritu crítico.",
+      "El asistente de voz me entiende en español."
+     ],
+     "quiz": [
+      {
+       "q": "« traducir » veut dire…",
+       "o": [
+        "traduire",
+        "trahir",
+        "tracer",
+        "transmettre"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« comprobar » veut dire…",
+       "o": [
+        "vérifier",
+        "comprendre",
+        "acheter",
+        "comparer"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« la fuente » (información) veut dire…",
+       "o": [
+        "la source",
+        "la fonte",
+        "la fuite",
+        "la forêt"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Quelle institution veille sur la langue espagnole ?",
+       "o": [
+        "la Real Academia Española",
+        "el Instituto Cervantes de París",
+        "la Unión Europea",
+        "la UNESCO"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« fiable » veut dire…",
+       "o": [
+        "fiable",
+        "faible",
+        "fable",
+        "fiancé"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « La IA puede ___. »",
+       "o": [
+        "equivocarse",
+        "equivocarte",
+        "equivocarme",
+        "equivoca"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Usas la inteligencia artificial para estudiar? ¿Cómo?",
+      "¿La IA puede reemplazar al profesor? Justifica.",
+      "Da tres consejos para usar bien un traductor automático."
+     ],
+     "culture": [
+      "La Real Academia Española (RAE), fondée en 1713, veille sur la langue espagnole.",
+      "La RAE a lancé le projet LEIA (« Lengua Española e Inteligencia Artificial ») pour que les machines utilisent un espagnol correct.",
+      "Les traducteurs automatiques se trompent encore souvent : il faut toujours vérifier."
+     ],
+     "erreurs": [
+      "Traduire mot à mot avec un traducteur sans vérifier le contexte.",
+      "Confondre « el ordenador » (Espagne) et « la computadora » (Amérique latine) : les deux sont corrects.",
+      "Oublier le pronom réfléchi : « equivocarse » → « me equivoco »."
+     ]
+    },
+    {
+     "id": "plantas-de-america",
+     "titre": "De las plantas de América a la biotecnología",
+     "objet": "Des explorations botaniques en Amérique latine aux biotechnologies aujourd’hui",
+     "notions": [
+      "Les plantes venues d’Amérique",
+      "Le passé simple pour l’histoire des sciences",
+      "Servir para + infinitif",
+      "Venir de : la papa viene de los Andes"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "la planta",
+       "la plante"
+      ],
+      [
+       "la papa",
+       "la pomme de terre (Amérique)"
+      ],
+      [
+       "el maíz",
+       "le maïs"
+      ],
+      [
+       "el cacao",
+       "le cacao"
+      ],
+      [
+       "la vainilla",
+       "la vanille"
+      ],
+      [
+       "la quina",
+       "le quinquina"
+      ],
+      [
+       "el medicamento",
+       "le médicament"
+      ],
+      [
+       "el científico",
+       "le scientifique"
+      ],
+      [
+       "la expedición",
+       "l'expédition"
+      ],
+      [
+       "descubrir",
+       "découvrir"
+      ],
+      [
+       "investigar",
+       "faire des recherches"
+      ],
+      [
+       "el laboratorio",
+       "le laboratoire"
+      ],
+      [
+       "la semilla",
+       "la graine"
+      ],
+      [
+       "cultivar",
+       "cultiver"
+      ]
+     ],
+     "phrases": [
+      "La papa viene de los Andes.",
+      "José Celestino Mutis estudió las plantas de Colombia.",
+      "La quina sirvió para curar la malaria.",
+      "Hoy los científicos investigan en el laboratorio."
+     ],
+     "quiz": [
+      {
+       "q": "« la semilla » veut dire…",
+       "o": [
+        "la graine",
+        "la semaine",
+        "la semelle",
+        "la semoule"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "D’où vient la pomme de terre ?",
+       "o": [
+        "de los Andes",
+        "de Europa",
+        "de África",
+        "de Asia"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« investigar » (ciencia) veut dire…",
+       "o": [
+        "faire des recherches",
+        "investir",
+        "inventer",
+        "inviter"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "À quoi a servi le quinquina ?",
+       "o": [
+        "contra la malaria",
+        "contra el frío",
+        "para cocinar",
+        "para pintar"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« cultivar » veut dire…",
+       "o": [
+        "cultiver",
+        "cueillir",
+        "couper",
+        "cuisiner"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète au passé simple : « Mutis ___ las plantas de Colombia. »",
+       "o": [
+        "estudió",
+        "estudia",
+        "estudiará",
+        "estudiar"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Qué alimentos de América comes a menudo?",
+      "Imagina que eres un explorador en la selva: ¿qué descubres?",
+      "¿Para qué sirve la ciencia?"
+     ],
+     "culture": [
+      "La pomme de terre, la tomate, le maïs, le cacao et la vanille viennent d’Amérique : ils sont arrivés en Europe après 1492.",
+      "Au XVIIIe siècle, José Celestino Mutis a dirigé l’Expédition botanique de la Nouvelle-Grenade (l’actuelle Colombie).",
+      "L’écorce du quinquina, un arbre des Andes, a permis de fabriquer la quinine contre le paludisme."
+     ],
+     "erreurs": [
+      "Confondre « la papa » (pomme de terre) et « el Papa » (le pape).",
+      "Dire « investir » pour « investigar » (faux-ami : faire des recherches).",
+      "Oublier l’accent du passé simple : « estudió »."
      ]
     }
    ]
@@ -721,16 +2041,506 @@
   {
    "n": 5,
    "titre": "Langages et messages artistiques",
-   "objets": [
-    "Les créations artistiques (Dalí, Kahlo, Gaudí…)",
-    "El arte callejero",
-    "L’artiste témoigne et s’engage"
+   "intro": "Chanté, écrit, dansé ou peint, chaque langage artistique exprime une part de soi, transmet des émotions et raconte des histoires personnelles ou collectives.",
+   "taches": [
+    "Décrire et commenter une œuvre de Dalí, Kahlo ou Gaudí devant la classe.",
+    "Imaginer une fresque pour le collège et en expliquer le message.",
+    "Présenter un artiste engagé et une de ses œuvres."
    ],
-   "themes": []
+   "objets": [
+    "Les créations artistiques (Dalí, Kahlo, Gaudí, etc.) : d’étonnantes constructions mentales",
+    "El arte callejero : quand les langages artistiques nous interpellent",
+    "L’artiste témoigne et s’engage pour des causes sociales ou contre des régimes autoritaires (Espagne, Argentine, Cuba, etc.)"
+   ],
+   "themes": [
+    {
+     "id": "artistas-geniales",
+     "titre": "Artistas geniales",
+     "objet": "Les créations artistiques (Dalí, Kahlo, Gaudí, etc.) : d’étonnantes constructions mentales",
+     "notions": [
+      "Décrire une œuvre : en el centro, al fondo, los colores",
+      "Le passé simple : pintó, construyó",
+      "Exprimer une réaction : me llama la atención, me parece extraño",
+      "Les grands artistes du monde hispanique"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el cuadro",
+       "le tableau"
+      ],
+      [
+       "el pintor",
+       "le peintre"
+      ],
+      [
+       "la pintora",
+       "la peintre"
+      ],
+      [
+       "pintar",
+       "peindre"
+      ],
+      [
+       "la obra",
+       "l'œuvre"
+      ],
+      [
+       "el museo",
+       "le musée"
+      ],
+      [
+       "el autorretrato",
+       "l'autoportrait"
+      ],
+      [
+       "el reloj blando",
+       "la montre molle"
+      ],
+      [
+       "surrealista",
+       "surréaliste"
+      ],
+      [
+       "el arquitecto",
+       "l'architecte"
+      ],
+      [
+       "los colores",
+       "les couleurs"
+      ],
+      [
+       "la imaginación",
+       "l'imagination"
+      ],
+      [
+       "extraño",
+       "étrange"
+      ],
+      [
+       "me llama la atención",
+       "cela attire mon attention"
+      ]
+     ],
+     "phrases": [
+      "Dalí pintó relojes blandos.",
+      "Frida Kahlo pintó muchos autorretratos.",
+      "Gaudí construyó la Casa Batlló en Barcelona.",
+      "Este cuadro me llama la atención por sus colores."
+     ],
+     "quiz": [
+      {
+       "q": "« el cuadro » veut dire…",
+       "o": [
+        "le tableau",
+        "le cahier",
+        "le quart",
+        "le cœur"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el autorretrato » veut dire…",
+       "o": [
+        "l'autoportrait",
+        "l'automne",
+        "l'autoroute",
+        "l'auteur"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Qui a peint des montres molles ?",
+       "o": [
+        "Dalí",
+        "Kahlo",
+        "Gaudí",
+        "Picasso"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Qu’a construit Gaudí ?",
+       "o": [
+        "edificios",
+        "películas",
+        "canciones",
+        "novelas"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« extraño » veut dire…",
+       "o": [
+        "étrange",
+        "extrait",
+        "étranger (pays)",
+        "étroit"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète au passé simple : « Frida ___ muchos autorretratos. »",
+       "o": [
+        "pintó",
+        "pinta",
+        "pintará",
+        "pintando"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Describe un cuadro de Dalí o de Frida Kahlo.",
+      "¿Qué obra te gusta más? ¿Por qué?",
+      "Imagina un edificio al estilo de Gaudí."
+     ],
+     "culture": [
+      "Salvador Dalí, peintre surréaliste catalan, a peint les célèbres montres molles de « La persistance de la mémoire » (1931).",
+      "Frida Kahlo a peint de nombreux autoportraits : elle disait se peindre parce qu’elle passait beaucoup de temps seule.",
+      "Antoni Gaudí a imaginé à Barcelone des bâtiments aux formes courbes, comme la Casa Batlló ou le parc Güell."
+     ],
+     "erreurs": [
+      "Confondre « el cuadro » (le tableau) et « la pizarra » (le tableau de classe).",
+      "Dire « me llaman la atención » pour un seul élément.",
+      "Oublier l’accent du passé simple : « pintó », « construyó »."
+     ]
+    },
+    {
+     "id": "arte-callejero",
+     "titre": "El arte callejero",
+     "objet": "El arte callejero : quand les langages artistiques nous interpellent",
+     "notions": [
+      "L’art urbain et le muralisme",
+      "Estar lleno de",
+      "Exprimer son opinion sur une œuvre",
+      "Transmettre un message : quiere decir que…"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el arte callejero",
+       "l'art de rue"
+      ],
+      [
+       "el grafiti",
+       "le graffiti"
+      ],
+      [
+       "el mural",
+       "la fresque murale"
+      ],
+      [
+       "la pared",
+       "le mur"
+      ],
+      [
+       "el muralista",
+       "le peintre de fresques"
+      ],
+      [
+       "el mensaje",
+       "le message"
+      ],
+      [
+       "la calle",
+       "la rue"
+      ],
+      [
+       "el barrio",
+       "le quartier"
+      ],
+      [
+       "colorido",
+       "coloré"
+      ],
+      [
+       "transmitir",
+       "transmettre"
+      ],
+      [
+       "la denuncia",
+       "la dénonciation"
+      ],
+      [
+       "el espray",
+       "la bombe de peinture"
+      ],
+      [
+       "interpelar",
+       "interpeller"
+      ],
+      [
+       "llamar la atención",
+       "attirer l'attention"
+      ]
+     ],
+     "phrases": [
+      "En Valparaíso, las paredes están llenas de murales.",
+      "Diego Rivera pintó grandes murales en México.",
+      "Este grafiti transmite un mensaje.",
+      "El arte callejero transforma el barrio."
+     ],
+     "quiz": [
+      {
+       "q": "« la pared » veut dire…",
+       "o": [
+        "le mur",
+        "la paroi de verre",
+        "la paire",
+        "la parade"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el mural » veut dire…",
+       "o": [
+        "la fresque murale",
+        "la muraille",
+        "le mûrier",
+        "le moral"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Quel artiste mexicain a peint des fresques ?",
+       "o": [
+        "Diego Rivera",
+        "Salvador Dalí",
+        "Pablo Picasso",
+        "Joan Miró"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« transmitir » veut dire…",
+       "o": [
+        "transmettre",
+        "transformer",
+        "traverser",
+        "transporter"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Quelle ville chilienne est célèbre pour ses fresques ?",
+       "o": [
+        "Valparaíso",
+        "Lima",
+        "Quito",
+        "Caracas"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Las paredes ___ llenas de murales. »",
+       "o": [
+        "están",
+        "son",
+        "hay",
+        "tienen"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Describe un mural que te gusta.",
+      "¿El grafiti es arte? Justifica.",
+      "Imagina un mural para tu colegio: ¿qué mensaje transmite?"
+     ],
+     "culture": [
+      "Au Mexique, après la révolution, des muralistes comme Diego Rivera ont peint l’histoire du pays sur les murs des bâtiments publics.",
+      "À Valparaíso, au Chili, les maisons et les escaliers sont couverts de fresques colorées.",
+      "L’art de rue transmet souvent un message social ou politique."
+     ],
+     "erreurs": [
+      "Utiliser « ser » avec « lleno » : on dit « está lleno de ».",
+      "Confondre « la pared » (mur intérieur) et « la muralla » (muraille).",
+      "Oublier l’accord : « las paredes coloridas »."
+     ]
+    },
+    {
+     "id": "el-artista-testigo",
+     "titre": "El artista testigo",
+     "objet": "L’artiste témoigne et s’engage pour des causes sociales ou contre des régimes autoritaires (Espagne, Argentine, Cuba, etc.)",
+     "notions": [
+      "L’art engagé : dénoncer, témoigner",
+      "Lo + adjectif : lo sorprendente, lo interesante",
+      "L’imparfait : cantaba, vivía",
+      "Exprimer une émotion face à une œuvre"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "la guerra",
+       "la guerre"
+      ],
+      [
+       "el testigo",
+       "le témoin"
+      ],
+      [
+       "comprometido",
+       "engagé"
+      ],
+      [
+       "denunciar",
+       "dénoncer"
+      ],
+      [
+       "la injusticia",
+       "l'injustice"
+      ],
+      [
+       "la libertad",
+       "la liberté"
+      ],
+      [
+       "la canción",
+       "la chanson"
+      ],
+      [
+       "el exilio",
+       "l'exil"
+      ],
+      [
+       "la dictadura",
+       "la dictature"
+      ],
+      [
+       "el bombardeo",
+       "le bombardement"
+      ],
+      [
+       "el sufrimiento",
+       "la souffrance"
+      ],
+      [
+       "lo sorprendente",
+       "ce qui est surprenant"
+      ],
+      [
+       "lo interesante",
+       "ce qui est intéressant"
+      ],
+      [
+       "ayudar",
+       "aider"
+      ]
+     ],
+     "phrases": [
+      "En el Guernica, Picasso denuncia la guerra.",
+      "Mercedes Sosa cantaba por la libertad.",
+      "El artista es un testigo de su tiempo.",
+      "Lo sorprendente es que el cuadro no tiene colores."
+     ],
+     "quiz": [
+      {
+       "q": "« el testigo » veut dire…",
+       "o": [
+        "le témoin",
+        "le test",
+        "le texte",
+        "la tige"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« denunciar » veut dire…",
+       "o": [
+        "dénoncer",
+        "annoncer",
+        "renoncer",
+        "prononcer"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Que dénonce Guernica ?",
+       "o": [
+        "la guerra",
+        "el amor",
+        "la naturaleza",
+        "el deporte"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Où est exposé Guernica aujourd’hui ?",
+       "o": [
+        "en el Museo Reina Sofía de Madrid",
+        "en el Louvre",
+        "en Barcelona",
+        "en Nueva York"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« la dictadura » veut dire…",
+       "o": [
+        "la dictature",
+        "la dictée",
+        "le dictionnaire",
+        "la direction"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « Lo ___ es que no tiene colores. »",
+       "o": [
+        "sorprendente",
+        "sorprender",
+        "sorprendido",
+        "sorpresa"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Describe el Guernica en cuatro frases.",
+      "¿Puede el arte cambiar el mundo?",
+      "Presenta a un artista comprometido."
+     ],
+     "culture": [
+      "« Guernica » (1937) de Picasso dénonce le bombardement de la ville basque de Guernica pendant la guerre civile ; il est exposé au musée Reina Sofía de Madrid.",
+      "La chanteuse argentine Mercedes Sosa a dû s’exiler pendant la dictature militaire.",
+      "La chanteuse cubaine Celia Cruz a vécu en exil aux États-Unis après 1960."
+     ],
+     "erreurs": [
+      "Accorder « lo » avec le nom : « lo sorprendente » reste invariable.",
+      "Confondre « denunciar » (dénoncer) et « anunciar » (annoncer).",
+      "Oublier l’imparfait pour une habitude passée : « cantaba »."
+     ]
+    }
+   ]
   },
   {
    "n": 6,
    "titre": "L’Andalousie, terre de merveilles",
+   "intro": "Région emblématique de l’Espagne, l’Andalousie est à la croisée de riches cultures millénaires et l’un des fleurons du tourisme, un modèle de plus en plus remis en cause.",
+   "taches": [
+    "Présenter un spectacle de flamenco ou une sévillane.",
+    "Préparer la visite guidée de l’Alhambra ou de la Mezquita.",
+    "Débat : le tourisme en Andalousie, chance ou problème ?"
+   ],
    "objets": [
     "Une terre de musique(s)",
     "Un regard vers le passé : al-Ándalus",
@@ -739,27 +2549,19 @@
    "themes": [
     {
      "id": "andalucia",
-     "titre": "Andalucía",
-     "objet": "Une terre de musique(s) · al-Ándalus",
+     "titre": "Andalucía, tierra de música",
+     "objet": "Une terre de musique(s)",
      "notions": [
-      "La musique et les monuments d’Andalousie",
-      "Les mots d’origine arabe",
-      "Estar pour situer, ser pour définir",
-      "Al-Ándalus : repères historiques"
+      "La musique et la danse en Andalousie",
+      "Le flamenco : cante, baile, toque",
+      "L’imparfait pour évoquer un artiste : tocaba, cantaba",
+      "Exprimer une émotion : me emociona, me encanta"
      ],
      "relu": false,
      "vocab": [
       [
-       "Andalucía",
-       "l'Andalousie"
-      ],
-      [
        "el flamenco",
        "le flamenco"
-      ],
-      [
-       "la guitarra",
-       "la guitare"
       ],
       [
        "el cante",
@@ -770,64 +2572,72 @@
        "la danse"
       ],
       [
+       "el toque",
+       "le jeu de guitare"
+      ],
+      [
+       "la guitarra",
+       "la guitare"
+      ],
+      [
        "las palmas",
        "les claquements de mains"
       ],
       [
-       "la Alhambra",
-       "l'Alhambra"
+       "el cajón",
+       "le cajón (percussion)"
       ],
       [
-       "la Mezquita",
-       "la Mosquée-cathédrale"
+       "el bailaor",
+       "le danseur de flamenco"
       ],
       [
-       "el palacio",
-       "le palais"
+       "la bailaora",
+       "la danseuse de flamenco"
       ],
       [
-       "el patio",
-       "le patio"
-      ],
-      [
-       "el azulejo",
-       "le carreau de faïence"
-      ],
-      [
-       "el olivo",
-       "l'olivier"
-      ],
-      [
-       "el aceite de oliva",
-       "l'huile d'olive"
+       "las sevillanas",
+       "les sévillanes"
       ],
       [
        "la feria",
        "la foire, la fête"
       ],
       [
-       "el turismo",
-       "le tourisme"
+       "el traje de flamenca",
+       "la robe de flamenca"
       ],
       [
-       "al-Ándalus",
-       "al-Andalus"
+       "el compás",
+       "le rythme"
+      ],
+      [
+       "emocionar",
+       "émouvoir"
+      ],
+      [
+       "¡Olé!",
+       "Olé !"
+      ],
+      [
+       "Andalucía",
+       "l'Andalousie"
       ]
      ],
      "phrases": [
-      "La Alhambra está en Granada.",
-      "El flamenco mezcla cante, baile y guitarra.",
-      "Andalucía produce mucho aceite de oliva.",
-      "En abril se celebra la Feria de Sevilla."
+      "El flamenco mezcla cante, baile y toque.",
+      "En la feria se bailan sevillanas.",
+      "El cajón viene de Perú.",
+      "Paco de Lucía tocaba la guitarra flamenca."
      ],
      "quiz": [
       {
-       "q": "Dans quelle ville se trouve l'Alhambra ?",
+       "q": "Le flamenco réunit…",
        "o": [
-        "Granada",
-        "Sevilla",
-        "Córdoba",
-        "Málaga"
+        "cante, baile y toque",
+        "piano y violín",
+        "rap y DJ",
+        "tambores y flauta"
        ],
        "a": 0,
        "diff": "bronce"
@@ -844,60 +2654,382 @@
        "diff": "bronce"
       },
       {
-       "q": "Le flamenco réunit…",
+       "q": "« las palmas » (flamenco) veut dire…",
        "o": [
-        "cante, baile y guitarra",
-        "piano y violín",
-        "rap y DJ",
-        "tambores y flauta"
+        "les claquements de mains",
+        "les pieds",
+        "les cris",
+        "les chapeaux"
        ],
        "a": 0,
        "diff": "plata"
       },
       {
-       "q": "« el aceite » veut dire…",
+       "q": "D’où vient le cajón ?",
        "o": [
-        "l'huile",
-        "le vinaigre",
-        "l'acier",
-        "l'assiette"
-       ],
-       "a": 0,
-       "diff": "plata"
-      },
-      {
-       "q": "Le mot « ojalá » vient de la langue…",
-       "o": [
-        "arabe",
-        "latine",
-        "grecque",
-        "quechua"
+        "de Perú",
+        "de Cuba",
+        "de México",
+        "de Marruecos"
        ],
        "a": 0,
        "diff": "oro"
       },
       {
-       "q": "Complète : « La Mezquita ___ en Córdoba. »",
+       "q": "Complète à l’imparfait : « Paco de Lucía ___ la guitarra. »",
        "o": [
-        "está",
-        "es",
-        "hay",
-        "tiene"
+        "tocaba",
+        "tocamos",
+        "tocáis",
+        "tocan"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« emocionar » veut dire…",
+       "o": [
+        "émouvoir",
+        "émotion",
+        "émettre",
+        "énerver"
+       ],
+       "a": 0,
+       "diff": "plata"
+      }
+     ],
+     "parole": [
+      "Describe un espectáculo de flamenco.",
+      "¿Qué música te emociona? ¿Por qué?",
+      "Presenta a un artista de flamenco."
+     ],
+     "culture": [
+      "Le flamenco est inscrit au patrimoine culturel immatériel de l’UNESCO depuis 2010.",
+      "Le cajón, une caisse en bois venue du Pérou, a été adopté par le flamenco grâce au guitariste Paco de Lucía.",
+      "Les sévillanes se dansent à deux, notamment pendant la Feria de Séville."
+     ],
+     "erreurs": [
+      "Confondre « el bailaor » (flamenco) et « el bailarín » (danseur en général).",
+      "Oublier l’imparfait pour décrire une habitude passée : « tocaba ».",
+      "Dire « me emociona las canciones » au lieu de « me emocionan »."
+     ]
+    },
+    {
+     "id": "al-andalus",
+     "titre": "Al-Ándalus",
+     "objet": "Un regard vers le passé : al-Ándalus",
+     "notions": [
+      "Al-Ándalus : repères historiques (711-1492)",
+      "L’imparfait pour décrire le passé",
+      "Les mots d’origine arabe",
+      "Estar pour situer : la Mezquita está en Córdoba"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "al-Ándalus",
+       "al-Andalus"
+      ],
+      [
+       "los musulmanes",
+       "les musulmans"
+      ],
+      [
+       "los cristianos",
+       "les chrétiens"
+      ],
+      [
+       "los judíos",
+       "les juifs"
+      ],
+      [
+       "convivir",
+       "cohabiter"
+      ],
+      [
+       "la Mezquita",
+       "la Mosquée-cathédrale"
+      ],
+      [
+       "la Alhambra",
+       "l'Alhambra"
+      ],
+      [
+       "el palacio",
+       "le palais"
+      ],
+      [
+       "el patio",
+       "le patio"
+      ],
+      [
+       "la fuente",
+       "la fontaine"
+      ],
+      [
+       "el azulejo",
+       "le carreau de faïence"
+      ],
+      [
+       "el califato",
+       "le califat"
+      ],
+      [
+       "la Reconquista",
+       "la Reconquête"
+      ],
+      [
+       "las tres culturas",
+       "les trois cultures"
+      ]
+     ],
+     "phrases": [
+      "En Córdoba está la Mezquita.",
+      "La Alhambra es un palacio nazarí.",
+      "En al-Ándalus vivían musulmanes, cristianos y judíos.",
+      "Muchas palabras españolas vienen del árabe."
+     ],
+     "quiz": [
+      {
+       "q": "Dans quelle ville se trouve l’Alhambra ?",
+       "o": [
+        "Granada",
+        "Sevilla",
+        "Córdoba",
+        "Málaga"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Dans quelle ville se trouve la Mezquita ?",
+       "o": [
+        "Córdoba",
+        "Granada",
+        "Toledo",
+        "Cádiz"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« la fuente » (Alhambra) veut dire…",
+       "o": [
+        "la fontaine",
+        "la fonte",
+        "la fuite",
+        "la foule"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Le mot « ojalá » vient de…",
+       "o": [
+        "árabe",
+        "latín",
+        "griego",
+        "quechua"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« convivir » veut dire…",
+       "o": [
+        "cohabiter",
+        "convaincre",
+        "convier",
+        "convenir"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète à l’imparfait : « En al-Ándalus ___ tres culturas. »",
+       "o": [
+        "convivían",
+        "convive",
+        "convivimos",
+        "convivirán"
        ],
        "a": 0,
        "diff": "oro"
       }
      ],
      "parole": [
-      "¿Qué lugar de Andalucía te gustaría visitar? ¿Por qué?",
-      "Describe un espectáculo de flamenco.",
-      "¿El turismo es bueno o malo para Andalucía?"
+      "Describe la Alhambra o la Mezquita.",
+      "¿Qué nos queda hoy de al-Ándalus?",
+      "Busca tres palabras españolas de origen árabe."
      ],
      "culture": [
       "Al-Ándalus est le nom de la partie de la péninsule ibérique sous domination musulmane, de 711 à 1492.",
       "L’Alhambra de Grenade a été construite par la dynastie nasride aux XIIIe et XIVe siècles.",
-      "Le flamenco est inscrit au patrimoine culturel immatériel de l’UNESCO depuis 2010.",
-      "Beaucoup de mots espagnols viennent de l’arabe : aceite, azúcar, almohada, ojalá."
+      "Au Xe siècle, Cordoue, capitale du califat, était l’une des plus grandes villes d’Europe."
+     ],
+     "erreurs": [
+      "Utiliser « es » pour situer : « la Mezquita está en Córdoba ».",
+      "Oublier l’imparfait pour décrire une époque passée.",
+      "Mettre une majuscule à « musulmanes », « cristianos » (minuscules en espagnol)."
+     ]
+    },
+    {
+     "id": "andalucia-turistica",
+     "titre": "Andalucía para todos los gustos",
+     "objet": "Une destination touristique pour tous les goûts",
+     "notions": [
+      "Le tourisme et ses effets",
+      "Se puede + infinitif",
+      "Cada vez más / menos",
+      "Peser le pour et le contre"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el turismo",
+       "le tourisme"
+      ],
+      [
+       "el turista",
+       "le touriste"
+      ],
+      [
+       "la playa",
+       "la plage"
+      ],
+      [
+       "la Costa del Sol",
+       "la Costa del Sol"
+      ],
+      [
+       "la sierra",
+       "la chaîne de montagnes"
+      ],
+      [
+       "Sierra Nevada",
+       "la Sierra Nevada"
+      ],
+      [
+       "esquiar",
+       "skier"
+      ],
+      [
+       "el pueblo blanco",
+       "le village blanc"
+      ],
+      [
+       "el hotel",
+       "l'hôtel"
+      ],
+      [
+       "masificado",
+       "saturé de monde"
+      ],
+      [
+       "el alquiler",
+       "le loyer"
+      ],
+      [
+       "los vecinos",
+       "les habitants, les voisins"
+      ],
+      [
+       "disfrutar",
+       "profiter"
+      ],
+      [
+       "cada vez más",
+       "de plus en plus"
+      ]
+     ],
+     "phrases": [
+      "En Andalucía se puede esquiar y bañarse en el mar el mismo día.",
+      "Málaga está en la Costa del Sol.",
+      "Algunos vecinos critican el turismo masivo.",
+      "Los alquileres son cada vez más caros."
+     ],
+     "quiz": [
+      {
+       "q": "« esquiar » veut dire…",
+       "o": [
+        "skier",
+        "esquiver",
+        "esquisser",
+        "essuyer"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« la sierra » (geografía) veut dire…",
+       "o": [
+        "la chaîne de montagnes",
+        "la serre",
+        "la ville",
+        "la mer"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Où se trouve Málaga ?",
+       "o": [
+        "en la Costa del Sol",
+        "en los Pirineos",
+        "en Galicia",
+        "en Canarias"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« masificado » veut dire…",
+       "o": [
+        "saturé de monde",
+        "massif",
+        "masqué",
+        "maximal"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« el alquiler » veut dire…",
+       "o": [
+        "le loyer",
+        "l'alcool",
+        "l'allure",
+        "l'aller"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « En Andalucía se ___ esquiar. »",
+       "o": [
+        "puede",
+        "pueden",
+        "podemos",
+        "poder"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Prepara un viaje de tres días por Andalucía.",
+      "¿El turismo es bueno o malo para los vecinos?",
+      "¿Prefieres la playa o la montaña? ¿Por qué?"
+     ],
+     "culture": [
+      "Près de Grenade, on peut skier dans la Sierra Nevada et se baigner dans la Méditerranée le même jour.",
+      "Les plages de la Costa del Sol, autour de Málaga, attirent des millions de touristes.",
+      "En 2024, des habitants de Málaga et de Barcelone ont manifesté contre le tourisme de masse, qui fait monter les loyers."
+     ],
+     "erreurs": [
+      "Dire « se pueden esquiar » : avec un infinitif, « se puede esquiar ».",
+      "Confondre « el alquiler » (le loyer) et « alquilar » (louer).",
+      "Oublier « cada » : « cada vez más caro »."
      ]
     }
    ],

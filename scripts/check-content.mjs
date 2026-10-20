@@ -27,7 +27,9 @@ for (const n of NIVEAUX) {
   for (const [k, a] of (c.axes ?? []).entries()) {
     check(a.n === k + 1 && isStr(a.titre), `${f} › axe ${k + 1} : numéro ou titre invalide`);
     check(Array.isArray(a.objets) && a.objets.length && a.objets.every(isStr), `${f} › axe ${k + 1} : objets d'étude manquants`);
-    check(Array.isArray(a.themes), `${f} › axe ${k + 1} : "themes" doit être une liste`);
+    check(Array.isArray(a.themes) && a.themes.length === 3, `${f} › axe ${k + 1} : 3 chapitres attendus (un par objet d'étude)`);
+    check(isStr(a.intro), `${f} › axe ${k + 1} : "intro" (objectif de l'axe) manquant`);
+    check(Array.isArray(a.taches) && a.taches.length >= 2 && a.taches.every(isStr), `${f} › axe ${k + 1} : au moins 2 "taches" finales`);
   }
   const axe6 = c.axes?.[5];
   check(axe6?.obligatoire === true && axe6.themes.length > 0, `${f} : l'axe 6 est obligatoire et doit avoir au moins un thème`);
@@ -41,6 +43,8 @@ for (const n of NIVEAUX) {
     check(isStr(t.titre), `${at} : "titre" manquant`);
     check(isStr(t.objet), `${at} : "objet" (objet d'étude) manquant`);
     check(Array.isArray(t.notions) && t.notions.length > 0 && t.notions.every(isStr), `${at} : "notions" manquantes`);
+    check(Array.isArray(t.erreurs) && t.erreurs.length >= 2 && t.erreurs.every(isStr), `${at} : au moins 2 "erreurs" fréquentes`);
+    check(t.phrases?.length >= 3 && t.parole?.length >= 3 && t.quiz?.length >= 4 && t.vocab?.length >= 12, `${at} : chapitre incomplet (12 mots, 3 phrases, 3 sujets d'oral, 4 questions minimum)`);
     check(Array.isArray(t.culture) && t.culture.length > 0 && t.culture.every(isStr), `${at} : au moins un repère dans "culture"`);
     check(typeof t.relu === 'boolean', `${at} : "relu" doit valoir true ou false`);
     if (t.relu === false) warnings.push(`${at} : espagnol à relire`);

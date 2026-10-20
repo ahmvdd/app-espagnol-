@@ -6,16 +6,181 @@
   {
    "n": 1,
    "titre": "À la rencontre de l’autre",
+   "intro": "Apprendre une langue, c’est aller vers l’autre pour tisser des liens : rencontres, amitiés et amours, en face-à-face ou à distance, racontés par la presse, la littérature et le cinéma.",
+   "taches": [
+    "Organiser une « sobremesa » en classe : un débat convivial autour d’un thème.",
+    "Écrire une lettre à un ami imaginaire d’un pays hispanophone.",
+    "Présenter un couple célèbre de l’histoire ou de la littérature hispanique."
+   ],
    "objets": [
     "La convivialité, tout un art de vivre !",
-    "¿Amigos para siempre?",
+    "¿Amigos para siempre? Histoires d’amitiés célèbres, imaginaires ou familières",
     "Des amours célèbres"
    ],
    "themes": [
     {
+     "id": "la-convivencia",
+     "titre": "La convivencia",
+     "objet": "La convivialité, tout un art de vivre !",
+     "notions": [
+      "La convivialité : partager, quedar, la sobremesa",
+      "Quedar con / quedar en",
+      "Gustar + infinitif",
+      "Comparer deux modes de vie"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "la convivencia",
+       "le vivre-ensemble"
+      ],
+      [
+       "la sobremesa",
+       "le moment passé à table après le repas"
+      ],
+      [
+       "quedar con amigos",
+       "retrouver des amis"
+      ],
+      [
+       "la terraza",
+       "la terrasse"
+      ],
+      [
+       "ir de tapas",
+       "aller manger des tapas"
+      ],
+      [
+       "compartir",
+       "partager"
+      ],
+      [
+       "charlar",
+       "bavarder"
+      ],
+      [
+       "reunirse",
+       "se réunir"
+      ],
+      [
+       "la cena",
+       "le dîner"
+      ],
+      [
+       "invitar",
+       "inviter"
+      ],
+      [
+       "el ambiente",
+       "l'ambiance"
+      ],
+      [
+       "la plaza",
+       "la place"
+      ],
+      [
+       "salir",
+       "sortir"
+      ],
+      [
+       "el mate",
+       "le maté"
+      ]
+     ],
+     "phrases": [
+      "Los domingos comemos en familia y la sobremesa dura horas.",
+      "Quedamos en una terraza para tomar algo.",
+      "Compartimos unas tapas.",
+      "Me encanta el ambiente de las plazas."
+     ],
+     "quiz": [
+      {
+       "q": "« la sobremesa » veut dire…",
+       "o": [
+        "le temps passé à table après le repas",
+        "le dessert",
+        "la nappe",
+        "le dessus de la table"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« charlar » veut dire…",
+       "o": [
+        "bavarder",
+        "charger",
+        "chanter",
+        "charmer"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« ir de tapas » veut dire…",
+       "o": [
+        "aller manger des tapas de bar en bar",
+        "cuisiner des tapas",
+        "acheter des tapas",
+        "faire la vaisselle"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« el ambiente » veut dire…",
+       "o": [
+        "l'ambiance",
+        "l'ambition",
+        "l'ambulance",
+        "l'ampoule"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "En Argentine, entre amis, on partage…",
+       "o": [
+        "el mate",
+        "el té",
+        "el café",
+        "la horchata"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Nos ___ quedarnos en la terraza. »",
+       "o": [
+        "gusta",
+        "gustan",
+        "gusto",
+        "gustamos"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Describe una comida en familia.",
+      "¿Qué haces con tus amigos el fin de semana?",
+      "Compara la convivencia en España y en Francia."
+     ],
+     "culture": [
+      "La « sobremesa » est le moment où l’on reste à table pour discuter après le repas : elle peut durer longtemps.",
+      "Aller de bar en bar pour manger des tapas se dit « ir de tapas ».",
+      "En Argentine et en Uruguay, partager le maté entre amis est un geste de convivialité."
+     ],
+     "erreurs": [
+      "Confondre « quedar con » (retrouver quelqu’un) et « quedarse » (rester).",
+      "Dire « nos gustan quedarnos » : avec un infinitif, « nos gusta ».",
+      "Confondre « el ambiente » (l’ambiance) et « el medio ambiente » (l’environnement)."
+     ]
+    },
+    {
      "id": "la-amistad",
      "titre": "¿Amigos para siempre?",
-     "objet": "¿Amigos para siempre? Histoires d’amitiés",
+     "objet": "¿Amigos para siempre? Histoires d’amitiés célèbres, imaginaires ou familières",
      "notions": [
       "Les relations : llevarse bien, enfadarse",
       "Les verbes pronominaux au passé",
@@ -172,6 +337,174 @@
       "Selon les pays, un ami se dit cuate (Mexique), pana (Venezuela), parcero (Colombie) ou colega (Espagne).",
       "En Argentine, on fête le Día del Amigo le 20 juillet.",
       "En Espagne, on se retrouve souvent entre amis pour les tapas : la convivialité fait partie de la culture."
+     ],
+     "erreurs": [
+      "Oublier le subjonctif après « es importante que ».",
+      "Confondre « llevarse bien » (bien s’entendre) et « llevar » (porter).",
+      "Dire « estoy enfadado con » / « me enfado con » : bien employer le pronom."
+     ]
+    },
+    {
+     "id": "amores-celebres",
+     "titre": "Amores célebres",
+     "objet": "Des amours célèbres",
+     "notions": [
+      "Les sentiments amoureux",
+      "Les verbes pronominaux : enamorarse, casarse",
+      "Le passé simple pour raconter une histoire",
+      "Echar de menos"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el amor",
+       "l'amour"
+      ],
+      [
+       "enamorarse",
+       "tomber amoureux"
+      ],
+      [
+       "estar enamorado",
+       "être amoureux"
+      ],
+      [
+       "el flechazo",
+       "le coup de foudre"
+      ],
+      [
+       "casarse",
+       "se marier"
+      ],
+      [
+       "la boda",
+       "le mariage"
+      ],
+      [
+       "los celos",
+       "la jalousie"
+      ],
+      [
+       "estar celoso",
+       "être jaloux"
+      ],
+      [
+       "el novio",
+       "le petit ami, le fiancé"
+      ],
+      [
+       "la novia",
+       "la petite amie, la fiancée"
+      ],
+      [
+       "los amantes",
+       "les amants"
+      ],
+      [
+       "el corazón",
+       "le cœur"
+      ],
+      [
+       "la carta de amor",
+       "la lettre d'amour"
+      ],
+      [
+       "querer",
+       "aimer"
+      ],
+      [
+       "echar de menos",
+       "regretter, manquer"
+      ]
+     ],
+     "phrases": [
+      "Frida Kahlo y Diego Rivera se casaron dos veces.",
+      "Fue un flechazo.",
+      "Los amantes de Teruel murieron de amor.",
+      "Te echo de menos."
+     ],
+     "quiz": [
+      {
+       "q": "« el flechazo » veut dire…",
+       "o": [
+        "le coup de foudre",
+        "la flèche",
+        "le flash",
+        "la flamme"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« los celos » veut dire…",
+       "o": [
+        "la jalousie",
+        "le ciel",
+        "les cils",
+        "le zèle"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« la boda » veut dire…",
+       "o": [
+        "le mariage",
+        "la bouteille",
+        "la boue",
+        "la botte"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Combien de fois Frida Kahlo et Diego Rivera se sont-ils mariés ?",
+       "o": [
+        "dos",
+        "una",
+        "tres",
+        "nunca"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« enamorarse » veut dire…",
+       "o": [
+        "tomber amoureux",
+        "s'ennuyer",
+        "se marier",
+        "s'endormir"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète au passé simple : « Cuando se ___, todo cambió. » (ellos, conocer)",
+       "o": [
+        "conocieron",
+        "conocen",
+        "conocerán",
+        "conocían"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Presenta una pareja célebre.",
+      "Escribe la carta de amor de un personaje famoso.",
+      "¿El amor a primera vista existe?"
+     ],
+     "culture": [
+      "Frida Kahlo et Diego Rivera se sont mariés deux fois, en 1929 et en 1940.",
+      "La légende des « Amantes de Teruel » (XIIIe siècle) est le Roméo et Juliette espagnol.",
+      "Le mariage d’Isabelle de Castille et de Ferdinand d’Aragon, en 1469, a uni deux grands royaumes."
+     ],
+     "erreurs": [
+      "Oublier le pronom : « me enamoré de », « se casaron ».",
+      "Dire « enamorarse con » au lieu de « enamorarse de ».",
+      "Confondre « echar de menos » (manquer) et « echar » (jeter)."
      ]
     }
    ]
@@ -179,12 +512,336 @@
   {
    "n": 2,
    "titre": "Travailler hier, aujourd’hui, demain",
+   "intro": "Le travail a profondément changé : réfléchir aux métiers et aux pratiques professionnelles d’hier, d’aujourd’hui et de demain, c’est aussi réfléchir aux enjeux de société.",
+   "taches": [
+    "Interviewer un proche sur son métier et présenter l’interview en espagnol.",
+    "Simuler un entretien d’embauche.",
+    "Présenter le métier de ses rêves en 2050."
+   ],
    "objets": [
     "Travailler hier",
     "Travailler aujourd’hui",
     "Travailler demain"
    ],
    "themes": [
+    {
+     "id": "trabajar-ayer",
+     "titre": "Trabajar ayer",
+     "objet": "Travailler hier",
+     "notions": [
+      "Les métiers d’autrefois",
+      "L’imparfait d’habitude : trabajaban, hacían",
+      "Antes / ahora",
+      "Les conditions de travail"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el campo",
+       "les champs, la campagne"
+      ],
+      [
+       "el campesino",
+       "le paysan"
+      ],
+      [
+       "la cosecha",
+       "la récolte"
+      ],
+      [
+       "el oficio",
+       "le métier"
+      ],
+      [
+       "el artesano",
+       "l'artisan"
+      ],
+      [
+       "el taller",
+       "l'atelier"
+      ],
+      [
+       "la fábrica",
+       "l'usine"
+      ],
+      [
+       "el obrero",
+       "l'ouvrier"
+      ],
+      [
+       "trabajar la tierra",
+       "travailler la terre"
+      ],
+      [
+       "el pescador",
+       "le pêcheur"
+      ],
+      [
+       "la jornada",
+       "la journée de travail"
+      ],
+      [
+       "duro",
+       "dur"
+      ],
+      [
+       "antes",
+       "avant"
+      ],
+      [
+       "la huelga",
+       "la grève"
+      ]
+     ],
+     "phrases": [
+      "Antes, mis abuelos trabajaban en el campo.",
+      "Los obreros trabajaban muchas horas en la fábrica.",
+      "El artesano hacía zapatos en su taller.",
+      "Era un trabajo muy duro."
+     ],
+     "quiz": [
+      {
+       "q": "« el campesino » veut dire…",
+       "o": [
+        "le paysan",
+        "le campeur",
+        "le champion",
+        "le camionneur"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« la cosecha » veut dire…",
+       "o": [
+        "la récolte",
+        "la cuisine",
+        "la coque",
+        "la côte"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el obrero » veut dire…",
+       "o": [
+        "l'ouvrier",
+        "l'ombre",
+        "l'obstacle",
+        "l'orchestre"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "En quelle année l’Espagne a-t-elle adopté la journée de huit heures ?",
+       "o": [
+        "1919",
+        "1789",
+        "1975",
+        "2000"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« la huelga » veut dire…",
+       "o": [
+        "la grève",
+        "la houle",
+        "l'huile",
+        "la hutte"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Antes mis abuelos ___ en el campo. »",
+       "o": [
+        "trabajaban",
+        "trabajan",
+        "trabajarán",
+        "trabajad"
+       ],
+       "a": 0,
+       "diff": "plata"
+      }
+     ],
+     "parole": [
+      "¿Cómo trabajaban tus abuelos?",
+      "Compara un oficio de antes y de hoy.",
+      "Imagina un día de trabajo en el campo hace cien años."
+     ],
+     "culture": [
+      "Au début du XXe siècle, la majorité des Espagnols travaillaient dans l’agriculture.",
+      "En 1919, après la grande grève de « La Canadiense » à Barcelone, l’Espagne a adopté la journée de travail de huit heures.",
+      "Beaucoup de métiers artisanaux traditionnels (potier, forgeron, cordonnier) ont presque disparu."
+     ],
+     "erreurs": [
+      "Utiliser le passé simple pour une habitude : on emploie l’imparfait (« trabajaban »).",
+      "Confondre « el taller » (l’atelier) et « la tailleur ».",
+      "Oublier l’accent : « había », « hacían »."
+     ]
+    },
+    {
+     "id": "trabajar-hoy",
+     "titre": "Trabajar hoy",
+     "objet": "Travailler aujourd’hui",
+     "notions": [
+      "Le monde du travail aujourd’hui",
+      "Para / por",
+      "Le présent pour décrire une activité",
+      "Se présenter pour un emploi"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "la profesión",
+       "la profession"
+      ],
+      [
+       "la oficina",
+       "le bureau"
+      ],
+      [
+       "el sueldo",
+       "le salaire"
+      ],
+      [
+       "el paro",
+       "le chômage"
+      ],
+      [
+       "el puesto de trabajo",
+       "le poste"
+      ],
+      [
+       "el jefe",
+       "le chef"
+      ],
+      [
+       "los empleados",
+       "les employés"
+      ],
+      [
+       "la empresa",
+       "l'entreprise"
+      ],
+      [
+       "teletrabajar",
+       "télétravailler"
+      ],
+      [
+       "el horario",
+       "les horaires"
+      ],
+      [
+       "las prácticas",
+       "le stage"
+      ],
+      [
+       "la entrevista",
+       "l'entretien"
+      ],
+      [
+       "buscar trabajo",
+       "chercher du travail"
+      ],
+      [
+       "la formación profesional",
+       "la formation professionnelle"
+      ]
+     ],
+     "phrases": [
+      "Mi madre teletrabaja dos días por semana.",
+      "Hago unas prácticas en una empresa.",
+      "Busco trabajo para el verano.",
+      "En la entrevista hay que estar tranquilo."
+     ],
+     "quiz": [
+      {
+       "q": "« el sueldo » veut dire…",
+       "o": [
+        "le salaire",
+        "le sol",
+        "la solde",
+        "le sou"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el paro » veut dire…",
+       "o": [
+        "le chômage",
+        "la parole",
+        "la paroi",
+        "le pari"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« las prácticas » veut dire…",
+       "o": [
+        "le stage",
+        "les pratiques religieuses",
+        "les exercices de sport",
+        "les promenades"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« la entrevista » veut dire…",
+       "o": [
+        "l'entretien",
+        "l'entrevue amicale",
+        "l'entrée",
+        "l'entracte"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« télétravailler » se dit…",
+       "o": [
+        "teletrabajar",
+        "trabajar tele",
+        "telecomprar",
+        "teletrabajo hacer"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « Busco trabajo ___ el verano. »",
+       "o": [
+        "para",
+        "por",
+        "en",
+        "a"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Qué trabajo hacen las personas de tu familia?",
+      "Prepara una entrevista de trabajo.",
+      "¿Te gustaría teletrabajar? ¿Por qué?"
+     ],
+     "culture": [
+      "En Espagne, le salaire minimum s’appelle le SMI (Salario Mínimo Interprofesional).",
+      "Depuis 2020, le télétravail (teletrabajo) s’est beaucoup développé en Espagne.",
+      "Après la ESO, la formación profesional (FP) prépare directement à un métier."
+     ],
+     "erreurs": [
+      "Confondre « para » (but, destination) et « por » (cause, moyen).",
+      "Dire « el trabajo es duro » / « estoy cansado » : ser et estar.",
+      "Confondre « el paro » (chômage) et « parar » (arrêter)."
+     ]
+    },
     {
      "id": "el-futuro",
      "titre": "El trabajo y el futuro",
@@ -367,6 +1024,11 @@
      "culture": [
       "Le 1er mai (Día del Trabajador) est férié en Espagne et dans presque toute l’Amérique latine.",
       "Après la ESO, les jeunes Espagnols choisissent entre le bachillerato et la formación profesional (FP), qui prépare à un métier."
+     ],
+     "erreurs": [
+      "Oublier l’accent du futur : « trabajaré », « seré ».",
+      "Confondre « me gustaría » (conditionnel) et « me gustará » (futur).",
+      "Dire « quiero ser médico » mais « quiero estar » : ser pour un métier."
      ]
     }
    ]
@@ -374,16 +1036,22 @@
   {
    "n": 3,
    "titre": "Voyages et migrations",
+   "intro": "Le voyage fait découvrir d’autres réalités de l’aire hispanophone ; il peut aussi devenir le départ d’une nouvelle vie, par choix ou par nécessité.",
+   "taches": [
+    "Organiser un voyage scolaire dans un pays hispanophone (itinéraire, budget).",
+    "Écrire la lettre d’un émigrant à sa famille.",
+    "Réaliser un carnet de voyage illustré."
+   ],
    "objets": [
     "Partons en voyage !",
-    "Quitter son pays : aventure, émigration ou exil",
+    "Quitter son pays : aventure, émigration économique ou exil politique",
     "Souvenirs de voyage"
    ],
    "themes": [
     {
      "id": "de-viaje",
      "titre": "De viaje",
-     "objet": "Partons en voyage ! · Quitter son pays",
+     "objet": "Partons en voyage !",
      "notions": [
       "Le voyage et les transports",
       "Raconter au passé : fui, viajé",
@@ -437,31 +1105,31 @@
        "le camping"
       ],
       [
-       "emigrar",
-       "émigrer"
+       "el tren",
+       "le train"
       ],
       [
-       "el inmigrante",
-       "l'immigré"
+       "el avión",
+       "l'avion"
       ],
       [
-       "dejar",
-       "quitter, laisser"
+       "reservar",
+       "réserver"
       ],
       [
-       "la frontera",
-       "la frontière"
+       "la ruta turística",
+       "l'itinéraire touristique"
       ],
       [
-       "echar de menos",
-       "regretter, manquer"
+       "el parador",
+       "l'hôtel historique (Espagne)"
       ]
      ],
      "phrases": [
       "El verano pasado fui de viaje a Málaga.",
       "Para viajar fuera de Europa hace falta el pasaporte.",
-      "Mi abuelo emigró a Argentina.",
-      "Echo de menos a mi familia."
+      "Reservamos una habitación en un parador.",
+      "La salida del tren es a las nueve."
      ],
      "quiz": [
       {
@@ -476,15 +1144,15 @@
        "diff": "bronce"
       },
       {
-       "q": "« echar de menos » veut dire…",
+       "q": "« reservar » veut dire…",
        "o": [
-        "regretter (quelqu'un) / manquer",
-        "jeter moins",
-        "échouer",
-        "mettre de côté"
+        "réserver",
+        "réserve (le stock)",
+        "rêver",
+        "revenir"
        ],
        "a": 0,
-       "diff": "plata"
+       "diff": "bronce"
       },
       {
        "q": "Le DNI est…",
@@ -498,15 +1166,15 @@
        "diff": "bronce"
       },
       {
-       "q": "« emigrar » veut dire…",
+       "q": "« estar de vacaciones » veut dire…",
        "o": [
-        "émigrer",
-        "émerger",
-        "immigrer ici",
-        "émettre"
+        "être en vacances",
+        "avoir des vacances payées",
+        "partir en vacances demain",
+        "être en congé maladie"
        ],
        "a": 0,
-       "diff": "bronce"
+       "diff": "plata"
       },
       {
        "q": "Complète : « El verano pasado ___ a Málaga. » (yo, ir)",
@@ -520,7 +1188,7 @@
        "diff": "oro"
       },
       {
-       "q": "Comment s'appellent les hôtels publics installés dans des monuments historiques en Espagne ?",
+       "q": "Comment s’appellent les hôtels publics installés dans des monuments historiques en Espagne ?",
        "o": [
         "los paradores",
         "los hostales",
@@ -533,13 +1201,340 @@
      ],
      "parole": [
       "Cuenta un viaje inolvidable.",
-      "¿Por qué las personas dejan su país?",
-      "Imagina que vives un año en un país hispano: ¿qué echarías de menos?"
+      "Organiza un viaje de una semana por un país hispano.",
+      "¿Qué medio de transporte prefieres para viajar? ¿Por qué?"
      ],
      "culture": [
-      "Entre la fin du XIXe et le milieu du XXe siècle, des millions d’Espagnols ont émigré vers l’Argentine, Cuba ou le Mexique.",
+      "En Espagne, la carte d’identité s’appelle le DNI (Documento Nacional de Identidad).",
       "Les paradores sont des hôtels publics installés dans des châteaux, monastères et palais historiques d’Espagne.",
-      "En Espagne, la carte d’identité s’appelle le DNI (Documento Nacional de Identidad)."
+      "Le train à grande vitesse espagnol, l’AVE, relie Madrid et Séville depuis 1992."
+     ],
+     "erreurs": [
+      "Confondre « la salida » (le départ / la sortie) et « el salido ».",
+      "Mélanger passé simple et imparfait dans le récit de voyage.",
+      "Dire « estar en vacaciones » au lieu de « estar de vacaciones »."
+     ]
+    },
+    {
+     "id": "dejar-su-pais",
+     "titre": "Dejar su país",
+     "objet": "Quitter son pays : aventure, émigration économique ou exil politique",
+     "notions": [
+      "Émigration et exil",
+      "Le passé simple : se fueron, emigró",
+      "Para + infinitif : exprimer le but",
+      "Exprimer la nostalgie : echar de menos"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "emigrar",
+       "émigrer"
+      ],
+      [
+       "el emigrante",
+       "l'émigrant"
+      ],
+      [
+       "el inmigrante",
+       "l'immigré"
+      ],
+      [
+       "el exilio",
+       "l'exil"
+      ],
+      [
+       "exiliarse",
+       "s'exiler"
+      ],
+      [
+       "la frontera",
+       "la frontière"
+      ],
+      [
+       "dejar",
+       "quitter, laisser"
+      ],
+      [
+       "la maleta",
+       "la valise"
+      ],
+      [
+       "el pasaporte",
+       "le passeport"
+      ],
+      [
+       "la visa",
+       "le visa"
+      ],
+      [
+       "una vida mejor",
+       "une vie meilleure"
+      ],
+      [
+       "la nostalgia",
+       "la nostalgie"
+      ],
+      [
+       "echar de menos",
+       "regretter, manquer"
+      ],
+      [
+       "acoger",
+       "accueillir"
+      ],
+      [
+       "integrarse",
+       "s'intégrer"
+      ]
+     ],
+     "phrases": [
+      "En 1939 muchos republicanos españoles se exiliaron a Francia.",
+      "Mi bisabuelo emigró de Galicia a Argentina.",
+      "Se fueron para buscar una vida mejor.",
+      "Echan de menos su tierra."
+     ],
+     "quiz": [
+      {
+       "q": "« la frontera » veut dire…",
+       "o": [
+        "la frontière",
+        "le front",
+        "la fronde",
+        "la fontaine"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« exiliarse » veut dire…",
+       "o": [
+        "s'exiler",
+        "exister",
+        "s'exercer",
+        "s'expliquer"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Qu’est-ce que la « Retirada » ?",
+       "o": [
+        "el exilio de los republicanos a Francia en 1939",
+        "una batalla",
+        "una fiesta",
+        "un viaje turístico"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« buscar una vida mejor » veut dire…",
+       "o": [
+        "chercher une vie meilleure",
+        "mieux vivre sa vie",
+        "chercher la vie",
+        "trouver la vie"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« acoger » veut dire…",
+       "o": [
+        "accueillir",
+        "accrocher",
+        "accorder",
+        "acheter"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « Se ___ para buscar una vida mejor. » (ellos, ir)",
+       "o": [
+        "fueron",
+        "fuimos",
+        "fuiste",
+        "fui"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Por qué una persona deja su país?",
+      "Imagina la carta de un emigrante a su familia.",
+      "¿Hay emigrantes en la historia de tu familia?"
+     ],
+     "culture": [
+      "En 1939, à la fin de la guerre civile, près d’un demi-million de républicains espagnols ont fui en France : c’est la « Retirada ».",
+      "En Argentine, on appelle souvent « gallegos » tous les Espagnols, car beaucoup d’immigrés venaient de Galice.",
+      "Aujourd’hui, l’Espagne accueille beaucoup d’immigrés venus d’Amérique latine."
+     ],
+     "erreurs": [
+      "Confondre « emigrar » (partir de son pays) et « inmigrar » (arriver dans un pays).",
+      "Oublier le pronom : « se fueron », « se exiliaron ».",
+      "Dire « por buscar » au lieu de « para buscar » pour exprimer le but."
+     ]
+    },
+    {
+     "id": "recuerdos-de-viaje",
+     "titre": "Recuerdos de viaje",
+     "objet": "Souvenirs de voyage",
+     "notions": [
+      "Raconter un voyage passé",
+      "Passé simple et passé composé",
+      "Exprimer une émotion : me impresionó, me encantó",
+      "La carte postale et le journal de voyage"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el recuerdo",
+       "le souvenir"
+      ],
+      [
+       "la postal",
+       "la carte postale"
+      ],
+      [
+       "la foto",
+       "la photo"
+      ],
+      [
+       "inolvidable",
+       "inoubliable"
+      ],
+      [
+       "el diario de viaje",
+       "le carnet de voyage"
+      ],
+      [
+       "contar",
+       "raconter"
+      ],
+      [
+       "visitar",
+       "visiter"
+      ],
+      [
+       "probar",
+       "goûter, essayer"
+      ],
+      [
+       "conocer",
+       "découvrir, connaître"
+      ],
+      [
+       "el paisaje",
+       "le paysage"
+      ],
+      [
+       "la experiencia",
+       "l'expérience"
+      ],
+      [
+       "me impresionó",
+       "cela m'a impressionné"
+      ],
+      [
+       "volver",
+       "revenir"
+      ],
+      [
+       "nunca olvidaré",
+       "je n'oublierai jamais"
+      ]
+     ],
+     "phrases": [
+      "El año pasado visité Barcelona con mi clase.",
+      "Fue un viaje inolvidable.",
+      "Me impresionó la Sagrada Familia.",
+      "Nunca olvidaré ese día."
+     ],
+     "quiz": [
+      {
+       "q": "« inolvidable » veut dire…",
+       "o": [
+        "inoubliable",
+        "invisible",
+        "inévitable",
+        "incroyable"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« la postal » veut dire…",
+       "o": [
+        "la carte postale",
+        "la poste",
+        "le poster",
+        "le facteur"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« me impresionó » veut dire…",
+       "o": [
+        "cela m'a impressionné",
+        "je l'ai imprimé",
+        "cela m'impressionne",
+        "je l'ai pressé"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« probar » (comida) veut dire…",
+       "o": [
+        "goûter",
+        "prouver",
+        "approuver",
+        "probable"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Qui a écrit un carnet de voyage à moto à travers l’Amérique du Sud ?",
+       "o": [
+        "el Che Guevara",
+        "Colón",
+        "Cervantes",
+        "Dalí"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "Complète : « El año pasado ___ Barcelona. » (yo)",
+       "o": [
+        "visité",
+        "visito",
+        "visitaré",
+        "visitaba"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Cuenta tu mejor recuerdo de viaje.",
+      "Escribe una postal desde un país hispano.",
+      "¿Qué te llevas como recuerdo de un viaje?"
+     ],
+     "culture": [
+      "Les « Carnets de voyage à motocyclette » racontent le voyage du jeune Ernesto « Che » Guevara à travers l’Amérique du Sud en 1952.",
+      "Christophe Colomb tenait un journal de bord pendant son premier voyage, en 1492.",
+      "Le Codex Calixtinus, un manuscrit du XIIe siècle, est considéré comme le premier guide pour les pèlerins de Saint-Jacques."
+     ],
+     "erreurs": [
+      "Utiliser le passé composé pour une date précise passée : « el año pasado visité ».",
+      "Confondre « recordar » (se souvenir) et « el recuerdo » (le souvenir).",
+      "Dire « me impresionaron la catedral » pour un seul élément."
      ]
     }
    ]
@@ -547,16 +1542,185 @@
   {
    "n": 4,
    "titre": "Langages et médias",
+   "intro": "Face à des canaux d’information instantanés et multiples, il faut apprendre à voir, à écouter et à lire : identifier les sources, décoder les messages et exercer son esprit critique.",
+   "taches": [
+    "Présenter le journal télévisé de la classe en espagnol.",
+    "Créer une campagne de sensibilisation (affiche et slogan).",
+    "Dessiner et commenter une vignette de presse sur la vie du collège."
+   ],
    "objets": [
     "Des moyens d’information multiples",
-    "Les médias au service d’une cause",
+    "Les médias au service d’une cause, d’un combat ou du pouvoir, de l’autorité",
     "À la découverte du dessin de presse"
    ],
    "themes": [
     {
+     "id": "los-medios",
+     "titre": "Los medios de información",
+     "objet": "Des moyens d’information multiples",
+     "notions": [
+      "Les médias et l’information",
+      "Informarse : se renseigner",
+      "L’esprit critique : verificar las fuentes",
+      "Résumer une information"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el periódico",
+       "le journal"
+      ],
+      [
+       "el diario",
+       "le quotidien"
+      ],
+      [
+       "el telediario",
+       "le journal télévisé"
+      ],
+      [
+       "la radio",
+       "la radio"
+      ],
+      [
+       "el periodista",
+       "le journaliste"
+      ],
+      [
+       "informarse",
+       "s'informer"
+      ],
+      [
+       "la noticia",
+       "la nouvelle, l'information"
+      ],
+      [
+       "el titular",
+       "le gros titre"
+      ],
+      [
+       "las redes sociales",
+       "les réseaux sociaux"
+      ],
+      [
+       "compartir",
+       "partager"
+      ],
+      [
+       "la fuente",
+       "la source"
+      ],
+      [
+       "el testimonio",
+       "le témoignage"
+      ],
+      [
+       "la prensa digital",
+       "la presse en ligne"
+      ],
+      [
+       "verificar",
+       "vérifier"
+      ],
+      [
+       "el bulo",
+       "la fausse information"
+      ]
+     ],
+     "phrases": [
+      "Me informo por las redes sociales.",
+      "El telediario empieza a las tres.",
+      "Hay que verificar las fuentes.",
+      "Esta noticia es un bulo."
+     ],
+     "quiz": [
+      {
+       "q": "« el titular » veut dire…",
+       "o": [
+        "le gros titre",
+        "le titulaire",
+        "le titre de noblesse",
+        "le tutoiement"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« la noticia » veut dire…",
+       "o": [
+        "la nouvelle, l'information",
+        "la notice",
+        "la note",
+        "la notion"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el bulo » veut dire…",
+       "o": [
+        "la fausse information",
+        "la bulle",
+        "le bureau",
+        "le boulot"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "À quelle heure commence le journal télévisé de midi en Espagne ?",
+       "o": [
+        "a las tres",
+        "a mediodía",
+        "a las ocho",
+        "a las diez"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« verificar » veut dire…",
+       "o": [
+        "vérifier",
+        "vérité",
+        "verser",
+        "verrouiller"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « Hay que ___ las fuentes. »",
+       "o": [
+        "verificar",
+        "verifica",
+        "verificas",
+        "verificado"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Cómo te informas? ¿Por qué?",
+      "¿Cómo reconocer una noticia falsa?",
+      "Presenta una noticia del día como un periodista."
+     ],
+     "culture": [
+      "El País et El Mundo sont deux grands quotidiens nationaux espagnols ; le journal télévisé s’appelle el telediario.",
+      "En Espagne, le journal télévisé de la mi-journée passe vers 15 h, à l’heure du déjeuner.",
+      "Une fausse information se dit « un bulo » : des sites spécialisés les vérifient."
+     ],
+     "erreurs": [
+      "Confondre « la noticia » (l’information) et « la notícia » (graphie fautive).",
+      "Dire « me informo en las redes » : on dit « por las redes ».",
+      "Confondre « el periódico » (journal) et « periódico » (périodique, adjectif)."
+     ]
+    },
+    {
      "id": "las-opiniones",
-     "titre": "Opinar y debatir",
-     "objet": "Des moyens d’information multiples · Débattre",
+     "titre": "Opinar y convencer",
+     "objet": "Les médias au service d’une cause, d’un combat ou du pouvoir, de l’autorité",
      "notions": [
       "Donner son avis : creo que, pienso que, en mi opinión",
       "Les connecteurs : sin embargo, además, por un lado",
@@ -733,8 +1897,173 @@
       "Debate: ¿el uniforme escolar es una buena idea?"
      ],
      "culture": [
-      "El País et El Mundo sont deux grands quotidiens nationaux espagnols ; le journal télévisé s’appelle el telediario.",
-      "Mafalda, la petite fille qui donne son avis sur le monde, a été créée par le dessinateur argentin Quino en 1964."
+      "Pendant la dictature de Franco (1939-1975), la presse espagnole était censurée.",
+      "Les campagnes de sensibilisation utilisent des slogans à l’impératif : « ¡Recicla! », « ¡No te calles! ».",
+      "Débattre, argumenter et nuancer son opinion sont au cœur de l’axe « Langages et médias »."
+     ],
+     "erreurs": [
+      "Oublier le subjonctif après une opinion négative : « no creo que sea ».",
+      "Dire « me gusta los videojuegos » au lieu de « me gustan ».",
+      "Confondre « porque » (parce que) et « por qué » (pourquoi)."
+     ]
+    },
+    {
+     "id": "el-dibujo-de-prensa",
+     "titre": "El dibujo de prensa",
+     "objet": "À la découverte du dessin de presse",
+     "notions": [
+      "Le dessin de presse : humour et critique",
+      "Hacer reír / hacer pensar",
+      "Décrire une image et son message",
+      "L’ironie"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el dibujo de prensa",
+       "le dessin de presse"
+      ],
+      [
+       "la viñeta",
+       "le dessin, la case"
+      ],
+      [
+       "el dibujante",
+       "le dessinateur"
+      ],
+      [
+       "el humor",
+       "l'humour"
+      ],
+      [
+       "la caricatura",
+       "la caricature"
+      ],
+      [
+       "el bocadillo",
+       "la bulle (BD)"
+      ],
+      [
+       "criticar",
+       "critiquer"
+      ],
+      [
+       "reírse",
+       "rire"
+      ],
+      [
+       "la ironía",
+       "l'ironie"
+      ],
+      [
+       "el personaje",
+       "le personnage"
+      ],
+      [
+       "el cómic",
+       "la bande dessinée"
+      ],
+      [
+       "exagerar",
+       "exagérer"
+      ],
+      [
+       "el mensaje",
+       "le message"
+      ],
+      [
+       "burlarse de",
+       "se moquer de"
+      ]
+     ],
+     "phrases": [
+      "Quino creó a Mafalda en 1964.",
+      "La viñeta critica a los políticos.",
+      "El dibujante exagera los rasgos.",
+      "Este dibujo me hace reír."
+     ],
+     "quiz": [
+      {
+       "q": "« la viñeta » veut dire…",
+       "o": [
+        "le dessin de presse",
+        "la vigne",
+        "la ville",
+        "la vitrine"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Dans une BD, « el bocadillo » est…",
+       "o": [
+        "la bulle",
+        "le sandwich",
+        "la bouche",
+        "le cadre"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "Qui a créé Mafalda ?",
+       "o": [
+        "Quino",
+        "Dalí",
+        "Gaudí",
+        "Picasso"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« burlarse de » veut dire…",
+       "o": [
+        "se moquer de",
+        "se brûler",
+        "bousculer",
+        "se burler"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« el dibujante » veut dire…",
+       "o": [
+        "le dessinateur",
+        "le débutant",
+        "le diable",
+        "le distributeur"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « Este dibujo me ___ reír. »",
+       "o": [
+        "hace",
+        "hago",
+        "haces",
+        "hacen"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Describe una viñeta de Mafalda.",
+      "¿El humor puede criticar? Justifica.",
+      "Inventa una viñeta sobre tu colegio."
+     ],
+     "culture": [
+      "Mafalda, la petite fille qui donne son avis sur le monde, a été créée par le dessinateur argentin Quino en 1964.",
+      "En Espagne, El Roto et Forges sont des dessinateurs de presse célèbres.",
+      "Une bande dessinée se dit « cómic » ou « tebeo » en Espagne, « historieta » en Amérique latine."
+     ],
+     "erreurs": [
+      "Confondre « el bocadillo » (bulle de BD / sandwich) selon le contexte.",
+      "Dire « me hace reír » / « me hacen reír » : accord avec le sujet.",
+      "Oublier le « a » personnel : « Quino creó a Mafalda »."
      ]
     }
    ]
@@ -742,16 +2071,181 @@
   {
    "n": 5,
    "titre": "Formes de l’engagement",
+   "intro": "Face aux défis des sociétés hispaniques, s’engager pour le bien commun est un acte fort, qu’on soit célèbre ou anonyme, notamment en temps de crise ou face aux régimes autoritaires.",
+   "taches": [
+    "Monter un projet solidaire pour le collège et le présenter.",
+    "Présenter une personnalité hispanique engagée.",
+    "Analyser une chanson engagée et en présenter le message."
+   ],
    "objets": [
     "Coopérer et aider, c’est aussi s’enrichir",
     "S’engager pour une cause",
-    "Les artistes engagés"
+    "Les artistes engagés contre le pouvoir ?"
    ],
    "themes": [
     {
+     "id": "cooperar-y-ayudar",
+     "titre": "Cooperar y ayudar",
+     "objet": "Coopérer et aider, c’est aussi s’enrichir",
+     "notions": [
+      "La solidarité et la coopération",
+      "Ayudar a + personne",
+      "Les connecteurs pour argumenter",
+      "Proposer un projet collectif"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "cooperar",
+       "coopérer"
+      ],
+      [
+       "ayudar",
+       "aider"
+      ],
+      [
+       "el voluntariado",
+       "le bénévolat"
+      ],
+      [
+       "la ONG",
+       "l'ONG"
+      ],
+      [
+       "la ayuda humanitaria",
+       "l'aide humanitaire"
+      ],
+      [
+       "donar",
+       "faire un don"
+      ],
+      [
+       "el banco de alimentos",
+       "la banque alimentaire"
+      ],
+      [
+       "la asociación",
+       "l'association"
+      ],
+      [
+       "colaborar",
+       "collaborer"
+      ],
+      [
+       "la solidaridad",
+       "la solidarité"
+      ],
+      [
+       "enriquecerse",
+       "s'enrichir"
+      ],
+      [
+       "compartir",
+       "partager"
+      ],
+      [
+       "los demás",
+       "les autres"
+      ],
+      [
+       "el trabajo en equipo",
+       "le travail d'équipe"
+      ]
+     ],
+     "phrases": [
+      "Colaboro con el banco de alimentos de mi barrio.",
+      "Ayudar a los demás me enriquece.",
+      "Trabajamos en equipo.",
+      "Donamos ropa a una asociación."
+     ],
+     "quiz": [
+      {
+       "q": "« el voluntariado » veut dire…",
+       "o": [
+        "le bénévolat",
+        "la volonté",
+        "le volontaire de l'armée",
+        "le volume"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« donar » veut dire…",
+       "o": [
+        "faire un don",
+        "donner un ordre",
+        "dominer",
+        "dorer"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« los demás » veut dire…",
+       "o": [
+        "les autres",
+        "les démons",
+        "demain",
+        "les dames"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Qu’est-ce que la « minga » dans les Andes ?",
+       "o": [
+        "un trabajo colectivo y solidario",
+        "una comida",
+        "un baile",
+        "una fiesta"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« colaborar » veut dire…",
+       "o": [
+        "collaborer",
+        "colorer",
+        "coller",
+        "coloniser"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « Ayudar a los demás me ___. »",
+       "o": [
+        "enriquece",
+        "enriquecen",
+        "enriquezco",
+        "enriquecer"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Ayudas a alguien a menudo? ¿Cómo?",
+      "Propón un proyecto solidario para tu colegio.",
+      "¿Por qué ayudar nos enriquece?"
+     ],
+     "culture": [
+      "En Espagne, l’ONCE et la Croix-Rouge (Cruz Roja) sont des organisations de solidarité très connues.",
+      "Dans les Andes, la « minga » (ou minka) est un travail collectif et solidaire au profit de la communauté.",
+      "Le 5 décembre est la Journée internationale des volontaires."
+     ],
+     "erreurs": [
+      "Oublier le « a » personnel : « ayudar a los demás ».",
+      "Confondre « donar » (faire un don) et « dar » (donner).",
+      "Oublier l’accord du verbe avec un infinitif sujet : « ayudar me enriquece »."
+     ]
+    },
+    {
      "id": "comprometerse",
      "titre": "Comprometerse",
-     "objet": "S’engager pour une cause · Coopérer et aider",
+     "objet": "S’engager pour une cause",
      "notions": [
       "L’engagement et la solidarité",
       "Es necesario que + subjonctif",
@@ -908,6 +2402,170 @@
       "Rigoberta Menchú, militante guatémaltèque des droits des peuples autochtones, a reçu le prix Nobel de la paix en 1992.",
       "Las Cholitas escaladoras sont des femmes aymaras de Bolivie qui escaladent les sommets des Andes en jupe traditionnelle.",
       "Pendant la guerre civile espagnole (1936-1939), des volontaires du monde entier ont rejoint les Brigades internationales."
+     ],
+     "erreurs": [
+      "Oublier le subjonctif après « es necesario que ».",
+      "Confondre « comprometerse » (s’engager) et « comprometer » (compromettre).",
+      "Dire « luchar contra de » : on dit « luchar contra »."
+     ]
+    },
+    {
+     "id": "artistas-comprometidos",
+     "titre": "Artistas comprometidos",
+     "objet": "Les artistes engagés contre le pouvoir ?",
+     "notions": [
+      "La chanson engagée",
+      "L’imparfait et le passé simple dans un récit historique",
+      "Estar prohibido / prohibir",
+      "Analyser les paroles d’une chanson"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el cantautor",
+       "l'auteur-compositeur-interprète"
+      ],
+      [
+       "la letra",
+       "les paroles (d'une chanson)"
+      ],
+      [
+       "la canción protesta",
+       "la chanson engagée"
+      ],
+      [
+       "el poder",
+       "le pouvoir"
+      ],
+      [
+       "la censura",
+       "la censure"
+      ],
+      [
+       "prohibir",
+       "interdire"
+      ],
+      [
+       "el régimen",
+       "le régime"
+      ],
+      [
+       "la dictadura",
+       "la dictature"
+      ],
+      [
+       "la libertad de expresión",
+       "la liberté d'expression"
+      ],
+      [
+       "criticar",
+       "critiquer"
+      ],
+      [
+       "el compromiso",
+       "l'engagement"
+      ],
+      [
+       "resistir",
+       "résister"
+      ],
+      [
+       "la voz",
+       "la voix"
+      ],
+      [
+       "el golpe de Estado",
+       "le coup d'État"
+      ]
+     ],
+     "phrases": [
+      "Víctor Jara cantaba contra la injusticia.",
+      "Durante la dictadura, muchas canciones estaban prohibidas.",
+      "La letra de esta canción critica el poder.",
+      "La música puede ser una forma de resistencia."
+     ],
+     "quiz": [
+      {
+       "q": "« la letra » d'une chanson, ce sont…",
+       "o": [
+        "les paroles",
+        "la lettre",
+        "la mélodie",
+        "le titre"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« la censura » veut dire…",
+       "o": [
+        "la censure",
+        "le recensement",
+        "le centre",
+        "la sensation"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« prohibir » veut dire…",
+       "o": [
+        "interdire",
+        "produire",
+        "promettre",
+        "prouver"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Pourquoi Serrat n’est-il pas allé à l’Eurovision en 1968 ?",
+       "o": [
+        "quería cantar en catalán",
+        "estaba enfermo",
+        "no le gustaba la canción",
+        "perdió el avión"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« el cantautor » veut dire…",
+       "o": [
+        "l'auteur-compositeur-interprète",
+        "le chanteur d'opéra",
+        "le chef de chœur",
+        "le compositeur de films"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Muchas canciones ___ prohibidas. »",
+       "o": [
+        "estaban",
+        "estoy",
+        "estás",
+        "estamos"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Presenta a un cantautor comprometido.",
+      "¿Puede una canción cambiar las cosas?",
+      "Escribe dos versos de una canción comprometida."
+     ],
+     "culture": [
+      "Le chanteur chilien Víctor Jara a été tué en 1973, après le coup d’État d’Augusto Pinochet ; il est devenu un symbole de résistance.",
+      "En 1968, Joan Manuel Serrat a refusé de représenter l’Espagne à l’Eurovision parce qu’il voulait chanter en catalan.",
+      "La chanson « Latinoamérica » (2011) du groupe portoricain Calle 13 célèbre l’identité latino-américaine."
+     ],
+     "erreurs": [
+      "Confondre « la letra » (paroles) et « la carta » (lettre qu’on envoie).",
+      "Oublier l’accord : « las canciones estaban prohibidas ».",
+      "Mélanger imparfait (contexte) et passé simple (événement) dans le récit."
      ]
     }
    ]
@@ -915,32 +2573,30 @@
   {
    "n": 6,
    "titre": "1492, l’année « admirable » ?",
+   "intro": "Le 12 octobre 1492 a profondément marqué l’histoire universelle : la rencontre de deux mondes, riche, tumultueuse et cruelle, toujours débattue cinq siècles plus tard.",
+   "taches": [
+    "Réaliser une frise chronologique de l’année 1492.",
+    "Écrire le journal de bord d’un marin de Colomb.",
+    "Débat : « ¿Descubrimiento, encuentro o conquista? »."
+   ],
    "objets": [
-    "De la reconquista a una nueva conquista",
-    "La « découverte » de l’Amérique",
+    "De la reconquista a una nueva conquista : 1492, une année riche en rebondissements",
+    "La « découverte » de l’Amérique : Christophe Colomb est-il le premier Européen à fouler la terre américaine ?",
     "Un évènement, deux points de vue : ¿Descubrimiento o despojo?"
    ],
    "themes": [
     {
      "id": "1492",
-     "titre": "1492",
-     "objet": "De la reconquista a una nueva conquista · La « découverte » de l’Amérique",
+     "titre": "1492, un año clave",
+     "objet": "De la reconquista a una nueva conquista : 1492, une année riche en rebondissements",
      "notions": [
       "Les événements de 1492",
       "Le passé simple pour raconter l’histoire",
-      "Les dates et les nombres : mil cuatrocientos noventa y dos",
-      "Deux points de vue : descubrimiento o conquista"
+      "Les dates : mil cuatrocientos noventa y dos",
+      "Les connecteurs chronologiques : primero, luego, ese mismo año"
      ],
      "relu": false,
      "vocab": [
-      [
-       "el descubrimiento",
-       "la découverte"
-      ],
-      [
-       "la conquista",
-       "la conquête"
-      ],
       [
        "la Reconquista",
        "la Reconquête"
@@ -950,72 +2606,61 @@
        "les Rois catholiques"
       ],
       [
-       "Cristóbal Colón",
-       "Christophe Colomb"
+       "Isabel la Católica",
+       "Isabelle la Catholique"
       ],
       [
-       "el almirante",
-       "l'amiral"
+       "Fernando de Aragón",
+       "Ferdinand d'Aragon"
       ],
       [
-       "la carabela",
-       "la caravelle"
+       "Granada",
+       "Grenade"
       ],
       [
-       "navegar",
-       "naviguer"
+       "Boabdil",
+       "Boabdil (dernier roi de Grenade)"
       ],
       [
-       "desembarcar",
-       "débarquer"
+       "la rendición",
+       "la reddition"
       ],
       [
-       "el Nuevo Mundo",
-       "le Nouveau Monde"
+       "conquistar",
+       "conquérir"
       ],
       [
-       "los indígenas",
-       "les peuples autochtones"
+       "el reino",
+       "le royaume"
       ],
       [
-       "el encuentro",
-       "la rencontre"
+       "el decreto",
+       "le décret"
       ],
       [
-       "el enfrentamiento",
-       "l'affrontement"
+       "la expulsión",
+       "l'expulsion"
       ],
       [
-       "la ruta",
-       "la route"
+       "la gramática",
+       "la grammaire"
       ],
       [
-       "el oro",
-       "l'or"
+       "unificar",
+       "unifier"
       ],
       [
-       "el despojo",
-       "la spoliation"
+       "el acontecimiento",
+       "l'événement"
       ]
      ],
      "phrases": [
       "En 1492 los Reyes Católicos conquistaron Granada.",
-      "Cristóbal Colón salió del puerto de Palos con tres carabelas.",
-      "El 12 de octubre de 1492 desembarcó en Guanahani.",
-      "¿Descubrimiento o despojo?"
+      "Boabdil entregó las llaves de la ciudad.",
+      "Ese mismo año, Nebrija publicó la primera gramática del castellano.",
+      "1492 es un año lleno de acontecimientos."
      ],
      "quiz": [
-      {
-       "q": "Comment s'appelaient les trois navires de Colomb ?",
-       "o": [
-        "la Pinta, la Niña y la Santa María",
-        "la Pinta, la Lola y la Santa Ana",
-        "la Niña, la Reina y la Granada",
-        "la Isabel, la Juana y la Fernanda"
-       ],
-       "a": 0,
-       "diff": "plata"
-      },
       {
        "q": "Quelle ville les Rois catholiques prennent-ils en janvier 1492 ?",
        "o": [
@@ -1028,37 +2673,48 @@
        "diff": "bronce"
       },
       {
-       "q": "Colomb débarque en Amérique le…",
+       "q": "« la rendición » veut dire…",
        "o": [
-        "12 de octubre de 1492",
-        "2 de enero de 1492",
-        "3 de agosto de 1492",
-        "25 de diciembre de 1492"
-       ],
-       "a": 0,
-       "diff": "bronce"
-      },
-      {
-       "q": "« desembarcar » veut dire…",
-       "o": [
-        "débarquer",
-        "embarquer",
-        "déballer",
-        "débarrasser"
-       ],
-       "a": 0,
-       "diff": "bronce"
-      },
-      {
-       "q": "« el almirante » veut dire…",
-       "o": [
-        "l'amiral",
-        "l'admirateur",
-        "l'aimant",
-        "le marin"
+        "la reddition",
+        "le rendez-vous",
+        "le rendement",
+        "la rentrée"
        ],
        "a": 0,
        "diff": "plata"
+      },
+      {
+       "q": "Qu’a publié Nebrija en 1492 ?",
+       "o": [
+        "la primera gramática del castellano",
+        "un mapa de América",
+        "una novela",
+        "un periódico"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Qui était le dernier roi nasride de Grenade ?",
+       "o": [
+        "Boabdil",
+        "Fernando",
+        "Colón",
+        "Cortés"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« el reino » veut dire…",
+       "o": [
+        "le royaume",
+        "la reine",
+        "le rein",
+        "le règne"
+       ],
+       "a": 0,
+       "diff": "bronce"
       },
       {
        "q": "Complète : « Colón ___ del puerto de Palos en 1492. »",
@@ -1073,16 +2729,341 @@
       }
      ],
      "parole": [
-      "¿1492 es un descubrimiento o una conquista? Justifica.",
-      "Cuenta el viaje de Colón en cinco frases.",
-      "Imagina el encuentro desde el punto de vista de un taíno."
+      "¿Por qué 1492 es un año «admirable»?",
+      "Cuenta los acontecimientos de 1492 en orden.",
+      "¿Qué acontecimiento de 1492 te parece más importante? ¿Por qué?"
      ],
      "culture": [
       "Le 2 janvier 1492, les Rois catholiques prennent Grenade : c’est la fin d’al-Ándalus.",
-      "Le 3 août 1492, Christophe Colomb part du port de Palos avec trois navires : la Pinta, la Niña et la Santa María.",
-      "Le 12 octobre 1492, il débarque sur l’île de Guanahani, aux Bahamas ; il croit être arrivé en Asie.",
-      "La même année, Antonio de Nebrija publie la première grammaire de la langue castillane.",
-      "Les Vikings de Leif Erikson avaient déjà atteint l’Amérique du Nord vers l’an 1000."
+      "Le 31 mars 1492, le décret de l’Alhambra ordonne l’expulsion des juifs d’Espagne.",
+      "La même année, Antonio de Nebrija publie la première grammaire de la langue castillane, et Colomb part de Palos le 3 août."
+     ],
+     "erreurs": [
+      "Lire les dates chiffre par chiffre : « mil cuatrocientos noventa y dos ».",
+      "Oublier l’accent du passé simple : « conquistó », « publicó ».",
+      "Confondre « el reino » (royaume) et « la reina » (reine)."
+     ]
+    },
+    {
+     "id": "el-descubrimiento",
+     "titre": "El descubrimiento de América",
+     "objet": "La « découverte » de l’Amérique : Christophe Colomb est-il le premier Européen à fouler la terre américaine ?",
+     "notions": [
+      "Le voyage de Colomb (1492)",
+      "Le passé simple : llegó, gritó, descubrió",
+      "Exprimer un doute : ¿fue el primero?",
+      "Le journal de bord"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el descubrimiento",
+       "la découverte"
+      ],
+      [
+       "descubrir",
+       "découvrir"
+      ],
+      [
+       "el navegante",
+       "le navigateur"
+      ],
+      [
+       "la carabela",
+       "la caravelle"
+      ],
+      [
+       "la tripulación",
+       "l'équipage"
+      ],
+      [
+       "el diario de a bordo",
+       "le journal de bord"
+      ],
+      [
+       "¡Tierra!",
+       "Terre !"
+      ],
+      [
+       "los vikingos",
+       "les Vikings"
+      ],
+      [
+       "llegar a",
+       "arriver à"
+      ],
+      [
+       "las Indias",
+       "les Indes"
+      ],
+      [
+       "el océano Atlántico",
+       "l'océan Atlantique"
+      ],
+      [
+       "cruzar",
+       "traverser"
+      ],
+      [
+       "la isla",
+       "l'île"
+      ],
+      [
+       "el marinero",
+       "le marin"
+      ],
+      [
+       "desembarcar",
+       "débarquer"
+      ]
+     ],
+     "phrases": [
+      "«¡Tierra!», gritó Rodrigo de Triana.",
+      "Colón creía que había llegado a las Indias.",
+      "Los vikingos llegaron a América hacia el año mil.",
+      "América se llama así por Américo Vespucio."
+     ],
+     "quiz": [
+      {
+       "q": "Comment s’appelaient les trois navires de Colomb ?",
+       "o": [
+        "la Pinta, la Niña y la Santa María",
+        "la Pinta, la Lola y la Santa Ana",
+        "la Niña, la Reina y la Granada",
+        "la Isabel, la Juana y la Fernanda"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« la tripulación » veut dire…",
+       "o": [
+        "l'équipage",
+        "la tribu",
+        "la tripe",
+        "la triple"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Qui a atteint l’Amérique avant Colomb ?",
+       "o": [
+        "los vikingos",
+        "los romanos",
+        "los franceses",
+        "los ingleses"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Colomb débarque en Amérique le…",
+       "o": [
+        "12 de octubre de 1492",
+        "2 de enero de 1492",
+        "3 de agosto de 1492",
+        "25 de diciembre de 1492"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "D’où vient le nom « América » ?",
+       "o": [
+        "de Américo Vespucio",
+        "de Colón",
+        "de un río",
+        "de una reina"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« desembarcar » veut dire…",
+       "o": [
+        "débarquer",
+        "embarquer",
+        "déballer",
+        "débarrasser"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      }
+     ],
+     "parole": [
+      "¿Colón descubrió América? Justifica.",
+      "Escribe el diario de a bordo de un marinero el 11 de octubre de 1492.",
+      "Imagina que eres un marinero: ¿qué ves al llegar?"
+     ],
+     "culture": [
+      "Le 12 octobre 1492, depuis la Pinta, le marin Rodrigo de Triana crie « ¡Tierra! ».",
+      "Colomb croyait être arrivé aux Indes : c’est pourquoi on a appelé « Indiens » les habitants de l’Amérique.",
+      "Les Vikings de Leif Erikson avaient atteint l’Amérique du Nord vers l’an 1000 (site de L’Anse aux Meadows, au Canada)."
+     ],
+     "erreurs": [
+      "Oublier l’accent du passé simple : « llegó », « gritó ».",
+      "Dire « descubrir la América » : pas d’article devant le continent.",
+      "Confondre « la tripulación » (l’équipage) et « los pasajeros » (les passagers)."
+     ]
+    },
+    {
+     "id": "dos-miradas",
+     "titre": "¿Descubrimiento o despojo?",
+     "objet": "Un évènement, deux points de vue : ¿Descubrimiento o despojo?",
+     "notions": [
+      "Deux points de vue sur 1492",
+      "Exprimer et nuancer une opinion : depende de, sin embargo",
+      "Le vocabulaire de la conquête",
+      "Débattre et argumenter"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el punto de vista",
+       "le point de vue"
+      ],
+      [
+       "el encuentro",
+       "la rencontre"
+      ],
+      [
+       "el choque",
+       "le choc"
+      ],
+      [
+       "la conquista",
+       "la conquête"
+      ],
+      [
+       "el despojo",
+       "la spoliation"
+      ],
+      [
+       "los pueblos indígenas",
+       "les peuples autochtones"
+      ],
+      [
+       "los taínos",
+       "les Taïnos"
+      ],
+      [
+       "los aztecas",
+       "les Aztèques"
+      ],
+      [
+       "el oro",
+       "l'or"
+      ],
+      [
+       "las enfermedades",
+       "les maladies"
+      ],
+      [
+       "la resistencia",
+       "la résistance"
+      ],
+      [
+       "la memoria",
+       "la mémoire"
+      ],
+      [
+       "conmemorar",
+       "commémorer"
+      ],
+      [
+       "depende de",
+       "cela dépend de"
+      ]
+     ],
+     "phrases": [
+      "Para los europeos fue un descubrimiento; para los indígenas, una invasión.",
+      "Las enfermedades mataron a muchos indígenas.",
+      "Bartolomé de las Casas denunció los abusos.",
+      "Depende del punto de vista."
+     ],
+     "quiz": [
+      {
+       "q": "« el despojo » veut dire…",
+       "o": [
+        "la spoliation",
+        "le dépôt",
+        "la dépouille de fête",
+        "le désordre"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« el punto de vista » veut dire…",
+       "o": [
+        "le point de vue",
+        "la vue d'un point",
+        "le point final",
+        "la vitesse"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Qui a conquis l’empire aztèque ?",
+       "o": [
+        "Hernán Cortés",
+        "Colón",
+        "Pizarro",
+        "Magallanes"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Qui a dénoncé les violences contre les Indiens dès le XVIe siècle ?",
+       "o": [
+        "Bartolomé de las Casas",
+        "Hernán Cortés",
+        "Isabel la Católica",
+        "Nebrija"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« las enfermedades » veut dire…",
+       "o": [
+        "les maladies",
+        "les enfermements",
+        "les infirmières",
+        "les enfants"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « Depende ___ punto de vista. »",
+       "o": [
+        "del",
+        "de",
+        "al",
+        "en"
+       ],
+       "a": 0,
+       "diff": "plata"
+      }
+     ],
+     "parole": [
+      "¿Descubrimiento, encuentro o conquista? Da tu opinión.",
+      "Cuenta 1492 desde el punto de vista de un taíno.",
+      "¿Hay que celebrar el 12 de octubre? Justifica."
+     ],
+     "culture": [
+      "Les maladies venues d’Europe, comme la variole, ont causé la mort d’une grande partie des populations autochtones.",
+      "Hernán Cortés a conquis l’Empire aztèque de Moctezuma entre 1519 et 1521.",
+      "Dès le XVIe siècle, le frère Bartolomé de las Casas a dénoncé les violences commises contre les Indiens."
+     ],
+     "erreurs": [
+      "Oublier la contraction : « depende del punto de vista ».",
+      "Confondre « el encuentro » (la rencontre) et « encontrar » (trouver).",
+      "Donner son avis sans le nuancer : utiliser « sin embargo, por un lado… »."
      ]
     }
    ],

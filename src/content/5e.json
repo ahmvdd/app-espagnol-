@@ -6,6 +6,12 @@
   {
    "n": 1,
    "titre": "Portrait, autoportrait",
+   "intro": "L’apprentissage de l’espagnol est une porte vers l’altérité : faire connaissance avec des personnes et des personnages de l’aire hispanique, et se présenter les uns aux autres.",
+   "taches": [
+    "Réaliser sa carte d’identité illustrée en espagnol et se présenter à la classe.",
+    "Présenter un arbre généalogique (réel ou d’une famille célèbre) à l’oral.",
+    "Organiser un défilé de mode : chacun décrit la tenue d’un camarade."
+   ],
    "objets": [
     "Y tú, ¿quién eres? Se présenter",
     "Portraits de familles",
@@ -194,6 +200,11 @@
      "culture": [
       "En Espagne, on se fait deux bises pour se saluer ; en Amérique latine, souvent une seule.",
       "Les Espagnols et les Latino-Américains ont deux noms de famille : le premier du père et le premier de la mère."
+     ],
+     "erreurs": [
+      "Dire « soy 12 años » au lieu de « tengo 12 años ».",
+      "Oublier les signes ¿ ? et les accents des mots interrogatifs (¿Cómo? ¿Cuántos?).",
+      "Oublier l’accord des adjectifs : « mi hermana es alto »."
      ]
     },
     {
@@ -378,6 +389,177 @@
      "culture": [
       "La fête des mères (el Día de la Madre) a lieu le premier dimanche de mai en Espagne et le 10 mai au Mexique.",
       "Une femme mariée garde ses noms de famille : elle ne prend pas le nom de son mari."
+     ],
+     "erreurs": [
+      "Accorder le possessif avec le possesseur (« mis hermano ») au lieu du nom.",
+      "Confondre « los padres » (les parents) et « los parientes » (la famille).",
+      "Oublier la préposition a devant une personne : « Quiero a mi abuela »."
+     ]
+    },
+    {
+     "id": "a-cada-uno-su-estilo",
+     "titre": "A cada uno su estilo",
+     "objet": "À chacun son style",
+     "notions": [
+      "Les vêtements et les couleurs",
+      "Llevar + vêtement : hoy llevo…",
+      "L’accord des adjectifs de couleur",
+      "Décrire l’apparence : tener el pelo…, ser alto…"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "los vaqueros",
+       "le jean"
+      ],
+      [
+       "la camiseta",
+       "le tee-shirt"
+      ],
+      [
+       "la camisa",
+       "la chemise"
+      ],
+      [
+       "el jersey",
+       "le pull"
+      ],
+      [
+       "la falda de cuadros",
+       "la jupe à carreaux"
+      ],
+      [
+       "los calcetines a rayas",
+       "les chaussettes rayées"
+      ],
+      [
+       "las zapatillas",
+       "les baskets"
+      ],
+      [
+       "la gorra",
+       "la casquette"
+      ],
+      [
+       "el chándal",
+       "le survêtement"
+      ],
+      [
+       "llevar",
+       "porter"
+      ],
+      [
+       "el pelo rizado",
+       "les cheveux bouclés"
+      ],
+      [
+       "el pelo lacio",
+       "les cheveux raides"
+      ],
+      [
+       "elegante",
+       "élégant"
+      ],
+      [
+       "cómodo",
+       "confortable"
+      ],
+      [
+       "de moda",
+       "à la mode"
+      ],
+      [
+       "el estilo",
+       "le style"
+      ]
+     ],
+     "phrases": [
+      "Hoy llevo unos vaqueros y una camiseta azul.",
+      "Mi hermana tiene el pelo rizado.",
+      "Prefiero la ropa cómoda.",
+      "En muchos colegios de América Latina, los alumnos llevan uniforme."
+     ],
+     "quiz": [
+      {
+       "q": "« porter » (un vêtement) se dit…",
+       "o": [
+        "llevar",
+        "traer",
+        "poner",
+        "tener"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« la gorra » veut dire…",
+       "o": [
+        "la casquette",
+        "la gorge",
+        "le gâteau",
+        "la robe"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« les baskets » se dit…",
+       "o": [
+        "las zapatillas",
+        "los zapatos",
+        "las sandalias",
+        "los calcetines"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el pelo rizado » veut dire…",
+       "o": [
+        "les cheveux bouclés",
+        "les cheveux raides",
+        "les cheveux roux",
+        "les cheveux courts"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Hoy ___ una camiseta roja. » (yo)",
+       "o": [
+        "llevo",
+        "lleva",
+        "llevas",
+        "llevan"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Esta falda es muy ___. »",
+       "o": [
+        "bonita",
+        "bonito",
+        "bonitos",
+        "bonitas"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Describe la ropa que llevas hoy.",
+      "¿Cuál es tu estilo? ¿Qué ropa prefieres?",
+      "Describe a un compañero sin decir su nombre: los demás adivinan."
+     ],
+     "culture": [
+      "Dans beaucoup de pays d’Amérique latine (Mexique, Pérou, Chili…), les élèves portent un uniforme scolaire.",
+      "Des marques de mode connues dans le monde entier sont espagnoles, comme Zara, née en Galice en 1975."
+     ],
+     "erreurs": [
+      "Accorder la couleur : « unos calcetines rojos », « una camisa blanca ».",
+      "Confondre « llevar » (porter un vêtement) et « traer » (apporter).",
+      "Oublier que les couleurs-noms restent invariables : « una falda naranja »."
      ]
     }
    ]
@@ -385,10 +567,16 @@
   {
    "n": 2,
    "titre": "Le quotidien : lieux, rythmes, saisons",
+   "intro": "La population hispanophone vit sous des climats et dans des espaces très variés : ses habitudes et ses rythmes de vie diffèrent selon les régions, et changent avec le temps.",
+   "taches": [
+    "Comparer une journée type en Espagne et en France dans un tableau illustré.",
+    "Présenter la météo d’un pays hispanophone comme à la télévision.",
+    "Réaliser une affiche « antes / ahora » sur un paysage transformé."
+   ],
    "objets": [
     "Oye, ¿qué hora es? L’Espagne, des horaires à part",
     "Des espaces géographiques et des rythmes multiples unis par la langue",
-    "Activités humaines : impact sur les paysages"
+    "Activités humaines : impact sur les paysages naturels et urbains d’Amérique hispanophone et d’Espagne"
    ],
    "themes": [
     {
@@ -573,6 +761,345 @@
      "culture": [
       "En Espagne, on déjeune souvent vers 14 h et on dîne vers 21 h ou 22 h.",
       "L’Espagne vit à l’heure de l’Europe centrale (comme Berlin) alors qu’elle est à l’ouest : le soleil s’y couche plus tard qu’en France."
+     ],
+     "erreurs": [
+      "Oublier le pronom réfléchi : « levanto » au lieu de « me levanto ».",
+      "Dire « a las una » au lieu de « a la una ».",
+      "Mettre une majuscule aux jours et aux mois (minuscule en espagnol)."
+     ]
+    },
+    {
+     "id": "paisajes-y-climas",
+     "titre": "Paisajes y climas",
+     "objet": "Des espaces géographiques et des rythmes multiples unis par la langue",
+     "notions": [
+      "Les paysages et le climat",
+      "Les saisons et la météo : hace calor, llueve",
+      "Hay / está pour décrire un lieu",
+      "Comparer : más… que, menos… que"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el paisaje",
+       "le paysage"
+      ],
+      [
+       "la montaña",
+       "la montagne"
+      ],
+      [
+       "la cordillera",
+       "la chaîne de montagnes"
+      ],
+      [
+       "la selva",
+       "la forêt tropicale"
+      ],
+      [
+       "el desierto",
+       "le désert"
+      ],
+      [
+       "el lago",
+       "le lac"
+      ],
+      [
+       "el río",
+       "le fleuve, la rivière"
+      ],
+      [
+       "la costa",
+       "la côte"
+      ],
+      [
+       "el puerto",
+       "le port"
+      ],
+      [
+       "a orillas de",
+       "au bord de"
+      ],
+      [
+       "el clima",
+       "le climat"
+      ],
+      [
+       "la primavera",
+       "le printemps"
+      ],
+      [
+       "el verano",
+       "l'été"
+      ],
+      [
+       "el otoño",
+       "l'automne"
+      ],
+      [
+       "el invierno",
+       "l'hiver"
+      ],
+      [
+       "hace calor",
+       "il fait chaud"
+      ]
+     ],
+     "phrases": [
+      "La Cordillera de los Andes atraviesa siete países.",
+      "En Argentina, la Navidad es en verano.",
+      "El desierto de Atacama, en Chile, es muy seco.",
+      "Vivo a orillas del mar."
+     ],
+     "quiz": [
+      {
+       "q": "« el invierno » veut dire…",
+       "o": [
+        "l'hiver",
+        "l'été",
+        "l'automne",
+        "le printemps"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« la selva » veut dire…",
+       "o": [
+        "la forêt tropicale",
+        "la salle",
+        "le sel",
+        "la chaise"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« au bord de » se dit…",
+       "o": [
+        "a orillas de",
+        "al lado de",
+        "cerca de",
+        "encima de"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "En Argentine, Noël est…",
+       "o": [
+        "en verano",
+        "en invierno",
+        "en otoño",
+        "en primavera"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« Hace calor » veut dire…",
+       "o": [
+        "il fait chaud",
+        "il fait froid",
+        "il a chaud",
+        "il fait beau"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "La cordillère des Andes traverse…",
+       "o": [
+        "siete países",
+        "dos países",
+        "doce países",
+        "cuatro países"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Describe el paisaje de tu región.",
+      "¿Qué estación prefieres? ¿Por qué?",
+      "Compara el clima de tu ciudad con el de Buenos Aires."
+     ],
+     "culture": [
+      "Quand c’est l’hiver en France, c’est l’été en Argentine, au Chili et en Uruguay : on y fête Noël en été.",
+      "La cordillère des Andes, la plus longue chaîne de montagnes du monde, traverse sept pays d’Amérique du Sud.",
+      "Le désert d’Atacama, au Chili, est l’un des endroits les plus secs de la planète."
+     ],
+     "erreurs": [
+      "Dire « es calor » au lieu de « hace calor ».",
+      "Confondre « hay » (il y a) et « está » (se trouve).",
+      "Oublier que « el clima » et « el mapa » sont masculins."
+     ]
+    },
+    {
+     "id": "el-ser-humano-y-el-paisaje",
+     "titre": "Ciudades y paisajes cambian",
+     "objet": "Activités humaines : impact sur les paysages naturels et urbains d’Amérique hispanophone et d’Espagne",
+     "notions": [
+      "Ville et campagne, nature et activités humaines",
+      "L’imparfait pour comparer : antes había…",
+      "Hay que + infinitif : proteger la naturaleza",
+      "Décrire une photo : en el centro, al fondo"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "la ciudad",
+       "la ville"
+      ],
+      [
+       "el campo",
+       "la campagne"
+      ],
+      [
+       "el edificio",
+       "le bâtiment"
+      ],
+      [
+       "la carretera",
+       "la route"
+      ],
+      [
+       "la fábrica",
+       "l'usine"
+      ],
+      [
+       "los cultivos",
+       "les cultures"
+      ],
+      [
+       "el bosque",
+       "la forêt"
+      ],
+      [
+       "cortar árboles",
+       "couper des arbres"
+      ],
+      [
+       "la contaminación",
+       "la pollution"
+      ],
+      [
+       "los invernaderos",
+       "les serres"
+      ],
+      [
+       "la naturaleza",
+       "la nature"
+      ],
+      [
+       "proteger",
+       "protéger"
+      ],
+      [
+       "construir",
+       "construire"
+      ],
+      [
+       "cambiar",
+       "changer"
+      ],
+      [
+       "antes",
+       "avant"
+      ],
+      [
+       "ahora",
+       "maintenant"
+      ]
+     ],
+     "phrases": [
+      "En Almería hay muchos invernaderos.",
+      "Cortan árboles en la selva amazónica.",
+      "Hay que proteger la naturaleza.",
+      "Antes había campos, ahora hay edificios."
+     ],
+     "quiz": [
+      {
+       "q": "« la fábrica » veut dire…",
+       "o": [
+        "l'usine",
+        "la fable",
+        "la façade",
+        "la ferme"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« proteger » veut dire…",
+       "o": [
+        "protéger",
+        "projeter",
+        "prolonger",
+        "provoquer"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el bosque » veut dire…",
+       "o": [
+        "la forêt",
+        "la plage",
+        "la montagne",
+        "le champ"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« la contaminación » veut dire…",
+       "o": [
+        "la pollution",
+        "la contamination d'un virus",
+        "la conversation",
+        "la construction"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Mexico a été construite sur…",
+       "o": [
+        "un lago",
+        "una montaña",
+        "un desierto",
+        "una isla"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "Complète : « Antes ___ campos, ahora hay edificios. »",
+       "o": [
+        "había",
+        "hay",
+        "habrá",
+        "ha"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Cómo ha cambiado tu barrio?",
+      "¿Qué podemos hacer para proteger la naturaleza?",
+      "Describe una foto: antes y ahora."
+     ],
+     "culture": [
+      "À Almería, en Andalousie, les serres couvrent tant de terrain qu’on parle de « mar de plástico ».",
+      "Mexico a été construite sur un lac : Tenochtitlan, la capitale aztèque, se trouvait sur le lac Texcoco.",
+      "L’Amazonie, la plus grande forêt tropicale du monde, recule à cause de la déforestation."
+     ],
+     "erreurs": [
+      "Confondre « el campo » (la campagne / le champ) et « el camping ».",
+      "Oublier l’imparfait pour décrire le passé : « antes hay » au lieu de « antes había ».",
+      "Dire « el contaminación » : le mot est féminin."
      ]
     }
    ]
@@ -580,27 +1107,37 @@
   {
    "n": 3,
    "titre": "École et loisirs",
+   "intro": "La vie des adolescents est rythmée par l’école et le temps libre : quelle place occupent-ils dans les pays de langue espagnole, et comment études et loisirs s’équilibrent-ils ?",
+   "taches": [
+    "Créer son emploi du temps idéal en espagnol et le justifier.",
+    "Écrire un message à un élève d’un pays hispanophone pour comparer les écoles.",
+    "Inventer un jeu de société et en expliquer les règles en espagnol."
+   ],
    "objets": [
     "Le(s) temps de l’école",
-    "Mil y una escuelas",
+    "Mil y una escuelas. Accès à l’école et variété des conditions d’enseignement",
     "Loisirs d’ici et d’ailleurs"
    ],
    "themes": [
     {
      "id": "el-colegio",
-     "titre": "El colegio y el tiempo libre",
-     "objet": "Le(s) temps de l’école · Loisirs d’ici et d’ailleurs",
+     "titre": "El colegio",
+     "objet": "Le(s) temps de l’école",
      "notions": [
       "Les matières et l’emploi du temps",
-      "Exprimer ses goûts : me gusta / me encanta + infinitif",
-      "Les loisirs et les lieux de loisirs",
-      "Ir a + lieu : voy a la piscina"
+      "Exprimer ses goûts : me gusta / me encanta",
+      "Dire l’heure des cours : a las ocho, de… a…",
+      "Les objets de la classe"
      ],
      "relu": false,
      "vocab": [
       [
        "el colegio",
        "le collège, l'école"
+      ],
+      [
+       "el instituto",
+       "le lycée, le collège (Espagne)"
       ],
       [
        "la asignatura",
@@ -635,38 +1172,34 @@
        "la trousse"
       ],
       [
+       "el cuaderno",
+       "le cahier"
+      ],
+      [
+       "la pizarra",
+       "le tableau"
+      ],
+      [
+       "el examen",
+       "l'examen, le contrôle"
+      ],
+      [
+       "aprobar",
+       "réussir (un examen)"
+      ],
+      [
+       "la nota",
+       "la note"
+      ],
+      [
        "el uniforme",
        "l'uniforme"
-      ],
-      [
-       "el polideportivo",
-       "le complexe sportif"
-      ],
-      [
-       "la piscina",
-       "la piscine"
-      ],
-      [
-       "el ajedrez",
-       "les échecs"
-      ],
-      [
-       "el parchís",
-       "les petits chevaux"
-      ],
-      [
-       "dar un paseo",
-       "se promener"
-      ],
-      [
-       "divertirse",
-       "s'amuser"
       ]
      ],
      "phrases": [
       "Mi asignatura favorita es la historia.",
-      "En el recreo juego al fútbol con mis amigos.",
-      "Los sábados voy a la piscina.",
+      "Las clases empiezan a las ocho y media.",
+      "En el recreo hablo con mis amigos.",
       "En mi colegio no llevamos uniforme."
      ],
      "quiz": [
@@ -704,12 +1237,12 @@
        "diff": "bronce"
       },
       {
-       "q": "« divertirse » veut dire…",
+       "q": "« aprobar » veut dire…",
        "o": [
-        "s'amuser",
-        "se reposer",
-        "se promener",
-        "se disputer"
+        "réussir un examen",
+        "approuver une idée",
+        "apprendre",
+        "approcher"
        ],
        "a": 0,
        "diff": "plata"
@@ -720,18 +1253,18 @@
         "favorita",
         "favorito",
         "favoritas",
-        "preferido"
+        "favoritos"
        ],
        "a": 0,
        "diff": "plata"
       },
       {
-       "q": "Complète : « Los sábados ___ a la piscina. » (yo)",
+       "q": "Complète : « Las clases ___ a las ocho. »",
        "o": [
-        "voy",
-        "va",
-        "vamos",
-        "vas"
+        "empiezan",
+        "empieza",
+        "empezamos",
+        "empiezo"
        ],
        "a": 0,
        "diff": "oro"
@@ -740,13 +1273,351 @@
      "parole": [
       "¿Cuál es tu asignatura favorita? ¿Por qué?",
       "Describe tu horario del lunes.",
-      "¿Qué haces en tu tiempo libre?",
       "Compara tu colegio con un colegio de España."
      ],
      "culture": [
       "En Espagne, le collège s’appelle la ESO (Educación Secundaria Obligatoria) et dure quatre ans, de 12 à 16 ans.",
-      "En Argentine et en Uruguay, les écoliers du primaire portent souvent une blouse blanche : el guardapolvo.",
+      "En Espagne, les cours finissent souvent vers 14 h 30 : beaucoup d’élèves déjeunent ensuite à la maison.",
       "Au Chili et en Argentine, les grandes vacances ont lieu de décembre à février : c’est l’été dans l’hémisphère sud."
+     ],
+     "erreurs": [
+      "Dire « la profesor » au lieu de « la profesora ».",
+      "Oublier l’accord : « mis asignaturas favoritas ».",
+      "Traduire « j’ai cours » mot à mot au lieu de « tengo clase »."
+     ]
+    },
+    {
+     "id": "mil-y-una-escuelas",
+     "titre": "Mil y una escuelas",
+     "objet": "Mil y una escuelas. Accès à l’école et variété des conditions d’enseignement",
+     "notions": [
+      "L’école dans le monde hispanique",
+      "Les moyens de transport : ir a pie, en autobús",
+      "Tener derecho a + nom",
+      "Comparer deux réalités"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "la escuela",
+       "l'école"
+      ],
+      [
+       "el aula",
+       "la salle de classe"
+      ],
+      [
+       "el camino",
+       "le chemin"
+      ],
+      [
+       "ir a pie",
+       "aller à pied"
+      ],
+      [
+       "lejos",
+       "loin"
+      ],
+      [
+       "cerca",
+       "près"
+      ],
+      [
+       "el uniforme",
+       "l'uniforme"
+      ],
+      [
+       "el guardapolvo",
+       "la blouse d'écolier"
+      ],
+      [
+       "aprender",
+       "apprendre"
+      ],
+      [
+       "enseñar",
+       "enseigner"
+      ],
+      [
+       "leer",
+       "lire"
+      ],
+      [
+       "escribir",
+       "écrire"
+      ],
+      [
+       "el derecho",
+       "le droit"
+      ],
+      [
+       "la educación",
+       "l'éducation"
+      ],
+      [
+       "el pueblo",
+       "le village"
+      ],
+      [
+       "la comunidad",
+       "la communauté"
+      ]
+     ],
+     "phrases": [
+      "En algunos pueblos de los Andes, los niños caminan una hora para ir a la escuela.",
+      "Todos los niños tienen derecho a la educación.",
+      "En mi aula hay treinta alumnos.",
+      "En Argentina, los alumnos llevan un guardapolvo blanco."
+     ],
+     "quiz": [
+      {
+       "q": "« el aula » veut dire…",
+       "o": [
+        "la salle de classe",
+        "l'aile",
+        "l'aube",
+        "l'autel"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« enseñar » veut dire…",
+       "o": [
+        "enseigner",
+        "ensemencer",
+        "enseigne",
+        "ensevelir"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« loin » se dit…",
+       "o": [
+        "lejos",
+        "cerca",
+        "al lado",
+        "encima"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el derecho » veut dire…",
+       "o": [
+        "le droit",
+        "le directeur",
+        "le devoir",
+        "le désir"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Los niños ___ una hora para ir a la escuela. »",
+       "o": [
+        "caminan",
+        "camina",
+        "caminamos",
+        "caminas"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « Todos los niños tienen derecho ___ la educación. »",
+       "o": [
+        "a",
+        "de",
+        "en",
+        "con"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Cómo vas al colegio? ¿Cuánto tiempo tardas?",
+      "Compara tu colegio con una escuela de los Andes.",
+      "¿Por qué es importante ir a la escuela?"
+     ],
+     "culture": [
+      "Dans certains villages des Andes (Pérou, Bolivie), des enfants marchent longtemps pour aller à l’école.",
+      "En Argentine et en Uruguay, les écoliers du primaire portent une blouse blanche : el guardapolvo.",
+      "L’éducation est un droit de tous les enfants, inscrit dans la Convention internationale des droits de l’enfant (1989)."
+     ],
+     "erreurs": [
+      "Dire « la aula » : on dit « el aula » (féminin, mais article el devant a tonique).",
+      "Confondre « aprender » (apprendre pour soi) et « enseñar » (apprendre à quelqu’un).",
+      "Oublier « a » : « ir a pie », « ir a la escuela »."
+     ]
+    },
+    {
+     "id": "el-tiempo-libre",
+     "titre": "El tiempo libre",
+     "objet": "Loisirs d’ici et d’ailleurs",
+     "notions": [
+      "Les loisirs et les jeux de société",
+      "Me gusta / me encanta + nom ou infinitif",
+      "Les consignes du jeu : te toca, (no) se puede",
+      "Les marqueurs de fréquence : los domingos, a veces"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el tiempo libre",
+       "le temps libre"
+      ],
+      [
+       "divertirse",
+       "s'amuser"
+      ],
+      [
+       "dar un paseo",
+       "se promener"
+      ],
+      [
+       "la piscina al aire libre",
+       "la piscine en plein air"
+      ],
+      [
+       "el polideportivo",
+       "le complexe sportif"
+      ],
+      [
+       "la pista de pádel",
+       "le terrain de padel"
+      ],
+      [
+       "ir a clase de dibujo",
+       "aller au cours de dessin"
+      ],
+      [
+       "tocar la guitarra",
+       "jouer de la guitare"
+      ],
+      [
+       "el ajedrez",
+       "les échecs"
+      ],
+      [
+       "el parchís",
+       "les petits chevaux"
+      ],
+      [
+       "el juego de la oca",
+       "le jeu de l'oie"
+      ],
+      [
+       "el dado",
+       "le dé"
+      ],
+      [
+       "la ficha",
+       "le pion"
+      ],
+      [
+       "te toca",
+       "c'est ton tour"
+      ],
+      [
+       "se puede",
+       "on peut"
+      ],
+      [
+       "a veces",
+       "parfois"
+      ]
+     ],
+     "phrases": [
+      "Los domingos doy un paseo con mi familia.",
+      "Me encanta jugar al parchís con mis abuelos.",
+      "¿Se puede nadar en la piscina al aire libre?",
+      "¡Te toca! Tira el dado."
+     ],
+     "quiz": [
+      {
+       "q": "« c'est ton tour » se dit…",
+       "o": [
+        "¡Te toca!",
+        "¡Me toca!",
+        "¡Le toca!",
+        "¡Nos toca!"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« el dado » veut dire…",
+       "o": [
+        "le dé",
+        "le doigt",
+        "le don",
+        "la date"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« dar un paseo » veut dire…",
+       "o": [
+        "se promener",
+        "faire une pause",
+        "passer",
+        "faire du sport"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el ajedrez » veut dire…",
+       "o": [
+        "les échecs",
+        "les dames",
+        "les cartes",
+        "le jeu de l'oie"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « Me ___ los juegos de mesa. »",
+       "o": [
+        "encantan",
+        "encanta",
+        "encanto",
+        "encantas"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "Complète : « ¿Se ___ nadar aquí? »",
+       "o": [
+        "puede",
+        "pueden",
+        "poder",
+        "podemos"
+       ],
+       "a": 0,
+       "diff": "plata"
+      }
+     ],
+     "parole": [
+      "¿Qué haces en tu tiempo libre?",
+      "Explica las reglas de tu juego favorito.",
+      "Compara los fines de semana en España y en Francia."
+     ],
+     "culture": [
+      "Le parchís, version espagnole des petits chevaux, se joue en famille dans toute l’Espagne.",
+      "En Espagne, le soir et le week-end, on aime sortir se promener : c’est « el paseo ».",
+      "Le padel est très populaire en Espagne et en Argentine."
+     ],
+     "erreurs": [
+      "Dire « me gusta los juegos » au lieu de « me gustan los juegos ».",
+      "Confondre « jugar » (jouer à un jeu) et « tocar » (jouer d’un instrument).",
+      "Oublier « al » : « jugar al fútbol », « jugar al parchís »."
      ]
     }
    ]
@@ -754,6 +1625,12 @@
   {
    "n": 4,
    "titre": "Le réel et l’imaginaire",
+   "intro": "La diversité du monde hispanophone, sa nature et ses cultures passées et présentes inspirent écrivains et artistes, qui mêlent le réel et l’imaginaire.",
+   "taches": [
+    "Préparer un calendrier illustré des fêtes hispaniques.",
+    "Présenter « mon héros / mon héroïne » en une minute.",
+    "Écrire et illustrer un court conte qui commence par « Érase una vez… »."
+   ],
    "objets": [
     "¿Qué celebramos hoy? Les fêtes traditionnelles",
     "Ces héros et héroïnes qui nous inspirent",
@@ -920,6 +1797,333 @@
       "En Espagne, ce sont les Rois mages (los Reyes Magos) qui apportent les cadeaux aux enfants, le 6 janvier.",
       "Le 31 décembre à minuit, les Espagnols mangent douze grains de raisin, un à chaque coup de l’horloge.",
       "Aux Fallas de Valence, en mars, on brûle d’immenses statues de carton appelées ninots."
+     ],
+     "erreurs": [
+      "Dire « tener años » pour « avoir un an de plus » au lieu de « cumplir años ».",
+      "Oublier l’article devant la date : « el seis de enero ».",
+      "Mettre une majuscule aux mois et aux jours."
+     ]
+    },
+    {
+     "id": "heroes-y-heroinas",
+     "titre": "Héroes y heroínas",
+     "objet": "Ces héros et héroïnes qui nous inspirent",
+     "notions": [
+      "Décrire les qualités d’une personne",
+      "Admirar a + personne (a personnel)",
+      "L’imparfait pour raconter une vie : pintaba, luchaba",
+      "Exprimer un souhait : me gustaría…"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el héroe",
+       "le héros"
+      ],
+      [
+       "la heroína",
+       "l'héroïne"
+      ],
+      [
+       "valiente",
+       "courageux"
+      ],
+      [
+       "fuerte",
+       "fort"
+      ],
+      [
+       "generoso",
+       "généreux"
+      ],
+      [
+       "admirar",
+       "admirer"
+      ],
+      [
+       "ayudar",
+       "aider"
+      ],
+      [
+       "salvar",
+       "sauver"
+      ],
+      [
+       "luchar",
+       "lutter"
+      ],
+      [
+       "el superpoder",
+       "le super-pouvoir"
+      ],
+      [
+       "famoso",
+       "célèbre"
+      ],
+      [
+       "la libertad",
+       "la liberté"
+      ],
+      [
+       "el ejemplo",
+       "l'exemple"
+      ],
+      [
+       "inspirar",
+       "inspirer"
+      ]
+     ],
+     "phrases": [
+      "Mi heroína es Frida Kahlo porque es valiente.",
+      "Admiro a Simón Bolívar.",
+      "Un héroe ayuda a los demás.",
+      "Me gustaría tener un superpoder."
+     ],
+     "quiz": [
+      {
+       "q": "« valiente » veut dire…",
+       "o": [
+        "courageux",
+        "paresseux",
+        "timide",
+        "méchant"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« admirar » veut dire…",
+       "o": [
+        "admirer",
+        "admettre",
+        "adorer",
+        "accompagner"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« sauver » se dit…",
+       "o": [
+        "salvar",
+        "saludar",
+        "salir",
+        "saltar"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Quel pays porte le nom de Simón Bolívar ?",
+       "o": [
+        "Bolivia",
+        "Colombia",
+        "Venezuela",
+        "Ecuador"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Que faisait Frida Kahlo ?",
+       "o": [
+        "pintaba",
+        "cantaba",
+        "bailaba",
+        "escribía novelas"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« generoso » veut dire…",
+       "o": [
+        "généreux",
+        "général",
+        "gênant",
+        "génial"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      }
+     ],
+     "parole": [
+      "¿Quién es tu héroe o tu heroína? ¿Por qué?",
+      "Inventa un superhéroe hispano y descríbelo.",
+      "¿Qué cualidades tiene un héroe?"
+     ],
+     "culture": [
+      "Simón Bolívar, « el Libertador », a mené l’indépendance de plusieurs pays d’Amérique du Sud ; la Bolivie porte son nom.",
+      "Frida Kahlo, peintre mexicaine, a continué à peindre malgré un grave accident à 18 ans.",
+      "Gabriela Mistral, poétesse chilienne, a été la première personne d’Amérique latine à recevoir le prix Nobel de littérature, en 1945."
+     ],
+     "erreurs": [
+      "Oublier le « a » personnel : « Admiro a mi madre ».",
+      "Dire « la héroe » : on dit « la heroína ».",
+      "Confondre « ser valiente » (qualité) et « estar cansado » (état)."
+     ]
+    },
+    {
+     "id": "cuentos-y-leyendas",
+     "titre": "Cuentos y leyendas",
+     "objet": "Les contes et légendes",
+     "notions": [
+      "Le vocabulaire des contes (programme : la poción mágica, el veneno, misterioso…)",
+      "Commencer et finir un conte : érase una vez…",
+      "L’imparfait de description : vivía, había",
+      "Raconter dans l’ordre : primero, luego, al final"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el cuento",
+       "le conte"
+      ],
+      [
+       "la leyenda",
+       "la légende"
+      ],
+      [
+       "érase una vez",
+       "il était une fois"
+      ],
+      [
+       "la princesa",
+       "la princesse"
+      ],
+      [
+       "el príncipe",
+       "le prince"
+      ],
+      [
+       "la bruja",
+       "la sorcière"
+      ],
+      [
+       "el dragón",
+       "le dragon"
+      ],
+      [
+       "el castillo",
+       "le château"
+      ],
+      [
+       "la poción mágica",
+       "la potion magique"
+      ],
+      [
+       "el veneno",
+       "le poison"
+      ],
+      [
+       "misterioso",
+       "mystérieux"
+      ],
+      [
+       "enamorarse",
+       "tomber amoureux"
+      ],
+      [
+       "el gigante",
+       "le géant"
+      ],
+      [
+       "el caballero",
+       "le chevalier"
+      ],
+      [
+       "al final",
+       "à la fin"
+      ]
+     ],
+     "phrases": [
+      "Érase una vez una princesa que vivía en un castillo.",
+      "La bruja prepara una poción mágica.",
+      "En la leyenda de Sant Jordi, el caballero mata al dragón.",
+      "Y vivieron felices y comieron perdices."
+     ],
+     "quiz": [
+      {
+       "q": "« la bruja » veut dire…",
+       "o": [
+        "la sorcière",
+        "la brune",
+        "le bruit",
+        "la brosse"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« érase una vez » veut dire…",
+       "o": [
+        "il était une fois",
+        "une fois par an",
+        "encore une fois",
+        "c'était l'heure"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el veneno » veut dire…",
+       "o": [
+        "le poison",
+        "la veine",
+        "le vent",
+        "la vente"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Le 23 avril, en Catalogne, on offre…",
+       "o": [
+        "una rosa y un libro",
+        "un dragón",
+        "una tarta",
+        "chocolate"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète à l’imparfait : « La princesa ___ en un castillo. »",
+       "o": [
+        "vivía",
+        "vivo",
+        "vivimos",
+        "viven"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« enamorarse » veut dire…",
+       "o": [
+        "tomber amoureux",
+        "s'ennuyer",
+        "se marier",
+        "s'endormir"
+       ],
+       "a": 0,
+       "diff": "plata"
+      }
+     ],
+     "parole": [
+      "Cuenta un cuento que conoces en tres frases.",
+      "Inventa el principio de una leyenda: «Érase una vez…».",
+      "¿Qué personaje de cuento prefieres? ¿Por qué?"
+     ],
+     "culture": [
+      "Le 23 avril, en Catalogne, pour la Sant Jordi, on offre une rose et un livre : la légende raconte que saint Georges a vaincu un dragon.",
+      "La Llorona, une femme qui pleure au bord de l’eau, est une légende très connue au Mexique.",
+      "Les contes espagnols finissent souvent par « y vivieron felices y comieron perdices » (et ils mangèrent des perdrix)."
+     ],
+     "erreurs": [
+      "Utiliser le présent au lieu de l’imparfait pour décrire : « había una vez ».",
+      "Dire « el bruja » : le mot est féminin.",
+      "Oublier le « a » personnel : « el caballero mata al dragón »."
      ]
     }
    ]
@@ -927,16 +2131,510 @@
   {
    "n": 5,
    "titre": "Des langues, des lieux, des histoires",
+   "intro": "L’espagnol est la deuxième langue maternelle au monde, avec près de 500 millions de locuteurs : comprendre sa diffusion, ses influences et les traces que l’histoire a laissées.",
+   "taches": [
+    "Réaliser une carte du monde hispanophone avec une information par pays.",
+    "Créer un petit dictionnaire illustré des mots venus d’autres langues.",
+    "Préparer une visite guidée d’un monument en espagnol."
+   ],
    "objets": [
     "L’espagnol dans le monde",
     "Une langue aux influences multiples",
-    "Las piedras hablan : sites et monuments"
+    "Las piedras hablan. Sites et monuments patrimoniaux : les marques de l’histoire"
    ],
-   "themes": []
+   "themes": [
+    {
+     "id": "el-espanol-en-el-mundo",
+     "titre": "El español en el mundo",
+     "objet": "L’espagnol dans le monde",
+     "notions": [
+      "Les pays et les langues",
+      "Se + verbe : se habla español",
+      "Les grands nombres : cien, mil, millones",
+      "Pas d’article devant les noms de pays"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el idioma",
+       "la langue"
+      ],
+      [
+       "la lengua",
+       "la langue"
+      ],
+      [
+       "hablar",
+       "parler"
+      ],
+      [
+       "el hablante",
+       "le locuteur"
+      ],
+      [
+       "el país",
+       "le pays"
+      ],
+      [
+       "el mundo",
+       "le monde"
+      ],
+      [
+       "oficial",
+       "officiel"
+      ],
+      [
+       "millones",
+       "des millions"
+      ],
+      [
+       "el continente",
+       "le continent"
+      ],
+      [
+       "África",
+       "l'Afrique"
+      ],
+      [
+       "América del Sur",
+       "l'Amérique du Sud"
+      ],
+      [
+       "Estados Unidos",
+       "les États-Unis"
+      ],
+      [
+       "bilingüe",
+       "bilingue"
+      ],
+      [
+       "aprender",
+       "apprendre"
+      ]
+     ],
+     "phrases": [
+      "El español se habla en veintiún países y territorios.",
+      "Casi quinientos millones de personas hablan español como lengua materna.",
+      "En Guinea Ecuatorial también se habla español.",
+      "Soy bilingüe: hablo francés y español."
+     ],
+     "quiz": [
+      {
+       "q": "« la lengua » veut dire…",
+       "o": [
+        "la langue",
+        "la ligne",
+        "la lune",
+        "la lenteur"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Combien de personnes ont l’espagnol comme langue maternelle ?",
+       "o": [
+        "casi 500 millones",
+        "50 millones",
+        "5 millones",
+        "mil millones"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Dans quel pays d’Afrique parle-t-on espagnol ?",
+       "o": [
+        "Guinea Ecuatorial",
+        "Marruecos",
+        "Senegal",
+        "Egipto"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "« el mundo » veut dire…",
+       "o": [
+        "le monde",
+        "le mot",
+        "la mode",
+        "le mur"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« bilingüe » veut dire…",
+       "o": [
+        "bilingue",
+        "bilatéral",
+        "biologique",
+        "billet"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « El español ___ en muchos países. »",
+       "o": [
+        "se habla",
+        "habla",
+        "hablan",
+        "hablamos"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "¿Por qué aprendes español?",
+      "¿En qué países se habla español? Nombra cinco.",
+      "¿Qué otros idiomas hablas o te gustaría aprender?"
+     ],
+     "culture": [
+      "Près de 500 millions de personnes ont l’espagnol comme langue maternelle : c’est la 2e langue maternelle du monde (programme officiel).",
+      "Environ 100 millions de personnes l’apprennent sur les cinq continents, et c’est la 3e langue la plus utilisée sur Internet (programme officiel).",
+      "La Guinée équatoriale est le seul pays d’Afrique où l’espagnol est langue officielle."
+     ],
+     "erreurs": [
+      "Mettre un article devant un pays : « la España » (on dit « España »).",
+      "Écrire les nationalités avec une majuscule : on écrit « español ».",
+      "Oublier « se » : « aquí se habla español »."
+     ]
+    },
+    {
+     "id": "una-lengua-mestiza",
+     "titre": "Una lengua de muchas influencias",
+     "objet": "Une langue aux influences multiples",
+     "notions": [
+      "Les origines des mots espagnols",
+      "Venir de + langue : viene del árabe",
+      "Les mots transparents et les faux-amis",
+      "Médiation : expliquer l’origine d’un mot"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el latín",
+       "le latin"
+      ],
+      [
+       "el árabe",
+       "l'arabe"
+      ],
+      [
+       "el náhuatl",
+       "le nahuatl"
+      ],
+      [
+       "el quechua",
+       "le quechua"
+      ],
+      [
+       "la palabra",
+       "le mot"
+      ],
+      [
+       "venir de",
+       "venir de"
+      ],
+      [
+       "el aceite",
+       "l'huile"
+      ],
+      [
+       "el azúcar",
+       "le sucre"
+      ],
+      [
+       "la almohada",
+       "l'oreiller"
+      ],
+      [
+       "ojalá",
+       "pourvu que"
+      ],
+      [
+       "el chocolate",
+       "le chocolat"
+      ],
+      [
+       "el tomate",
+       "la tomate"
+      ],
+      [
+       "el huracán",
+       "l'ouragan"
+      ],
+      [
+       "la canoa",
+       "le canoë"
+      ],
+      [
+       "la papa",
+       "la pomme de terre (Amérique)"
+      ]
+     ],
+     "phrases": [
+      "La palabra «chocolate» viene del náhuatl.",
+      "Muchas palabras españolas vienen del árabe.",
+      "«Huracán» es una palabra de origen taíno.",
+      "¡Ojalá haga sol mañana!"
+     ],
+     "quiz": [
+      {
+       "q": "« la almohada » veut dire…",
+       "o": [
+        "l'oreiller",
+        "la mode",
+        "l'amande",
+        "la couverture"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Le mot « chocolate » vient du…",
+       "o": [
+        "náhuatl",
+        "árabe",
+        "latín",
+        "inglés"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Le mot « aceite » vient de…",
+       "o": [
+        "árabe",
+        "náhuatl",
+        "quechua",
+        "griego"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Le mot « huracán » vient du…",
+       "o": [
+        "taíno",
+        "francés",
+        "latín",
+        "árabe"
+       ],
+       "a": 0,
+       "diff": "oro"
+      },
+      {
+       "q": "« el azúcar » veut dire…",
+       "o": [
+        "le sucre",
+        "l'azur",
+        "l'acier",
+        "le sel"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « La palabra ‘tomate’ ___ del náhuatl. »",
+       "o": [
+        "viene",
+        "vienen",
+        "vengo",
+        "venimos"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Busca tres palabras españolas que se parecen al francés.",
+      "¿Qué palabra de origen árabe te gusta más?",
+      "Explica a un compañero de dónde viene la palabra «chocolate»."
+     ],
+     "culture": [
+      "L’espagnol vient du latin, mais il a reçu des milliers de mots d’origine arabe : aceite, azúcar, almohada, ojalá…",
+      "Chocolate, tomate et aguacate viennent du náhuatl, la langue des Aztèques ; huracán, canoa et hamaca viennent du taíno, une langue des Caraïbes.",
+      "Papa (pomme de terre), llama et cóndor viennent du quechua, la langue des Incas."
+     ],
+     "erreurs": [
+      "Croire que tous les mots ressemblant au français ont le même sens (faux-amis).",
+      "Oublier le « del » : « viene del árabe » (de + el).",
+      "Confondre « la papa » (pomme de terre) et « el Papa » (le pape)."
+     ]
+    },
+    {
+     "id": "las-piedras-hablan",
+     "titre": "Las piedras hablan",
+     "objet": "Las piedras hablan. Sites et monuments patrimoniaux : les marques de l’histoire",
+     "notions": [
+      "Le vocabulaire du patrimoine",
+      "Estar pour situer un monument",
+      "Les siècles et les dates : el siglo XVI",
+      "Ser + origine : es romano, es maya"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el monumento",
+       "le monument"
+      ],
+      [
+       "la catedral",
+       "la cathédrale"
+      ],
+      [
+       "el acueducto",
+       "l'aqueduc"
+      ],
+      [
+       "la pirámide",
+       "la pyramide"
+      ],
+      [
+       "el templo",
+       "le temple"
+      ],
+      [
+       "las ruinas",
+       "les ruines"
+      ],
+      [
+       "antiguo",
+       "ancien"
+      ],
+      [
+       "los romanos",
+       "les Romains"
+      ],
+      [
+       "los mayas",
+       "les Mayas"
+      ],
+      [
+       "construir",
+       "construire"
+      ],
+      [
+       "el patrimonio",
+       "le patrimoine"
+      ],
+      [
+       "visitar",
+       "visiter"
+      ],
+      [
+       "la piedra",
+       "la pierre"
+      ],
+      [
+       "el siglo",
+       "le siècle"
+      ]
+     ],
+     "phrases": [
+      "El acueducto de Segovia es romano.",
+      "Chichén Itzá es una ciudad maya en México.",
+      "La Sagrada Familia está en Barcelona.",
+      "Este monumento tiene casi dos mil años."
+     ],
+     "quiz": [
+      {
+       "q": "« la piedra » veut dire…",
+       "o": [
+        "la pierre",
+        "la pièce",
+        "le pied",
+        "la prière"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Qui a construit l’aqueduc de Ségovie ?",
+       "o": [
+        "los romanos",
+        "los árabes",
+        "los mayas",
+        "los incas"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Où se trouve la Sagrada Familia ?",
+       "o": [
+        "Barcelona",
+        "Madrid",
+        "Sevilla",
+        "Granada"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« el siglo » veut dire…",
+       "o": [
+        "le siècle",
+        "le signe",
+        "le ciel",
+        "le sigle"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Chichén Itzá est une cité…",
+       "o": [
+        "maya",
+        "inca",
+        "romana",
+        "árabe"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « La Sagrada Familia ___ en Barcelona. »",
+       "o": [
+        "está",
+        "es",
+        "hay",
+        "tiene"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Describe un monumento famoso de España o de América.",
+      "¿Qué monumento te gustaría visitar? ¿Por qué?",
+      "Compara un monumento francés con uno español."
+     ],
+     "culture": [
+      "L’aqueduc de Ségovie a été construit par les Romains il y a près de 2 000 ans, sans mortier entre les pierres.",
+      "La Sagrada Família, à Barcelone, imaginée par Gaudí, est en construction depuis 1882.",
+      "Chichén Itzá, au Mexique, est une grande cité maya, avec la pyramide de Kukulcán."
+     ],
+     "erreurs": [
+      "Utiliser « es » pour situer : « la catedral es en Sevilla » (on dit « está »).",
+      "Lire les siècles en chiffres arabes : « el siglo XVI » se dit « dieciséis ».",
+      "Oublier l’accent de « pirámide »."
+     ]
+    }
+   ]
   },
   {
    "n": 6,
    "titre": "Le Mexique : partons à la découverte de ce pays fascinant !",
+   "intro": "Premier pays hispanophone du monde, le Mexique offre une diversité géographique, sociale et historique exceptionnelle.",
+   "taches": [
+    "Préparer une ofrenda de classe et la présenter en espagnol.",
+    "Écrire la carte d’un restaurant mexicain et jouer la scène au restaurant.",
+    "Réaliser un guide touristique illustré du Mexique."
+   ],
    "objets": [
     "Nature et patrimoine mexicains",
     "Saveurs du Mexique",
@@ -944,166 +2642,162 @@
    ],
    "themes": [
     {
-     "id": "dia-de-muertos",
-     "titre": "El Día de Muertos",
-     "objet": "La Fête des Morts",
+     "id": "naturaleza-de-mexico",
+     "titre": "Naturaleza y patrimonio de México",
+     "objet": "Nature et patrimoine mexicains",
      "notions": [
-      "Le vocabulaire de l’ofrenda",
-      "Le présent à la 3e personne du pluriel : las familias preparan",
-      "Hay + nom : en el altar hay velas",
-      "Comparer deux fêtes"
+      "La nature et les paysages mexicains",
+      "Hay pour décrire : en México hay volcanes",
+      "Les animaux et les plantes du Mexique",
+      "Ser / estar : es grande, está en el sur"
      ],
      "relu": false,
      "vocab": [
       [
-       "el Día de Muertos",
-       "le Jour des morts"
+       "el volcán",
+       "le volcan"
       ],
       [
-       "el altar",
-       "l'autel"
+       "la playa",
+       "la plage"
       ],
       [
-       "la ofrenda",
-       "l'offrande"
+       "la selva",
+       "la forêt tropicale"
       ],
       [
-       "la calavera",
-       "la tête de mort"
+       "el desierto",
+       "le désert"
       ],
       [
-       "la Catrina",
-       "la Catrina"
+       "el nopal",
+       "le figuier de Barbarie (cactus)"
       ],
       [
-       "el pan de muerto",
-       "le pain des morts"
+       "la mariposa monarca",
+       "le papillon monarque"
       ],
       [
-       "la flor de cempasúchil",
-       "la fleur d'œillet d'Inde"
+       "el ajolote",
+       "l'axolotl"
       ],
       [
-       "la vela",
-       "la bougie"
+       "el águila",
+       "l'aigle"
       ],
       [
-       "el papel picado",
-       "le papier découpé"
+       "la serpiente",
+       "le serpent"
       ],
       [
-       "el cementerio",
-       "le cimetière"
+       "la pirámide",
+       "la pyramide"
       ],
       [
-       "recordar",
-       "se souvenir"
+       "el sol",
+       "le soleil"
       ],
       [
-       "los antepasados",
-       "les ancêtres"
+       "la luna",
+       "la lune"
       ],
       [
-       "la foto",
-       "la photo"
+       "los aztecas",
+       "les Aztèques"
       ],
       [
-       "el esqueleto",
-       "le squelette"
-      ],
-      [
-       "celebrar",
-       "célébrer"
-      ],
-      [
-       "alegre",
-       "joyeux"
+       "la bandera",
+       "le drapeau"
       ]
      ],
      "phrases": [
-      "El Día de Muertos se celebra el uno y el dos de noviembre.",
-      "Las familias preparan un altar con una ofrenda.",
-      "En el altar hay velas, flores y fotos.",
-      "La Catrina es una calavera elegante."
+      "En México hay volcanes, playas y desiertos.",
+      "La mariposa monarca pasa el invierno en Michoacán.",
+      "En la bandera hay un águila sobre un nopal.",
+      "En Teotihuacán están las pirámides del Sol y de la Luna."
      ],
      "quiz": [
       {
-       "q": "Le Día de Muertos se célèbre…",
+       "q": "« la mariposa » veut dire…",
        "o": [
-        "les 1er et 2 novembre",
-        "le 31 octobre",
-        "le 6 janvier",
-        "le 16 septembre"
+        "le papillon",
+        "la marraine",
+        "la mariée",
+        "la marée"
        ],
        "a": 0,
        "diff": "bronce"
       },
       {
-       "q": "« la ofrenda » veut dire…",
+       "q": "Qu’y a-t-il sur le drapeau mexicain ?",
        "o": [
-        "l'offrande",
-        "l'autel",
-        "la bougie",
-        "la fleur"
-       ],
-       "a": 0,
-       "diff": "bronce"
-      },
-      {
-       "q": "« recordar » veut dire…",
-       "o": [
-        "se souvenir",
-        "enregistrer",
-        "regarder",
-        "répéter"
+        "un águila sobre un nopal",
+        "un sol",
+        "una estrella",
+        "un volcán"
        ],
        "a": 0,
        "diff": "plata"
       },
       {
-       "q": "Quelle fleur orange décore les autels ?",
+       "q": "À Teotihuacán se trouvent les pyramides…",
        "o": [
-        "el cempasúchil",
-        "la rosa",
-        "el girasol",
-        "el clavel"
+        "del Sol y de la Luna",
+        "del Agua y del Fuego",
+        "del Rey y de la Reina",
+        "de Cortés"
        ],
        "a": 0,
        "diff": "plata"
       },
       {
-       "q": "La Catrina est…",
+       "q": "« el volcán » veut dire…",
        "o": [
-        "une tête de mort élégante",
-        "une danseuse",
-        "une sorcière",
-        "une reine aztèque"
+        "le volcan",
+        "le vol",
+        "le voleur",
+        "la voile"
        ],
        "a": 0,
        "diff": "bronce"
       },
       {
-       "q": "Complète : « Las familias ___ un altar. »",
+       "q": "L’axolotl (ajolote) vit au…",
        "o": [
-        "preparan",
-        "prepara",
-        "preparamos",
-        "preparas"
+        "México",
+        "España",
+        "Chile",
+        "Cuba"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Complète : « En México ___ volcanes y desiertos. »",
+       "o": [
+        "hay",
+        "están",
+        "es",
+        "son"
        ],
        "a": 0,
        "diff": "oro"
       }
      ],
      "parole": [
-      "Describe un altar de muertos.",
-      "¿Qué ponen las familias en la ofrenda?",
-      "Compara el Día de Muertos con una fiesta francesa."
+      "Describe un paisaje de México.",
+      "Presenta un animal de México.",
+      "¿Qué lugar de México te gustaría visitar?"
      ],
      "culture": [
-      "Le Día de Muertos est célébré les 1er et 2 novembre : c’est une fête joyeuse pour se souvenir des défunts, pas une fête triste.",
-      "Les familles installent un autel (altar) avec des photos, des bougies, du pain de mort et des fleurs orange de cempasúchil.",
-      "La Catrina, squelette élégant au grand chapeau, vient d’une gravure de l’artiste mexicain José Guadalupe Posada.",
-      "Cette fête est inscrite par l’UNESCO au patrimoine culturel immatériel de l’humanité."
+      "Chaque hiver, des millions de papillons monarques arrivent du Canada et des États-Unis dans les forêts du Michoacán.",
+      "L’axolotl (ajolote), une salamandre qui ne vit qu’au Mexique, est devenu un symbole du pays.",
+      "Le nopal (un cactus) figure sur le drapeau mexicain, avec un aigle qui mange un serpent."
+     ],
+     "erreurs": [
+      "Confondre « hay » (il y a) et « está » (se trouve).",
+      "Dire « la águila » : on dit « el águila » (féminin, a tonique).",
+      "Oublier l’accent de « volcán » et l’absence d’accent au pluriel « volcanes »."
      ]
     },
     {
@@ -1266,6 +2960,179 @@
       "Le maïs est la base de la cuisine mexicaine : tortillas, tamales, tacos…",
       "Le chocolat et la tomate viennent du Mexique : « tomate » vient du mot náhuatl tomatl.",
       "La cuisine traditionnelle mexicaine est inscrite au patrimoine culturel immatériel de l’UNESCO."
+     ],
+     "erreurs": [
+      "Confondre « el aguacate » (le fruit) et « el abogado » (le métier).",
+      "Oublier « se » dans « se come, se hace ».",
+      "Dire « es rico » au lieu de « ¡Qué rico! / está rico » pour un plat goûté."
+     ]
+    },
+    {
+     "id": "dia-de-muertos",
+     "titre": "El Día de Muertos",
+     "objet": "La Fête des Morts",
+     "notions": [
+      "Le vocabulaire de l’ofrenda",
+      "Le présent à la 3e personne du pluriel : las familias preparan",
+      "Hay + nom : en el altar hay velas",
+      "Comparer deux fêtes"
+     ],
+     "relu": false,
+     "vocab": [
+      [
+       "el Día de Muertos",
+       "le Jour des morts"
+      ],
+      [
+       "el altar",
+       "l'autel"
+      ],
+      [
+       "la ofrenda",
+       "l'offrande"
+      ],
+      [
+       "la calavera",
+       "la tête de mort"
+      ],
+      [
+       "la Catrina",
+       "la Catrina"
+      ],
+      [
+       "el pan de muerto",
+       "le pain des morts"
+      ],
+      [
+       "la flor de cempasúchil",
+       "la fleur d'œillet d'Inde"
+      ],
+      [
+       "la vela",
+       "la bougie"
+      ],
+      [
+       "el papel picado",
+       "le papier découpé"
+      ],
+      [
+       "el cementerio",
+       "le cimetière"
+      ],
+      [
+       "recordar",
+       "se souvenir"
+      ],
+      [
+       "los antepasados",
+       "les ancêtres"
+      ],
+      [
+       "la foto",
+       "la photo"
+      ],
+      [
+       "el esqueleto",
+       "le squelette"
+      ],
+      [
+       "celebrar",
+       "célébrer"
+      ],
+      [
+       "alegre",
+       "joyeux"
+      ]
+     ],
+     "phrases": [
+      "El Día de Muertos se celebra el uno y el dos de noviembre.",
+      "Las familias preparan un altar con una ofrenda.",
+      "En el altar hay velas, flores y fotos.",
+      "La Catrina es una calavera elegante."
+     ],
+     "quiz": [
+      {
+       "q": "Le Día de Muertos se célèbre…",
+       "o": [
+        "les 1er et 2 novembre",
+        "le 31 octobre",
+        "le 6 janvier",
+        "le 16 septembre"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« la ofrenda » veut dire…",
+       "o": [
+        "l'offrande",
+        "l'autel",
+        "la bougie",
+        "la fleur"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "« recordar » veut dire…",
+       "o": [
+        "se souvenir",
+        "enregistrer",
+        "regarder",
+        "répéter"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "Quelle fleur orange décore les autels ?",
+       "o": [
+        "el cempasúchil",
+        "la rosa",
+        "el girasol",
+        "el clavel"
+       ],
+       "a": 0,
+       "diff": "plata"
+      },
+      {
+       "q": "La Catrina est…",
+       "o": [
+        "une tête de mort élégante",
+        "une danseuse",
+        "une sorcière",
+        "une reine aztèque"
+       ],
+       "a": 0,
+       "diff": "bronce"
+      },
+      {
+       "q": "Complète : « Las familias ___ un altar. »",
+       "o": [
+        "preparan",
+        "prepara",
+        "preparamos",
+        "preparas"
+       ],
+       "a": 0,
+       "diff": "oro"
+      }
+     ],
+     "parole": [
+      "Describe un altar de muertos.",
+      "¿Qué ponen las familias en la ofrenda?",
+      "Compara el Día de Muertos con una fiesta francesa."
+     ],
+     "culture": [
+      "Le Día de Muertos est célébré les 1er et 2 novembre : c’est une fête joyeuse pour se souvenir des défunts, pas une fête triste.",
+      "Les familles installent un autel (altar) avec des photos, des bougies, du pain de mort et des fleurs orange de cempasúchil.",
+      "La Catrina, squelette élégant au grand chapeau, vient d’une gravure de l’artiste mexicain José Guadalupe Posada.",
+      "Cette fête est inscrite par l’UNESCO au patrimoine culturel immatériel de l’humanité."
+     ],
+     "erreurs": [
+      "Assimiler le Día de Muertos à Halloween : bien marquer la différence.",
+      "Oublier le « n » de la 3e personne du pluriel : « las familias preparan ».",
+      "Confondre « recordar » (se souvenir) et « registrar »."
      ]
     }
    ],
