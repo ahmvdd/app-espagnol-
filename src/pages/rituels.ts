@@ -6,10 +6,10 @@ import { $, $$, esc, toast } from '../lib/ui';
 
 /** État du jour (météo, votes, question) : local à l'appareil, remis à zéro chaque jour, sans aucun nom d'élève. */
 const KEY = 'rincon.rituels';
-type Jour = { jour: number; meteo: number[]; votes: number[]; niveau: Niveau; q: number; trad: boolean };
+type Jour = { jour: number; fecha: string; meteo: number[]; votes: number[]; niveau: Niveau; q: number; trad: boolean };
 
 function lire(): Jour {
-  const neuf: Jour = { jour: dayIndex(), meteo: [], votes: RITUELS.emociones.map(() => 0), niveau: '5e', q: 0, trad: false };
+  const neuf: Jour = { jour: dayIndex(), fecha: '', meteo: [], votes: RITUELS.emociones.map(() => 0), niveau: '5e', q: 0, trad: false };
   try {
     const j = JSON.parse(localStorage.getItem(KEY) || 'null') as Jour | null;
     if (j && j.jour === dayIndex()) return { ...neuf, ...j };
@@ -22,11 +22,6 @@ const ecrire = (j: Jour) => { try { localStorage.setItem(KEY, JSON.stringify(j))
 const dire = (t: string) => { if (!speak(t, state.reglages.accent ?? 'es-ES')) toast('Voix espagnole absente sur cet appareil'); };
 
 type Rituel = { id: string; titre: string; draw: (el: HTMLElement, grand: boolean, maj: () => void) => void };
-
-const fechaHoy = () => {
-  const s = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
-  return `Hoy es ${s}.`;
-};
 
 function rituels(j: Jour): Rituel[] {
   const w = palabraDelDia();
@@ -50,19 +45,28 @@ function rituels(j: Jour): Rituel[] {
       id: 'fecha', titre: 'La fecha y el tiempo',
       draw: (el, grand, maj) => {
         const tiempo = j.meteo.map(i => RITUELS.meteo[i][1]).join(' y ').toLowerCase();
-        const frase = `${fechaHoy()}${tiempo ? ` ${tiempo[0].toUpperCase()}${tiempo.slice(1)}.` : ''}`;
+        const phraseTiempo = tiempo ? `${tiempo[0].toUpperCase()}${tiempo.slice(1)}.` : '';
         el.innerHTML = `
-          <p class="${grand ? 'huge' : 'big'} fecha" lang="es">${esc(frase)}</p>
+          <label class="${grand ? 'huge' : 'big'} fecha" lang="es">Hoy es <input data-fecha value="${esc(j.fecha)}" placeholder="…" maxlength="60" autocomplete="off" spellcheck="false" aria-label="La fecha, à compléter avec les élèves"></label>
+          ${phraseTiempo ? `<p class="${grand ? 'big' : ''}" lang="es">${esc(phraseTiempo)}</p>` : ''}
+          <p class="muted small">Demandez la date aux élèves, puis écrivez-la. Cliquez sur le temps qu’il fait.</p>
           <div class="row wrap center-row meteo" role="group" aria-label="El tiempo">
             ${RITUELS.meteo.map(([ico, txt], i) => `<button class="btn ghost ${grand ? '' : 'sm'}" data-m="${i}" aria-pressed="${j.meteo.includes(i)}" lang="es"><span aria-hidden="true">${ico}</span> ${esc(txt)}</button>`).join('')}
           </div>
           <button class="btn ghost sm" data-act="say">🔊 Escuchar</button>`;
+        const champ = $<HTMLInputElement>('[data-fecha]', el);
+        const taille = () => { champ.style.width = `${Math.max(3, champ.value.length * 0.55 + 0.8)}em`; };
+        taille();
+        champ.oninput = () => { j.fecha = champ.value; ecrire(j); taille(); };
         $$('[data-m]', el).forEach(b => b.onclick = () => {
           const i = Number(b.dataset.m);
           j.meteo = j.meteo.includes(i) ? j.meteo.filter(x => x !== i) : [...j.meteo, i].slice(-2);
           ecrire(j); maj();
         });
-        $('[data-act="say"]', el).onclick = () => dire(frase);
+        $('[data-act="say"]', el).onclick = () => {
+          const frase = [j.fecha.trim() && `Hoy es ${j.fecha.trim()}.`, phraseTiempo].filter(Boolean).join(' ');
+          if (frase) dire(frase); else toast('Écrivez d’abord la date ou choisissez le temps');
+        };
       }
     },
     {

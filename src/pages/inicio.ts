@@ -59,14 +59,12 @@ function etapes(): string {
 
 export const inicio: View = el => {
   const { prenom: p, dedicace } = accueilPerso(state.reglages);
-  const date = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
   const raccourcis = ['minuteur', 'ruleta', 'equipos'].map(id => TOOLS.find(t => t.id === id)!);
 
   el.innerHTML = `
     <section class="hero">
       <img class="logo" src="/icon-192.png" alt="" width="80" height="80">
       <div>
-        <p class="muted" lang="es">${esc(date)}</p>
         <h1 class="hello" lang="es">¡Hola${p ? `, ${esc(p)}` : ''}!</h1>
         ${dedicace ? `<p class="dedicace">${esc(dedicace)}</p>` : ''}
       </div>
