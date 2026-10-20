@@ -61,7 +61,7 @@ export const inicio: View = el => {
     <div class="levels">
       ${NIVEAUX.map(n => {
         const t = dernierTheme(n);
-        return `<a class="panel level" href="#/nivel/${n}/${t.id}" style="--niveau:${COULEUR[n]}">
+        return `<a class="panel level" href="#/programme/${n}" style="--niveau:${COULEUR[n]}">
           <span class="row"><span class="huge">${n}</span><span class="pill">${CECRL[n]}</span></span>
           <span><strong>${esc(t.titre)}</strong></span>
           <span class="muted small">Axe ${axeDe(n, t.id)?.n} · ${esc(axeDe(n, t.id)?.titre)}</span></a>`;
