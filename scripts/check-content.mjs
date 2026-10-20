@@ -94,6 +94,7 @@ check(paires(rit.meteo), 'rituels.json : "meteo" = liste de [emoji, phrase]');
 check(paires(rit.emociones), 'rituels.json : "emociones" = liste de [emoji, phrase]');
 for (const n of NIVEAUX) check(Array.isArray(rit.preguntas?.[n]) && rit.preguntas[n].length >= 5 && rit.preguntas[n].every(isStr), `rituels.json : au moins 5 preguntas pour ${n}`);
 const citas = read('citas.json') ?? {};
+check(isStr(citas.autorProf), 'citas.json : "autorProf" manquant');
 check(Array.isArray(citas.prof) && citas.prof.length >= 1 && citas.prof.every(isStr), 'citas.json : "prof" = liste de phrases');
 check(Array.isArray(citas.celebres) && citas.celebres.length >= 80 && citas.celebres.every(x => Array.isArray(x) && x.length === 2 && x.every(isStr)), 'citas.json : au moins 80 [citation, auteur]');
 const paises = read('paises.json') ?? [];

@@ -41,15 +41,15 @@ export function palabraDelDia(d = new Date()) {
   return all[dayIndex(d) % all.length];
 }
 
-/** Citations pour l'enseignante : une phrase de la cliente environ tous les huit jours, entre les citations célèbres. */
+/** Citations pour l'enseignante : une phrase de Souhaïla H. environ tous les huit jours, entre les citations célèbres. */
 export const CITAS: { texto: string; autor?: string }[] = (() => {
   const prof = [...citasJson.prof];
   const out: { texto: string; autor?: string }[] = [];
   citasJson.celebres.forEach(([texto, autor], i) => {
-    if (i % 7 === 0 && prof.length) out.push({ texto: prof.shift()! });
+    if (i % 7 === 0 && prof.length) out.push({ texto: prof.shift()!, autor: citasJson.autorProf });
     out.push({ texto, autor });
   });
-  return [...out, ...prof.map(texto => ({ texto }))];
+  return [...out, ...prof.map(texto => ({ texto, autor: citasJson.autorProf }))];
 })();
 
 export const citaDelDia = (decalage = 0, d = new Date()) => CITAS[(dayIndex(d) + decalage) % CITAS.length];
