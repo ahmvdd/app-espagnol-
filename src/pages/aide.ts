@@ -40,6 +40,7 @@ export const aide: View = el => {
 
     <section class="panel prose" id="credits">
       <h2>Crédits</h2>
+      <p>Créée par Souhaïla Hasnoun.</p>
       <ul>
         <li>Polices : Atkinson Hyperlegible (Braille Institute, OFL), Bricolage Grotesque (OFL), OpenDyslexic (OFL), auto-hébergées.</li>
         <li>Sons : générés par le navigateur (Web Audio), aucun fichier externe.</li>
