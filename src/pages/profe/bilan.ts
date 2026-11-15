@@ -32,7 +32,7 @@ export function ouvrirBilan(classeId = currentClasseId(), apres: () => void = ()
         </div>
         <label class="field">Chapitre
           <select name="chap">${AXES[c.niveau].filter(a => a.themes.length).map(a => `<optgroup label="Axe ${a.n}">${a.themes.map(t =>
-            `<option value="${t.id}" ${t.id === chap ? 'selected' : ''}>${esc(t.titre)}</option>`).join('')}</optgroup>`).join('')}</select></label>
+            `<option value="${t.id}" ${t.id === chap ? 'selected' : ''}>${esc(t.titreFr)}</option>`).join('')}</optgroup>`).join('')}</select></label>
         <label class="field">Ce qu’on a fait <input name="fait" maxlength="140" placeholder="ex. flashcards + quiz par équipes"></label>
         <fieldset class="field"><legend>1. Comment s’est passée la séance ?</legend>
           <div class="row wrap">${HUMEURS.map(([i, l], k) => `<button type="button" class="btn ghost humeur" data-h="${k}" aria-pressed="${rep.humeur === k}"><span aria-hidden="true">${i}</span> ${l}</button>`).join('')}</div></fieldset>

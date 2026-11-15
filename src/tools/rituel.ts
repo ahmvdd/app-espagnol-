@@ -37,7 +37,7 @@ const rituel: Tool = el => {
     el.innerHTML = `
       <div class="center">
         <div class="row wrap center-row" role="group" aria-label="Niveau">
-          ${NIVEAUX.map(n => `<button class="btn ghost sm" data-n="${n}" aria-pressed="${n === niveau}">${n} · ${esc(THEMES[n][0] && dernierTheme(n).titre)}</button>`).join('')}
+          ${NIVEAUX.map(n => `<button class="btn ghost sm" data-n="${n}" aria-pressed="${n === niveau}">${n} · ${esc(THEMES[n][0] && dernierTheme(n).titreFr)}</button>`).join('')}
         </div>
         <p class="big" lang="es">${esc(consigne)}</p>
         <p class="pill" lang="es">${esc(fecha)}</p>
@@ -51,7 +51,7 @@ const rituel: Tool = el => {
           <button class="btn bigbtn" id="go">${timer ? 'Recommencer' : '▶ Lancer les 3 minutes'}</button>
           <button class="btn ghost" id="say">🔊 Lire la consigne</button>
         </div>
-        <p class="muted small">Palabra del día : <strong lang="es">${esc(palabraDelDia().es)}</strong></p>
+        <p class="muted small">Mot du jour (${niveau}) : <strong lang="es">${esc(palabraDelDia(niveau).es)}</strong></p>
       </div>`;
     $$('[data-n]', el).forEach(b => b.onclick = () => { niveau = b.dataset.n as Niveau; texteDefi = defi(niveau); render(); });
     $('#autre', el).onclick = () => { texteDefi = defi(niveau); render(timer?.left() ?? 180); };

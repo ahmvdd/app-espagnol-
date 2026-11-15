@@ -30,7 +30,7 @@ const base = `http://localhost:${server.address().port}/`;
 
 const niveaux = ['5e', '4e', '3e'];
 const docs = ['cours', 'synthese', 'exercices', 'corriges',
-  'fiche-prof', 'seance', 'projeter', 'cartes', 'simplifiee', 'difficile', 'evaluation', 'evaluation-corrige'];
+  'fiche-prof', 'seance', 'projeter', 'cartes', 'carte-mentale', 'carte-mentale-vierge', 'simplifiee', 'difficile', 'evaluation', 'evaluation-corrige'];
 const docsAxe = ['axe-vue', 'axe-oral', 'axe-taches'];
 rmSync(OUT, { recursive: true, force: true }); // repart de zéro : pas de PDF d'un chapitre supprimé
 mkdirSync(OUT, { recursive: true });
@@ -59,7 +59,7 @@ for (const niv of niveaux) {
   for (const axe of contenu.axes) {
     if (!axe.themes.length) continue;
     for (const d of docsAxe) await rendre(`#/doc/${niv}/axe${axe.n}/${d}`, `Axe ${axe.n}`, niv);
-    for (const t of axe.themes) for (const d of docs) await rendre(`#/doc/${niv}/${t.id}/${d}`, t.titre, niv, d === 'projeter');
+    for (const t of axe.themes) for (const d of docs) await rendre(`#/doc/${niv}/${t.id}/${d}`, t.titreFr, niv, d === 'projeter' || d.startsWith('carte-mentale'));
   }
 }
 await browser.close();

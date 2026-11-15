@@ -26,9 +26,9 @@ export const juegos: View = el => {
   const game = GAMES.find(g => g.id === id);
 
   if (!game) {
-    el.innerHTML = `<h1>Jeux <span class="es" lang="es">· Juegos</span></h1>
+    el.innerHTML = `<h1>Jeux</h1>
       <p class="muted">Choisis un jeu, puis le niveau, le thème et les équipes. Les scores sont gardés d’un jeu à l’autre pendant la séance.</p>
-      ${qn ? `<p class="pill">Thème choisi : ${session.niveau} · ${esc(THEMES[session.niveau].find(t => t.id === session.themeId)?.titre)}</p>` : ''}
+      ${qn ? `<p class="pill">Thème choisi : ${session.niveau} · ${esc(THEMES[session.niveau].find(t => t.id === session.themeId)?.titreFr)}</p>` : ''}
       <div class="tools">${GAMES.map(gameCard).join('')}</div>`;
     return;
   }
@@ -44,7 +44,7 @@ export const juegos: View = el => {
     el.innerHTML = `
       <div class="row head">
         <a class="btn ghost sm" href="#/juegos">← Jeux</a>
-        <h1>${game.icon} ${esc(game.nom)} <span class="es" lang="es">· ${esc(game.es)}</span></h1>
+        <h1>${game.icon} ${esc(game.nom)}</h1>
         <span></span>
       </div>
       <section class="panel setup">
@@ -54,7 +54,7 @@ export const juegos: View = el => {
         ${game.sansTheme ? '' : `<label class="field">Thème
           <select id="theme">
             ${AXES[session.niveau].filter(a => a.themes.length).map(a => `<optgroup label="Axe ${a.n} · ${esc(a.titre)}">
-              ${a.themes.map(t => `<option value="${t.id}" ${t.id === session.themeId ? 'selected' : ''}>${esc(t.titre)} (${t.vocab.length} mots)</option>`).join('')}
+              ${a.themes.map(t => `<option value="${t.id}" ${t.id === session.themeId ? 'selected' : ''}>${esc(t.titreFr)} (${t.vocab.length} mots)</option>`).join('')}
             </optgroup>`).join('')}
             <option value="tous" ${session.themeId === 'tous' ? 'selected' : ''}>Tous les thèmes de ${session.niveau}</option>
           </select>
@@ -82,7 +82,7 @@ export const juegos: View = el => {
     el.innerHTML = `
       <div class="row head">
         <button class="btn ghost sm" id="back">← Réglages</button>
-        <h1>${game.icon} ${esc(game.nom)} <span class="es">· ${session.niveau}${game.sansTheme ? '' : ` · ${esc(theme.titre)}`}</span></h1>
+        <h1>${game.icon} ${esc(game.nom)} <span class="es">· ${session.niveau}${game.sansTheme ? '' : ` · ${esc(theme.titreFr)}`}</span></h1>
         <button class="btn ghost sm" id="fs">⛶ Plein écran</button>
       </div>
       <section class="panel stage game-stage" id="stage">

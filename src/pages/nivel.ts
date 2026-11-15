@@ -27,14 +27,15 @@ export const nivel: View = el => {
   el.innerHTML = `
     <nav class="fil small" aria-label="Fil d’Ariane"><a href="#/programme">Programme</a> › <a href="#/programme/${n}">${n}</a> › Axe ${axe.n} › Chapitre ${num}</nav>
     <div class="row head niveau-head">
-      <h1><span class="niveau-badge">${n}</span> <span lang="es">${esc(theme.titre)}</span></h1>
+      <h1><span class="niveau-badge">${n}</span> ${esc(theme.titreFr)}</h1>
+      <p class="muted">Titre en espagnol : <span lang="es">${esc(theme.titre)}</span></p>
       <span class="pill" title="Niveau visé en fin d'année (LVB)">🎯 ${CECRL[n]} · LVB</span>
     </div>
     <section class="theme-head">
       <p class="muted">Axe ${axe.n} · ${esc(axe.titre)}${axe.obligatoire ? ' · ⭐ obligatoire' : ''} — chapitre ${num} sur ${axe.themes.length}</p>
       <p class="small">Objet d’étude : ${esc(theme.objet)}</p>
       <ul class="notions">${theme.notions.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
-      <p class="row wrap small">${axe.themes.map((t, i) => `<a class="btn ${t === theme ? '' : 'ghost'} sm" href="#/nivel/${n}/${t.id}" ${t === theme ? 'aria-current="true"' : ''}>${i + 1}. ${esc(t.titre)}</a>`).join('')}</p>
+      <p class="row wrap small">${axe.themes.map((t, i) => `<a class="btn ${t === theme ? '' : 'ghost'} sm" href="#/nivel/${n}/${t.id}" ${t === theme ? 'aria-current="true"' : ''}>${i + 1}. ${esc(t.titreFr)}</a>`).join('')}</p>
     </section>
 
     <h2>1 · Vocabulaire</h2>
@@ -51,20 +52,21 @@ export const nivel: View = el => {
     </div>
 
     <section class="panel culture">
-      <h2>4 · <span lang="es">🌎 Lo que aprendí sobre el mundo hispánico</span></h2>
+      <h2>4 · 🌎 Ce que j’apprends sur le monde hispanique</h2>
       <ul>${theme.culture.map(c => `<li>${esc(c)}</li>`).join('')}</ul>
     </section>
 
     <section class="panel docs-eleves">
       <h2>5 à 8 · Documents à imprimer</h2>
       <div class="row wrap">${(Object.keys(DOCS) as DocType[]).map(btnDoc).join('')}</div>
-      <p class="muted small">Cours, synthèse (une feuille), 3 exercices et leurs corrigés (fichier séparé, pour l’enseignante). Aperçu, puis « Imprimer » ou « Enregistrer en PDF ».</p>
+      <div class="row wrap">${(['carte-mentale', 'carte-mentale-vierge'] as RessChapitre[]).map(btnRess).join('')}</div>
+      <p class="muted small">Cours, synthèse (une feuille), 3 exercices et leurs corrigés (fichier séparé, pour l’enseignante), et la carte mentale de la séquence (complète ou à compléter, format paysage). Aperçu, puis « Imprimer » ou « Enregistrer en PDF ».</p>
     </section>
 
     <section class="panel ressources" id="ressources">
       <h2>9 · 🧑‍🏫 Ressources pour l’enseignante</h2>
       <h3>Ce chapitre</h3>
-      <div class="row wrap">${(Object.keys(RESS_CHAPITRE) as RessChapitre[]).map(btnRess).join('')}</div>
+      <div class="row wrap">${(Object.keys(RESS_CHAPITRE) as RessChapitre[]).filter(r => !r.startsWith('carte-mentale')).map(btnRess).join('')}</div>
       <h3>L’axe ${axe.n}</h3>
       <div class="row wrap">${(Object.keys(RESS_AXE) as RessAxe[]).map(btnAxe).join('')}</div>
       <details class="grammaire"><summary><strong>Grammaire du programme en ${n}</strong>&nbsp;· ${CECRL[n]}</summary>
@@ -81,11 +83,11 @@ export const nivel: View = el => {
   });
   $$('[data-doc]', el).forEach(b => b.onclick = () => {
     const d = b.dataset.doc as DocType;
-    apercu(`${DOCS[d].label} · ${n} · ${theme.titre}`, docHtml(d, n, axe, theme), fichierPdf(n, axe, theme, d));
+    apercu(`${DOCS[d].label} · ${n} · ${theme.titreFr}`, docHtml(d, n, axe, theme), fichierPdf(n, axe, theme, d));
   });
   $$('[data-ress]', el).forEach(b => b.onclick = () => {
     const r = b.dataset.ress as RessChapitre;
-    apercu(`${RESS_CHAPITRE[r].label} · ${n} · ${theme.titre}`, ressourceHtml(r, n, axe, theme), fichierRessource(n, axe, theme, r));
+    apercu(`${RESS_CHAPITRE[r].label} · ${n} · ${theme.titreFr}`, ressourceHtml(r, n, axe, theme), fichierRessource(n, axe, theme, r));
   });
   $$('[data-axe]', el).forEach(b => b.onclick = () => {
     const r = b.dataset.axe as RessAxe;

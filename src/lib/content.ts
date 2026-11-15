@@ -36,21 +36,14 @@ export const AMBIANCES: { id: Ambiance; label: string; icon: string }[] = [
 /** Numéro du jour local : même tirage pour toute la journée. */
 export const dayIndex = (d = new Date()) => Math.floor((d.getTime() - d.getTimezoneOffset() * 6e4) / 864e5);
 
-export function palabraDelDia(d = new Date()) {
-  const all = NIVEAUX.flatMap(n => THEMES[n].flatMap(t => t.vocab.map(([es, fr]) => ({ es, fr, niveau: n, theme: t.titre }))));
+/** Mot du jour d'un niveau : le même toute la journée, différent pour chaque classe. */
+export function palabraDelDia(n: Niveau, d = new Date()) {
+  const all = THEMES[n].flatMap(t => t.vocab.map(([es, fr]) => ({ es, fr, niveau: n, theme: t.titreFr })));
   return all[dayIndex(d) % all.length];
 }
 
-/** Citations pour l'enseignante : une phrase de Souhaïla H. environ tous les huit jours, entre les citations célèbres. */
-export const CITAS: { texto: string; autor?: string }[] = (() => {
-  const prof = [...citasJson.prof];
-  const out: { texto: string; autor?: string }[] = [];
-  citasJson.celebres.forEach(([texto, autor], i) => {
-    if (i % 7 === 0 && prof.length) out.push({ texto: prof.shift()!, autor: citasJson.autorProf });
-    out.push({ texto, autor });
-  });
-  return [...out, ...prof.map(texto => ({ texto, autor: citasJson.autorProf }))];
-})();
+/** Citations célèbres pour l'enseignante. */
+export const CITAS: { texto: string; autor?: string }[] = citasJson.celebres.map(([texto, autor]) => ({ texto, autor }));
 
 export const citaDelDia = (decalage = 0, d = new Date()) => CITAS[(dayIndex(d) + decalage) % CITAS.length];
 

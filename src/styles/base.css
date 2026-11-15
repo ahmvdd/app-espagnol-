@@ -666,3 +666,98 @@ html.doc-seul .doc-ecran{display:block;background:#fff;max-width:210mm;margin:0 
   nav::-webkit-scrollbar{display:none}
   nav a{white-space:nowrap;padding:.4rem .7rem;flex:none}
 }
+
+/* Carte mentale (A4 paysage) */
+.doc-cm{page:paysage}
+.cm{position:relative;display:grid;grid-template-columns:1fr .9fr 1fr;grid-template-rows:1fr 1fr 1fr;gap:5mm 7mm;height:166mm;font-size:9.5pt;line-height:1.3}
+.cm-traits{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.cm-traits line{stroke:var(--c);stroke-width:2.2;stroke-linecap:round;vector-effect:non-scaling-stroke;opacity:.55}
+.cm-branche,.cm-centre{position:relative;z-index:1;background:#fff;border:2px solid var(--c);border-radius:12px;padding:2.5mm 3.5mm;overflow:hidden}
+.cm-branche h2{font:800 10.5pt 'Bricolage Grotesque Variable',sans-serif;color:var(--c);margin:0 0 1.5mm}
+.cm-branche h2 small{font:400 8pt 'Atkinson Hyperlegible',sans-serif;color:#56607A}
+.cm-branche ul{margin:0;padding-left:4mm}
+.cm-branche li{margin:0 0 .6mm}
+.cm-fr{color:#56607A;font-size:8.5pt}
+.cm-fr::before{content:"· "}
+.cm-ligne{list-style:none;margin-left:-4mm;border-bottom:1px dotted #8A93AD;height:5.5mm}
+.cm-vocab1{grid-area:1/1}.cm-notions{grid-area:1/2}.cm-vocab2{grid-area:1/3}
+.cm-frases{grid-area:2/1}.cm-centre{grid-area:2/2}.cm-parole{grid-area:2/3}
+.cm-culture{grid-area:3/1}.cm-ojo{grid-area:3/2}.cm-mifrase{grid-area:3/3}
+.cm-mifrase .cm-ligne{height:8mm}
+.cm-centre{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:var(--c);color:#fff;border-radius:50%/40%;padding:4mm}
+.cm-centre h1{font:800 17pt/1.1 'Bricolage Grotesque Variable',sans-serif;margin:1mm 0}
+.cm-centre .cm-niv,.cm-centre .cm-titre-fr{margin:0;font-size:9pt;opacity:.92}
+.cm-centre .doc-nom{font-size:8pt;margin:2mm 0 0;color:#fff}
+.cm-pied{text-align:right;font-size:7.5pt;color:#56607A;margin:2mm 0 0}
+
+/* Jeux de plateau : commun */
+.plateau-regles .regles{text-align:left;max-width:46rem;line-height:1.5;padding-left:1.2rem}
+.plateau-regles .regles li{margin:.35rem 0}
+.plateau{display:flex;flex-direction:column;gap:1rem}
+.plateau-corps{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(16rem,1fr);gap:1rem;align-items:start}
+@media (max-width:900px){.plateau-corps{grid-template-columns:1fr}}
+.plateau-action,.mist-action{display:flex;flex-direction:column;align-items:center;gap:.7rem;text-align:center}
+.plateau-action h3,.ruta-action h3{margin:0}
+.de{font-size:4rem;line-height:1}
+.pions{display:flex;gap:2px;justify-content:center;min-height:1.3em}
+.pion{font-size:1.15rem;filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
+.a-dire{border:2px dashed var(--ochre);border-radius:14px;padding:.7rem 1rem;display:flex;flex-direction:column;align-items:center;gap:.4rem;width:100%}
+.a-dire p{margin:0}
+.carte-jeu{border:3px solid var(--cobalt);border-radius:16px;padding:1rem;background:var(--tile);display:flex;flex-direction:column;align-items:center;gap:.4rem;width:100%}
+.carte-jeu p{margin:0}
+.carte-montant{font:800 1.6rem var(--display)}
+.carte-montant.moins{color:var(--pink)}.carte-montant.plus{color:var(--olive)}
+.chrono{font-size:1.3rem}
+.paga-equipes{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.paga-eq{display:flex;flex-direction:column;align-items:center;border:2px solid var(--line);border-radius:12px;padding:.4rem .9rem;background:var(--surface);min-width:9rem}
+.paga-eq b{font:800 1.5rem/1.1 var(--display)}
+.paga-eq small{color:var(--muted)}
+.paga-eq.turn{border-color:var(--ochre);box-shadow:0 0 0 2px var(--ochre)}
+.paga-eq.fini{opacity:.75}
+.paga-podium{font-size:1.4rem;text-align:left}
+
+/* La paga del mes : calendrier */
+.paga-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.paga-dia{text-align:center;font-weight:700;font-size:.8rem;color:var(--muted);text-transform:capitalize}
+.paga-case{border:1.5px solid var(--line);border-radius:8px;background:var(--surface);padding:3px;min-height:4.4rem;display:flex;flex-direction:column;align-items:center;font-size:.8rem;line-height:1.1}
+.paga-case b{align-self:flex-start;font-size:.85rem}
+.paga-case>span{font-size:1.15rem}
+.paga-case small{color:var(--muted);font-size:.68rem;text-align:center}
+.paga-case.actuelle{border-color:var(--ochre);box-shadow:0 0 0 2px var(--ochre)}
+.paga-domingo{background:var(--tile)}
+.paga-paga{background:var(--olive);color:#fff}.paga-paga small{color:#fff}
+
+/* El misterio de la clase */
+.mist{display:flex;flex-direction:column;gap:.8rem}
+.mist-carnet{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+@media (max-width:700px){.mist-carnet{grid-template-columns:1fr}}
+.mist-col{display:flex;flex-direction:column;gap:.35rem}
+.mist-col h3{margin:0 0 .2rem;text-align:center}
+.mist-col h3 small{font-weight:400;color:var(--muted);font-size:.8em}
+.mist-carte{display:flex;align-items:center;gap:.5rem;border:2px solid var(--line);border-radius:10px;padding:.45rem .6rem;background:var(--surface);font:inherit;color:var(--ink);text-align:left;cursor:pointer}
+.mist-carte span:first-child{font-size:1.4rem}
+.mist-carte[aria-pressed="true"]{border-color:var(--cobalt);box-shadow:0 0 0 2px var(--cobalt);font-weight:700}
+.mist-carte.elimine{opacity:.45;text-decoration:line-through}
+.mist-carte:disabled{cursor:default}
+.mist-reponse{border-left:5px solid var(--cobalt);padding-left:.8rem;text-align:left}
+.mist-aide summary{cursor:pointer;font-weight:700}
+
+/* Ruta por España : plateau 7 × 7 */
+.ruta-plateau{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-template-rows:repeat(7,minmax(4.6rem,auto));gap:3px}
+.ruta-case{position:relative;border:1.5px solid var(--line);border-radius:8px;background:var(--surface);padding:3px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;font-size:.72rem;line-height:1.1;overflow:hidden}
+.ruta-case>span{font-size:1.25rem}
+.ruta-case b{font-size:.74rem}
+.ruta-case small{color:var(--muted)}
+.ruta-case.possede{border:3px solid var(--eq,var(--cobalt))}
+.ruta-case .proprio{position:absolute;top:1px;right:2px;font-style:normal;font-size:.85rem}
+.ruta-suerte,.ruta-caja{background:var(--tile)}
+.ruta-salida,.ruta-control,.ruta-fiesta,.ruta-alControl{background:var(--tile);font-weight:700}
+.ruta-centre{grid-area:2/2/7/7;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;padding:.6rem;text-align:center;border-radius:14px;background:var(--paper)}
+.ruta-centre .huge{font-size:clamp(1.4rem,3.5vw,2.6rem);opacity:.85}
+.ruta-action{display:flex;flex-direction:column;align-items:center;gap:.55rem;width:100%;max-width:40rem}
+.ruta-action p{margin:0}
+.ruta-action .opts{grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))}
+@media (max-width:700px){.ruta-plateau{grid-template-rows:repeat(7,minmax(3.4rem,auto))}.ruta-case b{font-size:.6rem}.ruta-case small{display:none}}
+.meteo-ico{font-size:4.5rem;line-height:1}
+.plateau-action .big,.ruta-action .big{font-size:clamp(1.1rem,2.2vw,1.5rem)}
+.plateau-action .carte-jeu .big{font-size:clamp(1.25rem,2.6vw,1.8rem)}

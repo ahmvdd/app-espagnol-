@@ -21,6 +21,7 @@
     {
      "id": "la-convivencia",
      "titre": "La convivencia",
+     "titreFr": "Le vivre-ensemble",
      "objet": "La convivialité, tout un art de vivre !",
      "notions": [
       "La convivialité : partager, quedar, la sobremesa",
@@ -180,6 +181,7 @@
     {
      "id": "la-amistad",
      "titre": "¿Amigos para siempre?",
+     "titreFr": "Amis pour toujours ?",
      "objet": "¿Amigos para siempre? Histoires d’amitiés célèbres, imaginaires ou familières",
      "notions": [
       "Les relations : llevarse bien, enfadarse",
@@ -347,6 +349,7 @@
     {
      "id": "amores-celebres",
      "titre": "Amores célebres",
+     "titreFr": "Des amours célèbres",
      "objet": "Des amours célèbres",
      "notions": [
       "Les sentiments amoureux",
@@ -527,6 +530,7 @@
     {
      "id": "trabajar-ayer",
      "titre": "Trabajar ayer",
+     "titreFr": "Travailler hier",
      "objet": "Travailler hier",
      "notions": [
       "Les métiers d’autrefois",
@@ -686,6 +690,7 @@
     {
      "id": "trabajar-hoy",
      "titre": "Trabajar hoy",
+     "titreFr": "Travailler aujourd’hui",
      "objet": "Travailler aujourd’hui",
      "notions": [
       "Le monde du travail aujourd’hui",
@@ -845,6 +850,7 @@
     {
      "id": "el-futuro",
      "titre": "El trabajo y el futuro",
+     "titreFr": "Le travail et l’avenir",
      "objet": "Travailler demain",
      "notions": [
       "Les métiers et le travail",
@@ -1051,6 +1057,7 @@
     {
      "id": "de-viaje",
      "titre": "De viaje",
+     "titreFr": "En voyage",
      "objet": "Partons en voyage !",
      "notions": [
       "Le voyage et les transports",
@@ -1218,6 +1225,7 @@
     {
      "id": "dejar-su-pais",
      "titre": "Dejar su país",
+     "titreFr": "Quitter son pays",
      "objet": "Quitter son pays : aventure, émigration économique ou exil politique",
      "notions": [
       "Émigration et exil",
@@ -1381,6 +1389,7 @@
     {
      "id": "recuerdos-de-viaje",
      "titre": "Recuerdos de viaje",
+     "titreFr": "Souvenirs de voyage",
      "objet": "Souvenirs de voyage",
      "notions": [
       "Raconter un voyage passé",
@@ -1557,6 +1566,7 @@
     {
      "id": "los-medios",
      "titre": "Los medios de información",
+     "titreFr": "Les médias d’information",
      "objet": "Des moyens d’information multiples",
      "notions": [
       "Les médias et l’information",
@@ -1720,6 +1730,7 @@
     {
      "id": "las-opiniones",
      "titre": "Opinar y convencer",
+     "titreFr": "Donner son avis et convaincre",
      "objet": "Les médias au service d’une cause, d’un combat ou du pouvoir, de l’autorité",
      "notions": [
       "Donner son avis : creo que, pienso que, en mi opinión",
@@ -1910,6 +1921,7 @@
     {
      "id": "el-dibujo-de-prensa",
      "titre": "El dibujo de prensa",
+     "titreFr": "Le dessin de presse",
      "objet": "À la découverte du dessin de presse",
      "notions": [
       "Le dessin de presse : humour et critique",
@@ -2086,6 +2098,7 @@
     {
      "id": "cooperar-y-ayudar",
      "titre": "Cooperar y ayudar",
+     "titreFr": "Coopérer et aider",
      "objet": "Coopérer et aider, c’est aussi s’enrichir",
      "notions": [
       "La solidarité et la coopération",
@@ -2245,6 +2258,7 @@
     {
      "id": "comprometerse",
      "titre": "Comprometerse",
+     "titreFr": "S’engager",
      "objet": "S’engager pour une cause",
      "notions": [
       "L’engagement et la solidarité",
@@ -2412,6 +2426,7 @@
     {
      "id": "artistas-comprometidos",
      "titre": "Artistas comprometidos",
+     "titreFr": "Des artistes engagés",
      "objet": "Les artistes engagés contre le pouvoir ?",
      "notions": [
       "La chanson engagée",
@@ -2588,6 +2603,7 @@
     {
      "id": "1492",
      "titre": "1492, un año clave",
+     "titreFr": "1492, une année clé",
      "objet": "De la reconquista a una nueva conquista : 1492, une année riche en rebondissements",
      "notions": [
       "Les événements de 1492",
@@ -2747,6 +2763,7 @@
     {
      "id": "el-descubrimiento",
      "titre": "El descubrimiento de América",
+     "titreFr": "La découverte de l’Amérique",
      "objet": "La « découverte » de l’Amérique : Christophe Colomb est-il le premier Européen à fouler la terre américaine ?",
      "notions": [
       "Le voyage de Colomb (1492)",
@@ -2910,6 +2927,7 @@
     {
      "id": "dos-miradas",
      "titre": "¿Descubrimiento o despojo?",
+     "titreFr": "Découverte ou spoliation ?",
      "objet": "Un évènement, deux points de vue : ¿Descubrimiento o despojo?",
      "notions": [
       "Deux points de vue sur 1492",

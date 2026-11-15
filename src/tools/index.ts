@@ -36,4 +36,4 @@ export const TOOLS: ToolInfo[] = [
 ];
 
 export const toolCard = (t: ToolInfo, query = '') =>
-  `<a class="panel tool-card" href="#/herramientas/${t.id}${query}"><span class="ico" aria-hidden="true">${t.icon}</span><strong>${t.nom}</strong><span class="es" lang="es">${t.es}</span><span class="muted small">${t.desc}</span></a>`;
+  `<a class="panel tool-card" href="#/herramientas/${t.id}${query}"><span class="ico" aria-hidden="true">${t.icon}</span><strong>${t.nom}</strong><span class="muted small">${t.desc}</span></a>`;

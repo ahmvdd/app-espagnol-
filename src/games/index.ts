@@ -8,6 +8,9 @@ import basta from './basta';
 import taboo from './taboo';
 import loteria from './loteria';
 import escape from './escape';
+import paga from './paga';
+import misterio from './misterio';
+import ruta from './ruta';
 
 export const GAMES: GameInfo[] = [
   { id: 'quiz', nom: 'Quiz en direct', es: 'El quiz', desc: 'Questions projetées, réponses sur ardoise', icon: '❓', run: quiz },
@@ -18,8 +21,11 @@ export const GAMES: GameInfo[] = [
   { id: 'basta', nom: 'Basta', es: '¡Basta!', desc: 'Une lettre, des catégories, 2 minutes', icon: '✋', run: basta },
   { id: 'taboo', nom: 'Taboo', es: 'Tabú', desc: 'Faire deviner sans les mots interdits', icon: '🚫', run: taboo, needsTeams: true },
   { id: 'escape', nom: 'Escape game', es: 'Escape room', desc: 'Axe 6 : 5 énigmes, un cadenas, 20 à 45 min', icon: '🔐', run: escape, sansTheme: true },
-  { id: 'loteria', nom: 'Lotería', es: 'La lotería', desc: 'Bingo avec cartes imprimables', icon: '🎴', run: loteria }
+  { id: 'loteria', nom: 'Lotería', es: 'La lotería', desc: 'Bingo avec cartes imprimables', icon: '🎴', run: loteria },
+  { id: 'paga', nom: 'La paga del mes', es: 'La paga del mes', desc: 'Un mois de budget : argent, métiers, météo, imprévus', icon: '💶', run: paga, needsTeams: true, sansTheme: true },
+  { id: 'misterio', nom: 'El misterio de la clase', es: 'El misterio de la clase', desc: 'Enquête façon Cluedo : hypothèses au passé', icon: '🕵️', run: misterio, needsTeams: true, sansTheme: true },
+  { id: 'ruta', nom: 'Ruta por España', es: 'Ruta por España', desc: 'Monopoly des villes hispaniques : acheter, louer, négocier', icon: '🗺', run: ruta, needsTeams: true, sansTheme: true }
 ];
 
 export const gameCard = (g: GameInfo) =>
-  `<a class="panel tool-card" href="#/juegos/${g.id}"><span class="ico" aria-hidden="true">${g.icon}</span><strong>${g.nom}</strong><span class="es" lang="es">${g.es}</span><span class="muted small">${g.desc}</span></a>`;
+  `<a class="panel tool-card" href="#/juegos/${g.id}"><span class="ico" aria-hidden="true">${g.icon}</span><strong>${g.nom}</strong><span class="muted small">${g.desc}</span></a>`;

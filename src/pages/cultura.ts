@@ -24,7 +24,7 @@ export const cultura: View = el => {
   const [, , onglet = '', id] = location.hash.split('/');
   let stop: void | (() => void);
   el.innerHTML = `
-    <h1>Culture <span class="es" lang="es">· Cultura</span></h1>
+    <h1>Culture</h1>
     <nav class="row wrap onglets" aria-label="Culture">
       ${ONGLETS.map(o => `<a class="btn ghost sm" href="#/cultura${o.id ? '/' + o.id : ''}" aria-current="${o.id === onglet ? 'page' : 'false'}">${o.label}</a>`).join('')}
     </nav>

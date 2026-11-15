@@ -10,7 +10,7 @@ let filtre = '';
 /** Historique des séances, par classe. Inclus dans « Sauvegarder dans un fichier ». */
 export function renderCarnet(el: HTMLElement): void {
   const render = () => {
-    const titre = (niv: string, id: string) => THEMES[niv as '5e']?.find(t => t.id === id)?.titre ?? id;
+    const titre = (niv: string, id: string) => THEMES[niv as '5e']?.find(t => t.id === id)?.titreFr ?? id;
     const seances = state.seances
       .filter(s => !filtre || s.classeId === filtre)
       .sort((a, b) => b.date.localeCompare(a.date));

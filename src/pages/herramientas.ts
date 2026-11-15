@@ -8,14 +8,14 @@ export const herramientas: View = el => {
   const tool = TOOLS.find(t => t.id === id);
 
   if (!tool) {
-    el.innerHTML = `<h1>Outils <span class="es" lang="es">· Herramientas</span></h1><div class="tools">${TOOLS.map(t => toolCard(t)).join('')}</div>`;
+    el.innerHTML = `<h1>Outils</h1><div class="tools">${TOOLS.map(t => toolCard(t)).join('')}</div>`;
     return;
   }
 
   el.innerHTML = `
     <div class="row head">
       <a class="btn ghost sm" href="#/herramientas">← Outils</a>
-      <h1>${tool.icon} ${tool.nom} <span class="es" lang="es">· ${tool.es}</span></h1>
+      <h1>${tool.icon} ${tool.nom}</h1>
       <button class="btn ghost sm" id="fs">⛶ Plein écran</button>
     </div>
     <section class="panel stage" id="stage">

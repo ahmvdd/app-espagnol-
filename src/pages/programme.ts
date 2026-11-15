@@ -53,7 +53,7 @@ export const programme: View = el => {
               <div class="row prog-chap-tete">
                 <span class="pill">Chapitre ${i + 1}</span>${st ? `<span class="small">${st.icon} ${st.label}</span>` : ''}
               </div>
-              <h3 lang="es"><a href="#/nivel/${n}/${t.id}">${esc(t.titre)}</a></h3>
+              <h3><a href="#/nivel/${n}/${t.id}">${esc(t.titreFr)}</a></h3>
               <p class="muted small">${esc(t.objet)}</p>
               <ul class="prog-ressources">
                 ${(Object.keys(DOCS) as DocType[]).map(d => `<li><a href="pdf/${fichierPdf(n, a, t, d)}" download target="_blank" rel="noopener">${DOCS[d].icon} ${DOCS[d].label}${DOCS[d].eleve ? '' : ' (enseignante)'}</a></li>`).join('')}

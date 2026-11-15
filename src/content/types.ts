@@ -6,7 +6,10 @@ export type Question = { q: string; o: string[]; a: number; diff: Diff };
 
 export type Theme = {
   id: string;
+  /** Titre en espagnol (documents élèves). */
   titre: string;
+  /** Titre en français (navigation, menus). */
+  titreFr: string;
   /** Objet d'étude du programme auquel le thème se rattache. */
   objet: string;
   /** Notions du chapitre (lexique, grammaire, culture) : le « programme » affiché et imprimé. */

@@ -21,6 +21,7 @@
     {
      "id": "el-deporte",
      "titre": "El deporte",
+     "titreFr": "Le sport",
      "objet": "Sport et bien-être : le sport au service d’aptitudes physiques et intellectuelles et du lien social",
      "notions": [
       "Les sports, le matériel et les lieux",
@@ -188,6 +189,7 @@
     {
      "id": "las-reglas-del-juego",
      "titre": "Las reglas del juego",
+     "titreFr": "Les règles du jeu",
      "objet": "Les règles du jeu : respecter les règles, porter les couleurs de sa région, se dépasser et gagner loyalement",
      "notions": [
       "Les règles et l’arbitrage",
@@ -347,6 +349,7 @@
     {
      "id": "deporte-para-todos",
      "titre": "El deporte para todos",
+     "titreFr": "Le sport pour tous",
      "objet": "Le sport pour tous : des amateurs aux sportifs, valides et handicapés, les plus célèbres",
      "notions": [
       "Le sport adapté et l’inclusion",
@@ -523,6 +526,7 @@
     {
      "id": "espana-destino-europeo",
      "titre": "España, destino de jóvenes europeos",
+     "titreFr": "L’Espagne, destination des jeunes Européens",
      "objet": "L’Espagne, une destination appréciée des jeunes citoyens européens",
      "notions": [
       "L’Europe et les échanges",
@@ -682,6 +686,7 @@
     {
      "id": "viajar-libre",
      "titre": "Viajar para sentirse libre",
+     "titreFr": "Voyager pour se sentir libre",
      "objet": "Voyager pour se sentir libre",
      "notions": [
       "Le voyage et les émotions",
@@ -841,6 +846,7 @@
     {
      "id": "machu-picchu",
      "titre": "Viajar a Machu Picchu",
+     "titreFr": "Voyage au Machu Picchu",
      "objet": "Machu Picchu, une merveille inca",
      "notions": [
       "Le vocabulaire du voyage",
@@ -1025,6 +1031,7 @@
     {
      "id": "la-ciudad",
      "titre": "La ciudad",
+     "titreFr": "La ville",
      "objet": "Villes et capitales d’Espagne et d’Amérique hispanophone",
      "notions": [
       "Les lieux de la ville",
@@ -1215,6 +1222,7 @@
     {
      "id": "donde-vivir",
      "titre": "¿Dónde vivir?",
+     "titreFr": "Où vivre ?",
      "objet": "Où habiter ? Diversité des espaces construits",
      "notions": [
       "Les types de logement",
@@ -1374,6 +1382,7 @@
     {
      "id": "cuidar-el-entorno",
      "titre": "Cuidar el entorno",
+     "titreFr": "Prendre soin de son environnement",
      "objet": "Préserver son cadre de vie",
      "notions": [
       "L’environnement et le recyclage",
@@ -1554,6 +1563,7 @@
     {
      "id": "los-inventos",
      "titre": "Los inventos",
+     "titreFr": "Les inventions",
      "objet": "La technologie au service de l’homme",
      "notions": [
       "La technologie et les inventions",
@@ -1721,6 +1731,7 @@
     {
      "id": "espanol-e-ia",
      "titre": "El español y la inteligencia artificial",
+     "titreFr": "L’espagnol et l’intelligence artificielle",
      "objet": "La langue espagnole et l’intelligence artificielle",
      "notions": [
       "Le vocabulaire du numérique",
@@ -1880,6 +1891,7 @@
     {
      "id": "plantas-de-america",
      "titre": "De las plantas de América a la biotecnología",
+     "titreFr": "Des plantes d’Amérique à la biotechnologie",
      "objet": "Des explorations botaniques en Amérique latine aux biotechnologies aujourd’hui",
      "notions": [
       "Les plantes venues d’Amérique",
@@ -2056,6 +2068,7 @@
     {
      "id": "artistas-geniales",
      "titre": "Artistas geniales",
+     "titreFr": "Des artistes de génie",
      "objet": "Les créations artistiques (Dalí, Kahlo, Gaudí, etc.) : d’étonnantes constructions mentales",
      "notions": [
       "Décrire une œuvre : en el centro, al fondo, los colores",
@@ -2215,6 +2228,7 @@
     {
      "id": "arte-callejero",
      "titre": "El arte callejero",
+     "titreFr": "L’art urbain",
      "objet": "El arte callejero : quand les langages artistiques nous interpellent",
      "notions": [
       "L’art urbain et le muralisme",
@@ -2374,6 +2388,7 @@
     {
      "id": "el-artista-testigo",
      "titre": "El artista testigo",
+     "titreFr": "L’artiste témoin",
      "objet": "L’artiste témoigne et s’engage pour des causes sociales ou contre des régimes autoritaires (Espagne, Argentine, Cuba, etc.)",
      "notions": [
       "L’art engagé : dénoncer, témoigner",
@@ -2550,6 +2565,7 @@
     {
      "id": "andalucia",
      "titre": "Andalucía, tierra de música",
+     "titreFr": "L’Andalousie, terre de musique",
      "objet": "Une terre de musique(s)",
      "notions": [
       "La musique et la danse en Andalousie",
@@ -2717,6 +2733,7 @@
     {
      "id": "al-andalus",
      "titre": "Al-Ándalus",
+     "titreFr": "Al-Andalus",
      "objet": "Un regard vers le passé : al-Ándalus",
      "notions": [
       "Al-Ándalus : repères historiques (711-1492)",
@@ -2876,6 +2893,7 @@
     {
      "id": "andalucia-turistica",
      "titre": "Andalucía para todos los gustos",
+     "titreFr": "L’Andalousie pour tous les goûts",
      "objet": "Une destination touristique pour tous les goûts",
      "notions": [
       "Le tourisme et ses effets",

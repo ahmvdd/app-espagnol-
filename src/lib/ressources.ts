@@ -4,7 +4,7 @@ import { SITE_NOM } from './documents';
 import { esc } from './ui';
 
 /** Ressources pour l'enseignante : documents imprimables par chapitre et par axe (générés en PDF au build). */
-export type RessChapitre = 'fiche-prof' | 'seance' | 'projeter' | 'cartes' | 'simplifiee' | 'difficile' | 'evaluation' | 'evaluation-corrige';
+export type RessChapitre = 'fiche-prof' | 'seance' | 'projeter' | 'cartes' | 'carte-mentale' | 'carte-mentale-vierge' | 'simplifiee' | 'difficile' | 'evaluation' | 'evaluation-corrige';
 export type RessAxe = 'axe-vue' | 'axe-oral' | 'axe-taches';
 
 export const RESS_CHAPITRE: Record<RessChapitre, { label: string; icon: string; paysage?: boolean }> = {
@@ -12,6 +12,8 @@ export const RESS_CHAPITRE: Record<RessChapitre, { label: string; icon: string; 
   seance: { label: 'Déroulé de séance', icon: '⏱' },
   projeter: { label: 'Supports à projeter', icon: '📽', paysage: true },
   cartes: { label: 'Cartes à imprimer', icon: '🃏' },
+  'carte-mentale': { label: 'Carte mentale', icon: '🧠', paysage: true },
+  'carte-mentale-vierge': { label: 'Carte mentale à compléter', icon: '✍️', paysage: true },
   simplifiee: { label: 'Fiche simplifiée', icon: '🟢' },
   difficile: { label: 'Fiche approfondie', icon: '🔴' },
   evaluation: { label: 'Évaluation', icon: '📋' },
@@ -145,12 +147,55 @@ function evaluation(n: Niveau, axe: Axe, t: Theme, corrige: boolean): string {
   </article>`;
 }
 
+/**
+ * Carte mentale de la séquence (A4 paysage) : le titre au centre, 7 branches autour.
+ * `vierge` : les branches ne donnent qu'un exemple, l'élève complète sur les lignes.
+ */
+function carteMentale(n: Niveau, axe: Axe, t: Theme, vierge: boolean): string {
+  const v = t.vocab;
+  const moitie = Math.ceil(Math.min(v.length, 16) / 2);
+  const mots = (l: [string, string][]) => l.map(([es, fr]) => `<li><span lang="es">${esc(es)}</span> <span class="cm-fr">${esc(fr)}</span></li>`).join('');
+  const lignes = (k: number) => '<li class="cm-ligne"></li>'.repeat(k);
+  const branche = (pos: string, es: string, fr: string, plein: string, exemple: string, k: number) => `
+    <section class="cm-branche cm-${pos}"><h2><span lang="es">${es}</span> <small>${fr}</small></h2>
+      <ul>${vierge ? exemple + lignes(k) : plein}</ul></section>`;
+  const lis = (l: string[], lang = '') => l.map(x => `<li${lang ? ` lang="${lang}"` : ''}>${esc(x)}</li>`).join('');
+  const erreurs = (t.erreurs?.length ? t.erreurs : ERREURS_PAR_DEFAUT).slice(0, 3);
+  // Centres des cases de la grille (en %) : colonnes 1fr 0.9fr 1fr, lignes égales.
+  const X = [17.2, 50, 82.8], Y = [16.7, 50, 83.3];
+  const traits = [[0, 0], [1, 0], [2, 0], [0, 1], [2, 1], [0, 2], [1, 2], [2, 2]]
+    .map(([c, l]) => `<line x1="50" y1="50" x2="${X[c]}" y2="${Y[l]}" />`).join('');
+  return `<article class="doc doc-paysage doc-cm" style="--c:${COULEUR[n]}">
+    <div class="cm">
+      <svg class="cm-traits" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${traits}</svg>
+      ${branche('vocab1', 'Vocabulario', 'Vocabulaire', mots(v.slice(0, moitie)), mots(v.slice(0, 1)), moitie - 1)}
+      ${branche('notions', 'Lo que aprendo', 'Ce que j’apprends', lis(t.notions.slice(0, 5)), lis(t.notions.slice(0, 1)), 3)}
+      ${branche('vocab2', 'Más palabras', 'Encore des mots', mots(v.slice(moitie, moitie * 2)), mots(v.slice(moitie, moitie + 1)), Math.max(1, Math.min(moitie, v.length - moitie) - 1))}
+      ${branche('frases', 'Frases clave', 'Phrases modèles', lis(t.phrases.slice(0, 4), 'es'), lis(t.phrases.slice(0, 1), 'es'), 3)}
+      <section class="cm-centre">
+        <p class="cm-niv">${n} · Axe ${axe.n} · Chapitre ${axe.themes.indexOf(t) + 1}</p>
+        <h1 lang="es">${esc(t.titre)}</h1>
+        <p class="cm-titre-fr">${esc(t.titreFr)}</p>
+        ${vierge ? '<p class="doc-nom">Nombre : ______________ Clase : ______</p>' : ''}
+      </section>
+      ${branche('parole', 'Para hablar', 'Pour parler', lis(t.parole.slice(0, 3), 'es'), lis(t.parole.slice(0, 1), 'es'), 2)}
+      ${branche('culture', 'Cultura', 'Culture', lis(t.culture.slice(0, 3)), lis(t.culture.slice(0, 1)), 2)}
+      ${branche('ojo', '¡Ojo!', 'Attention aux erreurs', lis(erreurs), lis(erreurs.slice(0, 1)), 2)}
+      <section class="cm-branche cm-mifrase"><h2><span lang="es">Mi frase</span> <small>Ma phrase avec les mots du chapitre</small></h2>
+        <ul>${lignes(3)}</ul></section>
+    </div>
+    <p class="cm-pied">${SITE_NOM} · ${n} · ${esc(t.titreFr)}${vierge ? ' · à compléter' : ''}</p>
+  </article>`;
+}
+
 export function ressourceHtml(r: RessChapitre, n: Niveau, axe: Axe, t: Theme): string {
   switch (r) {
     case 'fiche-prof': return ficheProf(n, axe, t);
     case 'seance': return seance(n, axe, t);
     case 'projeter': return projeter(n, axe, t);
     case 'cartes': return cartes(n, axe, t);
+    case 'carte-mentale': return carteMentale(n, axe, t, false);
+    case 'carte-mentale-vierge': return carteMentale(n, axe, t, true);
     case 'simplifiee': return simplifiee(n, axe, t);
     case 'difficile': return difficile(n, axe, t);
     case 'evaluation': return evaluation(n, axe, t, false);

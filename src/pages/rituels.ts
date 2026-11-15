@@ -6,14 +6,14 @@ import { $, $$, esc, toast } from '../lib/ui';
 
 /** État du jour (météo, votes, question) : local à l'appareil, remis à zéro chaque jour, sans aucun nom d'élève. */
 const KEY = 'rincon.rituels';
-type Jour = { jour: number; fecha: string; meteo: number[]; votes: number[]; niveau: Niveau; q: number; trad: boolean };
+type Jour = { jour: number; fecha: string; meteo: number[]; votes: number[]; niveau: Niveau; q: number; trad: boolean; nivPalabra: Niveau };
 
 function lire(): Jour {
-  const neuf: Jour = { jour: dayIndex(), fecha: '', meteo: [], votes: RITUELS.emociones.map(() => 0), niveau: '5e', q: 0, trad: false };
+  const neuf: Jour = { jour: dayIndex(), fecha: '', meteo: [], votes: RITUELS.emociones.map(() => 0), niveau: '5e', q: 0, trad: false, nivPalabra: '5e' };
   try {
     const j = JSON.parse(localStorage.getItem(KEY) || 'null') as Jour | null;
     if (j && j.jour === dayIndex()) return { ...neuf, ...j };
-    if (j) neuf.niveau = j.niveau;
+    if (j) { neuf.niveau = j.niveau; neuf.nivPalabra = j.nivPalabra ?? '5e'; }
   } catch { /* ignore */ }
   return neuf;
 }
@@ -24,19 +24,21 @@ const dire = (t: string) => { if (!speak(t, state.reglages.accent ?? 'es-ES')) t
 type Rituel = { id: string; titre: string; draw: (el: HTMLElement, grand: boolean, maj: () => void) => void };
 
 function rituels(j: Jour): Rituel[] {
-  const w = palabraDelDia();
   return [
     {
       id: 'palabra', titre: 'Palabra del día',
       draw: (el, grand, maj) => {
+        const w = palabraDelDia(j.nivPalabra);
         el.innerHTML = `
-          <span class="pill">${w.niveau} · ${esc(w.theme)}</span>
+          <div class="row wrap center-row" role="group" aria-label="Niveau du mot du jour">${NIVEAUX.map(n => `<button class="btn ghost sm" data-np="${n}" aria-pressed="${n === j.nivPalabra}">${n}</button>`).join('')}</div>
+          <span class="pill">${esc(w.theme)}</span>
           <div class="${grand ? 'huge' : 'big'}" lang="es">${esc(w.es)}</div>
           ${j.trad ? `<p class="big win">${esc(w.fr)}</p>` : ''}
           <div class="row wrap center-row">
             <button class="btn ghost sm" data-act="say">🔊 Escuchar</button>
             <button class="btn sm" data-act="trad">${j.trad ? 'Cacher' : 'Révéler'} la traduction</button>
           </div>`;
+        $$('[data-np]', el).forEach(b => b.onclick = () => { j.nivPalabra = b.dataset.np as Niveau; j.trad = false; ecrire(j); maj(); });
         $('[data-act="say"]', el).onclick = () => dire(w.es);
         $('[data-act="trad"]', el).onclick = () => { j.trad = !j.trad; ecrire(j); maj(); };
       }

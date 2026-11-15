@@ -21,6 +21,7 @@
     {
      "id": "me-presento",
      "titre": "Me presento",
+     "titreFr": "Je me présente",
      "objet": "Y tú, ¿quién eres? Se présenter",
      "notions": [
       "Se présenter : nom, âge, nationalité, ville",
@@ -210,6 +211,7 @@
     {
      "id": "la-familia",
      "titre": "La familia",
+     "titreFr": "La famille",
      "objet": "Portraits de familles",
      "notions": [
       "Le vocabulaire de la famille",
@@ -399,6 +401,7 @@
     {
      "id": "a-cada-uno-su-estilo",
      "titre": "A cada uno su estilo",
+     "titreFr": "À chacun son style",
      "objet": "À chacun son style",
      "notions": [
       "Les vêtements et les couleurs",
@@ -582,6 +585,7 @@
     {
      "id": "la-rutina",
      "titre": "La rutina y los horarios",
+     "titreFr": "La routine et les horaires",
      "objet": "Oye, ¿qué hora es? L’Espagne, des horaires à part",
      "notions": [
       "Les verbes pronominaux : levantarse, ducharse, acostarse",
@@ -771,6 +775,7 @@
     {
      "id": "paisajes-y-climas",
      "titre": "Paisajes y climas",
+     "titreFr": "Paysages et climats",
      "objet": "Des espaces géographiques et des rythmes multiples unis par la langue",
      "notions": [
       "Les paysages et le climat",
@@ -938,6 +943,7 @@
     {
      "id": "el-ser-humano-y-el-paisaje",
      "titre": "Ciudades y paisajes cambian",
+     "titreFr": "Des villes et des paysages qui changent",
      "objet": "Activités humaines : impact sur les paysages naturels et urbains d’Amérique hispanophone et d’Espagne",
      "notions": [
       "Ville et campagne, nature et activités humaines",
@@ -1122,6 +1128,7 @@
     {
      "id": "el-colegio",
      "titre": "El colegio",
+     "titreFr": "Le collège",
      "objet": "Le(s) temps de l’école",
      "notions": [
       "Les matières et l’emploi du temps",
@@ -1289,6 +1296,7 @@
     {
      "id": "mil-y-una-escuelas",
      "titre": "Mil y una escuelas",
+     "titreFr": "Mille et une écoles",
      "objet": "Mil y una escuelas. Accès à l’école et variété des conditions d’enseignement",
      "notions": [
       "L’école dans le monde hispanique",
@@ -1456,6 +1464,7 @@
     {
      "id": "el-tiempo-libre",
      "titre": "El tiempo libre",
+     "titreFr": "Le temps libre",
      "objet": "Loisirs d’ici et d’ailleurs",
      "notions": [
       "Les loisirs et les jeux de société",
@@ -1640,6 +1649,7 @@
     {
      "id": "las-fiestas",
      "titre": "¿Qué celebramos hoy?",
+     "titreFr": "Que fête-t-on aujourd’hui ?",
      "objet": "¿Qué celebramos hoy? Les fêtes traditionnelles",
      "notions": [
       "Les fêtes d’Espagne et d’Amérique latine",
@@ -1807,6 +1817,7 @@
     {
      "id": "heroes-y-heroinas",
      "titre": "Héroes y heroínas",
+     "titreFr": "Héros et héroïnes",
      "objet": "Ces héros et héroïnes qui nous inspirent",
      "notions": [
       "Décrire les qualités d’une personne",
@@ -1966,6 +1977,7 @@
     {
      "id": "cuentos-y-leyendas",
      "titre": "Cuentos y leyendas",
+     "titreFr": "Contes et légendes",
      "objet": "Les contes et légendes",
      "notions": [
       "Le vocabulaire des contes (programme : la poción mágica, el veneno, misterioso…)",
@@ -2146,6 +2158,7 @@
     {
      "id": "el-espanol-en-el-mundo",
      "titre": "El español en el mundo",
+     "titreFr": "L’espagnol dans le monde",
      "objet": "L’espagnol dans le monde",
      "notions": [
       "Les pays et les langues",
@@ -2305,6 +2318,7 @@
     {
      "id": "una-lengua-mestiza",
      "titre": "Una lengua de muchas influencias",
+     "titreFr": "Une langue aux multiples influences",
      "objet": "Une langue aux influences multiples",
      "notions": [
       "Les origines des mots espagnols",
@@ -2468,6 +2482,7 @@
     {
      "id": "las-piedras-hablan",
      "titre": "Las piedras hablan",
+     "titreFr": "Les pierres parlent",
      "objet": "Las piedras hablan. Sites et monuments patrimoniaux : les marques de l’histoire",
      "notions": [
       "Le vocabulaire du patrimoine",
@@ -2644,6 +2659,7 @@
     {
      "id": "naturaleza-de-mexico",
      "titre": "Naturaleza y patrimonio de México",
+     "titreFr": "Nature et patrimoine du Mexique",
      "objet": "Nature et patrimoine mexicains",
      "notions": [
       "La nature et les paysages mexicains",
@@ -2803,6 +2819,7 @@
     {
      "id": "sabores-de-mexico",
      "titre": "Sabores de México",
+     "titreFr": "Saveurs du Mexique",
      "objet": "Saveurs du Mexique",
      "notions": [
       "Les aliments et les saveurs",
@@ -2970,6 +2987,7 @@
     {
      "id": "dia-de-muertos",
      "titre": "El Día de Muertos",
+     "titreFr": "Le Jour des morts",
      "objet": "La Fête des Morts",
      "notions": [
       "Le vocabulaire de l’ofrenda",

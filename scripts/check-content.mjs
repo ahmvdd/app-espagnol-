@@ -41,6 +41,7 @@ for (const n of NIVEAUX) {
     check(isStr(t.id) && /^[a-z0-9-]+$/.test(t.id), `${at} : "id" en minuscules et tirets`);
     check(!ids.has(t.id), `${at} : id en double`); ids.add(t.id);
     check(isStr(t.titre), `${at} : "titre" manquant`);
+    check(isStr(t.titreFr), `${at} : "titreFr" (titre en français) manquant`);
     check(isStr(t.objet), `${at} : "objet" (objet d'étude) manquant`);
     check(Array.isArray(t.notions) && t.notions.length > 0 && t.notions.every(isStr), `${at} : "notions" manquantes`);
     check(Array.isArray(t.erreurs) && t.erreurs.length >= 2 && t.erreurs.every(isStr), `${at} : au moins 2 "erreurs" fréquentes`);
@@ -94,8 +95,6 @@ check(paires(rit.meteo), 'rituels.json : "meteo" = liste de [emoji, phrase]');
 check(paires(rit.emociones), 'rituels.json : "emociones" = liste de [emoji, phrase]');
 for (const n of NIVEAUX) check(Array.isArray(rit.preguntas?.[n]) && rit.preguntas[n].length >= 5 && rit.preguntas[n].every(isStr), `rituels.json : au moins 5 preguntas pour ${n}`);
 const citas = read('citas.json') ?? {};
-check(isStr(citas.autorProf), 'citas.json : "autorProf" manquant');
-check(Array.isArray(citas.prof) && citas.prof.length >= 1 && citas.prof.every(isStr), 'citas.json : "prof" = liste de phrases');
 check(Array.isArray(citas.celebres) && citas.celebres.length >= 80 && citas.celebres.every(x => Array.isArray(x) && x.length === 2 && x.every(isStr)), 'citas.json : au moins 80 [citation, auteur]');
 const paises = read('paises.json') ?? [];
 check(paises.length >= 8 && paises.every(p => isStr(p.nom) && isStr(p.drapeau)), 'paises.json : 8 pays avec nom et drapeau');
