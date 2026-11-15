@@ -9,8 +9,9 @@ pour une professeure de collège. Stage de Souhaïla du 23/11 au 04/12/2026.
 
 ## Principes
 - Utilisable debout, une main libre, 3 clics max.
-- Hors ligne (PWA), aucun compte, aucune base de données.
-- Aucune donnée d'élève ne quitte l'appareil (localStorage) + sauvegarde fichier .json.
+- 3 espaces, chacun protégé par un mot secret (variables d'environnement Vercel, jamais dans le code).
+- Données de l'espace gardées sur l'appareil (localStorage, marche hors ligne) et synchronisées dans Neon (Postgres, UE) ; 30 versions conservées par espace.
+- Se déconnecter efface l'appareil. Sauvegarde fichier .json toujours possible en secours.
 - Positif uniquement : les points ne se retirent jamais.
 - Accessibilité : Atkinson Hyperlegible, jamais d'info par la couleur seule, bouton muet toujours visible.
 
@@ -31,6 +32,7 @@ src/
   main.ts            point d'entrée (son, projection, rappel sauvegarde, routes)
   router.ts          routeur par hash (#/herramientas ...)
   lib/storage.ts     localStorage + 10 points de retour + export/import .json
+  lib/sync.ts        synchronisation de l'espace avec /api (Neon)
   lib/sound.ts       bips doux + mode muet
   lib/speech.ts      synthèse vocale espagnole (es-ES / es-MX)
   lib/state.ts       état partagé (update / subscribe)
@@ -46,3 +48,11 @@ docs/
   ROADMAP.md         phases et checklist
   prototype/         prototype « La Clase Viva » (référence visuelle et code à porter)
 ```
+
+## Espaces et base de données (Vercel + Neon)
+1. Vercel → projet → Storage → Neon (région Frankfurt) : crée `DATABASE_URL`.
+2. Vercel → Settings → Environment Variables : voir `.env.example` (`SESSION_SECRET`, `ESPACE_n_NOM`, `ESPACE_n_SECRET`).
+3. Redéployer. Les tables se créent seules au premier appel.
+
+Connexion : un seul champ « mot secret », qui ouvre l'espace auquel il appartient (les 3 mots secrets doivent être différents).
+Fonctions serveur dans `api/` : `login` (15 essais ratés / 15 min), `logout`, `session`, `data` (GET / PUT avec détection de conflit).

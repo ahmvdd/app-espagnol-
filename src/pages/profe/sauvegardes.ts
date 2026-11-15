@@ -1,4 +1,5 @@
-import { exportBackup, readBackup, getSnapshots, restoreSnapshot, wipeAll, type BackupPreview } from '../../lib/storage';
+import { EMPTY, exportBackup, readBackup, getSnapshots, restoreSnapshot, wipeAll, type BackupPreview } from '../../lib/storage';
+import { envoyer } from '../../lib/sync';
 import { state, update, replaceState } from '../../lib/state';
 import { accueilPerso } from '../../lib/content';
 import { confirmModal } from '../../lib/modal';
@@ -65,7 +66,7 @@ export function renderSauvegardes(el: HTMLElement): void {
 
       <h2>Zone sensible</h2>
       <section class="panel">
-        <p>Efface toutes les classes, réglages et points de retour de cet appareil. Sauvegarde d’abord dans un fichier.</p>
+        <p>Efface toutes les classes, réglages et points de retour de ton espace, sur cet appareil et en ligne. Sauvegarde d’abord dans un fichier.</p>
         <button class="btn danger" id="wipe">Tout effacer</button>
       </section>`;
 
@@ -95,9 +96,11 @@ export function renderSauvegardes(el: HTMLElement): void {
 
     $('#wipe', el).onclick = async () => {
       const ok = await confirmModal('Tout effacer ?',
-        'Toutes les classes, les réglages et les points de retour de cet appareil seront supprimés. Seul un fichier de sauvegarde permettra de les récupérer.',
+        'Toutes les classes, les réglages et les points de retour de ton espace seront supprimés, sur cet appareil et en ligne. Seul un fichier de sauvegarde permettra de les récupérer.',
         'Tout effacer', { danger: true, typeToConfirm: 'EFFACER' });
       if (!ok) return;
+      replaceState(structuredClone(EMPTY));
+      await envoyer(); // l'espace en ligne est vidé aussi
       wipeAll();
       location.reload();
     };

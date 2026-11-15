@@ -24,6 +24,8 @@ import { importer } from './pages/importer';
 import { cultura } from './pages/cultura';
 import { doc } from './pages/doc';
 import { programme } from './pages/programme';
+import { espace, LIBELLES } from './pages/espace';
+import { demarrer, espaceActif, getStatut, onStatut } from './lib/sync';
 
 registerSW({ immediate: true });
 requestPersistence();
@@ -50,8 +52,20 @@ proj.onclick = () => {
   proj.setAttribute('aria-pressed', String(on));
 };
 
-// Rappel de sauvegarde (> 7 jours)
-if (shouldRemindBackup(state)) {
+// Espace connecté : pastille d'état dans l'en-tête
+const chip = $<HTMLAnchorElement>('#btn-espace');
+onStatut(s => {
+  const e = espaceActif();
+  chip.hidden = !e;
+  if (!e) return;
+  chip.textContent = (s === 'ok' ? '☁️ ' : s === 'envoi' ? '⟳ ' : '⚠️ ') + e.nom;
+  chip.title = LIBELLES[s];
+  if (s === 'deconnecte' && !location.hash.startsWith('#/espace')) location.hash = '#/espace';
+});
+demarrer();
+
+// Rappel de sauvegarde fichier (> 7 jours), inutile quand l'espace est sauvegardé en ligne
+if (!espaceActif() && shouldRemindBackup(state)) {
   const r = $('#backup-reminder');
   r.hidden = false;
   r.innerHTML = 'Pense à sauvegarder tes classes 💾 <a href="#/profe">Sauvegarder maintenant</a>';
@@ -67,5 +81,10 @@ route('/import', importer);
 route('/cultura', cultura);
 route('/doc', doc);
 route('/programme', programme);
+route('/espace', espace);
 route('/nivel', nivel); // #/nivel/5e, #/nivel/4e, #/nivel/3e
-start($('#app'));
+// Accès réservé : sans espace connecté, seules l'aide et la page de connexion sont ouvertes
+start($('#app'), path => {
+  if (path.startsWith('/espace') || path.startsWith('/aide')) return null;
+  return !espaceActif() || getStatut() === 'deconnecte' ? '/espace' : null;
+});

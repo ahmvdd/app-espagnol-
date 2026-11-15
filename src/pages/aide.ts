@@ -22,18 +22,19 @@ export const aide: View = el => {
         <li><kbd>←</kbd> <kbd>→</kbd> : changer de flashcard · <kbd>0</kbd>–<kbd>3</kbd> : niveau de voix · <kbd>Échap</kbd> : sortir</li>
       </ul>
       <h3>Sauvegarder (important)</h3>
-      <p>Les classes sont enregistrées <strong>sur cet appareil uniquement</strong>. Sur un ordinateur du collège, le profil peut être effacé :
-        fais <em>Profe → Sauvegarder dans un fichier</em> chaque semaine et garde le fichier sur une clé USB ou ton ENT.
-        Pour retrouver tes classes ailleurs : <em>Profe → Restaurer un fichier</em>.</p>
+      <p>Tes classes, ton suivi et ton carnet sont <strong>sauvegardés automatiquement dans ton espace</strong> (pastille ☁️ en haut).
+        Sur un autre appareil, connecte-toi avec le même mot secret pour tout retrouver. Hors ligne, tout reste enregistré sur l’appareil et part en ligne au retour du réseau.
+        Sur un ordinateur partagé, pense à <em>Se déconnecter</em> (pastille de l’espace) : les données de l’appareil sont alors effacées.</p>
     </section>
 
     <section class="panel prose" id="confidentialite">
       <h2>Confidentialité</h2>
-      <p>Clase Viva ne collecte aucune donnée.</p>
       <ul>
-        <li>Aucun compte, aucune base de données, aucune statistique de visite.</li>
-        <li>Les prénoms des élèves restent dans le navigateur de cet appareil (stockage local) et dans les fichiers que tu exportes toi-même.</li>
-        <li>Rien n’est envoyé sur Internet : le site fonctionne même hors ligne une fois chargé.</li>
+        <li>Chaque espace est protégé par un mot secret. Seul cet espace accède à ses données.</li>
+        <li>Les données d’un espace (classes avec les prénoms des élèves, plans de classe, suivi, carnet de bord, réglages) sont enregistrées sur l’appareil et sauvegardées dans une base de données hébergée dans l’Union européenne. Les 30 dernières versions sont conservées pour pouvoir revenir en arrière.</li>
+        <li>Seuls les prénoms sont enregistrés : pas de nom de famille, de note ni de photo d’élève.</li>
+        <li>Aucune statistique de visite, aucune publicité, aucune donnée revendue.</li>
+        <li>Se déconnecter efface les données de l’appareil (elles restent dans l’espace en ligne).</li>
         <li>Le micro (sonomètre) est analysé en direct sur l’appareil, jamais enregistré.</li>
       </ul>
     </section>

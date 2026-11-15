@@ -25,7 +25,7 @@ export const profe: View = el => {
   if (onglet === 'carnet') return renderCarnet(zone);
 
   zone.innerHTML = `
-    <p class="muted">Tout reste sur cet appareil. Pense à sauvegarder dans un fichier de temps en temps.</p>
+    <p class="muted">Tes données sont gardées sur cet appareil et sauvegardées automatiquement dans ton espace en ligne. Le fichier de sauvegarde reste possible en secours.</p>
     <h2>Mes classes</h2><div id="classes"></div>
     <h2>Réglages</h2><div id="reglages"></div>
     <h2>Sauvegardes</h2><div id="sauvegardes"></div>`;

@@ -5,8 +5,11 @@ let cleanup: void | (() => void);
 
 export const route = (path: string, view: View) => routes.set(path, view);
 
-export function start(app: HTMLElement): void {
+/** `guard` renvoie un chemin de redirection (ex. écran de connexion) ou null. */
+export function start(app: HTMLElement, guard?: (path: string) => string | null): void {
   const go = () => {
+    const redirect = guard?.(location.hash.replace(/^#/, '') || '/');
+    if (redirect && location.hash !== '#' + redirect) { location.hash = '#' + redirect; return; }
     if (typeof cleanup === 'function') cleanup();
     const path = location.hash.replace(/^#/, '') || '/';
     const base = '/' + (path.split('/')[1] ?? '').split('?')[0];
