@@ -1,17 +1,20 @@
-// Génère les PDF de chaque chapitre (cours, synthèse, exercices, corrigés) dans dist/pdf/.
+// Génère les PDF de chaque chapitre (cours, synthèse, exercices, corrigés) dans public/pdf/.
 // De vrais fichiers hébergés avec le site : téléchargement fiable partout, même là où l'impression est bloquée.
+// Vercel n'a pas de Chrome pendant le build : les PDF sont donc générés sur l'ordinateur (npm run pdf)
+// et commités avec le code. À relancer après chaque modification du contenu (src/content).
 import { createServer } from 'node:http';
-import { existsSync, mkdirSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, rmSync } from 'node:fs';
 import { extname, join, normalize } from 'node:path';
 import puppeteer from 'puppeteer-core';
 
 const DIST = new URL('../dist/', import.meta.url).pathname;
+const OUT = new URL('../public/pdf/', import.meta.url).pathname;
 const CHROME = process.env.CHROME_PATH
   ?? ['/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/usr/bin/google-chrome', '/usr/bin/chromium']
     .find(p => existsSync(p));
 if (!CHROME) {
-  console.warn('⚠ Chrome introuvable (CHROME_PATH) : PDF non générés. Le bouton « Enregistrer en PDF » sera désactivé.');
-  process.exit(0);
+  console.error('✗ Chrome introuvable : installe Google Chrome ou indique son chemin dans CHROME_PATH.');
+  process.exit(1);
 }
 
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml',
@@ -29,7 +32,8 @@ const niveaux = ['5e', '4e', '3e'];
 const docs = ['cours', 'synthese', 'exercices', 'corriges',
   'fiche-prof', 'seance', 'projeter', 'cartes', 'simplifiee', 'difficile', 'evaluation', 'evaluation-corrige'];
 const docsAxe = ['axe-vue', 'axe-oral', 'axe-taches'];
-mkdirSync(join(DIST, 'pdf'), { recursive: true });
+rmSync(OUT, { recursive: true, force: true }); // repart de zéro : pas de PDF d'un chapitre supprimé
+mkdirSync(OUT, { recursive: true });
 
 const browser = await puppeteer.launch({ executablePath: CHROME, headless: true });
 const page = await browser.newPage();
@@ -42,7 +46,7 @@ async function rendre(hash, titre, niv, paysage = false) {
   const nom = await page.title();
   if (!/^\w+_axe\d(_chapitre\d+)?_[\w-]+\.pdf$/.test(nom)) throw new Error(`Nom de fichier inattendu pour ${hash} : ${nom}`);
   await page.pdf({
-    path: join(DIST, 'pdf', nom), format: 'A4', landscape: paysage, printBackground: true,
+    path: join(OUT, nom), format: 'A4', landscape: paysage, printBackground: true,
     margin: { top: '12mm', bottom: '14mm', left: '12mm', right: '12mm' },
     displayHeaderFooter: true, headerTemplate: '<span></span>',
     footerTemplate: `<div style="font:8px sans-serif;width:100%;padding:0 12mm;display:flex;justify-content:space-between;color:#56607A">
@@ -60,4 +64,4 @@ for (const niv of niveaux) {
 }
 await browser.close();
 server.close();
-console.log(`✓ ${n} PDF générés dans dist/pdf/`);
+console.log(`✓ ${n} PDF générés dans public/pdf/ : commite-les avec le code.`);

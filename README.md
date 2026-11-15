@@ -23,6 +23,7 @@ Vite + TypeScript (sans framework) · vite-plugin-pwa · polices auto-hébergée
 npm install
 npm run dev      # http://localhost:5173 (accessible sur le réseau local avec --host)
 npm run build    # vérifie le contenu puis sortie dans dist/
+npm run pdf      # régénère les PDF dans public/pdf/ (Chrome requis) — à relancer et commiter après chaque changement de contenu
 npm test         # tests unitaires (équipes)
 ```
 

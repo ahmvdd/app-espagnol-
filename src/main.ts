@@ -85,6 +85,7 @@ route('/espace', espace);
 route('/nivel', nivel); // #/nivel/5e, #/nivel/4e, #/nivel/3e
 // Accès réservé : sans espace connecté, seules l'aide et la page de connexion sont ouvertes
 start($('#app'), path => {
-  if (path.startsWith('/espace') || path.startsWith('/aide')) return null;
+  // /doc : documents de cours (aucune donnée d'élève), ouverts aussi pour la génération des PDF
+  if (path.startsWith('/espace') || path.startsWith('/aide') || path.startsWith('/doc')) return null;
   return !espaceActif() || getStatut() === 'deconnecte' ? '/espace' : null;
 });
