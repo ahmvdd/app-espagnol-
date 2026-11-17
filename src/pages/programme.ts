@@ -4,6 +4,7 @@ import { DOCS, fichierPdf, type DocType } from '../lib/documents';
 import { state } from '../lib/state';
 import { suiviDe, statutInfo } from '../lib/suivi';
 import { $, esc } from '../lib/ui';
+import { btnAide } from '../lib/aide';
 
 const JEUX: [string, string][] = [['quiz', '❓ Quiz'], ['memory', '🃏 Memory'], ['rosco', '🔤 Rosco'], ['ahorcado', '🪢 Pendu'], ['taboo', '🚫 Taboo']];
 const classeChoisie: Record<string, string> = {};
@@ -13,7 +14,7 @@ export const programme: View = el => {
   const hashN = location.hash.split('/')[2] as Niveau | undefined;
   if (!hashN || !NIVEAUX.includes(hashN)) {
     el.innerHTML = `
-      <h1>Programme</h1>
+      <h1>Programme ${btnAide('programme')}</h1>
       <p class="muted">Programme officiel d’espagnol (LVB) : 6 axes par classe, l’axe 6 est obligatoire.</p>
       <div class="levels">${NIVEAUX.map(n => {
         const axes = AXES[n].filter(a => a.themes.length);
@@ -34,7 +35,7 @@ export const programme: View = el => {
     el.style.setProperty('--niveau', COULEUR[n]);
     el.innerHTML = `
       <div class="row head niveau-head">
-        <h1><span class="niveau-badge">${n}</span> Programme <span class="pill">🎯 ${CECRL[n]} · LVB</span></h1>
+        <h1><span class="niveau-badge">${n}</span> Programme <span class="pill">🎯 ${CECRL[n]} · LVB</span> ${btnAide('programme')}</h1>
         <nav class="row wrap" aria-label="Classes">${NIVEAUX.map(x => `<a class="btn ghost sm" href="#/programme/${x}" aria-current="${x === n ? 'page' : 'false'}">${x}</a>`).join('')}</nav>
       </div>
       <section class="panel vue-ensemble">

@@ -12,6 +12,7 @@ import { requestPersistence, shouldRemindBackup } from './lib/storage';
 import { state, update, subscribe } from './lib/state';
 import { setMuted, setVolume } from './lib/sound';
 import { $ } from './lib/ui';
+import { activerAides } from './lib/aide';
 
 import { inicio } from './pages/inicio';
 import { herramientas } from './pages/herramientas';
@@ -28,6 +29,7 @@ import { espace, LIBELLES } from './pages/espace';
 import { demarrer, espaceActif, getStatut, onStatut } from './lib/sync';
 
 registerSW({ immediate: true });
+activerAides();
 requestPersistence();
 
 // Bouton muet toujours visible

@@ -3,18 +3,21 @@ import { renderClasses } from './profe/classes';
 import { renderReglages, renderSauvegardes } from './profe/sauvegardes';
 import { renderSuivi } from './profe/suivi';
 import { renderCarnet } from './profe/carnet';
+import { renderSequences } from './profe/sequences';
 import { $ } from '../lib/ui';
+import { btnAide } from '../lib/aide';
 
 const ONGLETS = [
   { id: '', label: '👥 Classes et sauvegardes' },
   { id: 'suivi', label: '📈 Suivi des chapitres' },
-  { id: 'carnet', label: '📓 Carnet de bord' }
+  { id: 'carnet', label: '📓 Carnet de bord' },
+  { id: 'sequences', label: '🗂 Séquences' }
 ];
 
 export const profe: View = el => {
   const onglet = location.hash.split('/')[2]?.split('?')[0] ?? '';
   el.innerHTML = `
-    <h1>Profe</h1>
+    <h1>Profe ${btnAide('profe')}</h1>
     <nav class="row wrap onglets" aria-label="Espace Profe">
       ${ONGLETS.map(o => `<a class="btn ghost sm" href="#/profe${o.id ? '/' + o.id : ''}" aria-current="${o.id === onglet ? 'page' : 'false'}">${o.label}</a>`).join('')}
     </nav>
@@ -23,6 +26,7 @@ export const profe: View = el => {
 
   if (onglet === 'suivi') return renderSuivi(zone);
   if (onglet === 'carnet') return renderCarnet(zone);
+  if (onglet === 'sequences') return renderSequences(zone);
 
   zone.innerHTML = `
     <p class="muted">Tes données sont gardées sur cet appareil et sauvegardées automatiquement dans ton espace en ligne. Le fichier de sauvegarde reste possible en secours.</p>

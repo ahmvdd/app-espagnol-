@@ -1,6 +1,7 @@
 import type { View } from '../router';
 import { SOS } from '../lib/content';
 import { $$, esc } from '../lib/ui';
+import { btnAide } from '../lib/aide';
 
 /** Idée affichée par situation : garde la position le temps de la séance. */
 const idx = SOS.map(() => 0);
@@ -8,7 +9,7 @@ const idx = SOS.map(() => 0);
 export const sos: View = el => {
   const render = () => {
     el.innerHTML = `
-      <h1>SOS</h1>
+      <h1>SOS ${btnAide('sos')}</h1>
       <p class="muted">Une idée tout de suite, un clic pour la lancer.</p>
       <div class="sos-grid">
         ${SOS.map((s, i) => {

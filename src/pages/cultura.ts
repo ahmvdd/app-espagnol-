@@ -6,6 +6,7 @@ import { state } from '../lib/state';
 import { speak } from '../lib/speech';
 import { toggleFullscreen, exitFullscreen } from '../lib/fullscreen';
 import { $, $$, esc, toast } from '../lib/ui';
+import { btnAide } from '../lib/aide';
 
 type Fiesta = { id: string; nom: string; pays: string; quand: string; icon: string; texte: string[]; vocab: [string, string][]; activite: string; niveaux: string[] };
 type Foto = { id: string; fichier: string; lieu: string; pays: string; quoi: string; preguntas: string[]; vocab: [string, string][]; credit: { auteur: string; licence: string; source: string } };
@@ -24,7 +25,7 @@ export const cultura: View = el => {
   const [, , onglet = '', id] = location.hash.split('/');
   let stop: void | (() => void);
   el.innerHTML = `
-    <h1>Culture</h1>
+    <h1>Culture ${btnAide('culture')}</h1>
     <nav class="row wrap onglets" aria-label="Culture">
       ${ONGLETS.map(o => `<a class="btn ghost sm" href="#/cultura${o.id ? '/' + o.id : ''}" aria-current="${o.id === onglet ? 'page' : 'false'}">${o.label}</a>`).join('')}
     </nav>

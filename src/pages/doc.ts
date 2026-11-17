@@ -24,6 +24,8 @@ export const doc: View = el => {
   if (!html) { el.innerHTML = '<p>Document introuvable.</p>'; return; }
   document.title = nom;
   document.documentElement.classList.add('doc-seul');
-  el.innerHTML = `<div class="print-area doc-ecran">${html}</div>`;
+  // Croix de retour (masquée à l'impression et dans les PDF générés)
+  const retour = (n && id && !axeN) ? `#/nivel/${n}/${id}` : `#/programme/${n}`;
+  el.innerHTML = `<a class="btn retour-doc" href="${retour}" aria-label="Revenir au chapitre">✕ Retour</a><div class="print-area doc-ecran">${html}</div>`;
   return () => { document.documentElement.classList.remove('doc-seul'); document.title = 'Clase Viva'; };
 };

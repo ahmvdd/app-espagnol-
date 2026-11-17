@@ -2,20 +2,21 @@ import type { View } from '../router';
 import { TOOLS, toolCard } from '../tools';
 import { $ } from '../lib/ui';
 import { toggleFullscreen, exitFullscreen } from '../lib/fullscreen';
+import { btnAide } from '../lib/aide';
 
 export const herramientas: View = el => {
   const [id, query = ''] = (location.hash.split('/')[2] ?? '').split('?');
   const tool = TOOLS.find(t => t.id === id);
 
   if (!tool) {
-    el.innerHTML = `<h1>Outils</h1><div class="tools">${TOOLS.map(t => toolCard(t)).join('')}</div>`;
+    el.innerHTML = `<h1>Outils ${btnAide('outils')}</h1><div class="tools">${TOOLS.map(t => toolCard(t)).join('')}</div>`;
     return;
   }
 
   el.innerHTML = `
     <div class="row head">
       <a class="btn ghost sm" href="#/herramientas">← Outils</a>
-      <h1>${tool.icon} ${tool.nom}</h1>
+      <h1>${tool.icon} ${tool.nom} ${btnAide(tool.id)}</h1>
       <button class="btn ghost sm" id="fs">⛶ Plein écran</button>
     </div>
     <section class="panel stage" id="stage">

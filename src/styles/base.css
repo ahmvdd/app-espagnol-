@@ -761,3 +761,101 @@ html.doc-seul .doc-ecran{display:block;background:#fff;max-width:210mm;margin:0 
 .meteo-ico{font-size:4.5rem;line-height:1}
 .plateau-action .big,.ruta-action .big{font-size:clamp(1.1rem,2.2vw,1.5rem)}
 .plateau-action .carte-jeu .big{font-size:clamp(1.25rem,2.6vw,1.8rem)}
+
+/* Fenêtres plein écran (aperçu, diaporama) : croix toujours visible */
+.overlay{position:fixed;inset:0;z-index:40;background:var(--paper);color:var(--ink);overflow:auto;display:flex;flex-direction:column;align-items:stretch;padding:0 0 2rem}
+html.overlay-ouvert{overflow:hidden}
+.overlay-x{position:fixed;top:max(.6rem,env(safe-area-inset-top));right:.8rem;z-index:5;width:3rem;height:3rem;border-radius:50%;border:2px solid var(--cobalt);background:var(--surface);color:var(--cobalt);font:800 1.4rem/1 var(--body);cursor:pointer;box-shadow:0 2px 10px rgb(0 0 0 / .2)}
+.overlay-x:hover{background:var(--cobalt);color:var(--on-cobalt)}
+.overlay.apercu{background:var(--tile)}
+.overlay .apercu-barre{position:sticky;top:0;z-index:2;display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem .8rem;padding:.6rem 4.2rem .6rem 1rem;background:var(--tile);border-bottom:1px solid var(--line)}
+.apercu-titre{font-size:1rem}
+.apercu-aide-d summary{list-style:none;cursor:pointer;width:2rem;height:2rem;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-weight:800;color:var(--muted)}
+.apercu-aide-d summary::-webkit-details-marker{display:none}
+.apercu-aide-d[open]{flex-basis:100%}
+.apercu-aide-d[open] summary{margin:0 auto}
+.overlay .apercu-page{margin-top:1rem}
+@media (max-width:600px){.overlay .apercu-page{padding:5mm;border-radius:0}.apercu-titre{flex-basis:100%;text-align:center;font-size:.9rem}}
+@media print{.overlay-x,.retour-doc{display:none!important}}
+.retour-doc{position:fixed;top:.8rem;right:.8rem;z-index:5}
+
+/* Modes d'emploi : « ? » discret */
+.aide-btn{display:inline-grid;place-items:center;width:1.55rem;height:1.55rem;margin-left:.35rem;vertical-align:middle;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);color:var(--muted);font:700 .85rem/1 var(--body);cursor:pointer;opacity:.75}
+.aide-btn:hover,.aide-btn:focus-visible{opacity:1;border-color:var(--cobalt);color:var(--cobalt)}
+.game-stage:fullscreen .aide-btn,.stage:fullscreen .aide-btn{display:none}
+.aide-modal{position:relative;max-width:34rem}
+.aide-modal ol{padding-left:1.3rem;line-height:1.5}
+.aide-modal li{margin:.3rem 0}
+.aide-x{position:absolute;top:.6rem;right:.6rem;width:2.4rem;height:2.4rem;font-size:1.1rem}
+.aide-astuce{background:var(--tile);border-radius:10px;padding:.6rem .8rem}
+
+/* Diaporamas : diapo 16/9 qui s'adapte à son conteneur */
+.diapo-scene,.ed-vue{container-type:inline-size}
+.diapo-cv{position:relative;aspect-ratio:16/9;width:100%;box-sizing:border-box;background:#fff;color:#16203B;border:.5cqi solid var(--c);border-top-width:2.2cqi;border-radius:2cqi;padding:4cqi 6cqi 5cqi;display:flex;flex-direction:column;justify-content:center;gap:1.5cqi;overflow:hidden;text-align:left}
+.diapo-cv h2{font:800 5cqi/1.1 'Bricolage Grotesque Variable',sans-serif;color:var(--c);margin:0}
+.diapo-cv ul{margin:0;padding-left:4cqi;font-size:3cqi;line-height:1.35}
+.diapo-cv li{margin:.4cqi 0}
+.diapo-cv p{margin:0;font-size:3.2cqi;line-height:1.35}
+.diapo-cv .diapo-ico{font-size:7cqi;line-height:1}
+.diapo-cv.diapo-grand{align-items:center;text-align:center}
+.diapo-cv.diapo-grand h2{font-size:8cqi}
+.diapo-cv.diapo-grand p{font-size:3.8cqi;color:#56607A}
+.diapo-cv .diapo-rep{font-weight:800;color:#3F7A26;border-top:2px dashed #3F7A26;padding-top:1cqi}
+.diapo-cv .diapo-rep.cachee{color:#8a93a8;border-color:#C5CBDB;font-weight:400;font-style:italic;font-size:2.2cqi}
+.diapo-cv .diapo-pied{position:absolute;bottom:1.5cqi;right:3cqi;font-size:1.6cqi;color:#8a93a8}
+/* Impression : une diapo par page A4 paysage */
+.doc-paysage .diapo-cv{page:paysage;aspect-ratio:auto;height:178mm;border-width:2mm;border-top-width:8mm;border-radius:6mm;padding:12mm 18mm;break-after:page;margin-bottom:6mm;gap:5mm}
+.doc-paysage .diapo-cv h2{font-size:30pt}
+.doc-paysage .diapo-cv.diapo-grand h2{font-size:44pt}
+.doc-paysage .diapo-cv ul,.doc-paysage .diapo-cv p{font-size:20pt}
+.doc-paysage .diapo-cv .diapo-ico{font-size:40pt}
+.doc-paysage .diapo-cv .diapo-pied{font-size:9pt;bottom:4mm;right:6mm}
+.doc-paysage .diapo-cv .diapo-rep{font-size:16pt}
+
+/* Présentation */
+.overlay.diapo-presentation{background:#0E1325;justify-content:center;align-items:center;padding:1rem}
+.diapo-presentation .diapo-scene{width:min(100%,calc((100vh - 5.5rem) * 16 / 9));cursor:pointer}
+.diapo-nav{display:flex;gap:.6rem;align-items:center;justify-content:center;margin-top:.8rem}
+.diapo-presentation .diapo-nav .btn.ghost{background:#fff}
+.diapo-presentation:fullscreen .diapo-nav{opacity:.25}
+.diapo-presentation:fullscreen .diapo-nav:hover{opacity:1}
+
+/* Page chapitre : cartes des deux diaporamas */
+.diapo-cartes{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem}
+.diapo-carte{border:2px solid var(--line);border-radius:14px;padding:1rem;display:flex;flex-direction:column;gap:.4rem}
+.diapo-carte h3{margin:0}
+.diapo-carte p{margin:0}
+
+/* Éditeur de diaporama */
+.ed-liste{display:flex;flex-direction:column;gap:1rem;padding:1rem;max-width:1200px;width:100%;margin:0 auto}
+.ed-diapo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:1rem;align-items:start}
+@media (max-width:800px){.ed-diapo{grid-template-columns:1fr}}
+.ed-champs{display:flex;flex-direction:column;gap:.4rem}
+.ed-champs .field{display:flex;flex-direction:column;gap:.2rem;font-weight:700;font-size:.9rem}
+.ed-champs input,.ed-champs textarea{font:inherit;font-weight:400;width:100%;box-sizing:border-box}
+.ed-tete{justify-content:space-between;align-items:center}
+.ed-ligne{gap:.5rem;align-items:flex-end}
+.ed-ligne .ed-ico{flex:0 0 5rem}
+.ed-ligne .field:not(.ed-ico){flex:1}
+.gemini-prompt{white-space:pre-wrap;background:#F3F5FB;border:1px solid #D3D9EA;border-radius:8px;padding:4mm;font-size:9.5pt;line-height:1.45}
+
+/* Séquences */
+.seq-form{max-width:46rem}
+.seq-form .field{display:flex;flex-direction:column;gap:.35rem;margin:.6rem 0;font-weight:700}
+.seq-liste{display:flex;flex-direction:column;gap:.6rem}
+.seq-carte{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.6rem}
+.seq-barre{gap:.5rem;align-items:center;margin-bottom:.6rem}
+.seq-ed{border-bottom:1px dashed var(--line);padding:0 .1rem;border-radius:3px;outline-offset:2px}
+.seq-ed:hover{background:var(--tile)}
+.seq-ed:focus{background:var(--surface);outline:2px solid var(--ochre)}
+.seq-seance h3{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.seq-etapes{padding-left:1.3rem;display:flex;flex-direction:column;gap:.45rem}
+.seq-etapes li{line-height:1.5}
+.seq-min{width:3.6rem;min-height:32px;padding:.15rem .3rem}
+.seq-notes{display:block;min-height:3rem}
+.seq-cta .btn{align-self:flex-start}
+.doc-table{width:100%;border-collapse:collapse;margin:2mm 0}
+.doc-table td{border-bottom:1px solid #D3D9EA;padding:1.2mm 2mm;vertical-align:top}
+.doc-min{white-space:nowrap;font-weight:700;color:var(--c);width:16mm}
+.ed-champs input[type=checkbox]{width:auto;margin:0}
+.ed-champs label.inline{display:flex;flex-direction:row;align-items:center;gap:.4rem;font-weight:400}

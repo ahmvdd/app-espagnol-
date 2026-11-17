@@ -26,7 +26,20 @@ export type Seance = {
   id: string; date: string; classeId: string; chapId: string; fait: string;
   humeur: 0 | 1 | 2; objectif: 'oui' | 'partie' | 'non'; bien: string; ameliorer: string; revoir: boolean;
 };
+/** Séquence : plan d'un chapitre séance par séance (modifiable). */
+export type Etape = { min: number; texte: string; lien?: string };
+export type SeanceSeq = { titre: string; objectif: string; etapes: Etape[]; devoirs: string };
+export type Sequence = {
+  id: string; creeLe: string; niveau: '5e' | '4e' | '3e'; chapId: string; classeId?: string;
+  nbSeances: number; duree: number; titre: string; seances: SeanceSeq[]; notes: string;
+};
+/** Diapositive modifiable : `corps` = une ligne par puce ; `reponse` = réponse cachée d'une mini-question. */
+export type Diapo = { ico?: string; titre: string; corps: string; reponse?: string; note?: string; grand?: boolean };
 export type Data = {
+  /** Séquences créées par l'enseignante. */
+  sequences: Sequence[];
+  /** Diaporamas modifiés, par clé « niveau:chapitre:apercu|synthese » (absent = version d'origine). */
+  diapos: Record<string, Diapo[]>;
   classes: Classe[]; plans: Plan[]; reglages: Reglages;
   /** suivi[classeId][chapId] */
   suivi: Record<string, Record<string, SuiviChapitre>>;
@@ -35,6 +48,8 @@ export type Data = {
 export type Snapshot = { date: number; data: string };
 
 export const EMPTY: Data = {
+  sequences: [],
+  diapos: {},
   classes: [],
   plans: [],
   suivi: {},

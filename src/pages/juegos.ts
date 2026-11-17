@@ -6,6 +6,7 @@ import { NIVEAUX, AXES, THEMES, dernierTheme } from '../lib/content';
 import { toggleFullscreen, exitFullscreen } from '../lib/fullscreen';
 import { confirmModal } from '../lib/modal';
 import { $, $$, esc } from '../lib/ui';
+import { btnAide } from '../lib/aide';
 
 /** Réglages et scores gardés le temps de la séance, d'un jeu à l'autre. */
 const session: { niveau: Niveau; themeId: string; nbEquipes: number; teams: Team[] } = {
@@ -26,7 +27,7 @@ export const juegos: View = el => {
   const game = GAMES.find(g => g.id === id);
 
   if (!game) {
-    el.innerHTML = `<h1>Jeux</h1>
+    el.innerHTML = `<h1>Jeux ${btnAide('jeux')}</h1>
       <p class="muted">Choisis un jeu, puis le niveau, le thème et les équipes. Les scores sont gardés d’un jeu à l’autre pendant la séance.</p>
       ${qn ? `<p class="pill">Thème choisi : ${session.niveau} · ${esc(THEMES[session.niveau].find(t => t.id === session.themeId)?.titreFr)}</p>` : ''}
       <div class="tools">${GAMES.map(gameCard).join('')}</div>`;
@@ -44,7 +45,7 @@ export const juegos: View = el => {
     el.innerHTML = `
       <div class="row head">
         <a class="btn ghost sm" href="#/juegos">← Jeux</a>
-        <h1>${game.icon} ${esc(game.nom)}</h1>
+        <h1>${game.icon} ${esc(game.nom)} ${btnAide(game.id)}</h1>
         <span></span>
       </div>
       <section class="panel setup">
@@ -82,7 +83,7 @@ export const juegos: View = el => {
     el.innerHTML = `
       <div class="row head">
         <button class="btn ghost sm" id="back">← Réglages</button>
-        <h1>${game.icon} ${esc(game.nom)} <span class="es">· ${session.niveau}${game.sansTheme ? '' : ` · ${esc(theme.titreFr)}`}</span></h1>
+        <h1>${game.icon} ${esc(game.nom)} <span class="es">· ${session.niveau}${game.sansTheme ? '' : ` · ${esc(theme.titreFr)}`}</span> ${btnAide(game.id)}</h1>
         <button class="btn ghost sm" id="fs">⛶ Plein écran</button>
       </div>
       <section class="panel stage game-stage" id="stage">

@@ -8,6 +8,7 @@ import { renderRituels } from './rituels';
 import { ouvrirBilan } from './profe/bilan';
 import { TOOLS, toolCard } from '../tools';
 import { $, $$, esc } from '../lib/ui';
+import { btnAide } from '../lib/aide';
 
 /** « Otra cita » : décalage gardé pour la journée sur cet appareil. */
 const KEY_CITA = 'rincon.cita';
@@ -75,15 +76,15 @@ export const inicio: View = el => {
       <div id="cita" aria-live="polite">${cita(lireDecalage())}</div>
     </section>
 
-    <h2>Rituels du jour</h2>
+    <h2>Rituels du jour ${btnAide('rituels')}</h2>
     <div id="rituels"></div>
 
     <section class="panel star">
-      <h2>⏱ J’ai… minutes</h2>
+      <h2>⏱ J’ai… minutes ${btnAide('minutes')}</h2>
       <div id="etapes"></div>
     </section>
 
-    <h2>Raccourcis</h2>
+    <h2>Raccourcis ${btnAide('raccourcis')}</h2>
     <div class="tools">
       ${raccourcis.map(t => toolCard(t)).join('')}
       <a class="panel tool-card" href="#/profe/carnet" id="raccourci-bilan"><span class="ico" aria-hidden="true">📝</span><strong>Bilan de séance</strong><span class="muted small">Moins d’une minute, en fin de cours</span></a>

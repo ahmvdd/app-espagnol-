@@ -1,6 +1,7 @@
 import type { Axe, Niveau, Theme } from '../content/types';
 import { COULEUR, CECRL, GRAMMAIRE } from './content';
 import { esc } from './ui';
+import { ouvrirOverlay } from './overlay';
 
 /** Hasard reproductible : la fiche et son corrigé tirent toujours les mêmes éléments. */
 function rng(seed: string) {
@@ -125,28 +126,21 @@ export function imprimer(html: string): void {
   setTimeout(() => { if (zone.isConnected) nettoyer(); }, 60_000);
 }
 
-/** Aperçu à l'écran : « Imprimer » (boîte d'impression) et « Enregistrer en PDF » (vrai fichier). */
+const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+
+/** Aperçu à l'écran : « Imprimer » (boîte d'impression) et « PDF » (vrai fichier). La croix ✕ ou le retour du téléphone ferment. */
 export function apercu(titre: string, html: string, pdf?: string): void {
-  const zone = document.createElement('div');
-  zone.className = 'rituel-plein apercu';
-  zone.setAttribute('role', 'dialog');
-  zone.setAttribute('aria-modal', 'true');
-  zone.setAttribute('aria-label', titre);
-  zone.innerHTML = `
+  const { zone } = ouvrirOverlay('apercu', titre, `
     <div class="apercu-barre">
-      <div class="row wrap"><strong>${esc(titre)}</strong>
-        <button class="btn" data-print>🖨 Imprimer</button>
-        ${pdf ? `<a class="btn" data-pdf href="pdf/${pdf}" download="${pdf}" target="_blank" rel="noopener">⬇️ Enregistrer en PDF</a>` : ''}
-        <button class="btn ghost" data-close>✕ Fermer</button></div>
-      <p class="small apercu-aide" data-aide>Rien ne s’ouvre ? Certaines applications (WhatsApp, Messenger…) et le site installé sur iPhone bloquent l’impression :
-        ouvre le site dans Chrome, Safari ou Edge, ou utilise « Enregistrer en PDF » puis imprime le fichier.</p>
+      <strong class="apercu-titre">${esc(titre)}</strong>
+      <div class="row wrap center-row">
+        <button class="btn sm" data-print>🖨 Imprimer</button>
+        ${pdf ? `<a class="btn sm" data-pdf href="pdf/${pdf}" ${IOS ? '' : `download="${pdf}"`} target="_blank" rel="noopener">⬇️ PDF</a>` : ''}
+        <details class="apercu-aide-d"><summary aria-label="Aide pour imprimer">?</summary>
+          <p class="small apercu-aide" data-aide>« Imprimer » ouvre l’impression du navigateur. « PDF » télécharge le fichier, à imprimer ou envoyer. Rien ne s’ouvre ? Certaines applications (WhatsApp, Messenger…) et le site installé sur iPhone bloquent l’impression : ouvre le site dans Chrome, Safari ou Edge, ou utilise « PDF ». Pour revenir : la croix ✕ en haut à droite, ou le bouton retour.</p></details>
+      </div>
     </div>
-    <div class="apercu-page">${html}</div>`;
-  document.body.append(zone);
-  const fermer = () => { zone.remove(); removeEventListener('keydown', key, true); };
-  const key = (e: KeyboardEvent) => { if (e.key === 'Escape') { e.stopPropagation(); fermer(); } };
-  addEventListener('keydown', key, true);
-  zone.querySelector<HTMLButtonElement>('[data-close]')!.onclick = fermer;
+    <div class="apercu-page">${html}</div>`);
   const p = zone.querySelector<HTMLButtonElement>('[data-print]')!;
   p.onclick = () => imprimer(html);
   const lien = zone.querySelector<HTMLAnchorElement>('[data-pdf]');
@@ -156,7 +150,7 @@ export function apercu(titre: string, html: string, pdf?: string): void {
     lien.removeAttribute('href');
     lien.classList.add('desactive');
     lien.setAttribute('aria-disabled', 'true');
-    lien.textContent = '⬇️ PDF indisponible hors ligne';
+    lien.textContent = '⬇️ PDF hors ligne';
     zone.querySelector<HTMLElement>('[data-aide]')!.textContent = 'Le fichier PDF se télécharge seulement avec Internet. Hors ligne : « Imprimer », puis choisis « Enregistrer au format PDF » comme imprimante.';
   });
   p.focus();
