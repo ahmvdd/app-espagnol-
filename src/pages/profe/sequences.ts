@@ -40,6 +40,7 @@ export function renderSequences(el: HTMLElement): void {
   let chap = THEMES[niveau].some(t => t.id === q.get('t')) ? q.get('t')! : dernierTheme(niveau).id;
   if (q.get('n')) cid = state.classes.find(c => c.niveau === niveau)?.id ?? '';
   let nb = 5, duree = 55;
+  let filtre: 'tous' | Niveau = 'tous';
 
   const enregistrer = (s: Sequence) => update(d => { const i = d.sequences.findIndex(x => x.id === s.id); if (i >= 0) d.sequences[i] = s; });
 
@@ -61,14 +62,25 @@ export function renderSequences(el: HTMLElement): void {
         </label>
         <div class="field">Nombre de séances <div class="row wrap" role="group" aria-label="Nombre de séances">${NB_SEANCES.map(k => `<button class="btn ghost sm" data-nb="${k}" aria-pressed="${k === nb}">${k}</button>`).join('')}</div></div>
         <div class="field">Durée d’une séance <div class="row wrap" role="group" aria-label="Durée">${DUREES_SEANCE.map(k => `<button class="btn ghost sm" data-d="${k}" aria-pressed="${k === duree}">${k} min</button>`).join('')}</div></div>
-        <button class="btn bigbtn" id="creer">✨ Créer la séquence</button>
+        <button class="btn bigbtn" id="creer">Créer la séquence</button>
       </section>
       <h2>Mes séquences</h2>
-      ${state.sequences.length ? `<div class="seq-liste">${[...state.sequences].reverse().map(s => `
-        <div class="panel seq-carte">
-          <div><strong>${esc(s.titre)}</strong><br><span class="muted small">${s.nbSeances} séances · ${s.duree} min${nomClasse(s.classeId) ? ` · ${esc(nomClasse(s.classeId)!)}` : ''} · créée le ${new Date(s.creeLe).toLocaleDateString('fr-FR')}</span></div>
-          <div class="row wrap"><button class="btn sm" data-ouvrir="${s.id}">Ouvrir</button><button class="btn ghost sm danger" data-suppr="${s.id}">Supprimer</button></div>
-        </div>`).join('')}</div>` : '<p class="muted">Aucune séquence pour l’instant : crée la première avec le formulaire.</p>'}`;
+      ${state.sequences.length ? `
+        <div class="row wrap" role="group" aria-label="Filtrer par niveau">
+          ${(['tous', ...NIVEAUX] as const).map(f => `<button class="btn ghost sm" data-filtre="${f}" aria-pressed="${f === filtre}">${f === 'tous' ? 'Tous les niveaux' : f} <span class="muted small">(${f === 'tous' ? state.sequences.length : state.sequences.filter(s => s.niveau === f).length})</span></button>`).join('')}
+        </div>
+        ${NIVEAUX.filter(nv => (filtre === 'tous' || filtre === nv) && state.sequences.some(s => s.niveau === nv)).map(nv => `
+          <section class="seq-niveau">
+            <h3><span class="niveau-badge" style="background:${COULEUR[nv]}">${nv}</span> ${state.sequences.filter(s => s.niveau === nv).length} séquence(s)</h3>
+            <div class="seq-liste">${state.sequences.filter(s => s.niveau === nv)
+              .sort((a, b) => (nomClasse(a.classeId) ?? '').localeCompare(nomClasse(b.classeId) ?? '') || b.creeLe.localeCompare(a.creeLe)).map(s => `
+              <div class="panel seq-carte">
+                <div><strong>${esc(s.titre)}</strong><br><span class="muted small">${nomClasse(s.classeId) ? `Classe ${esc(nomClasse(s.classeId)!)} · ` : ''}${s.nbSeances} séances · ${s.duree} min · créée le ${new Date(s.creeLe).toLocaleDateString('fr-FR')}</span></div>
+                <div class="row wrap"><button class="btn sm" data-ouvrir="${s.id}">Ouvrir</button><button class="btn ghost sm danger" data-suppr="${s.id}">Supprimer</button></div>
+              </div>`).join('')}</div>
+          </section>`).join('') || '<p class="muted">Aucune séquence pour ce niveau.</p>'}` : '<p class="muted">Aucune séquence pour l’instant : crée la première avec le formulaire.</p>'}`;
+
+    $$('[data-filtre]', el).forEach(b => b.onclick = () => { filtre = b.dataset.filtre as typeof filtre; liste(); });
 
     $$('[data-c]', el).forEach(b => b.onclick = () => {
       cid = b.dataset.c!;

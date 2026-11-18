@@ -42,7 +42,7 @@ export const programme: View = el => {
         <p class="big">${axes.length} axes · ${chapitres.length} chapitres${c ? ` · ✅ ${vus} vu${vus > 1 ? 's' : ''} avec ${esc(c.nom || 'la classe')}` : ''}</p>
         ${c ? `<div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="${chapitres.length}" aria-valuenow="${vus}" aria-label="Chapitres vus"><i style="width:${chapitres.length ? (vus / chapitres.length) * 100 : 0}%"></i></div>` : ''}
         ${classes.length > 1 ? `<label class="row small">Suivi de la classe <select id="classe">${classes.map(x => `<option value="${x.id}" ${x === c ? 'selected' : ''}>${esc(x.nom || 'Sans nom')}</option>`).join('')}</select></label>` : ''}
-        ${!classes.length ? `<p class="muted small">Crée une classe de ${n} dans <a href="#/profe">Profe</a> pour suivre les chapitres vus.</p>` : `<p class="small"><a href="#/profe/suivi">Ouvrir le suivi détaillé</a></p>`}
+        ${!classes.length ? `<p class="muted small">Crée une classe de ${n} dans <a href="#/profe">Prof</a> pour suivre les chapitres vus.</p>` : `<p class="small"><a href="#/profe/suivi">Ouvrir le suivi détaillé</a></p>`}
       </section>
       ${axes.map(a => `
         <section class="prog-axe ${a.obligatoire ? 'oblig' : ''}">
@@ -58,7 +58,7 @@ export const programme: View = el => {
               <p class="muted small">${esc(t.objet)}</p>
               <ul class="prog-ressources">
                 ${(Object.keys(DOCS) as DocType[]).map(d => `<li><a href="#/nivel/${n}/${t.id}?doc=${d}">${DOCS[d].icon} ${DOCS[d].label}${DOCS[d].eleve ? '' : ' (enseignante)'}</a></li>`).join('')}
-                <li class="large"><a class="prog-diapos" href="#/nivel/${n}/${t.id}#diaporamas">🎞 Diaporamas · aperçu, synthèse, Gemini</a></li>
+                <li class="large"><a class="prog-diapos" href="#/nivel/${n}/${t.id}#diaporamas">🎞 Diaporamas · aperçu, synthèse, retouches</a></li>
                 <li class="large"><a href="#/nivel/${n}/${t.id}#ressources">🧑‍🏫 Ressources pour l’enseignante</a></li>
               </ul>
               <p class="small prog-jeux">🎲 ${JEUX.map(([g, l]) => `<a href="#/juegos/${g}?n=${n}&t=${t.id}">${l}</a>`).join('')}</p>

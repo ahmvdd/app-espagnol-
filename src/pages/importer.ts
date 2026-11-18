@@ -33,6 +33,6 @@ export const importer: View = el => {
       location.hash = '#/profe';
     };
   }).catch((e: Error) => {
-    el.innerHTML = `<h1>Importer une classe</h1><p class="big">${esc(e.message)}</p><a class="btn" href="#/profe">Aller dans Profe</a>`;
+    el.innerHTML = `<h1>Importer une classe</h1><p class="big">${esc(e.message)}</p><a class="btn" href="#/profe">Aller dans Prof</a>`;
   });
 };

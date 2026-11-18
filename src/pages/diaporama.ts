@@ -138,7 +138,7 @@ export function blocDiaporamas(n: Niveau, axe: Axe, t: Theme): string {
         <button class="btn ghost sm" data-diapo="${type}" data-a="edit">✏️ Modifier</button>
         <button class="btn ghost sm" data-diapo="${type}" data-a="print">🖨 Imprimer / PDF</button>
         <button class="btn ghost sm" data-diapo="${type}" data-a="pptx">⬇️ PowerPoint</button>
-        <button class="btn ghost sm" data-diapo="${type}" data-a="gemini">✨ Générer avec Gemini</button>
+        <button class="btn ghost sm" data-diapo="${type}" data-a="gemini">🪄 Retouches</button>
       </div>
     </div>`;
   }).join('')}</div>`;
@@ -160,50 +160,45 @@ export function brancherDiaporamas(el: HTMLElement, n: Niveau, axe: Axe, t: Them
   });
 }
 
-/** Génération avec Gemini, directement dans le site (la clé reste sur le serveur). */
+/** « Retouches » : une nouvelle version proposée par l'IA (Gemini, côté serveur), sans quitter le site. */
 export function genererGemini(n: Niveau, axe: Axe, t: Theme, type: TypeDiapo, apres: () => void): void {
   const info = DIAPOS[type];
   let resultat: Diapo[] | null = null, enCours = false;
-  const { zone, fermer } = ouvrirOverlay('diapo-editeur', `Générer le diaporama ${info.label} avec Gemini`, `
-    <div class="apercu-barre"><strong class="apercu-titre">✨ ${info.ico} ${info.label} avec Gemini · ${n} · ${esc(t.titreFr)}</strong></div>
+  const { zone, fermer } = ouvrirOverlay('diapo-editeur', `Retouches du diaporama ${info.label}`, `
+    <div class="apercu-barre"><strong class="apercu-titre">🪄 Retouches · ${info.ico} ${info.label} · ${n} · ${esc(t.titreFr)}</strong></div>
     <div class="ed-liste gem" id="gem"></div>`, apres);
   const z = $('#gem', zone);
 
-  const formulaire = (erreur = '', sansCle = false) => {
+  const formulaire = (erreur = '') => {
     z.innerHTML = `
       <section class="panel gem-form">
         <p><strong>${info.moment}.</strong> ${info.role}</p>
         <label class="field">Une demande en plus ? <span class="muted small">(facultatif)</span>
           <textarea id="envie" rows="3" placeholder="Ex. : plus d’images, une diapo sur Frida Kahlo, des phrases plus simples…"></textarea></label>
-        <p class="muted small">Gemini part du contenu du chapitre. Le résultat s’affiche ici : tu choisis de l’utiliser ou non, puis tu peux tout modifier.</p>
+        <p class="muted small">Une nouvelle version est préparée à partir du contenu du chapitre. Le résultat s’affiche ici : tu choisis de l’utiliser ou non, puis tu peux tout modifier.</p>
         ${erreur ? `<p class="gem-erreur" role="alert">${esc(erreur)}</p>` : ''}
-        ${sansCle ? `<p class="small">En attendant, tu peux copier la consigne et l’utiliser toi-même : <button class="btn ghost sm" id="copier">📋 Copier la consigne</button></p>` : ''}
-        <button class="btn bigbtn" id="generer">✨ Générer</button>
+        <button class="btn bigbtn" id="generer">🪄 Lancer les retouches</button>
       </section>`;
     $('#generer', z).onclick = () => lancer($<HTMLTextAreaElement>('#envie', z).value.trim());
-    $('#copier', z)?.addEventListener('click', async () => {
-      try { await navigator.clipboard.writeText(promptGemini(n, axe, t, type, lireDiapos(n, axe, t, type))); toast('Consigne copiée ✓'); }
-      catch { toast('Copie impossible sur cet appareil'); }
-    });
   };
 
   const lancer = async (envie: string) => {
     if (enCours) return;
     enCours = true;
-    z.innerHTML = `<section class="panel center gem-attente"><div class="gem-spin" aria-hidden="true">✨</div>
-      <p class="big">Gemini prépare ton diaporama…</p><p class="muted">Cela prend en général 10 à 30 secondes.</p></section>`;
+    z.innerHTML = `<section class="panel center gem-attente"><div class="gem-spin" aria-hidden="true">🪄</div>
+      <p class="big">Préparation de ton diaporama…</p><p class="muted">Cela prend en général 10 à 30 secondes.</p></section>`;
     const consigne = promptGemini(n, axe, t, type, diaposDefaut(n, axe, t, type)) + (envie ? `\n\nDemande particulière de l’enseignante : ${envie}` : '');
     try {
       const ctrl = new AbortController(), stop = setTimeout(() => ctrl.abort(), 70_000);
       const r = await fetch('/api/diapo', { method: 'POST', credentials: 'same-origin', signal: ctrl.signal, headers: { 'content-type': 'application/json' }, body: JSON.stringify({ type, consigne }) }).finally(() => clearTimeout(stop));
       const b = await r.json().catch(() => ({}));
       enCours = false;
-      if (!r.ok) return formulaire(b.erreur ?? 'La génération a échoué.', b.code === 'sans-cle');
+      if (!r.ok) return formulaire(b.erreur ?? 'Les retouches ont échoué.');
       resultat = b.diapos as Diapo[];
       apercuResultat(envie);
     } catch (e) {
       enCours = false;
-      formulaire((e as Error).name === 'AbortError' ? 'Gemini n’a pas répondu à temps (plus d’une minute) : réessaie.' : 'Pas de connexion Internet : la génération a besoin du réseau.');
+      formulaire((e as Error).name === 'AbortError' ? 'Pas de réponse à temps (plus d’une minute) : réessaie.' : 'Pas de connexion Internet : la génération a besoin du réseau.');
     }
   };
 
@@ -211,7 +206,7 @@ export function genererGemini(n: Niveau, axe: Axe, t: Theme, type: TypeDiapo, ap
     const d = resultat!;
     z.innerHTML = `
       <section class="panel gem-choix">
-        <p class="big">✓ ${d.length} diapos proposées par Gemini</p>
+        <p class="big">✓ ${d.length} diapos proposées</p>
         <div class="row wrap center-row">
           <button class="btn" id="utiliser">✓ Utiliser ce diaporama</button>
           <button class="btn ghost" id="regen">↻ Régénérer</button>

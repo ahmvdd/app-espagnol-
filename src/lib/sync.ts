@@ -51,7 +51,7 @@ export function envoyer(): Promise<void> {
       if (status === 200) { meta!.updatedAt = body.updatedAt; meta!.dirty = false; ecrireMeta(); changer('ok'); }
       else if (status === 409) {
         appliquer(body.data, body.updatedAt);
-        toast('Données mises à jour depuis un autre appareil. Ta version est dans Profe → points de retour.');
+        toast('Données mises à jour depuis un autre appareil. Ta version est dans Prof → points de retour.');
         changer('ok');
       } else if (status === 401) changer('deconnecte');
       else changer('erreur');
@@ -70,7 +70,7 @@ export async function recuperer(): Promise<void> {
     if (status !== 200) return changer('erreur');
     if (body.data === null) { meta.dirty = true; ecrireMeta(); return envoyer(); }
     if (body.updatedAt !== meta.updatedAt) {
-      if (meta.dirty && meta.updatedAt !== null) toast('Données mises à jour depuis un autre appareil. Ta version est dans Profe → points de retour.');
+      if (meta.dirty && meta.updatedAt !== null) toast('Données mises à jour depuis un autre appareil. Ta version est dans Prof → points de retour.');
       appliquer(body.data, body.updatedAt);
       changer('ok');
     } else if (meta.dirty) await envoyer();

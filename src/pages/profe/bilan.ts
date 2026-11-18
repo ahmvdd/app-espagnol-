@@ -9,7 +9,7 @@ const OBJECTIFS = [['oui', 'Oui'], ['partie', 'En partie'], ['non', 'Non']] as c
 
 /** Mini-bilan de fin de séance (moins d'une minute), rangé ensuite dans le carnet de bord. */
 export function ouvrirBilan(classeId = currentClasseId(), apres: () => void = () => {}): void {
-  if (!state.classes.length) { toast('Crée d’abord une classe dans Profe'); location.hash = '#/profe'; return; }
+  if (!state.classes.length) { toast('Crée d’abord une classe dans Prof'); location.hash = '#/profe'; return; }
   let cid = state.classes.some(c => c.id === classeId) ? classeId : state.classes[0].id;
   const rep = { humeur: -1, objectif: '', revoir: false };
 

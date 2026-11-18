@@ -36,7 +36,7 @@ export async function POST(req: Request) {
   const s = lireSession(req);
   if (!s) return json({ erreur: 'Non connecté' }, 401);
   const cle = process.env.GEMINI_API_KEY;
-  if (!cle) return json({ erreur: 'La génération avec Gemini n’est pas encore activée (clé GEMINI_API_KEY absente dans Vercel).', code: 'sans-cle' }, 503);
+  if (!cle) return json({ erreur: 'Les retouches ne sont pas encore activées sur ce site.', code: 'sans-cle' }, 503);
 
   let body: { consigne?: unknown; type?: unknown };
   try { body = await req.json(); } catch { return json({ erreur: 'Requête illisible' }, 400); }
@@ -83,19 +83,19 @@ Première et dernière diapo : grand = true.`;
       if (r.status === 503 && k === 0) { await new Promise(ok => setTimeout(ok, 1500)); r = await appeler(m); if (!passager(r.status)) break; }
     }
   } catch (e) {
-    return json({ erreur: (e as Error).name === 'AbortError' ? 'Gemini met trop de temps à répondre : réessaie.' : 'Gemini ne répond pas : réessaie dans un instant.' }, 504);
+    return json({ erreur: (e as Error).name === 'AbortError' ? 'Le service met trop de temps à répondre : réessaie.' : 'Le service ne répond pas : réessaie dans un instant.' }, 504);
   }
   if (!r.ok) {
     const detail = await r.text().catch(() => '');
     let message = '';
     try { message = (JSON.parse(detail) as { error?: { message?: string } }).error?.message ?? ''; } catch { /* texte brut */ }
     console.error('Gemini', r.status, detail.slice(0, 800));
-    const motif = r.status === 429 ? 'quota Gemini atteint, réessaie plus tard'
-      : r.status === 400 || r.status === 403 ? 'clé refusée : vérifie GEMINI_API_KEY dans Vercel'
-      : r.status === 404 ? 'modèle introuvable : vérifie GEMINI_MODEL dans Vercel (ou supprime-la)'
-      : r.status === 503 ? 'Gemini est très demandé en ce moment, réessaie dans quelques minutes'
-      : 'erreur de Gemini, réessaie';
-    return json({ erreur: `Gemini (${r.status}) : ${motif}.${message ? ` Détail : ${message.slice(0, 200)}` : ''}` }, 502);
+    const motif = r.status === 429 ? 'quota atteint, réessaie plus tard'
+      : r.status === 400 || r.status === 403 ? 'clé refusée, vérifie la clé dans les réglages du site'
+      : r.status === 404 ? 'modèle introuvable, vérifie les réglages du site'
+      : r.status === 503 ? 'le service est très demandé en ce moment, réessaie dans quelques minutes'
+      : 'erreur du service, réessaie';
+    return json({ erreur: `Retouches impossibles (${r.status}) : ${motif}.` }, 502);
   }
 
   let diapos: Diapo[] = [];
@@ -112,7 +112,7 @@ Première et dernière diapo : grand = true.`;
       note: court(d.note, 400) || undefined,
       grand: d.grand === true || undefined
     })).filter(d => d.corps || d.grand);
-  } catch { return json({ erreur: 'Réponse de Gemini illisible : réessaie.' }, 502); }
-  if (diapos.length < Math.min(3, min)) return json({ erreur: 'Gemini n’a pas produit assez de diapos : réessaie.' }, 502);
+  } catch { return json({ erreur: 'Réponse illisible : réessaie.' }, 502); }
+  if (diapos.length < Math.min(3, min)) return json({ erreur: 'Pas assez de diapos proposées : réessaie.' }, 502);
   return json({ diapos: JSON.parse(JSON.stringify(diapos)) });
 }

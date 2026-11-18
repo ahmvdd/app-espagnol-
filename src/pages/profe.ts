@@ -17,8 +17,8 @@ const ONGLETS = [
 export const profe: View = el => {
   const onglet = location.hash.split('/')[2]?.split('?')[0] ?? '';
   el.innerHTML = `
-    <h1>Profe ${btnAide('profe')}</h1>
-    <nav class="row wrap onglets" aria-label="Espace Profe">
+    <h1>Prof ${btnAide('profe')}</h1>
+    <nav class="row wrap onglets" aria-label="Espace Prof">
       ${ONGLETS.map(o => `<a class="btn ghost sm" href="#/profe${o.id ? '/' + o.id : ''}" aria-current="${o.id === onglet ? 'page' : 'false'}">${o.label}</a>`).join('')}
     </nav>
     <div id="onglet"></div>`;

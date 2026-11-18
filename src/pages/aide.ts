@@ -9,7 +9,7 @@ export const aide: View = el => {
     <section class="panel prose">
       <h2>Mode d’emploi en une page</h2>
       <ol>
-        <li><strong>Profe</strong> : crée tes classes et colle la liste des prénoms (un par ligne).</li>
+        <li><strong>Prof</strong> : crée tes classes et colle la liste des prénoms (un par ligne).</li>
         <li><strong>Accueil → J’ai… minutes</strong> : choisis la durée, la classe et l’ambiance, puis <em>Lancer</em>.</li>
         <li><strong>Outils</strong> : minuteur, roulette, équipes, Congelados, niveau de voix. Bouton <em>Plein écran</em> pour le projecteur.</li>
         <li><strong>Jeux</strong> : choisis le niveau et le thème, fais les équipes, compte les points.</li>

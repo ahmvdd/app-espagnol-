@@ -45,7 +45,7 @@ const equipos: Tool = el => {
         <div class="chips">${c.eleves.map(e =>
           `<button class="chip" data-abs="${e.id}" aria-pressed="${!abs.has(e.id)}">${abs.has(e.id) ? '✕ absent · ' : '✓ '}${esc(e.prenom)}</button>`).join('')}</div>
       </details>
-      <p class="muted small">${c.incompatibles.length} paire(s) à séparer · <a href="#/profe">Gérer dans Profe</a></p>
+      <p class="muted small">${c.incompatibles.length} paire(s) à séparer · <a href="#/profe">Gérer dans Prof</a></p>
       <div class="row wrap center-row">
         <button class="btn bigbtn" id="gen">${result ? '🔀 Refaire' : 'Faire les équipes'}</button>
         ${result ? '<button class="btn ghost" id="proj">⛶ Projeter</button>' : ''}

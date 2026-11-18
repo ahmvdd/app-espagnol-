@@ -72,7 +72,7 @@ function seance(n: Niveau, axe: Axe, t: Theme): string {
     ['15 min', 'Découverte', `Présentation du thème « ${t.titre} » : flashcards projetées avec l’audio, répétition chorale, puis lecture des phrases modèles.`],
     ['15 min', 'Entraînement', 'Exercices 1 et 2 de la fiche (compléter, relier), correction collective ; jeu de 5 min (Quiz ou Memory) avec les équipes.'],
     ['15 min', 'Production', `Par deux, préparer puis présenter un sujet d’oral : « ${t.parole[0] ?? ''} »`],
-    ['5 min', 'Bilan', '« Lo que aprendí » : chaque élève écrit une chose apprise sur le monde hispanique. Mini-bilan de séance dans Profe.']
+    ['5 min', 'Bilan', '« Lo que aprendí » : chaque élève écrit une chose apprise sur le monde hispanique. Mini-bilan de séance dans Prof.']
   ];
   return `<article class="doc" style="--c:${COULEUR[n]}">${tete(n, t.titre, `Séance type de 55 minutes · Axe ${axe.n} · ${axe.titre}`, 'Déroulé de séance')}
     <table class="doc-seance"><thead><tr><th>Durée</th><th>Étape</th><th>Déroulement</th></tr></thead>

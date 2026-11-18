@@ -29,7 +29,7 @@ export async function montrerQr(c: Classe): Promise<void> {
   const svg = await QRCode.toString(lien, { type: 'svg', errorCorrectionLevel: 'M', margin: 2 });
   fenetre(`Transférer « ${c.nom} »`, `
     <div class="qr-box">${svg}</div>
-    <p>Sur l’autre appareil : scanne ce code avec l’appareil photo, ou ouvre <strong>Profe → Scanner un QR de classe</strong>.</p>
+    <p>Sur l’autre appareil : scanne ce code avec l’appareil photo, ou ouvre <strong>Prof → Scanner un QR de classe</strong>.</p>
     <p class="muted small">${c.eleves.length} élève(s). Les prénoms passent directement d’un écran à l’autre : rien n’est envoyé sur Internet.</p>`);
 }
 

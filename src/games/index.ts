@@ -11,6 +11,9 @@ import escape from './escape';
 import paga from './paga';
 import misterio from './misterio';
 import ruta from './ruta';
+import oca from './oca';
+import dibujalo from './dibujalo';
+import quefalta from './quefalta';
 
 export const GAMES: GameInfo[] = [
   { id: 'quiz', nom: 'Quiz en direct', es: 'El quiz', desc: 'Questions projetées, réponses sur ardoise', icon: '❓', run: quiz },
@@ -24,7 +27,10 @@ export const GAMES: GameInfo[] = [
   { id: 'loteria', nom: 'Lotería', es: 'La lotería', desc: 'Bingo avec cartes imprimables', icon: '🎴', run: loteria },
   { id: 'paga', nom: 'La paga del mes', es: 'La paga del mes', desc: 'Un mois de budget : argent, métiers, météo, imprévus', icon: '💶', run: paga, needsTeams: true, sansTheme: true },
   { id: 'misterio', nom: 'El misterio de la clase', es: 'El misterio de la clase', desc: 'Enquête façon Cluedo : hypothèses au passé', icon: '🕵️', run: misterio, needsTeams: true, sansTheme: true },
-  { id: 'ruta', nom: 'Ruta por España', es: 'Ruta por España', desc: 'Monopoly des villes hispaniques : acheter, louer, négocier', icon: '🗺', run: ruta, needsTeams: true, sansTheme: true }
+  { id: 'ruta', nom: 'Ruta por España', es: 'Ruta por España', desc: 'Monopoly des villes hispaniques : acheter, louer, négocier', icon: '🗺', run: ruta, needsTeams: true, sansTheme: true },
+  { id: 'oca', nom: 'Jeu de l’oie', es: 'El juego de la oca', desc: 'Le classique espagnol : dé, questions du chapitre, cases piégées', icon: '🦢', run: oca, needsTeams: true },
+  { id: 'dibujalo', nom: 'Pictionary', es: '¡Dibújalo!', desc: 'Dessiner au tableau, deviner en espagnol', icon: '🖍', run: dibujalo, needsTeams: true },
+  { id: 'quefalta', nom: 'Qu’est-ce qui manque ?', es: '¿Qué falta?', desc: 'Mémoriser les mots, trouver celui qui a disparu', icon: '🧠', run: quefalta }
 ];
 
 export const gameCard = (g: GameInfo) =>

@@ -92,7 +92,7 @@ export const inicio: View = el => {
     </div>
 
     <p class="home-foot muted small">
-      <a href="#/aide">Aide</a> · <a href="#/aide/credits">Crédits</a> · <a href="#/profe">Tout effacer (dans Profe)</a>
+      <a href="#/aide">Aide</a> · <a href="#/aide/credits">Crédits</a> · <a href="#/profe">Tout effacer (dans Prof)</a>
     </p>`;
 
   const zone = $('#etapes', el);

@@ -11,7 +11,7 @@ import { blocDiaporamas, brancherDiaporamas, presenter } from './diaporama';
 import type { TypeDiapo } from '../lib/diapos';
 import { apresHistorique } from '../lib/overlay';
 
-const JEUX: [string, string][] = [['quiz', '❓ Quiz'], ['memory', '🃏 Memory'], ['rosco', '🔤 Rosco'], ['ahorcado', '🪢 Pendu'], ['bomba', '💣 La bomba'], ['taboo', '🚫 Taboo'], ['loteria', '🎴 Lotería']];
+const JEUX: [string, string][] = [['quiz', '❓ Quiz'], ['memory', '🃏 Memory'], ['rosco', '🔤 Rosco'], ['ahorcado', '🪢 Pendu'], ['bomba', '💣 La bomba'], ['taboo', '🚫 Taboo'], ['loteria', '🎴 Lotería'], ['oca', '🦢 La oca'], ['dibujalo', '🖍 ¡Dibújalo!'], ['quefalta', '🧠 ¿Qué falta?']];
 
 /** Page d'un chapitre, dans l'ordre demandé : vocabulaire → phrases → oral → culture → documents → ressources → jeux. */
 export const nivel: View = el => {
@@ -77,7 +77,7 @@ export const nivel: View = el => {
     <section class="panel seq-cta">
       <h2>🗂 Préparer la séquence ${btnAide('sequence')}</h2>
       <p class="small">Le plan de ce chapitre séance par séance, en quelques clics : activités, liens vers les outils et documents, devoirs. Modifiable et imprimable.</p>
-      <a class="btn" href="#/profe/sequences?n=${n}&t=${theme.id}">✨ Créer la séquence de ce chapitre</a>
+      <a class="btn" href="#/profe/sequences?n=${n}&t=${theme.id}">Créer la séquence de ce chapitre</a>
     </section>
 
     <section class="panel ressources" id="ressources">
