@@ -1,6 +1,6 @@
 import type { View } from '../router';
 import { NIVEAUX, AXES, COULEUR, CECRL, type Niveau } from '../lib/content';
-import { DOCS, fichierPdf, type DocType } from '../lib/documents';
+import { DOCS, type DocType } from '../lib/documents';
 import { state } from '../lib/state';
 import { suiviDe, statutInfo } from '../lib/suivi';
 import { $, esc } from '../lib/ui';
@@ -57,8 +57,9 @@ export const programme: View = el => {
               <h3><a href="#/nivel/${n}/${t.id}">${esc(t.titreFr)}</a></h3>
               <p class="muted small">${esc(t.objet)}</p>
               <ul class="prog-ressources">
-                ${(Object.keys(DOCS) as DocType[]).map(d => `<li><a href="pdf/${fichierPdf(n, a, t, d)}" download target="_blank" rel="noopener">${DOCS[d].icon} ${DOCS[d].label}${DOCS[d].eleve ? '' : ' (enseignante)'}</a></li>`).join('')}
-                <li><a href="#/nivel/${n}/${t.id}#ressources">🧑‍🏫 Ressources pour l’enseignante</a></li>
+                ${(Object.keys(DOCS) as DocType[]).map(d => `<li><a href="#/nivel/${n}/${t.id}?doc=${d}">${DOCS[d].icon} ${DOCS[d].label}${DOCS[d].eleve ? '' : ' (enseignante)'}</a></li>`).join('')}
+                <li class="large"><a class="prog-diapos" href="#/nivel/${n}/${t.id}#diaporamas">🎞 Diaporamas · aperçu, synthèse, Gemini</a></li>
+                <li class="large"><a href="#/nivel/${n}/${t.id}#ressources">🧑‍🏫 Ressources pour l’enseignante</a></li>
               </ul>
               <p class="small prog-jeux">🎲 ${JEUX.map(([g, l]) => `<a href="#/juegos/${g}?n=${n}&t=${t.id}">${l}</a>`).join('')}</p>
             </article>`;

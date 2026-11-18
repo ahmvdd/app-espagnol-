@@ -612,7 +612,8 @@ html.doc-seul .doc-ecran{display:block;background:#fff;max-width:210mm;margin:0 
 .prog-chapitre p{margin:0}
 .prog-chap-tete{justify-content:space-between}
 .prog-ressources{list-style:none;padding:0;margin:.2rem 0;display:grid;grid-template-columns:1fr 1fr;gap:.2rem .6rem;font-weight:700;font-size:.92rem}
-.prog-ressources li:last-child{grid-column:1/-1}
+.prog-ressources li.large{grid-column:1/-1}
+.prog-ressources a.prog-diapos{border-color:var(--cobalt)}
 .prog-jeux{margin-top:auto!important}
 
 /* Ressources enseignante */

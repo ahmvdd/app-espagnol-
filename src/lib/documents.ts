@@ -129,7 +129,7 @@ export function imprimer(html: string): void {
 const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
 
 /** Aperçu à l'écran : « Imprimer » (boîte d'impression) et « PDF » (vrai fichier). La croix ✕ ou le retour du téléphone ferment. */
-export function apercu(titre: string, html: string, pdf?: string): void {
+export function apercu(titre: string, html: string, pdf?: string, onClose?: () => void): void {
   const { zone } = ouvrirOverlay('apercu', titre, `
     <div class="apercu-barre">
       <strong class="apercu-titre">${esc(titre)}</strong>
@@ -140,7 +140,7 @@ export function apercu(titre: string, html: string, pdf?: string): void {
           <p class="small apercu-aide" data-aide>« Imprimer » ouvre l’impression du navigateur. « PDF » télécharge le fichier, à imprimer ou envoyer. Rien ne s’ouvre ? Certaines applications (WhatsApp, Messenger…) et le site installé sur iPhone bloquent l’impression : ouvre le site dans Chrome, Safari ou Edge, ou utilise « PDF ». Pour revenir : la croix ✕ en haut à droite, ou le bouton retour.</p></details>
       </div>
     </div>
-    <div class="apercu-page">${html}</div>`);
+    <div class="apercu-page">${html}</div>`, onClose);
   const p = zone.querySelector<HTMLButtonElement>('[data-print]')!;
   p.onclick = () => imprimer(html);
   const lien = zone.querySelector<HTMLAnchorElement>('[data-pdf]');

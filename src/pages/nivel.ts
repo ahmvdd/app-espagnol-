@@ -9,6 +9,7 @@ import { $, $$, esc, toast } from '../lib/ui';
 import { btnAide } from '../lib/aide';
 import { blocDiaporamas, brancherDiaporamas, presenter } from './diaporama';
 import type { TypeDiapo } from '../lib/diapos';
+import { apresHistorique } from '../lib/overlay';
 
 const JEUX: [string, string][] = [['quiz', '❓ Quiz'], ['memory', '🃏 Memory'], ['rosco', '🔤 Rosco'], ['ahorcado', '🪢 Pendu'], ['bomba', '💣 La bomba'], ['taboo', '🚫 Taboo'], ['loteria', '🎴 Lotería']];
 
@@ -118,9 +119,11 @@ export const nivel: View = el => {
   rafraichirDiapos();
   // Liens directs (depuis une séquence) : ?doc=cours, ?ress=evaluation, ?diapo=apercu
   const dq = q.get('doc') as DocType | null, rq = q.get('ress') as RessChapitre | null, pq = q.get('diapo') as TypeDiapo | null;
-  if (dq && dq in DOCS) $<HTMLButtonElement>(`[data-doc="${dq}"]`, el)?.click();
-  else if (rq && rq in RESS_CHAPITRE) $<HTMLButtonElement>(`[data-ress="${rq}"]`, el)?.click();
-  else if (rq && rq in RESS_AXE) $<HTMLButtonElement>(`[data-axe="${rq}"]`, el)?.click();
+  // Ouvert depuis le programme ou une séquence : la croix ✕ ramène à la page d'où l'on vient.
+  const revenir = () => apresHistorique(() => history.back());
+  if (dq && dq in DOCS) apercu(`${DOCS[dq].label} · ${n} · ${theme.titreFr}`, docHtml(dq, n, axe, theme), fichierPdf(n, axe, theme, dq), revenir);
+  else if (rq && rq in RESS_CHAPITRE) apercu(`${RESS_CHAPITRE[rq].label} · ${n} · ${theme.titreFr}`, ressourceHtml(rq, n, axe, theme), fichierRessource(n, axe, theme, rq), revenir);
+  else if (rq && rq in RESS_AXE) apercu(`${RESS_AXE[rq as RessAxe].label} · ${n} · axe ${axe.n}`, ressourceAxeHtml(rq as RessAxe, n, axe), fichierAxe(n, axe, rq as RessAxe), revenir);
   else if (pq === 'apercu' || pq === 'synthese') presenter(n, axe, theme, pq);
   const stop = flashcards($('#flash', el), theme.vocab);
   if (ancre) requestAnimationFrame(() => document.getElementById(ancre)?.scrollIntoView());
