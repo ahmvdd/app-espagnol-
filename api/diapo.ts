@@ -72,12 +72,16 @@ Première et dernière diapo : grand = true.`;
     } finally { clearTimeout(minuterie); }
   };
   const PAR_DEFAUT = 'gemini-flash-latest';
-  const modele = process.env.GEMINI_MODEL?.trim() || PAR_DEFAUT;
-  let r: Response;
+  // Ordre d'essai : le modèle choisi, puis les alias Flash et Flash-Lite (si Google est surchargé ou si le nom est introuvable).
+  const modeles = [...new Set([process.env.GEMINI_MODEL?.trim() || PAR_DEFAUT, PAR_DEFAUT, 'gemini-flash-lite-latest'])];
+  const passager = (st: number) => st === 404 || st === 500 || st === 503;
+  let r!: Response;
   try {
-    r = await appeler(modele);
-    // Modèle inconnu (nom mal tapé ou retiré par Google) : on retente avec l'alias le plus récent.
-    if (r.status === 404 && modele !== PAR_DEFAUT) r = await appeler(PAR_DEFAUT);
+    for (const [k, m] of modeles.entries()) {
+      r = await appeler(m);
+      if (!passager(r.status)) break;
+      if (r.status === 503 && k === 0) { await new Promise(ok => setTimeout(ok, 1500)); r = await appeler(m); if (!passager(r.status)) break; }
+    }
   } catch (e) {
     return json({ erreur: (e as Error).name === 'AbortError' ? 'Gemini met trop de temps à répondre : réessaie.' : 'Gemini ne répond pas : réessaie dans un instant.' }, 504);
   }
@@ -89,6 +93,7 @@ Première et dernière diapo : grand = true.`;
     const motif = r.status === 429 ? 'quota Gemini atteint, réessaie plus tard'
       : r.status === 400 || r.status === 403 ? 'clé refusée : vérifie GEMINI_API_KEY dans Vercel'
       : r.status === 404 ? 'modèle introuvable : vérifie GEMINI_MODEL dans Vercel (ou supprime-la)'
+      : r.status === 503 ? 'Gemini est très demandé en ce moment, réessaie dans quelques minutes'
       : 'erreur de Gemini, réessaie';
     return json({ erreur: `Gemini (${r.status}) : ${motif}.${message ? ` Détail : ${message.slice(0, 200)}` : ''}` }, 502);
   }
