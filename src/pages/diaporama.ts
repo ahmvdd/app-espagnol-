@@ -194,15 +194,16 @@ export function genererGemini(n: Niveau, axe: Axe, t: Theme, type: TypeDiapo, ap
       <p class="big">Gemini prépare ton diaporama…</p><p class="muted">Cela prend en général 10 à 30 secondes.</p></section>`;
     const consigne = promptGemini(n, axe, t, type, diaposDefaut(n, axe, t, type)) + (envie ? `\n\nDemande particulière de l’enseignante : ${envie}` : '');
     try {
-      const r = await fetch('/api/diapo', { method: 'POST', credentials: 'same-origin', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ type, consigne }) });
+      const ctrl = new AbortController(), stop = setTimeout(() => ctrl.abort(), 70_000);
+      const r = await fetch('/api/diapo', { method: 'POST', credentials: 'same-origin', signal: ctrl.signal, headers: { 'content-type': 'application/json' }, body: JSON.stringify({ type, consigne }) }).finally(() => clearTimeout(stop));
       const b = await r.json().catch(() => ({}));
       enCours = false;
       if (!r.ok) return formulaire(b.erreur ?? 'La génération a échoué.', b.code === 'sans-cle');
       resultat = b.diapos as Diapo[];
       apercuResultat(envie);
-    } catch {
+    } catch (e) {
       enCours = false;
-      formulaire('Pas de connexion Internet : la génération a besoin du réseau.');
+      formulaire((e as Error).name === 'AbortError' ? 'Gemini n’a pas répondu à temps (plus d’une minute) : réessaie.' : 'Pas de connexion Internet : la génération a besoin du réseau.');
     }
   };
 

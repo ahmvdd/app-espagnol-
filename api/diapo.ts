@@ -3,7 +3,7 @@ import { db, json, lireSession } from './_lib.js';
 /**
  * Génère un diaporama avec Gemini, sans quitter le site.
  * La clé reste côté serveur : variable d'environnement GEMINI_API_KEY (Vercel).
- * Modèle : GEMINI_MODEL (par défaut gemini-3.8-flash).
+ * Modèle : GEMINI_MODEL (par défaut l'alias gemini-flash-latest, toujours le Flash le plus récent).
  */
 const MAX_PAR_HEURE = 30;
 const BORNES = { apercu: [5, 8], synthese: [10, 15] } as const;
@@ -59,22 +59,38 @@ Chaque diapo : un emoji (ico), un titre court en espagnol, des lignes courtes (p
 Pour une mini-question : la question dans « lignes » (avec les choix éventuels A, B, C…), la réponse dans « reponse ».
 Première et dernière diapo : grand = true.`;
 
-  const modele = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
+  const corps = JSON.stringify({
+    contents: [{ role: 'user', parts: [{ text: consigne }] }],
+    generationConfig: { responseMimeType: 'application/json', responseSchema: SCHEMA, temperature: 0.7 }
+  });
+  const appeler = async (modele: string) => {
+    const ctrl = new AbortController(), minuterie = setTimeout(() => ctrl.abort(), 55_000);
+    try {
+      return await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(modele)}:generateContent`, {
+        method: 'POST', signal: ctrl.signal, headers: { 'content-type': 'application/json', 'x-goog-api-key': cle }, body: corps
+      });
+    } finally { clearTimeout(minuterie); }
+  };
+  const PAR_DEFAUT = 'gemini-flash-latest';
+  const modele = process.env.GEMINI_MODEL?.trim() || PAR_DEFAUT;
   let r: Response;
   try {
-    r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(modele)}:generateContent`, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json', 'x-goog-api-key': cle },
-      body: JSON.stringify({
-        contents: [{ role: 'user', parts: [{ text: consigne }] }],
-        generationConfig: { responseMimeType: 'application/json', responseSchema: SCHEMA, temperature: 0.7 }
-      })
-    });
-  } catch { return json({ erreur: 'Gemini ne répond pas : réessaie dans un instant.' }, 502); }
+    r = await appeler(modele);
+    // Modèle inconnu (nom mal tapé ou retiré par Google) : on retente avec l'alias le plus récent.
+    if (r.status === 404 && modele !== PAR_DEFAUT) r = await appeler(PAR_DEFAUT);
+  } catch (e) {
+    return json({ erreur: (e as Error).name === 'AbortError' ? 'Gemini met trop de temps à répondre : réessaie.' : 'Gemini ne répond pas : réessaie dans un instant.' }, 504);
+  }
   if (!r.ok) {
     const detail = await r.text().catch(() => '');
-    console.error('Gemini', r.status, detail.slice(0, 500));
-    return json({ erreur: r.status === 429 ? 'Quota Gemini atteint : réessaie plus tard.' : r.status === 400 || r.status === 403 ? 'Clé ou modèle Gemini refusé : vérifie GEMINI_API_KEY (et GEMINI_MODEL) dans Vercel.' : 'Gemini a renvoyé une erreur : réessaie.' }, 502);
+    let message = '';
+    try { message = (JSON.parse(detail) as { error?: { message?: string } }).error?.message ?? ''; } catch { /* texte brut */ }
+    console.error('Gemini', r.status, detail.slice(0, 800));
+    const motif = r.status === 429 ? 'quota Gemini atteint, réessaie plus tard'
+      : r.status === 400 || r.status === 403 ? 'clé refusée : vérifie GEMINI_API_KEY dans Vercel'
+      : r.status === 404 ? 'modèle introuvable : vérifie GEMINI_MODEL dans Vercel (ou supprime-la)'
+      : 'erreur de Gemini, réessaie';
+    return json({ erreur: `Gemini (${r.status}) : ${motif}.${message ? ` Détail : ${message.slice(0, 200)}` : ''}` }, 502);
   }
 
   let diapos: Diapo[] = [];
