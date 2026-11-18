@@ -859,3 +859,13 @@ html.overlay-ouvert{overflow:hidden}
 .doc-min{white-space:nowrap;font-weight:700;color:var(--c);width:16mm}
 .ed-champs input[type=checkbox]{width:auto;margin:0}
 .ed-champs label.inline{display:flex;flex-direction:row;align-items:center;gap:.4rem;font-weight:400}
+.gem-form{max-width:46rem;margin:0 auto;width:100%;display:flex;flex-direction:column;gap:.6rem}
+.gem-form .field{display:flex;flex-direction:column;gap:.3rem;font-weight:700}
+.gem-form textarea{font:inherit;font-weight:400}
+.gem-erreur{background:color-mix(in srgb,var(--pink) 12%,var(--surface));border:2px solid var(--pink);border-radius:10px;padding:.6rem .8rem;margin:0}
+.gem-attente{padding:3rem 1rem}
+.gem-spin{font-size:4rem;animation:gemspin 1.6s linear infinite}
+@keyframes gemspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.gem-spin{animation:none}}
+.gem-choix{text-align:center;display:flex;flex-direction:column;gap:.5rem}
+.gem-grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(18rem,1fr));gap:.8rem}

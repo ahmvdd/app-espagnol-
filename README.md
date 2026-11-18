@@ -57,3 +57,6 @@ docs/
 
 Connexion : un seul champ « mot secret », qui ouvre l'espace auquel il appartient (les 3 mots secrets doivent être différents).
 Fonctions serveur dans `api/` : `login` (15 essais ratés / 15 min), `logout`, `session`, `data` (GET / PUT avec détection de conflit).
+
+## Diaporamas générés avec Gemini (facultatif)
+Ajouter `GEMINI_API_KEY` dans Vercel (Settings → Environment Variables) puis redéployer. Le bouton « ✨ Générer avec Gemini » d’un chapitre appelle `api/diapo` (réservé aux espaces connectés, 30 générations par heure et par espace). La clé ne quitte jamais le serveur. Sans clé, le site propose de copier la consigne.

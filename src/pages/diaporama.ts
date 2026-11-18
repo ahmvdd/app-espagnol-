@@ -2,7 +2,7 @@ import type { Axe, Niveau, Theme } from '../content/types';
 import type { Diapo } from '../lib/storage';
 import { DIAPOS, diapoHtml, diaposDefaut, diaposImpression, ecrireDiapos, estModifie, exporterPptx, lireDiapos, promptGemini, type TypeDiapo } from '../lib/diapos';
 import { apercu } from '../lib/documents';
-import { ouvrirOverlay } from '../lib/overlay';
+import { apresHistorique, ouvrirOverlay } from '../lib/overlay';
 import { confirmModal } from '../lib/modal';
 import { $, $$, esc, toast } from '../lib/ui';
 
@@ -138,7 +138,7 @@ export function blocDiaporamas(n: Niveau, axe: Axe, t: Theme): string {
         <button class="btn ghost sm" data-diapo="${type}" data-a="edit">✏️ Modifier</button>
         <button class="btn ghost sm" data-diapo="${type}" data-a="print">🖨 Imprimer / PDF</button>
         <button class="btn ghost sm" data-diapo="${type}" data-a="pptx">⬇️ PowerPoint</button>
-        <button class="btn ghost sm" data-diapo="${type}" data-a="gemini">✨ Gemini</button>
+        <button class="btn ghost sm" data-diapo="${type}" data-a="gemini">✨ Générer avec Gemini</button>
       </div>
     </div>`;
   }).join('')}</div>`;
@@ -155,14 +155,74 @@ export function brancherDiaporamas(el: HTMLElement, n: Niveau, axe: Axe, t: Them
         try { toast('Préparation du fichier…'); await exporterPptx(n, t, type, d); toast('Fichier PowerPoint téléchargé ✓'); }
         catch { toast('Téléchargement impossible : essaie dans Chrome, Safari ou Edge'); }
         return;
-      case 'gemini': {
-        const p = promptGemini(n, axe, t, type, d);
-        try { await navigator.clipboard.writeText(p); toast('Consigne copiée ✓ : colle-la dans Gemini'); } catch { toast('Copie impossible : sélectionne le texte à la main'); }
-        apercu(`Consigne Gemini · ${info.label}`, `<article class="doc"><h1>Créer ce diaporama avec Gemini</h1>
-          <ol><li>La consigne ci-dessous est copiée : ouvre <a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini</a> (ou, dans Google Slides, « Aide-moi à créer ») et colle-la.</li>
-          <li>Pour garder la main sur le résultat : télécharge aussi le fichier « PowerPoint » d’ici et ouvre-le dans Google Slides, puis modifie-le librement.</li></ol>
-          <pre class="gemini-prompt">${esc(p)}</pre></article>`);
-      }
+      case 'gemini': return genererGemini(n, axe, t, type, rafraichir);
     }
   });
+}
+
+/** Génération avec Gemini, directement dans le site (la clé reste sur le serveur). */
+export function genererGemini(n: Niveau, axe: Axe, t: Theme, type: TypeDiapo, apres: () => void): void {
+  const info = DIAPOS[type];
+  let resultat: Diapo[] | null = null, enCours = false;
+  const { zone, fermer } = ouvrirOverlay('diapo-editeur', `Générer le diaporama ${info.label} avec Gemini`, `
+    <div class="apercu-barre"><strong class="apercu-titre">✨ ${info.ico} ${info.label} avec Gemini · ${n} · ${esc(t.titreFr)}</strong></div>
+    <div class="ed-liste gem" id="gem"></div>`, apres);
+  const z = $('#gem', zone);
+
+  const formulaire = (erreur = '', sansCle = false) => {
+    z.innerHTML = `
+      <section class="panel gem-form">
+        <p><strong>${info.moment}.</strong> ${info.role}</p>
+        <label class="field">Une demande en plus ? <span class="muted small">(facultatif)</span>
+          <textarea id="envie" rows="3" placeholder="Ex. : plus d’images, une diapo sur Frida Kahlo, des phrases plus simples…"></textarea></label>
+        <p class="muted small">Gemini part du contenu du chapitre. Le résultat s’affiche ici : tu choisis de l’utiliser ou non, puis tu peux tout modifier.</p>
+        ${erreur ? `<p class="gem-erreur" role="alert">${esc(erreur)}</p>` : ''}
+        ${sansCle ? `<p class="small">En attendant, tu peux copier la consigne et l’utiliser toi-même : <button class="btn ghost sm" id="copier">📋 Copier la consigne</button></p>` : ''}
+        <button class="btn bigbtn" id="generer">✨ Générer</button>
+      </section>`;
+    $('#generer', z).onclick = () => lancer($<HTMLTextAreaElement>('#envie', z).value.trim());
+    $('#copier', z)?.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(promptGemini(n, axe, t, type, lireDiapos(n, axe, t, type))); toast('Consigne copiée ✓'); }
+      catch { toast('Copie impossible sur cet appareil'); }
+    });
+  };
+
+  const lancer = async (envie: string) => {
+    if (enCours) return;
+    enCours = true;
+    z.innerHTML = `<section class="panel center gem-attente"><div class="gem-spin" aria-hidden="true">✨</div>
+      <p class="big">Gemini prépare ton diaporama…</p><p class="muted">Cela prend en général 10 à 30 secondes.</p></section>`;
+    const consigne = promptGemini(n, axe, t, type, diaposDefaut(n, axe, t, type)) + (envie ? `\n\nDemande particulière de l’enseignante : ${envie}` : '');
+    try {
+      const r = await fetch('/api/diapo', { method: 'POST', credentials: 'same-origin', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ type, consigne }) });
+      const b = await r.json().catch(() => ({}));
+      enCours = false;
+      if (!r.ok) return formulaire(b.erreur ?? 'La génération a échoué.', b.code === 'sans-cle');
+      resultat = b.diapos as Diapo[];
+      apercuResultat(envie);
+    } catch {
+      enCours = false;
+      formulaire('Pas de connexion Internet : la génération a besoin du réseau.');
+    }
+  };
+
+  const apercuResultat = (envie: string) => {
+    const d = resultat!;
+    z.innerHTML = `
+      <section class="panel gem-choix">
+        <p class="big">✓ ${d.length} diapos proposées par Gemini</p>
+        <div class="row wrap center-row">
+          <button class="btn" id="utiliser">✓ Utiliser ce diaporama</button>
+          <button class="btn ghost" id="regen">↻ Régénérer</button>
+          <button class="btn ghost" id="annuler">Garder mon diaporama actuel</button>
+        </div>
+        <p class="muted small">« Utiliser » remplace le diaporama ${info.label} de ce chapitre ; il s’ouvre ensuite dans l’éditeur pour que tu puisses tout retoucher.</p>
+      </section>
+      <div class="gem-grille">${d.map((x, i) => `<div class="ed-vue">${diapoHtml(x, n, i, d.length, true)}</div>`).join('')}</div>`;
+    $('#utiliser', z).onclick = () => { ecrireDiapos(n, t.id, type, d); toast('Diaporama enregistré ✓'); fermer(); apresHistorique(() => editer(n, axe, t, type, apres)); };
+    $('#regen', z).onclick = () => lancer(envie);
+    $('#annuler', z).onclick = () => fermer();
+  };
+
+  formulaire();
 }

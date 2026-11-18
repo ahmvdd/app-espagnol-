@@ -33,3 +33,11 @@ export function ouvrirOverlay(classe: string, label: string, html: string, onClo
   zone.querySelector<HTMLButtonElement>('[data-x]')!.onclick = () => fermer();
   return { zone, fermer: () => fermer() };
 }
+
+/** Exécute `fn` une fois la fenêtre précédente vraiment fermée (le retour d'historique est asynchrone). */
+export function apresHistorique(fn: () => void): void {
+  let fait = false;
+  const go = () => { if (fait) return; fait = true; removeEventListener('popstate', go); setTimeout(fn, 0); };
+  addEventListener('popstate', go);
+  setTimeout(go, 400);
+}
